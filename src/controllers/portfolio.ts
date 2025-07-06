@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { profile, workExperience as experience, project as projects, skill as skills, educationHistory as education, contact } from '../constants/index.js';
+import { profile, workExperiences as experience, projects, skills, educationHistory as education, contact } from '../constants/index.js';
 
 // Get profile information
 export const getProfile = (req: Request, res: Response) => {
@@ -22,13 +22,6 @@ export const getExperience = (req: Request, res: Response) => {
 // Get projects
 export const getProjects = (req: Request, res: Response) => {
   try {
-    const { featured } = req.query;
-
-    if (featured === 'true') {
-      const featuredProjects = projects.filter((project) => project.featured);
-      return res.status(200).json(featuredProjects);
-    }
-
     res.status(200).json(projects);
   } catch (error) {
     res.status(500).json({ message: 'Error fetching projects data', error });
@@ -38,20 +31,6 @@ export const getProjects = (req: Request, res: Response) => {
 // Get skills
 export const getSkills = (req: Request, res: Response) => {
   try {
-    const { category } = req.query;
-
-    if (category && typeof category === 'string') {
-      const filteredSkills = skills.technical.find(
-        (skill) => skill.category.toLowerCase() === category.toLowerCase(),
-      );
-
-      if (filteredSkills) {
-        return res.status(200).json(filteredSkills);
-      }
-
-      return res.status(404).json({ message: 'Skill category not found' });
-    }
-
     res.status(200).json(skills);
   } catch (error) {
     res.status(500).json({ message: 'Error fetching skills data', error });
