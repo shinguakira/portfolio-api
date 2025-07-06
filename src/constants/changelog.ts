@@ -91,6 +91,6 @@ Youtube検索プロジェクト追加。
   {
     version: '1.0.0',
     date: '2024-12',
-    changes: [{ type: 'feature', description: 'サイト公開' }],
+    changes: [{type: 'feature', description: 'サイト公開'}],
   },
 ];

@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import { router as portfolioRoutes } from './routes/portfolio.js';
+import {router as portfolioRoutes} from './routes/portfolio.js';
 
 // Load environment variables
 dotenv.config();
@@ -18,12 +18,14 @@ app.use('/api', portfolioRoutes);
 
 // Health check endpoint
 app.get('/health', (req, res) => {
-  res.status(200).json({ status: 'OK', timestamp: new Date().toISOString() });
+  res.status(200).json({status: 'OK', timestamp: new Date().toISOString()});
 });
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// Start server only if not in a test environment
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
 
 export default app;

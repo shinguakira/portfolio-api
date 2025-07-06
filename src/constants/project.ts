@@ -1,5 +1,5 @@
-import { nextjsSkillSet, T3StackSkillSet } from './skill.js';
-import { links } from './links.js';
+import {nextjsSkillSet, T3StackSkillSet} from './skill.js';
+import {links} from './links.js';
 
 const tmpPic = '/images/profile/developer-pic-1.png'; // ポートフォリオサイトの画像
 const chatGptColonePic = '/images/projects/chat-gpt-clone.png'; // ChatGPT クローンの画像

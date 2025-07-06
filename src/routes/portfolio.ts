@@ -1,4 +1,4 @@
-import { Router } from 'express';
+import {Router} from 'express';
 import {
   getProfile,
   getExperience,
@@ -18,4 +18,4 @@ router.get('/skills', getSkills);
 router.get('/education', getEducation);
 router.get('/contact', getContact);
 
-export { router };
+export {router};

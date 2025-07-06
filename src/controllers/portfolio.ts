@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+import {Request, Response} from 'express';
 import {
   profile,
   workExperiences as experience,
@@ -13,7 +13,7 @@ export const getProfile = (req: Request, res: Response) => {
   try {
     res.status(200).json(profile);
   } catch (error) {
-    res.status(500).json({ message: 'Error fetching profile data', error });
+    res.status(500).json({message: 'Error fetching profile data', error});
   }
 };
 
@@ -22,7 +22,7 @@ export const getExperience = (req: Request, res: Response) => {
   try {
     res.status(200).json(experience);
   } catch (error) {
-    res.status(500).json({ message: 'Error fetching experience data', error });
+    res.status(500).json({message: 'Error fetching experience data', error});
   }
 };
 
@@ -31,7 +31,7 @@ export const getProjects = (req: Request, res: Response) => {
   try {
     res.status(200).json(projects);
   } catch (error) {
-    res.status(500).json({ message: 'Error fetching projects data', error });
+    res.status(500).json({message: 'Error fetching projects data', error});
   }
 };
 
@@ -40,7 +40,7 @@ export const getSkills = (req: Request, res: Response) => {
   try {
     res.status(200).json(skills);
   } catch (error) {
-    res.status(500).json({ message: 'Error fetching skills data', error });
+    res.status(500).json({message: 'Error fetching skills data', error});
   }
 };
 
@@ -49,7 +49,7 @@ export const getEducation = (req: Request, res: Response) => {
   try {
     res.status(200).json(education);
   } catch (error) {
-    res.status(500).json({ message: 'Error fetching education data', error });
+    res.status(500).json({message: 'Error fetching education data', error});
   }
 };
 
@@ -58,6 +58,6 @@ export const getContact = (req: Request, res: Response) => {
   try {
     res.status(200).json(contact);
   } catch (error) {
-    res.status(500).json({ message: 'Error fetching contact data', error });
+    res.status(500).json({message: 'Error fetching contact data', error});
   }
 };
