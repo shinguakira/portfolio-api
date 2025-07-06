@@ -1,15 +1,7 @@
-import {
-  receptionInnovationSkillSet,
-} from './index.js';
 import { nextjsSkillSet, T3StackSkillSet } from './skill.js';
 import { links } from './links.js';
 
 const tmpPic = '/images/profile/developer-pic-1.png'; // ポートフォリオサイトの画像
-const tokyoGasPic = '/images/projects/tokyo-gas2.png'; // 東京ガスの画像
-const tokyoGasHenkoPic = '/images/projects/tokyo-gas-henko.png'; // picture for tokyo gas henko screens
-const tokyoGasCustomerSearchPic =
-  '/images/projects/tokyo-gas-customer-search.png'; // picture for tokyo gas customer search screens
-const tokyoGasFuriwakePic = '/images/projects/tokyo-gas-furiwake.png'; // picture for tokyo gas furiwake screens
 const chatGptColonePic = '/images/projects/chat-gpt-clone.png'; // ChatGPT クローンの画像
 const chatBot3dPic = '/images/projects/3d-chatbot.png'; // 3Dチャットボットの画像
 const onDevelopingPic = '/images/projects/onDeveloping.jpg'; // 開発中の画像

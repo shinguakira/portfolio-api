@@ -54,11 +54,11 @@ SEO対応のためのgenerateStaticParamsの実装
     changes: [
       {
         type: 'feature',
-        description: `Qiita記事をArticleページに追加`,
+        description: 'Qiita記事をArticleページに追加',
       },
       {
         type: 'improvement',
-        description: `スキルセットのアイコン追加`,
+        description: 'スキルセットのアイコン追加',
       },
       // {
       //   type: "bugfix",

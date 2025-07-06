@@ -1,5 +1,12 @@
 import { Request, Response } from 'express';
-import { profile, workExperiences as experience, projects, skills, educationHistory as education, contact } from '../constants/index.js';
+import {
+  profile,
+  workExperiences as experience,
+  projects,
+  skills,
+  educationHistory as education,
+  contact,
+} from '../constants/index.js';
 
 // Get profile information
 export const getProfile = (req: Request, res: Response) => {

@@ -1,4 +1,4 @@
-import { onBusiness, selfStudy } from './index.js';
+import { onBusiness, selfStudy } from './common.js';
 
 export const nextjsSkillSet = [
   'React',

@@ -36,7 +36,7 @@ export const faqs: MultilingualFaqProps[] = [
     en: {
       question: 'Why do you focus on development rather than infrastructure?',
       answer:
-        "People who need systems primarily require the services and functionality those systems provide. Only after these are completed do aspects like security, reliability, and availability gain value. That's why I focus on development, which creates the service and functional aspects of systems.",
+        'People who need systems primarily require the services and functionality those systems provide. Only after these are completed do aspects like security, reliability, and availability gain value. That\'s why I focus on development, which creates the service and functional aspects of systems.',
     },
   },
   {
@@ -51,7 +51,7 @@ export const faqs: MultilingualFaqProps[] = [
     en: {
       question: 'Why do you focus on frontend rather than backend development?',
       answer:
-        "Frontend development creates the interface that users directly interact with, so better screen development more directly impacts user satisfaction. With the spread of Single Page Applications (SPAs), the frontend's role has expanded, increasing its importance. Additionally, as cloud services like AWS and Azure become more common with their pay-as-you-go pricing models, server load directly affects costs. Modern client devices now have sufficient processing power, allowing us to shift more processing to the client side, reducing server load and costs. For these reasons, I focus on frontend development.",
+        'Frontend development creates the interface that users directly interact with, so better screen development more directly impacts user satisfaction. With the spread of Single Page Applications (SPAs), the frontend\'s role has expanded, increasing its importance. Additionally, as cloud services like AWS and Azure become more common with their pay-as-you-go pricing models, server load directly affects costs. Modern client devices now have sufficient processing power, allowing us to shift more processing to the client side, reducing server load and costs. For these reasons, I focus on frontend development.',
     },
   },
   {
@@ -81,7 +81,7 @@ export const faqs: MultilingualFaqProps[] = [
       question:
         'Why did you choose to work at a hotel front desk instead of immediately joining the IT industry after leaving university?',
       answer:
-        "After leaving university, I wanted to secure a minimum financial stability before pursuing an IT career. I chose to work at a hotel front desk to leverage my strength in English. While I wanted to use my programming skills, there weren't suitable part-time opportunities available in that field, so I took the hotel position.",
+        'After leaving university, I wanted to secure a minimum financial stability before pursuing an IT career. I chose to work at a hotel front desk to leverage my strength in English. While I wanted to use my programming skills, there weren\'t suitable part-time opportunities available in that field, so I took the hotel position.',
     },
   },
   {
@@ -95,7 +95,7 @@ export const faqs: MultilingualFaqProps[] = [
     en: {
       question: 'Why do you obtain so many certifications?',
       answer:
-        "When you have limited years of experience, people tend to judge your abilities negatively until they work with you. Rather than suggesting that 'having certifications equals technical skill,' it demonstrates that I can dedicate my private time and money to my profession. Obtaining numerous certifications proves at least one of these qualities: 'ability to sacrifice personal time for work,' 'capacity for effort,' or 'high aptitude for knowledge acquisition.' Since these certifications are validated by third-party certification bodies, these abilities are objectively verified rather than self-proclaimed. When someone reviews my information, I consider it a success if they feel there's something different about me (whether that's perceived positively or negatively).",
+        'When you have limited years of experience, people tend to judge your abilities negatively until they work with you. Rather than suggesting that \'having certifications equals technical skill,\' it demonstrates that I can dedicate my private time and money to my profession. Obtaining numerous certifications proves at least one of these qualities: \'ability to sacrifice personal time for work,\' \'capacity for effort,\' or \'high aptitude for knowledge acquisition.\' Since these certifications are validated by third-party certification bodies, these abilities are objectively verified rather than self-proclaimed. When someone reviews my information, I consider it a success if they feel there\'s something different about me (whether that\'s perceived positively or negatively).',
     },
   },
   {
@@ -108,9 +108,9 @@ export const faqs: MultilingualFaqProps[] = [
     },
     en: {
       question:
-        "Why is there such variety in the types of certifications you've obtained?",
+        'Why is there such variety in the types of certifications you\'ve obtained?',
       answer:
-        "I obtained certifications to acquire knowledge needed for specific projects and companies at different times. Some might get the impression that this variety indicates a lack of focus or direction, but I'd encourage you to imagine what could be achieved if all that diverse effort were concentrated on a single goal.",
+        'I obtained certifications to acquire knowledge needed for specific projects and companies at different times. Some might get the impression that this variety indicates a lack of focus or direction, but I\'d encourage you to imagine what could be achieved if all that diverse effort were concentrated on a single goal.',
     },
   },
   {
@@ -125,7 +125,7 @@ export const faqs: MultilingualFaqProps[] = [
       question:
         'As a developer, why have you obtained so many AWS certifications?',
       answer:
-        "My current company aims to become an AWS partner, so they encourage obtaining AWS certifications. I believed that achieving AWS All Certified Engineer recognition could help increase the company's visibility. Additionally, obtaining certifications that lack recognition might not be valued as highly.",
+        'My current company aims to become an AWS partner, so they encourage obtaining AWS certifications. I believed that achieving AWS All Certified Engineer recognition could help increase the company\'s visibility. Additionally, obtaining certifications that lack recognition might not be valued as highly.',
     },
   },
   {
@@ -139,7 +139,7 @@ export const faqs: MultilingualFaqProps[] = [
     en: {
       question: 'Why did you leave your first company?',
       answer:
-        "I joined the company after being told I could do web development, but most of their projects were embedded systems. I wasn't offered web development projects and was forced to work at a company doing embedded systems. By chance, I was able to join a project using Java, but that was the only web project—everything else was embedded systems.",
+        'I joined the company after being told I could do web development, but most of their projects were embedded systems. I wasn\'t offered web development projects and was forced to work at a company doing embedded systems. By chance, I was able to join a project using Java, but that was the only web project—everything else was embedded systems.',
     },
   },
   {

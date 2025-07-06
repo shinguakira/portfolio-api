@@ -1,4 +1,5 @@
 import { links } from './links.js';
+import { CertificationItemProps } from '../type/certificationItem.js';
 
 const creadlyLink = links.creadlyLink;
 // object for certifications

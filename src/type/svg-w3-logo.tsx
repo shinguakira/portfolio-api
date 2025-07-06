@@ -3,5 +3,5 @@ type svgW3LogoProps = {
   svgPath: string;
   svgColor?: string;
   titleName?: string; // lable for svg icon below
-  className?: string;
+  
 };
