@@ -1,4 +1,5 @@
 import {onBusiness, selfStudy} from './common.js';
+import {SkillItemProps} from '../type/skillItem.js';
 
 export const nextjsSkillSet = [
   'React',
