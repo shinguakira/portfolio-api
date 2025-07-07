@@ -6,6 +6,11 @@ import {
   getSkills,
   getEducation,
   getContact,
+  getCertifications,
+  getChangelogs,
+  getFaqs,
+  getLinks,
+  getStrongPoints,
 } from '../controllers/portfolio.js';
 
 const router = Router();
@@ -17,5 +22,10 @@ router.get('/projects', getProjects);
 router.get('/skills', getSkills);
 router.get('/education', getEducation);
 router.get('/contact', getContact);
+router.get('/certifications', getCertifications);
+router.get('/changelogs', getChangelogs);
+router.get('/faqs', getFaqs);
+router.get('/links', getLinks);
+router.get('/strong-points', getStrongPoints);
 
 export {router};

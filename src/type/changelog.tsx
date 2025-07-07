@@ -6,7 +6,12 @@ type ChangelogProps = {
   date: string;
   changes: {
     type: ChangeType;
-    description: string;
+    ja: {
+      description: string;
+    };
+    en: {
+      description: string;
+    };
   }[];
 };
 
