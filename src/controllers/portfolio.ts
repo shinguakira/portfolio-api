@@ -1,11 +1,13 @@
 import {Request, Response} from 'express';
 import {
   profile,
-  workExperiences as experience,
+  workExperience as experience,
   projects,
   skills,
   educationHistory as education,
   contact,
+  strongPoints,
+  changelogs,
 } from '../constants/index.js';
 
 // Get profile information
@@ -84,5 +86,34 @@ export const getContact = (req: Request, res: Response) => {
     res.status(200).json(contact);
   } catch (error) {
     res.status(500).json({message: 'Error fetching contact data', error});
+  }
+};
+
+export const getStrongPoints = (req: Request, res: Response) => {
+  try {
+    const lang = req.query.lang as string;
+    const localizedStrongPoints = strongPoints.map((item) => ({
+      ...(lang === 'en' ? item.en : item.ja),
+    }));
+    res.status(200).json(localizedStrongPoints);
+  } catch (error) {
+    res.status(500).json({message: 'Error fetching strong points data', error});
+  }
+};
+
+export const getChangelog = (req: Request, res: Response) => {
+  try {
+    const lang = req.query.lang as string;
+    const localizedChangelog = changelogs.map((changelog) => ({
+      version: changelog.version,
+      date: changelog.date,
+      changes: changelog.changes.map((change) => ({
+        type: change.type,
+        ...(lang === 'en' ? change.en : change.ja),
+      })),
+    }));
+    res.status(200).json(localizedChangelog);
+  } catch (error) {
+    res.status(500).json({message: 'Error fetching changelog data', error});
   }
 };
