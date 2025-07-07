@@ -1,10 +1,10 @@
 import {Request, Response} from 'express';
 import {
   profile,
-  workExperience as experience,
+  workExperience,
   projects,
   skills,
-  educationHistory as education,
+  educationHistory,
   contact,
   strongPoints,
   changelogs,
@@ -28,7 +28,7 @@ export const getProfile = (req: Request, res: Response) => {
 export const getExperience = (req: Request, res: Response) => {
   try {
     const lang = req.query.lang as string;
-    const localizedExperience = experience.map((item) => ({
+    const localizedExperience = workExperience.map((item) => ({
       company: item.company,
       period: item.period,
       teamSize: item.teamSize,
@@ -69,7 +69,7 @@ export const getSkills = (req: Request, res: Response) => {
 export const getEducation = (req: Request, res: Response) => {
   try {
     const lang = req.query.lang as string;
-    const localizedEducation = education.map((item) => ({
+    const localizedEducation = educationHistory.map((item) => ({
       startYear: item.startYear,
       endYear: item.endYear,
       ...(lang === 'en' ? item.en : item.ja),
