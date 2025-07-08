@@ -1,0 +1,27 @@
+service: portfolio-api
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+  stage: dev
+  environment:
+    NODE_ENV: ${opt:stage, 'development'}
+    PORT: 3000 # Not strictly used by Lambda, but good for consistency
+    ALLOWED_ORIGINS: "http://localhost:3000,https://shinguakira.com"
+
+functions:
+  api:
+    handler: dist/handler.handler
+    events:
+      - http:
+          path: /api/{proxy+}
+          method: any
+          cors: true
+      - http:
+          path: /api
+          method: any
+          cors: true
+
+plugins:
+  - serverless-offline # For local development
