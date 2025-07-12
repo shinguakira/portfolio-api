@@ -1,3 +1,5 @@
+import {ChangelogProps} from '@/types/changelog.js';
+
 /**
  * constans for changelog history
  */
@@ -150,10 +152,12 @@ Added detailed link descriptions to Tokyo Gas project page.`,
   {
     version: '1.0.0',
     date: '2024-12',
-    changes: [{
-      type: 'feature',
-      ja: { description: 'サイト公開' },
-      en: { description: 'Site published.' }
-    }],
+    changes: [
+      {
+        type: 'feature',
+        ja: {description: 'サイト公開'},
+        en: {description: 'Site published.'},
+      },
+    ],
   },
 ];

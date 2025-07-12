@@ -1,4 +1,4 @@
-type Project = {
+export type Project = {
   // id: string; exclude id for maintainability
   title: string;
   description: string;

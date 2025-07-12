@@ -1,4 +1,4 @@
-type ArticleProps = {
+export type ArticleProps = {
   id: string;
   title: string;
   url: string;

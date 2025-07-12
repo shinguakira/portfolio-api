@@ -1,4 +1,4 @@
-type EducationHistoryProps = {
+export type EducationHistoryProps = {
   school: string;
   department: string;
   startYear: string;

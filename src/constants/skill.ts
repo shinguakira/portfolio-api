@@ -1,4 +1,5 @@
 import {onBusiness, selfStudy} from './common.js';
+import type {SkillItemProps} from '../types/skillItem.js';
 
 export const nextjsSkillSet = [
   'React',
@@ -13,44 +14,20 @@ export const receptionInnovationSkillSet = [
   'Java',
   'Springboot',
   'TypeScript',
-  'Next.js',
   'React',
-  'Material UI',
-  'PostgreSQL',
-  'AWS',
-  'Docker',
-  'Kubernetes',
-  'Terraform',
-  'Jenkins',
   'Git',
   'Github',
   'Swagger',
-  'Jira',
-  'Confluence',
-  'Slack',
-  'Figma',
 ];
 
 export const VOCSkillSet = [
   'Java',
   'Springboot',
   'TypeScript',
-  'Next.js',
   'React',
-  'Material UI',
-  'PostgreSQL',
-  'AWS',
-  'Docker',
-  'Kubernetes',
-  'Terraform',
-  'Jenkins',
   'Git',
   'Github',
   'Swagger',
-  'Jira',
-  'Confluence',
-  'Slack',
-  'Figma',
 ];
 
 export const T3StackSkillSet = [

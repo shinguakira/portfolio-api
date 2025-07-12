@@ -1,4 +1,4 @@
-type WorkExperience = {
+export type WorkExperience = {
   // id: number; exclude id for maintainability
   company: string; // comapny name
   projectOverview: string; // project name

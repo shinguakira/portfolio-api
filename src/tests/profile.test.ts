@@ -1,6 +1,6 @@
 import {describe, it, expect} from 'vitest';
 import request from 'supertest';
-import app from '../index';
+import app from '../index.js';
 import {profile} from '../constants/profile.js';
 
 describe('GET /api/profile', () => {

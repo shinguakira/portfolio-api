@@ -95,29 +95,31 @@ export const getContact = (req: Request, res: Response) => {
 export const getCertifications = (req: Request, res: Response) => {
   try {
     const lang = req.query.lang as string;
-    const localizedCertifications = certifications.map(item => ({
+    const localizedCertifications = certifications.map((item) => ({
       id: item.id,
       organization: item.organization,
       date: item.date,
       verifyLink: item.verifyLink,
-      ...(lang === 'en' ? item.en : item.ja)
+      ...(lang === 'en' ? item.en : item.ja),
     }));
     res.status(200).json(localizedCertifications);
   } catch (error) {
-    res.status(500).json({message: 'Error fetching certifications data', error});
+    res
+      .status(500)
+      .json({message: 'Error fetching certifications data', error});
   }
 };
 
 export const getChangelogs = (req: Request, res: Response) => {
   try {
     const lang = req.query.lang as string;
-    const localizedChangelogs = changelogs.map(item => ({
+    const localizedChangelogs = changelogs.map((item) => ({
       version: item.version,
       date: item.date,
-      changes: item.changes.map(change => ({
+      changes: item.changes.map((change: {type: any; en: any; ja: any}) => ({
         type: change.type,
-        ...(lang === 'en' ? change.en : change.ja)
-      }))
+        ...(lang === 'en' ? change.en : change.ja),
+      })),
     }));
     res.status(200).json(localizedChangelogs);
   } catch (error) {
@@ -128,10 +130,10 @@ export const getChangelogs = (req: Request, res: Response) => {
 export const getFaqs = (req: Request, res: Response) => {
   try {
     const lang = req.query.lang as string;
-    const localizedFaqs = faqs.map(item => ({
+    const localizedFaqs = faqs.map((item) => ({
       size: item.size,
       category: item.category,
-      ...(lang === 'en' ? item.en : item.ja)
+      ...(lang === 'en' ? item.en : item.ja),
     }));
     res.status(200).json(localizedFaqs);
   } catch (error) {
@@ -150,9 +152,9 @@ export const getLinks = (req: Request, res: Response) => {
 export const getStrongPoints = (req: Request, res: Response) => {
   try {
     const lang = req.query.lang as string;
-    const localizedStrongPoints = strongPoint.map(item => ({
+    const localizedStrongPoints = strongPoint.map((item) => ({
       size: item.size,
-      ...(lang === 'en' ? item.en : item.ja)
+      ...(lang === 'en' ? item.en : item.ja),
     }));
     res.status(200).json(localizedStrongPoints);
   } catch (error) {
