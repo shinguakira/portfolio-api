@@ -9,6 +9,8 @@ This project is a RESTful API built with Express.js and TypeScript. It serves po
 - Node.js
 - Express.js
 - TypeScript
+- AWS Lambda (Serverless Framework)
+- Vercel
 
 ## Directory Structure
 
@@ -33,3 +35,35 @@ This project is a RESTful API built with Express.js and TypeScript. It serves po
 - `npm run build`: Compiles the TypeScript source code into JavaScript in the `dist/` directory.
 - `npm run start`: Starts the production server from the compiled code in `dist/`.
 - `npm run test`: Runs tests using Jest.
+
+## Deployment Information
+
+### Deployed Endpoints
+
+#### AWS Lambda (Serverless Framework)
+- **Base URL**: https://s55mfd704a.execute-api.us-east-1.amazonaws.com/dev
+- **Important Note**: The `/dev` stage name is required for all AWS API Gateway endpoints
+- **Main Endpoint**: https://s55mfd704a.execute-api.us-east-1.amazonaws.com/dev/api/profile
+
+#### Vercel
+- **Base URL**: https://portfolio-mifikniwe-akirashingus-projects.vercel.app
+- **Main Endpoint**: https://portfolio-mifikniwe-akirashingus-projects.vercel.app/api/profile
+
+### Deployment Process
+
+#### AWS Lambda
+```bash
+# Build the application
+npm run build
+
+# Deploy to AWS
+serverless deploy
+```
+
+#### Vercel
+```bash
+# Build and deploy to Vercel
+vercel --prod
+```
+
+See `DEPLOYMENT.md` for a complete list of all endpoints and verification steps.
