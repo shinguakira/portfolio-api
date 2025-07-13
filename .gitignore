@@ -91,3 +91,7 @@ Desktop.ini
 /tmp
 
 .vercel
+/.serverless/cloudformation-template-create-stack.json
+/.serverless/cloudformation-template-update-stack.json
+/.serverless/portfolio-api.zip
+/.serverless/serverless-state.json

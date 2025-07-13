@@ -12,6 +12,8 @@ const bankingAppPic = '/images/projects/banking-app.png'; // picture for banking
 const typingGamePic = '/images/projects/typing-game.png'; // picture for typing game
 const TwodRpgPic = '/images/projects/2d-rpg-react.png'; // picture for 2d rpg
 const ragChatBotAkiraShinguPic = '/images/projects/rag-chatbot-akirashingu.jpg'; // picture for rag chatbot akira shingu
+const countryAppPic = '/images/projects/country-app.png'; // picture for country app
+const portfolioApiPic = '/images/projects/portfolio-api.png'; // picture for portfolio api
 
 export type ProjectContent = {
   title: string;
@@ -100,24 +102,24 @@ I'm learning about the characteristics and optimization of libraries that I migh
   {
     technologies: ['TypeScript', 'Hono.js', 'AWS Lambda'],
     ja: {
-      title: '神宮章情報取得API(開発中)',
+      title: '神宮章情報取得API',
       description: `神宮章情報取得API
 ポートフォリオを別パターン作成や、履歴書作成処理のために、メンテナンス時間削減のため、共通に使用できるAPI
 データはDBなしでjsonで定義。
 `,
-      image: onDevelopingPic,
-      githubUrl: '',
-      liveUrl: '',
+      image: portfolioApiPic,
+      githubUrl: 'https://github.com/shinguakira/portfolio-api',
+      liveUrl: 'https://portfolio-api-ten-delta.vercel.app/',
     },
     en: {
-      title: 'Akira Shingu Information API (In Development)',
+      title: 'Akira Shingu Information API',
       description: `An API for retrieving information about Akira Shingu.
 Created to reduce maintenance time for portfolio creation and resume processing.
 Data is defined in JSON without a database.
 `,
-      image: onDevelopingPic,
-      githubUrl: '',
-      liveUrl: '',
+      image: portfolioApiPic,
+      githubUrl: 'https://github.com/shinguakira/portfolio-api',
+      liveUrl: 'https://portfolio-api-ten-delta.vercel.app/',
     },
   },
   {
@@ -130,23 +132,23 @@ Data is defined in JSON without a database.
       'lucide-react',
     ],
     ja: {
-      title: '国検索アプリ(開発中)',
+      title: '国検索アプリ',
       description: `国検索アプリ
 公開APIを使用して国情報を取得し、国名を検索するアプリ。
 タイピングゲームと紐づけたり、国名検索だけでなくより細かい、州や県、市などを検索する実装も検討中
 `,
-      image: onDevelopingPic,
-      githubUrl: '',
-      liveUrl: '',
+      image: countryAppPic,
+      githubUrl: 'https://github.com/shinguakira/country-app-remix',
+      liveUrl: 'https://country-app-remix.vercel.app/',
     },
     en: {
-      title: 'Country Search App (In Development)',
+      title: 'Country Search App',
       description: `An application that retrieves and searches for country information using a public API.
 Considering implementations to link with typing games and search for more detailed information such as states, prefectures, and cities.
 `,
-      image: onDevelopingPic,
-      githubUrl: '',
-      liveUrl: '',
+      image: countryAppPic,
+      githubUrl: 'https://github.com/shinguakira/country-app-remix',
+      liveUrl: 'https://country-app-remix.vercel.app/',
     },
   },
   {

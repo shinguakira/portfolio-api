@@ -27,18 +27,24 @@ app.get('/', (req, res) => {
     message: 'Welcome to Shingu Akira Portfolio API',
     version: process.env.npm_package_version || '1.0.0',
     endpoints: [
-      { path: '/health', description: 'Health check endpoint' },
-      { path: '/api/profile', description: 'Get profile information' },
-      { path: '/api/skills', description: 'Get skills information' },
-      { path: '/api/projects', description: 'Get projects information' },
-      { path: '/api/experience', description: 'Get work experience information' },
-      { path: '/api/education', description: 'Get education history' },
-      { path: '/api/certifications', description: 'Get certification information' },
-      { path: '/api/faqs', description: 'Get FAQs' },
-      { path: '/api/links', description: 'Get important links' },
-      { path: '/api/strong-points', description: 'Get strong points information' },
-      { path: '/api/changelogs', description: 'Get changelog history' },
-    ]
+      {path: '/health', description: 'Health check endpoint'},
+      {path: '/api/profile', description: 'Get profile information'},
+      {path: '/api/skills', description: 'Get skills information'},
+      {path: '/api/projects', description: 'Get projects information'},
+      {path: '/api/experience', description: 'Get work experience information'},
+      {path: '/api/education', description: 'Get education history'},
+      {
+        path: '/api/certifications',
+        description: 'Get certification information',
+      },
+      {path: '/api/faqs', description: 'Get FAQs'},
+      {path: '/api/links', description: 'Get important links'},
+      {
+        path: '/api/strong-points',
+        description: 'Get strong points information',
+      },
+      {path: '/api/changelogs', description: 'Get changelog history'},
+    ],
   });
 });
 
