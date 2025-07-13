@@ -25,3 +25,12 @@ functions:
 
 plugins:
   - serverless-offline # For local development
+
+package:
+  individually: false
+  patterns:
+    - '!**'
+    - 'dist/**'
+    - 'node_modules/**'
+    - 'package.json'
+    - 'package-lock.json'
