@@ -1,0 +1,475 @@
+name: API Endpoint Tests
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Run daily at midnight UTC
+  workflow_dispatch:  # Allow manual triggering
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - '.github/workflows/api-tests.yml'
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'src/**'
+      - '.github/workflows/api-tests.yml'
+
+jobs:
+  code-quality:
+    name: Code Quality Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run linting
+        run: npm run lint
+        
+      - name: Run formatting check
+        run: npm run format:check
+        
+  run-tests:
+    name: Run Vitest Tests
+    runs-on: ubuntu-latest
+    needs: code-quality
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run tests
+        run: npm run test
+        
+  test-deployed-endpoints:
+    name: Test Deployed API Endpoints
+    runs-on: ubuntu-latest
+    needs: run-tests
+    
+    strategy:
+      matrix:
+        deployment: ['vercel', 'aws']
+        include:
+          - deployment: vercel
+            base_url: https://portfolio-api-ten-delta.vercel.app
+          - deployment: aws
+            base_url: https://s55mfd704a.execute-api.us-east-1.amazonaws.com/dev
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Wait for deployment (Allow time for fresh deployments to stabilize)
+        run: sleep 30s
+        if: github.event_name == 'push'
+      
+      - name: Install test dependencies
+        run: npm install -g newman
+
+      - name: Create Postman collection file
+        run: |
+          cat > portfolio-api-tests.json << 'EOL'
+          {
+            "info": {
+              "name": "Portfolio API Tests",
+              "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+            },
+            "item": [
+              {
+                "name": "Health Check",
+                "request": {
+                  "method": "GET",
+                  "url": "{{baseUrl}}/health"
+                },
+                "event": [
+                  {
+                    "listen": "test",
+                    "script": {
+                      "exec": [
+                        "pm.test('Status code is 200', function() {",
+                        "  pm.response.to.have.status(200);",
+                        "});",
+                        "pm.test('Response is valid JSON', function() {",
+                        "  pm.response.to.be.json;",
+                        "});",
+                        "pm.test('Has status field', function() {",
+                        "  const responseJson = pm.response.json();",
+                        "  pm.expect(responseJson).to.have.property('status');",
+                        "  pm.expect(responseJson.status).to.equal('OK');",
+                        "});"
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "Root Path",
+                "request": {
+                  "method": "GET",
+                  "url": "{{baseUrl}}/"
+                },
+                "event": [
+                  {
+                    "listen": "test",
+                    "script": {
+                      "exec": [
+                        "pm.test('Status code is 200', function() {",
+                        "  pm.response.to.have.status(200);",
+                        "});",
+                        "pm.test('Response is valid JSON', function() {",
+                        "  pm.response.to.be.json;",
+                        "});",
+                        "pm.test('Has endpoints array', function() {",
+                        "  const responseJson = pm.response.json();",
+                        "  pm.expect(responseJson).to.have.property('endpoints');",
+                        "  pm.expect(responseJson.endpoints).to.be.an('array');",
+                        "});"
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "Profile",
+                "request": {
+                  "method": "GET",
+                  "url": "{{baseUrl}}/api/profile"
+                },
+                "event": [
+                  {
+                    "listen": "test",
+                    "script": {
+                      "exec": [
+                        "pm.test('Status code is 200', function() {",
+                        "  pm.response.to.have.status(200);",
+                        "});",
+                        "pm.test('Response is valid JSON', function() {",
+                        "  pm.response.to.be.json;",
+                        "});",
+                        "pm.test('Has required fields', function() {",
+                        "  const responseJson = pm.response.json();",
+                        "  pm.expect(responseJson).to.have.property('name');",
+                        "});"
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "Skills",
+                "request": {
+                  "method": "GET",
+                  "url": "{{baseUrl}}/api/skills"
+                },
+                "event": [
+                  {
+                    "listen": "test",
+                    "script": {
+                      "exec": [
+                        "pm.test('Status code is 200', function() {",
+                        "  pm.response.to.have.status(200);",
+                        "});",
+                        "pm.test('Response is valid JSON', function() {",
+                        "  pm.response.to.be.json;",
+                        "});",
+                        "pm.test('Response is an array', function() {",
+                        "  const responseJson = pm.response.json();",
+                        "  pm.expect(responseJson).to.be.an('array');",
+                        "  pm.expect(responseJson.length).to.be.greaterThan(0);",
+                        "});"
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "Projects",
+                "request": {
+                  "method": "GET",
+                  "url": "{{baseUrl}}/api/projects"
+                },
+                "event": [
+                  {
+                    "listen": "test",
+                    "script": {
+                      "exec": [
+                        "pm.test('Status code is 200', function() {",
+                        "  pm.response.to.have.status(200);",
+                        "});",
+                        "pm.test('Response is valid JSON', function() {",
+                        "  pm.response.to.be.json;",
+                        "});",
+                        "pm.test('Response is an array', function() {",
+                        "  const responseJson = pm.response.json();",
+                        "  pm.expect(responseJson).to.be.an('array');",
+                        "});"
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "Experience",
+                "request": {
+                  "method": "GET",
+                  "url": "{{baseUrl}}/api/experience"
+                },
+                "event": [
+                  {
+                    "listen": "test",
+                    "script": {
+                      "exec": [
+                        "pm.test('Status code is 200', function() {",
+                        "  pm.response.to.have.status(200);",
+                        "});",
+                        "pm.test('Response is valid JSON', function() {",
+                        "  pm.response.to.be.json;",
+                        "});",
+                        "pm.test('Response is an array', function() {",
+                        "  const responseJson = pm.response.json();",
+                        "  pm.expect(responseJson).to.be.an('array');",
+                        "});"
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "Education",
+                "request": {
+                  "method": "GET",
+                  "url": "{{baseUrl}}/api/education"
+                },
+                "event": [
+                  {
+                    "listen": "test",
+                    "script": {
+                      "exec": [
+                        "pm.test('Status code is 200', function() {",
+                        "  pm.response.to.have.status(200);",
+                        "});",
+                        "pm.test('Response is valid JSON', function() {",
+                        "  pm.response.to.be.json;",
+                        "});",
+                        "pm.test('Response is an array', function() {",
+                        "  const responseJson = pm.response.json();",
+                        "  pm.expect(responseJson).to.be.an('array');",
+                        "});"
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "Certifications",
+                "request": {
+                  "method": "GET",
+                  "url": "{{baseUrl}}/api/certifications"
+                },
+                "event": [
+                  {
+                    "listen": "test",
+                    "script": {
+                      "exec": [
+                        "pm.test('Status code is 200', function() {",
+                        "  pm.response.to.have.status(200);",
+                        "});",
+                        "pm.test('Response is valid JSON', function() {",
+                        "  pm.response.to.be.json;",
+                        "});",
+                        "pm.test('Response is an array', function() {",
+                        "  const responseJson = pm.response.json();",
+                        "  pm.expect(responseJson).to.be.an('array');",
+                        "});"
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "FAQs",
+                "request": {
+                  "method": "GET",
+                  "url": "{{baseUrl}}/api/faqs"
+                },
+                "event": [
+                  {
+                    "listen": "test",
+                    "script": {
+                      "exec": [
+                        "pm.test('Status code is 200', function() {",
+                        "  pm.response.to.have.status(200);",
+                        "});",
+                        "pm.test('Response is valid JSON', function() {",
+                        "  pm.response.to.be.json;",
+                        "});",
+                        "pm.test('Response is an array', function() {",
+                        "  const responseJson = pm.response.json();",
+                        "  pm.expect(responseJson).to.be.an('array');",
+                        "});"
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "Links",
+                "request": {
+                  "method": "GET",
+                  "url": "{{baseUrl}}/api/links"
+                },
+                "event": [
+                  {
+                    "listen": "test",
+                    "script": {
+                      "exec": [
+                        "pm.test('Status code is 200', function() {",
+                        "  pm.response.to.have.status(200);",
+                        "});",
+                        "pm.test('Response is valid JSON', function() {",
+                        "  pm.response.to.be.json;",
+                        "});",
+                        "pm.test('Response contains items', function() {",
+                        "  const responseJson = pm.response.json();",
+                        "  pm.expect(responseJson).to.not.be.empty;",
+                        "});"
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "Strong Points",
+                "request": {
+                  "method": "GET",
+                  "url": "{{baseUrl}}/api/strong-points"
+                },
+                "event": [
+                  {
+                    "listen": "test",
+                    "script": {
+                      "exec": [
+                        "pm.test('Status code is 200', function() {",
+                        "  pm.response.to.have.status(200);",
+                        "});",
+                        "pm.test('Response is valid JSON', function() {",
+                        "  pm.response.to.be.json;",
+                        "});",
+                        "pm.test('Response is an array', function() {",
+                        "  const responseJson = pm.response.json();",
+                        "  pm.expect(responseJson).to.be.an('array');",
+                        "});"
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "Changelogs",
+                "request": {
+                  "method": "GET",
+                  "url": "{{baseUrl}}/api/changelogs"
+                },
+                "event": [
+                  {
+                    "listen": "test",
+                    "script": {
+                      "exec": [
+                        "pm.test('Status code is 200', function() {",
+                        "  pm.response.to.have.status(200);",
+                        "});",
+                        "pm.test('Response is valid JSON', function() {",
+                        "  pm.response.to.be.json;",
+                        "});",
+                        "pm.test('Response is an array', function() {",
+                        "  const responseJson = pm.response.json();",
+                        "  pm.expect(responseJson).to.be.an('array');",
+                        "});"
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+          EOL
+      
+      - name: Run API tests
+        id: api_tests
+        continue-on-error: true
+        run: |
+          echo "Testing ${{ matrix.deployment }} deployment at ${{ matrix.base_url }}"
+          newman run portfolio-api-tests.json --env-var "baseUrl=${{ matrix.base_url }}" --reporters cli,json --reporter-json-export test-results.json
+          
+          # Extract test statistics
+          TOTAL_TESTS=$(jq '.run.stats.tests' test-results.json)
+          PASSED_TESTS=$(jq '.run.stats.tests - .run.stats.failures' test-results.json)
+          FAILURES=$(jq '.run.failures' test-results.json)
+          
+          echo "::set-output name=total_tests::${TOTAL_TESTS}"
+          echo "::set-output name=passed_tests::${PASSED_TESTS}"
+          echo "::set-output name=has_failures::$([ "$FAILURES" == "[]" ] && echo "false" || echo "true")"
+          
+          # Show failed tests in the logs
+          if [ "$FAILURES" != "[]" ]; then
+            echo "Failed tests:"
+            jq -r '.run.failures[] | "- " + .parent + "/" + .name + ": " + .error.message' test-results.json
+            exit 1
+          fi
+
+      - name: Create summary
+        if: always()
+        run: |
+          echo "## API Test Results for ${{ matrix.deployment }}" >> $GITHUB_STEP_SUMMARY
+          echo "Base URL: ${{ matrix.base_url }}" >> $GITHUB_STEP_SUMMARY
+          
+          if [ -f test-results.json ]; then
+            # Get test statistics
+            TOTAL_TESTS=$(jq '.run.stats.tests' test-results.json)
+            PASSED_TESTS=$(jq '.run.stats.tests - .run.stats.failures' test-results.json)
+            FAILED_TESTS=$(jq '.run.stats.failures' test-results.json)
+            
+            echo "### Test Summary" >> $GITHUB_STEP_SUMMARY
+            echo "✅ Passed: $PASSED_TESTS" >> $GITHUB_STEP_SUMMARY
+            echo "❌ Failed: $FAILED_TESTS" >> $GITHUB_STEP_SUMMARY
+            echo "📊 Total: $TOTAL_TESTS" >> $GITHUB_STEP_SUMMARY
+            
+            # List failed tests
+            if [ "$(jq '.run.failures' test-results.json)" != "[]" ]; then
+              echo "\n### Failed Tests" >> $GITHUB_STEP_SUMMARY
+              jq -r '.run.failures[] | "- " + .parent + "/" + .name + ": " + .error.message' test-results.json >> $GITHUB_STEP_SUMMARY
+            fi
+            
+            # Add endpoint status (success/failure)
+            echo "\n### Endpoint Status" >> $GITHUB_STEP_SUMMARY
+            jq -r '.run.executions[] | "- " + .item.name + ": " + if .assertions | map(select(.error != null)) | length == 0 then "✅" else "❌" end' test-results.json >> $GITHUB_STEP_SUMMARY
+          else
+            echo "⚠️ No test results found" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          echo "\nTest completed at $(date)" >> $GITHUB_STEP_SUMMARY
