@@ -100,7 +100,7 @@ I'm learning about the characteristics and optimization of libraries that I migh
     },
   },
   {
-    technologies: ['TypeScript', 'Hono.js', 'AWS Lambda'],
+    technologies: ['TypeScript', 'Express.js', 'AWS Lambda'],
     ja: {
       title: '神宮章情報取得API',
       description: `神宮章情報取得API
