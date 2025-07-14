@@ -7,9 +7,9 @@ describe('GET /api/projects', () => {
   it('should respond with a 200 status code and the Japanese projects data by default', async () => {
     const response = await request(app).get('/api/projects');
     expect(response.status).toBe(200);
-    const expectedProjects = projects.map(project => ({
+    const expectedProjects = projects.map((project) => ({
       technologies: project.technologies,
-      ...project.ja
+      ...project.ja,
     }));
     expect(response.body).toEqual(expectedProjects);
   });
@@ -17,9 +17,9 @@ describe('GET /api/projects', () => {
   it('should respond with a 200 status code and the English projects data when lang=en', async () => {
     const response = await request(app).get('/api/projects?lang=en');
     expect(response.status).toBe(200);
-    const expectedProjects = projects.map(project => ({
+    const expectedProjects = projects.map((project) => ({
       technologies: project.technologies,
-      ...project.en
+      ...project.en,
     }));
     expect(response.body).toEqual(expectedProjects);
   });

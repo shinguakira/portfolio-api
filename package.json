@@ -10,6 +10,7 @@
     "dev": "npx tsx src/index.ts",
     "dev:watch": "npx tsx watch src/index.ts",
     "test": "vitest",
+    "test:coverage": "vitest run --coverage",
     "lint": "eslint src/**/*.ts",
     "format": "prettier --write \"src/**/*.ts\"",
     "format:check": "prettier --check \"src/**/*.ts\"",

@@ -80,8 +80,42 @@ export const workExperiences: MultilingualWorkExperience[] = [
         'I worked in an environment using various libraries and tools, including Sentry for monitoring, CodeRabbit for code reviews in CI/CD called by GitHub Actions, and Metabase for analyzing user trends.',
         'I gained experience implementing Next.js with SEO considerations for a B2C service.',
         'This was my first time working in an environment with designers, and I reduced misunderstandings by communicating using color names defined in Figma.',
-        'Since design proposals weren\'t available for all pages and sections, I created multiple mock patterns and proposed designs to designers and managers.',
+        "Since design proposals weren't available for all pages and sections, I created multiple mock patterns and proposed designs to designers and managers.",
       ],
+    },
+  },
+  {
+    company: '',
+    period: '2025年7月 - 現在',
+    teamSize: '2人',
+    manMonth: '',
+    technologies: [
+      'React',
+      'TypeScript',
+      'tailwindcss',
+      'shadcn',
+      'Electron',
+      'Node.js',
+      'vite',
+      'Python',
+    ],
+    ja: {
+      projectOverview: '医療ステレオカメラ自動評定システム',
+      role: 'フルスタック開発者',
+      description: [
+        'ReactベースでのElectronでのデスクトップ開発',
+        '外部のPythonモジュールおよび、exeモジュールを実行するためのインターフェース開発',
+      ],
+      archivement: ['未定'],
+    },
+    en: {
+      projectOverview: 'Medical Stereo Camera Automatic Evaluation System',
+      role: 'Full Stack Developer',
+      description: [
+        'Desktop development with React',
+        'Development of interfaces to run external Python modules and exe modules',
+      ],
+      archivement: ['未定'],
     },
   },
   {
@@ -153,7 +187,7 @@ export const workExperiences: MultilingualWorkExperience[] = [
         'Release is currently in integration testing and penetration testing phase. No issues as of December 1',
       ],
       archivement: [
-        'Similar to the previous project, understood the specifications, assigned tasks according to each person\'s abilities, and contributed to development',
+        "Similar to the previous project, understood the specifications, assigned tasks according to each person's abilities, and contributed to development",
       ],
     },
   },
@@ -209,7 +243,7 @@ export const workExperiences: MultilingualWorkExperience[] = [
         'Release is currently in integration testing and penetration testing phase. No issues as of December 1',
       ],
       archivement: [
-        'Similar to the previous project, understood the specifications, assigned tasks according to each person\'s abilities, and contributed to development',
+        "Similar to the previous project, understood the specifications, assigned tasks according to each person's abilities, and contributed to development",
       ],
     },
   },
@@ -240,7 +274,7 @@ export const workExperiences: MultilingualWorkExperience[] = [
         'B2B service',
       ],
       archivement: [
-        'As an initial team member, completed a project estimated at 15 person-months with just 2 people, despite no one in the company having the relevant technology stack or business knowledge. Finished with only minor issues and without unnecessary additional staffing. The efficiency created capacity for a member who joined a month later to develop additional unplanned features and screens, completing and releasing them simultaneously, contributing to the project\'s success. Quickly understood the gas company\'s business flow by asking questions to the client, identified additional requirements, assessed each person\'s abilities, and assigned tasks according to requests.',
+        "As an initial team member, completed a project estimated at 15 person-months with just 2 people, despite no one in the company having the relevant technology stack or business knowledge. Finished with only minor issues and without unnecessary additional staffing. The efficiency created capacity for a member who joined a month later to develop additional unplanned features and screens, completing and releasing them simultaneously, contributing to the project's success. Quickly understood the gas company's business flow by asking questions to the client, identified additional requirements, assessed each person's abilities, and assigned tasks according to requests.",
       ],
     },
   },
@@ -288,7 +322,7 @@ export const workExperiences: MultilingualWorkExperience[] = [
         'Collaborative development at Hitachi Industry & Control Solutions, Ltd. workplace',
       ],
       archivement: [
-        'Despite joining the project midway, understood the software source code and specifications, contributing to development. Participated as a software representative in the Technical Management Center (TMC) software quality check, which determined the project\'s approval, and resolved issues that occurred on-site.',
+        "Despite joining the project midway, understood the software source code and specifications, contributing to development. Participated as a software representative in the Technical Management Center (TMC) software quality check, which determined the project's approval, and resolved issues that occurred on-site.",
       ],
     },
   },
@@ -380,7 +414,7 @@ export const workExperiences: MultilingualWorkExperience[] = [
         'Translated customer messages for a company selling parallel imported smartphones on Amazon and other online shopping platforms',
         'Inspection and temporary storage of defective products',
         'Creation of Japanese reply templates',
-        'Phone support, handling calls to the Amazon seller\'s representative number',
+        "Phone support, handling calls to the Amazon seller's representative number",
       ],
       archivement: [''],
     },
