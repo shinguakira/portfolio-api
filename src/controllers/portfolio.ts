@@ -116,10 +116,16 @@ export const getChangelogs = (req: Request, res: Response) => {
     const localizedChangelogs = changelogs.map((item) => ({
       version: item.version,
       date: item.date,
-      changes: item.changes.map((change: {type: any; en: any; ja: any}) => ({
-        type: change.type,
-        ...(lang === 'en' ? change.en : change.ja),
-      })),
+      changes: item.changes.map(
+        (change: {
+          type: string;
+          en: {description: string};
+          ja: {description: string};
+        }) => ({
+          type: change.type,
+          ...(lang === 'en' ? change.en : change.ja),
+        })
+      ),
     }));
     res.status(200).json(localizedChangelogs);
   } catch (error) {
