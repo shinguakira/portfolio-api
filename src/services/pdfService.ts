@@ -188,69 +188,69 @@ const createPortfolioPDF = ({
 
   // Switch between different format patterns
   switch (format) {
-  case 'compact':
-    return createCompactPDF({
-      lang,
-      profileData,
-      localizedProjects,
-      localizedExperience,
-      localizedEducation,
-      localizedCertifications,
-      localizedStrongPoints,
-      includeProjects,
-      includeExperience,
-      includeCertifications,
-      includeEducation,
-    });
-  case 'executive':
-    return createExecutivePDF({
-      lang,
-      profileData,
-      localizedExperience,
-    });
-  case 'technical':
-    return createTechnicalPDF({
-      lang,
-      profileData,
-      localizedProjects,
-    });
-  case 'academic':
-    return createAcademicPDF({
-      lang,
-      profileData,
-      localizedProjects,
-      localizedExperience,
-      localizedEducation,
-      localizedCertifications,
-      localizedStrongPoints,
-      includeProjects,
-      includeExperience,
-      includeCertifications,
-      includeEducation,
-    });
-  case 'modern':
-    return createModernPDF({
-      lang,
-      profileData,
-      _localizedProjects: localizedProjects,
-      localizedExperience,
-      _localizedCertifications: localizedCertifications,
-    });
-  case 'standard':
-  default:
-    return createStandardPDF({
-      lang,
-      profileData,
-      localizedProjects,
-      localizedExperience,
-      localizedEducation,
-      localizedCertifications,
-      localizedStrongPoints,
-      includeProjects,
-      includeExperience,
-      includeCertifications,
-      includeEducation,
-    });
+    case 'compact':
+      return createCompactPDF({
+        lang,
+        profileData,
+        localizedProjects,
+        localizedExperience,
+        localizedEducation,
+        localizedCertifications,
+        localizedStrongPoints,
+        includeProjects,
+        includeExperience,
+        includeCertifications,
+        includeEducation,
+      });
+    case 'executive':
+      return createExecutivePDF({
+        lang,
+        profileData,
+        localizedExperience,
+      });
+    case 'technical':
+      return createTechnicalPDF({
+        lang,
+        profileData,
+        localizedProjects,
+      });
+    case 'academic':
+      return createAcademicPDF({
+        lang,
+        profileData,
+        localizedProjects,
+        localizedExperience,
+        localizedEducation,
+        localizedCertifications,
+        localizedStrongPoints,
+        includeProjects,
+        includeExperience,
+        includeCertifications,
+        includeEducation,
+      });
+    case 'modern':
+      return createModernPDF({
+        lang,
+        profileData,
+        _localizedProjects: localizedProjects,
+        localizedExperience,
+        _localizedCertifications: localizedCertifications,
+      });
+    case 'standard':
+    default:
+      return createStandardPDF({
+        lang,
+        profileData,
+        localizedProjects,
+        localizedExperience,
+        localizedEducation,
+        localizedCertifications,
+        localizedStrongPoints,
+        includeProjects,
+        includeExperience,
+        includeCertifications,
+        includeEducation,
+      });
   }
 };
 
@@ -360,48 +360,48 @@ const createStandardPDF = ({
       // Professional Experience (if enabled)
       ...(includeExperience
         ? [
-          React.createElement(
-            View,
-            {key: 'experience', style: styles.section},
-            [
-              React.createElement(
-                Text,
-                {style: styles.sectionTitle},
-                lang === 'en' ? 'Professional Experience' : '職務経歴'
-              ),
-              ...localizedExperience
-                .slice(0, 2)
-                .map((exp: WorkExperience, index: number) =>
-                  React.createElement(
-                    View,
-                    {key: index, style: styles.experienceItem},
-                    [
-                      React.createElement(
-                        Text,
-                        {style: styles.boldText},
-                        `${exp.role} at ${exp.company}`
-                      ),
-                      React.createElement(
-                        Text,
-                        {style: styles.text},
-                        `${exp.period} | Team: ${exp.teamSize} | ${exp.manMonth} months`
-                      ),
-                      React.createElement(
-                        Text,
-                        {style: styles.text},
-                        exp.projectOverview
-                      ),
-                      React.createElement(
-                        Text,
-                        {style: styles.text},
-                        `Technologies: ${exp.technologies.join(', ')}`
-                      ),
-                    ]
-                  )
+            React.createElement(
+              View,
+              {key: 'experience', style: styles.section},
+              [
+                React.createElement(
+                  Text,
+                  {style: styles.sectionTitle},
+                  lang === 'en' ? 'Professional Experience' : '職務経歴'
                 ),
-            ]
-          ),
-        ]
+                ...localizedExperience
+                  .slice(0, 2)
+                  .map((exp: WorkExperience, index: number) =>
+                    React.createElement(
+                      View,
+                      {key: index, style: styles.experienceItem},
+                      [
+                        React.createElement(
+                          Text,
+                          {style: styles.boldText},
+                          `${exp.role} at ${exp.company}`
+                        ),
+                        React.createElement(
+                          Text,
+                          {style: styles.text},
+                          `${exp.period} | Team: ${exp.teamSize} | ${exp.manMonth} months`
+                        ),
+                        React.createElement(
+                          Text,
+                          {style: styles.text},
+                          exp.projectOverview
+                        ),
+                        React.createElement(
+                          Text,
+                          {style: styles.text},
+                          `Technologies: ${exp.technologies.join(', ')}`
+                        ),
+                      ]
+                    )
+                  ),
+              ]
+            ),
+          ]
         : []),
     ]),
 
@@ -410,117 +410,117 @@ const createStandardPDF = ({
       // Projects (if enabled)
       ...(includeProjects
         ? [
-          React.createElement(View, {style: styles.section}, [
-            React.createElement(
-              Text,
-              {style: styles.sectionTitle},
-              lang === 'en' ? 'Key Projects' : '主要プロジェクト'
-            ),
-            ...localizedProjects
-              .slice(0, 4)
-              .map((project: Project, index: number) =>
-                React.createElement(
-                  View,
-                  {key: index, style: styles.projectItem},
-                  [
-                    React.createElement(
-                      Text,
-                      {style: styles.boldText},
-                      project.title
-                    ),
-                    React.createElement(
-                      Text,
-                      {style: styles.text},
-                      project.description
-                    ),
-                    React.createElement(
-                      Text,
-                      {style: styles.text},
-                      `Technologies: ${project.technologies.join(', ')}`
-                    ),
-                  ]
-                )
+            React.createElement(View, {style: styles.section}, [
+              React.createElement(
+                Text,
+                {style: styles.sectionTitle},
+                lang === 'en' ? 'Key Projects' : '主要プロジェクト'
               ),
-          ]),
-        ]
+              ...localizedProjects
+                .slice(0, 4)
+                .map((project: Project, index: number) =>
+                  React.createElement(
+                    View,
+                    {key: index, style: styles.projectItem},
+                    [
+                      React.createElement(
+                        Text,
+                        {style: styles.boldText},
+                        project.title
+                      ),
+                      React.createElement(
+                        Text,
+                        {style: styles.text},
+                        project.description
+                      ),
+                      React.createElement(
+                        Text,
+                        {style: styles.text},
+                        `Technologies: ${project.technologies.join(', ')}`
+                      ),
+                    ]
+                  )
+                ),
+            ]),
+          ]
         : []),
 
       // Education (if enabled)
       ...(includeEducation
         ? [
-          React.createElement(View, {style: styles.section}, [
-            React.createElement(
-              Text,
-              {style: styles.sectionTitle},
-              lang === 'en' ? 'Education' : '学歴'
-            ),
-            ...localizedEducation.map(
-              (edu: EducationHistoryProps, index: number) =>
-                React.createElement(
-                  View,
-                  {key: index, style: styles.educationItem},
-                  [
-                    React.createElement(
-                      Text,
-                      {style: styles.boldText},
-                      `${edu.school} - ${edu.department}`
-                    ),
-                    React.createElement(
-                      Text,
-                      {style: styles.text},
-                      `(${edu.startYear} - ${edu.endYear})`
-                    ),
-                    React.createElement(
-                      Text,
-                      {style: styles.text},
-                      edu.description
-                    ),
-                  ]
-                )
-            ),
-          ]),
-        ]
+            React.createElement(View, {style: styles.section}, [
+              React.createElement(
+                Text,
+                {style: styles.sectionTitle},
+                lang === 'en' ? 'Education' : '学歴'
+              ),
+              ...localizedEducation.map(
+                (edu: EducationHistoryProps, index: number) =>
+                  React.createElement(
+                    View,
+                    {key: index, style: styles.educationItem},
+                    [
+                      React.createElement(
+                        Text,
+                        {style: styles.boldText},
+                        `${edu.school} - ${edu.department}`
+                      ),
+                      React.createElement(
+                        Text,
+                        {style: styles.text},
+                        `(${edu.startYear} - ${edu.endYear})`
+                      ),
+                      React.createElement(
+                        Text,
+                        {style: styles.text},
+                        edu.description
+                      ),
+                    ]
+                  )
+              ),
+            ]),
+          ]
         : []),
 
       // Certifications (if enabled)
       ...(includeCertifications
         ? [
-          React.createElement(View, {style: styles.section}, [
-            React.createElement(
-              Text,
-              {style: styles.sectionTitle},
-              lang === 'en' ? 'Certifications' : '資格・認定'
-            ),
-            ...localizedCertifications.map(
-              (cert: CertificationItemProps, index: number) =>
-                React.createElement(
-                  View,
-                  {key: index, style: styles.certificationItem},
-                  [
-                    React.createElement(
-                      Text,
-                      {style: styles.boldText},
-                      cert.name
-                    ),
-                    React.createElement(
-                      Text,
-                      {style: styles.text},
-                      `${cert.organization} | ${cert.date}`
-                    ),
-                    ...(cert.verifyLink
-                      ? [
-                        React.createElement(
-                          Text,
-                          {style: styles.text},
-                          cert.verifyLink
-                        ),
-                      ]
-                      : []),
-                  ]
-                )
-            ),
-          ]),
-        ]
+            React.createElement(View, {style: styles.section}, [
+              React.createElement(
+                Text,
+                {style: styles.sectionTitle},
+                lang === 'en' ? 'Certifications' : '資格・認定'
+              ),
+              ...localizedCertifications.map(
+                (cert: CertificationItemProps, index: number) =>
+                  React.createElement(
+                    View,
+                    {key: index, style: styles.certificationItem},
+                    [
+                      React.createElement(
+                        Text,
+                        {style: styles.boldText},
+                        cert.name
+                      ),
+                      React.createElement(
+                        Text,
+                        {style: styles.text},
+                        `${cert.organization} | ${cert.date}`
+                      ),
+                      ...(cert.verifyLink
+                        ? [
+                            React.createElement(
+                              Text,
+                              {style: styles.text},
+                              cert.verifyLink
+                            ),
+                          ]
+                        : []),
+                    ]
+                  )
+              ),
+            ]),
+          ]
         : []),
     ]),
   ]);
@@ -611,42 +611,71 @@ const createCompactPDF = ({
         // Compact Experience (if enabled)
         ...(includeExperience
           ? [
-            React.createElement(
-              View,
-              {key: 'compact-experience', style: {marginBottom: 10}},
-              [
-                React.createElement(
-                  Text,
-                  {
-                    style: {
-                      ...styles.sectionTitle,
-                      fontSize: 12,
-                      marginBottom: 5,
+              React.createElement(
+                View,
+                {key: 'compact-experience', style: {marginBottom: 10}},
+                [
+                  React.createElement(
+                    Text,
+                    {
+                      style: {
+                        ...styles.sectionTitle,
+                        fontSize: 12,
+                        marginBottom: 5,
+                      },
                     },
-                  },
-                  lang === 'en' ? 'Experience' : '経験'
-                ),
-                ...localizedExperience
-                  .slice(0, 3)
-                  .map((exp: WorkExperience, index: number) =>
-                    React.createElement(
-                      Text,
-                      {key: index, style: {fontSize: 9, marginBottom: 3}},
-                      `${exp.role} at ${exp.company} (${exp.period})`
-                    )
+                    lang === 'en' ? 'Experience' : '経験'
                   ),
-              ]
-            ),
-          ]
+                  ...localizedExperience
+                    .slice(0, 3)
+                    .map((exp: WorkExperience, index: number) =>
+                      React.createElement(
+                        Text,
+                        {key: index, style: {fontSize: 9, marginBottom: 3}},
+                        `${exp.role} at ${exp.company} (${exp.period})`
+                      )
+                    ),
+                ]
+              ),
+            ]
           : []),
 
         // Compact Projects (if enabled)
         ...(includeProjects
           ? [
-            React.createElement(
-              View,
-              {key: 'compact-projects', style: {marginBottom: 10}},
-              [
+              React.createElement(
+                View,
+                {key: 'compact-projects', style: {marginBottom: 10}},
+                [
+                  React.createElement(
+                    Text,
+                    {
+                      style: {
+                        ...styles.sectionTitle,
+                        fontSize: 12,
+                        marginBottom: 5,
+                      },
+                    },
+                    lang === 'en' ? 'Key Projects' : '主要プロジェクト'
+                  ),
+                  ...localizedProjects
+                    .slice(0, 3)
+                    .map((project: Project, index: number) =>
+                      React.createElement(
+                        Text,
+                        {key: index, style: {fontSize: 9, marginBottom: 3}},
+                        `${project.title} - ${project.technologies.slice(0, 3).join(', ')}`
+                      )
+                    ),
+                ]
+              ),
+            ]
+          : []),
+
+        // Compact Certifications (if enabled)
+        ...(includeCertifications
+          ? [
+              React.createElement(View, {key: 'compact-certifications'}, [
                 React.createElement(
                   Text,
                   {
@@ -656,48 +685,19 @@ const createCompactPDF = ({
                       marginBottom: 5,
                     },
                   },
-                  lang === 'en' ? 'Key Projects' : '主要プロジェクト'
+                  lang === 'en' ? 'Certifications' : '資格'
                 ),
-                ...localizedProjects
-                  .slice(0, 3)
-                  .map((project: Project, index: number) =>
+                ...localizedCertifications
+                  .slice(0, 5)
+                  .map((cert: CertificationItemProps, index: number) =>
                     React.createElement(
                       Text,
-                      {key: index, style: {fontSize: 9, marginBottom: 3}},
-                      `${project.title} - ${project.technologies.slice(0, 3).join(', ')}`
+                      {key: index, style: {fontSize: 9, marginBottom: 2}},
+                      `${cert.name} (${cert.organization}, ${cert.date})`
                     )
                   ),
-              ]
-            ),
-          ]
-          : []),
-
-        // Compact Certifications (if enabled)
-        ...(includeCertifications
-          ? [
-            React.createElement(View, {key: 'compact-certifications'}, [
-              React.createElement(
-                Text,
-                {
-                  style: {
-                    ...styles.sectionTitle,
-                    fontSize: 12,
-                    marginBottom: 5,
-                  },
-                },
-                lang === 'en' ? 'Certifications' : '資格'
-              ),
-              ...localizedCertifications
-                .slice(0, 5)
-                .map((cert: CertificationItemProps, index: number) =>
-                  React.createElement(
-                    Text,
-                    {key: index, style: {fontSize: 9, marginBottom: 2}},
-                    `${cert.name} (${cert.organization}, ${cert.date})`
-                  )
-                ),
-            ]),
-          ]
+              ]),
+            ]
           : []),
       ]
     ),
@@ -1022,12 +1022,12 @@ const createAcademicPDF = ({
                     ),
                     ...(edu.description
                       ? [
-                        React.createElement(
-                          Text,
-                          {style: {fontSize: 11, marginTop: 3}},
-                          edu.description
-                        ),
-                      ]
+                          React.createElement(
+                            Text,
+                            {style: {fontSize: 11, marginTop: 3}},
+                            edu.description
+                          ),
+                        ]
                       : []),
                   ]
                 )
@@ -1070,12 +1070,12 @@ const createAcademicPDF = ({
                     ),
                     ...(cert.verifyLink
                       ? [
-                        React.createElement(
-                          Text,
-                          {style: {fontSize: 10, color: '#0066cc'}},
-                          cert.verifyLink
-                        ),
-                      ]
+                          React.createElement(
+                            Text,
+                            {style: {fontSize: 10, color: '#0066cc'}},
+                            cert.verifyLink
+                          ),
+                        ]
                       : []),
                   ]
                 )
