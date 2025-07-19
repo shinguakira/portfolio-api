@@ -15,7 +15,8 @@ describe('GET /api/experience', () => {
       technologies: item.technologies,
       ...item.ja,
     }));
-    expect(response.body).toEqual(expectedExperience);
+    expect(response.body.message).toBe('Experience data fetched successfully');
+    expect(response.body.data).toEqual(expectedExperience);
   });
 
   it('should respond with a 200 status code and the English experience data when lang=en', async () => {
@@ -29,6 +30,7 @@ describe('GET /api/experience', () => {
       technologies: item.technologies,
       ...item.en,
     }));
-    expect(response.body).toEqual(expectedExperience);
+    expect(response.body.message).toBe('Experience data fetched successfully');
+    expect(response.body.data).toEqual(expectedExperience);
   });
 });

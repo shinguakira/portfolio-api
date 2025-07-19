@@ -12,7 +12,8 @@ describe('GET /api/education', () => {
       endYear: item.endYear,
       ...item.ja,
     }));
-    expect(response.body).toEqual(expectedEducation);
+    expect(response.body.message).toBe('Education data fetched successfully');
+    expect(response.body.data).toEqual(expectedEducation);
   });
 
   it('should respond with a 200 status code and the English education data when lang=en', async () => {
@@ -23,6 +24,7 @@ describe('GET /api/education', () => {
       endYear: item.endYear,
       ...item.en,
     }));
-    expect(response.body).toEqual(expectedEducation);
+    expect(response.body.message).toBe('Education data fetched successfully');
+    expect(response.body.data).toEqual(expectedEducation);
   });
 });

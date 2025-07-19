@@ -12,7 +12,8 @@ describe('GET /api/faqs', () => {
       category: item.category,
       ...item.ja,
     }));
-    expect(response.body).toEqual(expectedFaqs);
+    expect(response.body.message).toBe('FAQs data fetched successfully');
+    expect(response.body.data).toEqual(expectedFaqs);
   });
 
   it('should respond with a 200 status code and the English FAQs data when lang=en', async () => {
@@ -23,6 +24,7 @@ describe('GET /api/faqs', () => {
       category: item.category,
       ...item.en,
     }));
-    expect(response.body).toEqual(expectedFaqs);
+    expect(response.body.message).toBe('FAQs data fetched successfully');
+    expect(response.body.data).toEqual(expectedFaqs);
   });
 });

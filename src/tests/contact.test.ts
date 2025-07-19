@@ -7,6 +7,7 @@ describe('GET /api/contact', () => {
   it('should respond with a 200 status code and the contact data', async () => {
     const response = await request(app).get('/api/contact');
     expect(response.status).toBe(200);
-    expect(response.body).toEqual(contact);
+    expect(response.body.message).toBe('Contact data fetched successfully');
+    expect(response.body.data).toEqual(contact);
   });
 });

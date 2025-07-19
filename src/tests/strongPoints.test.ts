@@ -9,9 +9,11 @@ describe('GET /api/strong-points', () => {
     expect(response.status).toBe(200);
     const expectedStrongPoints = strongPoint.map((item) => ({
       size: item.size,
-      ...item.ja,
+      ja: item.ja,
+      en: item.en,
     }));
-    expect(response.body).toEqual(expectedStrongPoints);
+    expect(response.body.message).toBe('Strong points data fetched successfully');
+    expect(response.body.data).toEqual(expectedStrongPoints);
   });
 
   it('should respond with a 200 status code and the English strong points data when lang=en', async () => {
@@ -19,8 +21,10 @@ describe('GET /api/strong-points', () => {
     expect(response.status).toBe(200);
     const expectedStrongPoints = strongPoint.map((item) => ({
       size: item.size,
-      ...item.en,
+      ja: item.ja,
+      en: item.en,
     }));
-    expect(response.body).toEqual(expectedStrongPoints);
+    expect(response.body.message).toBe('Strong points data fetched successfully');
+    expect(response.body.data).toEqual(expectedStrongPoints);
   });
 });
