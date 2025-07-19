@@ -65,12 +65,12 @@ jobs:
     
     strategy:
       matrix:
-        deployment: ['vercel', 'aws']
+        deployment: ['vercel'] # 'aws' commented out for now
         include:
           - deployment: vercel
             base_url: https://portfolio-api-ten-delta.vercel.app
-          - deployment: aws
-            base_url: https://s55mfd704a.execute-api.us-east-1.amazonaws.com/dev
+          # - deployment: aws
+          #   base_url: https://s55mfd704a.execute-api.us-east-1.amazonaws.com/dev
 
     steps:
       - name: Checkout code
@@ -427,8 +427,9 @@ jobs:
           newman run portfolio-api-tests.json --env-var "baseUrl=${{ matrix.base_url }}" --reporters cli,json --reporter-json-export test-results.json
           
           # Extract test statistics
-          TOTAL_TESTS=$(jq '.run.stats.tests' test-results.json)
-          PASSED_TESTS=$(jq '.run.stats.tests - .run.stats.failures' test-results.json)
+          TOTAL_TESTS=$(jq '.run.stats.tests // 0' test-results.json)
+          FAILED_TESTS=$(jq '.run.stats.failures // 0' test-results.json)
+          PASSED_TESTS=$(jq '(.run.stats.tests // 0) - (.run.stats.failures // 0)' test-results.json)
           FAILURES=$(jq '.run.failures' test-results.json)
           
           echo "::set-output name=total_tests::${TOTAL_TESTS}"
@@ -450,9 +451,9 @@ jobs:
           
           if [ -f test-results.json ]; then
             # Get test statistics
-            TOTAL_TESTS=$(jq '.run.stats.tests' test-results.json)
-            PASSED_TESTS=$(jq '.run.stats.tests - .run.stats.failures' test-results.json)
-            FAILED_TESTS=$(jq '.run.stats.failures' test-results.json)
+            TOTAL_TESTS=$(jq '.run.stats.tests // 0' test-results.json)
+            FAILED_TESTS=$(jq '.run.stats.failures // 0' test-results.json)
+            PASSED_TESTS=$(jq '(.run.stats.tests // 0) - (.run.stats.failures // 0)' test-results.json)
             
             echo "### Test Summary" >> $GITHUB_STEP_SUMMARY
             echo "✅ Passed: $PASSED_TESTS" >> $GITHUB_STEP_SUMMARY

@@ -33,15 +33,20 @@ export const getProfile = (
 ) => {
   try {
     const lang = req.query.lang as string;
-    if (lang === 'en') {
-      res
-        .status(200)
-        .json({message: 'Profile data fetched successfully', data: profile.en});
-    } else {
-      res
-        .status(200)
-        .json({message: 'Profile data fetched successfully', data: profile.ja});
-    }
+    const localizedData = lang === 'en' ? profile.en : profile.ja;
+
+    // Combine base profile data with localized content
+    const profileData = {
+      name: profile.name,
+      location: profile.location,
+      avatarUrl: profile.avatarUrl,
+      socialLinks: profile.socialLinks,
+      ...localizedData,
+    };
+
+    res
+      .status(200)
+      .json({message: 'Profile data fetched successfully', data: profileData});
   } catch (error) {
     res.status(500).json({message: 'Error fetching profile data', data: null});
   }
