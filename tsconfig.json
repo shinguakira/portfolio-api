@@ -20,6 +20,6 @@
     "baseUrl": ".",
     "typeRoots": ["./node_modules/@types", "./src/types"]
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "src/types"],
   "exclude": ["node_modules", "dist", "azure-functions"]
 }

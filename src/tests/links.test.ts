@@ -7,6 +7,7 @@ describe('GET /api/links', () => {
   it('should respond with a 200 status code and the links data', async () => {
     const response = await request(app).get('/api/links');
     expect(response.status).toBe(200);
-    expect(response.body).toEqual(links);
+    expect(response.body.message).toBe('Links data fetched successfully');
+    expect(response.body.data).toEqual(links);
   });
 });

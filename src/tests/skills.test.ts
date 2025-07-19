@@ -7,6 +7,7 @@ describe('GET /api/skills', () => {
   it('should respond with a 200 status code and the skills data', async () => {
     const response = await request(app).get('/api/skills');
     expect(response.status).toBe(200);
-    expect(response.body).toEqual(skills);
+    expect(response.body.message).toBe('Skills data fetched successfully');
+    expect(response.body.data).toEqual(skills);
   });
 });

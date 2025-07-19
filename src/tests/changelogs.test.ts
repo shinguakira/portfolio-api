@@ -12,10 +12,12 @@ describe('GET /api/changelogs', () => {
       date: item.date,
       changes: item.changes.map((change) => ({
         type: change.type,
-        ...change.ja,
+        ja: change.ja,
+        en: change.en,
       })),
     }));
-    expect(response.body).toEqual(expectedChangelogs);
+    expect(response.body.message).toBe('Changelogs data fetched successfully');
+    expect(response.body.data).toEqual(expectedChangelogs);
   });
 
   it('should respond with a 200 status code and the English changelogs data when lang=en', async () => {
@@ -26,9 +28,11 @@ describe('GET /api/changelogs', () => {
       date: item.date,
       changes: item.changes.map((change) => ({
         type: change.type,
-        ...change.en,
+        ja: change.ja,
+        en: change.en,
       })),
     }));
-    expect(response.body).toEqual(expectedChangelogs);
+    expect(response.body.message).toBe('Changelogs data fetched successfully');
+    expect(response.body.data).toEqual(expectedChangelogs);
   });
 });

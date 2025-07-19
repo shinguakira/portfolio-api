@@ -11,7 +11,8 @@ describe('GET /api/projects', () => {
       technologies: project.technologies,
       ...project.ja,
     }));
-    expect(response.body).toEqual(expectedProjects);
+    expect(response.body.message).toBe('Projects data fetched successfully');
+    expect(response.body.data).toEqual(expectedProjects);
   });
 
   it('should respond with a 200 status code and the English projects data when lang=en', async () => {
@@ -21,6 +22,7 @@ describe('GET /api/projects', () => {
       technologies: project.technologies,
       ...project.en,
     }));
-    expect(response.body).toEqual(expectedProjects);
+    expect(response.body.message).toBe('Projects data fetched successfully');
+    expect(response.body.data).toEqual(expectedProjects);
   });
 });

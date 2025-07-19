@@ -7,7 +7,6 @@ import {router as portfolioRoutes} from './routes/portfolio.js';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors());
@@ -44,15 +43,15 @@ app.get('/', (req, res) => {
         description: 'Get strong points information',
       },
       {path: '/api/changelogs', description: 'Get changelog history'},
+      {
+        path: '/api/download-pdf',
+        description:
+          'Download portfolio as PDF (query: lang=en|ja, format=standard|compact|executive|technical|academic|modern, projects=true|false, experience=true|false, certifications=true|false, education=true|false)',
+      },
     ],
   });
 });
 
 // Start server only if not in a test environment
-if (process.env.NODE_ENV !== 'test') {
-  app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-  });
-}
 
 export default app;

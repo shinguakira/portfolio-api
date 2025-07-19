@@ -14,7 +14,10 @@ describe('GET /api/certifications', () => {
       verifyLink: item.verifyLink,
       ...item.ja,
     }));
-    expect(response.body).toEqual(expectedCertifications);
+    expect(response.body.message).toBe(
+      'Certifications data fetched successfully'
+    );
+    expect(response.body.data).toEqual(expectedCertifications);
   });
 
   it('should respond with a 200 status code and the English certifications data when lang=en', async () => {
@@ -27,6 +30,9 @@ describe('GET /api/certifications', () => {
       verifyLink: item.verifyLink,
       ...item.en,
     }));
-    expect(response.body).toEqual(expectedCertifications);
+    expect(response.body.message).toBe(
+      'Certifications data fetched successfully'
+    );
+    expect(response.body.data).toEqual(expectedCertifications);
   });
 });
