@@ -1,7 +1,7 @@
 import {LocalizedProfileData} from './profile.js';
 import {Project} from './projectItem.js';
 import {WorkExperience} from './workHistory.js';
-import {EducationHistoryProps} from './educationHistory.js';
+import {EducationHistory} from './educationHistory.js';
 import {CertificationItemProps} from './certificationItem.js';
 import {StrongPoint} from './strongPoint.js';
 
@@ -13,7 +13,7 @@ export interface BasePDFOptions {
 export interface StandardPDFOptions extends BasePDFOptions {
   localizedProjects: Project[];
   localizedExperience: WorkExperience[];
-  localizedEducation: EducationHistoryProps[];
+  localizedEducation: EducationHistory[];
   localizedCertifications: CertificationItemProps[];
   localizedStrongPoints: StrongPoint[];
   includeProjects: boolean;
@@ -25,7 +25,7 @@ export interface StandardPDFOptions extends BasePDFOptions {
 export interface CompactPDFOptions extends BasePDFOptions {
   localizedProjects: Project[];
   localizedExperience: WorkExperience[];
-  localizedEducation: EducationHistoryProps[];
+  localizedEducation: EducationHistory[];
   localizedCertifications: CertificationItemProps[];
   localizedStrongPoints: StrongPoint[];
   includeProjects: boolean;
@@ -45,7 +45,7 @@ export interface TechnicalPDFOptions extends BasePDFOptions {
 export interface AcademicPDFOptions extends BasePDFOptions {
   localizedProjects: Project[];
   localizedExperience: WorkExperience[];
-  localizedEducation: EducationHistoryProps[];
+  localizedEducation: EducationHistory[];
   localizedCertifications: CertificationItemProps[];
   localizedStrongPoints: StrongPoint[];
   includeProjects: boolean;

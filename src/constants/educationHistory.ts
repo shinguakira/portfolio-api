@@ -1,6 +1,6 @@
-import {MultilingualEducationHistoryProps} from '../types/educationHistory.js';
+import {MultilingualEducationHistory} from '../types/educationHistory.js';
 
-export const educationHistory: MultilingualEducationHistoryProps[] = [
+export const educationHistory: MultilingualEducationHistory[] = [
   {
     startYear: '2018/4',
     endYear: '2022/4(退学)',

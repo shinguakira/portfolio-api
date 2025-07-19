@@ -1,4 +1,4 @@
-export type MultilingualEducationHistoryProps = {
+export type MultilingualEducationHistory = {
   startYear: string;
   endYear: string;
   ja: {
@@ -13,7 +13,7 @@ export type MultilingualEducationHistoryProps = {
   };
 };
 
-export type EducationHistoryProps = {
+export type EducationHistory = {
   school: string;
   department: string;
   startYear: string;

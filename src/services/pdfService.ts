@@ -21,7 +21,7 @@ import {
 import {StrongPoint} from '../types/strongPoint.js';
 import {WorkExperience} from '../types/workHistory.js';
 import {Project} from '../types/projectItem.js';
-import {EducationHistoryProps} from '../types/educationHistory.js';
+import {EducationHistory} from '../types/educationHistory.js';
 import {CertificationItemProps} from '../types/certificationItem.js';
 
 // Register fonts (optional - for better typography)
@@ -455,7 +455,7 @@ const createStandardPDF = ({
                 lang === 'en' ? 'Education' : '学歴'
               ),
               ...localizedEducation.map(
-                (edu: EducationHistoryProps, index: number) =>
+                (edu: EducationHistory, index: number) =>
                   React.createElement(
                     View,
                     {key: index, style: styles.educationItem},
@@ -1004,33 +1004,32 @@ const createAcademicPDF = ({
               },
               lang === 'en' ? 'Education' : '学歴'
             ),
-            ...localizedEducation.map(
-              (edu: EducationHistoryProps, index: number) =>
-                React.createElement(
-                  View,
-                  {key: index, style: {marginBottom: 12, paddingLeft: 10}},
-                  [
-                    React.createElement(
-                      Text,
-                      {style: {fontSize: 12, fontWeight: 'bold'}},
-                      `${edu.school} - ${edu.department}`
-                    ),
-                    React.createElement(
-                      Text,
-                      {style: {fontSize: 11, color: '#666'}},
-                      `(${edu.startYear} - ${edu.endYear})`
-                    ),
-                    ...(edu.description
-                      ? [
-                          React.createElement(
-                            Text,
-                            {style: {fontSize: 11, marginTop: 3}},
-                            edu.description
-                          ),
-                        ]
-                      : []),
-                  ]
-                )
+            ...localizedEducation.map((edu: EducationHistory, index: number) =>
+              React.createElement(
+                View,
+                {key: index, style: {marginBottom: 12, paddingLeft: 10}},
+                [
+                  React.createElement(
+                    Text,
+                    {style: {fontSize: 12, fontWeight: 'bold'}},
+                    `${edu.school} - ${edu.department}`
+                  ),
+                  React.createElement(
+                    Text,
+                    {style: {fontSize: 11, color: '#666'}},
+                    `(${edu.startYear} - ${edu.endYear})`
+                  ),
+                  ...(edu.description
+                    ? [
+                        React.createElement(
+                          Text,
+                          {style: {fontSize: 11, marginTop: 3}},
+                          edu.description
+                        ),
+                      ]
+                    : []),
+                ]
+              )
             ),
           ]
         ),

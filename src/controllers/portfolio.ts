@@ -4,8 +4,7 @@ import {Faq} from '../types/faq.js';
 import {Changelog} from '../types/changelog.js';
 import {CertificationItemProps} from '../types/certificationItem.js';
 import {Contact} from '../types/contact.js';
-import {EducationHistoryProps} from '../types/educationHistory.js';
-import {SkillItemProps} from '../types/skillItem.js';
+import {EducationHistory} from '../types/educationHistory.js';
 import {Project} from '../types/projectItem.js';
 import {WorkExperience} from '../types/workHistory.js';
 import {Request, Response as ExpressResponse} from 'express';
@@ -25,6 +24,7 @@ import {
   strongPoint,
 } from '../constants/index.js';
 import {generatePortfolioPDF} from '../services/pdfService.js';
+import {SkillItem} from '@/types/skillItem.js';
 
 // Get profile information
 export const getProfile = (
@@ -101,7 +101,7 @@ export const getProjects = (
 // Get skills
 export const getSkills = (
   req: Request,
-  res: ExpressResponse<Response<SkillItemProps[]>>
+  res: ExpressResponse<Response<SkillItem[]>>
 ) => {
   try {
     res
@@ -115,7 +115,7 @@ export const getSkills = (
 // Get education
 export const getEducation = (
   req: Request,
-  res: ExpressResponse<Response<EducationHistoryProps[]>>
+  res: ExpressResponse<Response<EducationHistory[]>>
 ) => {
   try {
     const lang = req.query.lang as string;
