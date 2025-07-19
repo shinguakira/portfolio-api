@@ -63,6 +63,8 @@ jobs:
     name: Test Deployed API Endpoints
     runs-on: ubuntu-latest
     needs: run-tests
+    # Skip endpoint testing on PRs, only run on schedule and manual dispatch
+    if: github.event_name != 'pull_request'
     
     strategy:
       matrix:
