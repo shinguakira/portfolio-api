@@ -1,4 +1,4 @@
-export type SkillItemProps = {
+export type SkillItem = {
   name: string;
   category: string;
   years: string;

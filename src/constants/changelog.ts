@@ -1,9 +1,9 @@
-import {ChangelogProps} from '@/types/changelog.js';
+import {Changelog} from '@/types/changelog.js';
 
 /**
  * constans for changelog history
  */
-export const changelogs: ChangelogProps[] = [
+export const changelogs: Changelog[] = [
   {
     version: '1.4.0',
     date: '2025-04-20',

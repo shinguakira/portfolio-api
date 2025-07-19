@@ -1,22 +1,8 @@
 import {receptionInnovationSkillSet, VOCSkillSet} from './skill.js';
 import {company} from './common.js';
-
-export type WorkExperienceContent = {
-  projectOverview: string;
-  role: string;
-  description: string[];
-  archivement: string[];
-};
-
-export type MultilingualWorkExperience = {
-  company: string;
-  period: string;
-  teamSize: string;
-  manMonth: string;
-  technologies: string[];
-  ja: WorkExperienceContent;
-  en: WorkExperienceContent;
-};
+import {
+  MultilingualWorkExperience,
+} from '../types/workHistory.js';
 
 // object for work experience
 export const workExperiences: MultilingualWorkExperience[] = [

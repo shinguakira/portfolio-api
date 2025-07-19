@@ -1,7 +1,7 @@
 import {describe, it, expect} from 'vitest';
 import request from 'supertest';
 import app from '../index.js';
-import {contact} from '../constants/contact.js';
+import {contact} from './testData/expected-json/contact.js';
 
 describe('GET /api/contact', () => {
   it('should respond with a 200 status code and the contact data', async () => {

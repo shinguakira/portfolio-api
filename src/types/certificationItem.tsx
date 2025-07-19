@@ -1,3 +1,16 @@
+export type MultilingualCertificationItem = {
+  id: number;
+  organization: string;
+  date: string;
+  verifyLink: string;
+  ja: {
+    name: string;
+  };
+  en: {
+    name: string;
+  };
+};
+
 export type CertificationItemProps = {
   id: number; // index of certification list
   name: string; // name of certification

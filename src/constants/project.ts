@@ -15,21 +15,9 @@ const ragChatBotAkiraShinguPic = '/images/projects/rag-chatbot-akirashingu.jpg';
 const countryAppPic = '/images/projects/country-app.png'; // picture for country app
 const portfolioApiPic = '/images/projects/portfolio-api.png'; // picture for portfolio api
 
-export type ProjectContent = {
-  title: string;
-  description: string;
-  image: string;
-  githubUrl: string;
-  liveUrl: string;
-};
+import { MultilingualProject} from '../types/projectItem.js';
 
-export type MultilingualProjectProps = {
-  technologies: string[];
-  ja: ProjectContent;
-  en: ProjectContent;
-};
-
-export const projects: MultilingualProjectProps[] = [
+export const projects: MultilingualProject[] = [
   {
     technologies: nextjsSkillSet,
     ja: {

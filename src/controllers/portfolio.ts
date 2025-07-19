@@ -1,7 +1,7 @@
 import {Links} from '../types/links.js';
 import {StrongPoint} from '../types/strongPoint.js';
-import {FaqProps} from '../types/faq.js';
-import {ChangelogProps} from '../types/changelog.js';
+import {Faq} from '../types/faq.js';
+import {Changelog} from '../types/changelog.js';
 import {CertificationItemProps} from '../types/certificationItem.js';
 import {Contact} from '../types/contact.js';
 import {EducationHistoryProps} from '../types/educationHistory.js';
@@ -175,7 +175,7 @@ export const getCertifications = (
 
 export const getChangelogs = (
   req: Request,
-  res: ExpressResponse<Response<ChangelogProps[]>>
+  res: ExpressResponse<Response<Changelog[]>>
 ) => {
   try {
     const localizedChangelogs = changelogs.map((item) => ({
@@ -200,7 +200,7 @@ export const getChangelogs = (
 
 export const getFaqs = (
   req: Request,
-  res: ExpressResponse<Response<FaqProps[]>>
+  res: ExpressResponse<Response<Faq[]>>
 ) => {
   try {
     const lang = req.query.lang as string;

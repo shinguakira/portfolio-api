@@ -1,17 +1,4 @@
-export interface MultilingualEducationHistoryProps {
-  startYear: string;
-  endYear: string;
-  ja: {
-    school: string;
-    department: string;
-    description: string;
-  };
-  en: {
-    school: string;
-    department: string;
-    description: string;
-  };
-}
+import {MultilingualEducationHistoryProps} from '../types/educationHistory.js';
 
 export const educationHistory: MultilingualEducationHistoryProps[] = [
   {

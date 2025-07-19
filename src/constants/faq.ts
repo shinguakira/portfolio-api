@@ -1,16 +1,6 @@
-export type MultilingualFaqContent = {
-  question: string;
-  answer: string;
-};
+import { MultilingualFaq} from '../types/faq.js';
 
-export type MultilingualFaqProps = {
-  size: string;
-  category: string;
-  ja: MultilingualFaqContent;
-  en: MultilingualFaqContent;
-};
-
-export const faqs: MultilingualFaqProps[] = [
+export const faqs: MultilingualFaq[] = [
   {
     size: 'large',
     category: 'Others',

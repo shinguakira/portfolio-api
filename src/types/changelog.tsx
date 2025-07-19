@@ -1,7 +1,7 @@
 /**
  * type for ChangelogComponent
  */
-export type ChangelogProps = {
+export type Changelog = {
   version: string;
   date: string;
   changes: {
