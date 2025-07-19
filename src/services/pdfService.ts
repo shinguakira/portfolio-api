@@ -1,12 +1,4 @@
-import {
-  Document,
-  Page,
-  Text,
-  View,
-  StyleSheet,
-  Font,
-  pdf,
-} from '@react-pdf/renderer';
+import {Document, Page, Text, View, StyleSheet, pdf} from '@react-pdf/renderer';
 import * as React from 'react';
 import {
   profile,
@@ -18,6 +10,19 @@ import {
   certifications,
   strongPoint,
 } from '../constants/index.js';
+import {
+  StandardPDFOptions,
+  CompactPDFOptions,
+  ExecutivePDFOptions,
+  TechnicalPDFOptions,
+  AcademicPDFOptions,
+  ModernPDFOptions,
+} from '../types/pdfTypes.js';
+import {StrongPoint} from '../types/strongPoint.js';
+import {WorkExperience} from '../types/workHistory.js';
+import {Project} from '../types/projectItem.js';
+import {EducationHistoryProps} from '../types/educationHistory.js';
+import {CertificationItemProps} from '../types/certificationItem.js';
 
 // Register fonts (optional - for better typography)
 // Font.register({
@@ -177,7 +182,8 @@ const createPortfolioPDF = ({
 
   const localizedStrongPoints = strongPoint.map((item) => ({
     size: item.size,
-    ...(lang === 'en' ? item.en : item.ja),
+    ja: item.ja,
+    en: item.en,
   }));
 
   // Switch between different format patterns
@@ -200,29 +206,13 @@ const createPortfolioPDF = ({
     return createExecutivePDF({
       lang,
       profileData,
-      localizedProjects,
       localizedExperience,
-      localizedEducation,
-      localizedCertifications,
-      localizedStrongPoints,
-      includeProjects,
-      includeExperience,
-      includeCertifications,
-      includeEducation,
     });
   case 'technical':
     return createTechnicalPDF({
       lang,
       profileData,
       localizedProjects,
-      localizedExperience,
-      localizedEducation,
-      localizedCertifications,
-      localizedStrongPoints,
-      includeProjects,
-      includeExperience,
-      includeCertifications,
-      includeEducation,
     });
   case 'academic':
     return createAcademicPDF({
@@ -242,15 +232,9 @@ const createPortfolioPDF = ({
     return createModernPDF({
       lang,
       profileData,
-      localizedProjects,
+      _localizedProjects: localizedProjects,
       localizedExperience,
-      localizedEducation,
-      localizedCertifications,
-      localizedStrongPoints,
-      includeProjects,
-      includeExperience,
-      includeCertifications,
-      includeEducation,
+      _localizedCertifications: localizedCertifications,
     });
   case 'standard':
   default:
@@ -283,7 +267,7 @@ const createStandardPDF = ({
   includeExperience,
   includeCertifications,
   includeEducation,
-}: any) => {
+}: StandardPDFOptions) => {
   return React.createElement(Document, {}, [
     // First Page - Profile and Basic Info
     React.createElement(Page, {key: 'page-1', size: 'A4', style: styles.page}, [
@@ -328,10 +312,10 @@ const createStandardPDF = ({
           {style: styles.sectionTitle},
           lang === 'en' ? 'Key Strengths' : '強み'
         ),
-        ...localizedStrongPoints.map((point: any, index: number) =>
+        ...localizedStrongPoints.map((point: StrongPoint, index: number) =>
           React.createElement(View, {key: index, style: {marginBottom: 8}}, [
-            React.createElement(Text, {style: styles.boldText}, point.question),
-            React.createElement(Text, {style: styles.text}, point.answer),
+            React.createElement(Text, {style: styles.boldText}, lang === 'en' ? point.en.question : point.ja.question),
+            React.createElement(Text, {style: styles.text}, lang === 'en' ? point.en.answer : point.ja.answer),
           ])
         ),
       ]),
@@ -379,7 +363,7 @@ const createStandardPDF = ({
               ),
               ...localizedExperience
                 .slice(0, 2)
-                .map((exp: any, index: number) =>
+                .map((exp: WorkExperience, index: number) =>
                   React.createElement(
                     View,
                     {key: index, style: styles.experienceItem},
@@ -426,7 +410,7 @@ const createStandardPDF = ({
             ),
             ...localizedProjects
               .slice(0, 4)
-              .map((project: any, index: number) =>
+              .map((project: Project, index: number) =>
                 React.createElement(
                   View,
                   {key: index, style: styles.projectItem},
@@ -462,7 +446,7 @@ const createStandardPDF = ({
               {style: styles.sectionTitle},
               lang === 'en' ? 'Education' : '学歴'
             ),
-            ...localizedEducation.map((edu: any, index: number) =>
+            ...localizedEducation.map((edu: EducationHistoryProps, index: number) =>
               React.createElement(
                 View,
                 {key: index, style: styles.educationItem},
@@ -498,7 +482,7 @@ const createStandardPDF = ({
               {style: styles.sectionTitle},
               lang === 'en' ? 'Certifications' : '資格・認定'
             ),
-            ...localizedCertifications.map((cert: any, index: number) =>
+            ...localizedCertifications.map((cert: CertificationItemProps, index: number) =>
               React.createElement(
                 View,
                 {key: index, style: styles.certificationItem},
@@ -542,7 +526,7 @@ const createCompactPDF = ({
   includeProjects,
   includeExperience,
   includeCertifications,
-}: any) => {
+}: CompactPDFOptions) => {
   return React.createElement(Document, {}, [
     React.createElement(
       Page,
@@ -634,7 +618,7 @@ const createCompactPDF = ({
                 ),
                 ...localizedExperience
                   .slice(0, 3)
-                  .map((exp: any, index: number) =>
+                  .map((exp: WorkExperience, index: number) =>
                     React.createElement(
                       Text,
                       {key: index, style: {fontSize: 9, marginBottom: 3}},
@@ -666,7 +650,7 @@ const createCompactPDF = ({
                 ),
                 ...localizedProjects
                   .slice(0, 3)
-                  .map((project: any, index: number) =>
+                  .map((project: Project, index: number) =>
                     React.createElement(
                       Text,
                       {key: index, style: {fontSize: 9, marginBottom: 3}},
@@ -695,7 +679,7 @@ const createCompactPDF = ({
               ),
               ...localizedCertifications
                 .slice(0, 5)
-                .map((cert: any, index: number) =>
+                .map((cert: CertificationItemProps, index: number) =>
                   React.createElement(
                     Text,
                     {key: index, style: {fontSize: 9, marginBottom: 2}},
@@ -714,10 +698,8 @@ const createCompactPDF = ({
 const createExecutivePDF = ({
   lang,
   profileData,
-  localizedProjects,
   localizedExperience,
-  localizedCertifications,
-}: any) => {
+}: ExecutivePDFOptions) => {
   return React.createElement(Document, {}, [
     React.createElement(
       Page,
@@ -798,7 +780,7 @@ const createExecutivePDF = ({
             ),
             ...localizedExperience
               .slice(0, 2)
-              .map((exp: any, index: number) =>
+              .map((exp: WorkExperience, index: number) =>
                 React.createElement(
                   View,
                   {key: index, style: {marginBottom: 12, paddingLeft: 10}},
@@ -816,9 +798,7 @@ const createExecutivePDF = ({
                     React.createElement(
                       Text,
                       {style: {fontSize: 11, marginTop: 3}},
-                      exp.description.length > 150
-                        ? exp.description.substring(0, 150) + '...'
-                        : exp.description
+                      exp.description.join('\n').length > 150                        ? exp.description.join('\n').substring(0, 150) + '...'                        : exp.description.join('\n')
                     ),
                   ]
                 )
@@ -865,8 +845,7 @@ const createTechnicalPDF = ({
   lang,
   profileData,
   localizedProjects,
-  localizedExperience,
-}: any) => {
+}: TechnicalPDFOptions) => {
   return React.createElement(Document, {}, [
     React.createElement(
       Page,
@@ -938,7 +917,7 @@ const createTechnicalPDF = ({
           ),
           ...localizedProjects
             .slice(0, 4)
-            .map((project: any, index: number) =>
+            .map((project: Project, index: number) =>
               React.createElement(
                 View,
                 {key: index, style: {marginBottom: 15, paddingLeft: 10}},
@@ -975,7 +954,7 @@ const createAcademicPDF = ({
   profileData,
   localizedEducation,
   localizedCertifications,
-}: any) => {
+}: AcademicPDFOptions) => {
   return React.createElement(Document, {}, [
     React.createElement(
       Page,
@@ -1013,7 +992,7 @@ const createAcademicPDF = ({
               },
               lang === 'en' ? 'Education' : '学歴'
             ),
-            ...localizedEducation.map((edu: any, index: number) =>
+            ...localizedEducation.map((edu: EducationHistoryProps, index: number) =>
               React.createElement(
                 View,
                 {key: index, style: {marginBottom: 12, paddingLeft: 10}},
@@ -1021,12 +1000,12 @@ const createAcademicPDF = ({
                   React.createElement(
                     Text,
                     {style: {fontSize: 12, fontWeight: 'bold'}},
-                    edu.degree
+                    `${edu.school} - ${edu.department}`
                   ),
                   React.createElement(
                     Text,
                     {style: {fontSize: 11, color: '#666'}},
-                    `${edu.institution} | ${edu.startYear} - ${edu.endYear}`
+                    `(${edu.startYear} - ${edu.endYear})`
                   ),
                   ...(edu.description
                     ? [
@@ -1060,7 +1039,7 @@ const createAcademicPDF = ({
               },
               lang === 'en' ? 'Certifications & Licenses' : '資格・免許'
             ),
-            ...localizedCertifications.map((cert: any, index: number) =>
+            ...localizedCertifications.map((cert: CertificationItemProps, index: number) =>
               React.createElement(
                 View,
                 {key: index, style: {marginBottom: 10, paddingLeft: 10}},
@@ -1124,10 +1103,10 @@ const createAcademicPDF = ({
 const createModernPDF = ({
   lang,
   profileData,
-  localizedProjects,
+  _localizedProjects,
   localizedExperience,
-  localizedCertifications,
-}: any) => {
+  _localizedCertifications,
+}: ModernPDFOptions) => {
   return React.createElement(Document, {}, [
     React.createElement(
       Page,
@@ -1228,7 +1207,7 @@ const createModernPDF = ({
               },
               lang === 'en' ? 'Experience Highlights' : '経験ハイライト'
             ),
-            ...localizedExperience.slice(0, 2).map((exp: any, index: number) =>
+            ...localizedExperience.slice(0, 2).map((exp: WorkExperience, index: number) =>
               React.createElement(
                 View,
                 {
@@ -1259,9 +1238,7 @@ const createModernPDF = ({
                   React.createElement(
                     Text,
                     {style: {fontSize: 10, color: '#555'}},
-                    exp.description.length > 100
-                      ? exp.description.substring(0, 100) + '...'
-                      : exp.description
+                    exp.description.join('\n').length > 100                      ? exp.description.join('\n').substring(0, 100) + '...'                      : exp.description.join('\n')
                   ),
                 ]
               )

@@ -11,3 +11,4 @@ export * from './faq.js';
 export * from './downloadLink.js';
 export * from './strongPoint.js';
 export * from './links.js';
+export * from './pdfTypes.js';

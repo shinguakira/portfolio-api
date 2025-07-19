@@ -1,6 +1,5 @@
 import {Links} from '../types/links.js';
 import {StrongPoint} from '../types/strongPoint.js';
-import {DownLoadLinkProps} from '../types/downloadLink.js';
 import {FaqProps} from '../types/faq.js';
 import {ChangelogProps} from '../types/changelog.js';
 import {CertificationItemProps} from '../types/certificationItem.js';
@@ -11,7 +10,7 @@ import {Project} from '../types/projectItem.js';
 import {WorkExperience} from '../types/workHistory.js';
 import {Request, Response as ExpressResponse} from 'express';
 import {Response} from '../types/response.js';
-import {Profile} from '../types/profile.js';
+import { LocalizedProfileData} from '../types/profile.js';
 import {
   profile,
   workExperiences as experience,
@@ -30,7 +29,7 @@ import {generatePortfolioPDF} from '../services/pdfService.js';
 // Get profile information
 export const getProfile = (
   req: Request,
-  res: ExpressResponse<Response<Profile>>
+  res: ExpressResponse<Response<LocalizedProfileData>>
 ) => {
   try {
     const lang = req.query.lang as string;
@@ -174,7 +173,6 @@ export const getChangelogs = (
   res: ExpressResponse<Response<ChangelogProps[]>>
 ) => {
   try {
-    const lang = req.query.lang as string;
     const localizedChangelogs = changelogs.map((item) => ({
       version: item.version,
       date: item.date,
@@ -232,7 +230,6 @@ export const getStrongPoints = (
   res: ExpressResponse<Response<StrongPoint[]>>
 ) => {
   try {
-    const lang = req.query.lang as string;
     const localizedStrongPoints = strongPoint.map((item) => ({
       size: item.size,
       ja: item.ja,
@@ -263,7 +260,7 @@ export const downloadPortfolioPDF = async (
 
     const pdfBuffer = await generatePortfolioPDF({
       lang,
-      format: format as any,
+      format: format as 'standard' | 'compact' | 'executive' | 'technical' | 'academic' | 'modern',
       includeProjects,
       includeExperience,
       includeCertifications,

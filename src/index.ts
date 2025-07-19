@@ -54,10 +54,6 @@ app.get('/', (req, res) => {
 });
 
 // Start server only if not in a test environment
-if (process.env.NODE_ENV !== 'test') {
-  app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-  });
-}
+
 
 export default app;
