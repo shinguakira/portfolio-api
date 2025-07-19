@@ -10,7 +10,7 @@ import {Project} from '../types/projectItem.js';
 import {WorkExperience} from '../types/workHistory.js';
 import {Request, Response as ExpressResponse} from 'express';
 import {Response} from '../types/response.js';
-import { LocalizedProfileData} from '../types/profile.js';
+import {LocalizedProfileData} from '../types/profile.js';
 import {
   profile,
   workExperiences as experience,
@@ -260,7 +260,13 @@ export const downloadPortfolioPDF = async (
 
     const pdfBuffer = await generatePortfolioPDF({
       lang,
-      format: format as 'standard' | 'compact' | 'executive' | 'technical' | 'academic' | 'modern',
+      format: format as
+        | 'standard'
+        | 'compact'
+        | 'executive'
+        | 'technical'
+        | 'academic'
+        | 'modern',
       includeProjects,
       includeExperience,
       includeCertifications,

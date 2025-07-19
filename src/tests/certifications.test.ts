@@ -14,7 +14,9 @@ describe('GET /api/certifications', () => {
       verifyLink: item.verifyLink,
       ...item.ja,
     }));
-    expect(response.body.message).toBe('Certifications data fetched successfully');
+    expect(response.body.message).toBe(
+      'Certifications data fetched successfully'
+    );
     expect(response.body.data).toEqual(expectedCertifications);
   });
 
@@ -28,7 +30,9 @@ describe('GET /api/certifications', () => {
       verifyLink: item.verifyLink,
       ...item.en,
     }));
-    expect(response.body.message).toBe('Certifications data fetched successfully');
+    expect(response.body.message).toBe(
+      'Certifications data fetched successfully'
+    );
     expect(response.body.data).toEqual(expectedCertifications);
   });
 });

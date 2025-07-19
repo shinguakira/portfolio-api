@@ -12,7 +12,9 @@ describe('GET /api/strong-points', () => {
       ja: item.ja,
       en: item.en,
     }));
-    expect(response.body.message).toBe('Strong points data fetched successfully');
+    expect(response.body.message).toBe(
+      'Strong points data fetched successfully'
+    );
     expect(response.body.data).toEqual(expectedStrongPoints);
   });
 
@@ -24,7 +26,9 @@ describe('GET /api/strong-points', () => {
       ja: item.ja,
       en: item.en,
     }));
-    expect(response.body.message).toBe('Strong points data fetched successfully');
+    expect(response.body.message).toBe(
+      'Strong points data fetched successfully'
+    );
     expect(response.body.data).toEqual(expectedStrongPoints);
   });
 });
