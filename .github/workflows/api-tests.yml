@@ -5,12 +5,13 @@ on:
     - cron: '0 0 * * *'  # Run daily at midnight UTC
   workflow_dispatch:  # Allow manual triggering
   push:
-    branches: [main]
+    branches: [develop]  # Test develop branch deployments
     paths:
       - 'src/**'
       - '.github/workflows/api-tests.yml'
   pull_request:
     types: [opened, synchronize, reopened]
+    branches: [main]  # Test PRs to main branch
     paths:
       - 'src/**'
       - '.github/workflows/api-tests.yml'
@@ -68,7 +69,8 @@ jobs:
         deployment: ['vercel'] # 'aws' commented out for now
         include:
           - deployment: vercel
-            base_url: https://portfolio-api-ten-delta.vercel.app
+            # Dynamic URL based on context
+            base_url: ${{ github.event_name == 'pull_request' && format('https://portfolio-api-{0}-shinguakira.vercel.app', github.head_ref) || 'https://portfolio-api-ten-delta.vercel.app' }}
           # - deployment: aws
           #   base_url: https://s55mfd704a.execute-api.us-east-1.amazonaws.com/dev
 
