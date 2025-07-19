@@ -44,6 +44,11 @@ app.get('/', (req, res) => {
         description: 'Get strong points information',
       },
       {path: '/api/changelogs', description: 'Get changelog history'},
+      {
+        path: '/api/download-pdf',
+        description:
+          'Download portfolio as PDF (query: lang=en|ja, format=standard|compact|executive|technical|academic|modern, projects=true|false, experience=true|false, certifications=true|false, education=true|false)',
+      },
     ],
   });
 });

@@ -11,6 +11,7 @@ import {
   getFaqs,
   getLinks,
   getStrongPoints,
+  downloadPortfolioPDF,
 } from '../controllers/portfolio.js';
 
 const router = Router();
@@ -27,5 +28,6 @@ router.get('/changelogs', getChangelogs);
 router.get('/faqs', getFaqs);
 router.get('/links', getLinks);
 router.get('/strong-points', getStrongPoints);
+router.get('/download-pdf', downloadPortfolioPDF);
 
 export {router};
