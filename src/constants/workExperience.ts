@@ -69,7 +69,7 @@ export const workExperiences: MultilingualWorkExperience[] = [
     },
   },
   {
-    company: '',
+    company: 'お客さま4',
     period: '2025年7月 - 現在',
     teamSize: '2人',
     manMonth: '',
@@ -81,6 +81,7 @@ export const workExperiences: MultilingualWorkExperience[] = [
       'Electron',
       'Node.js',
       'vite',
+      'vitest',
       'Python',
     ],
     ja: {
@@ -103,7 +104,7 @@ export const workExperiences: MultilingualWorkExperience[] = [
     },
   },
   {
-    company: '',
+    company: 'お客さま3',
     period: '2025年3月 - 2025年6月',
     teamSize: '10人',
     manMonth: '',
@@ -263,7 +264,7 @@ export const workExperiences: MultilingualWorkExperience[] = [
     },
   },
   {
-    company: `${company.staffService}(${company.higashiTechLab})`,
+    company: company.staffService,
     period: '2023年6月 - 2023年12月(6か月)',
     teamSize: '4-10',
     manMonth: '不明(2021年頃スタート)',

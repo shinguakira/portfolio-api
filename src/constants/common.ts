@@ -59,8 +59,8 @@ export const nextjsSkillSet: string[] = [
 ];
 // company names that I worked for
 export const company = {
-  eastCoast: '株式会社イースト・コースト・ワン',
-  staffService: '株式会社スタッフサービス エンジニアリング',
+  eastCoast: 'お客さま2',
+  staffService: 'お客さま1',
   higashiTechLab: '株式会社東日本技術研究所',
   hotelTerrace: '株式会社ホテルテラスザスクエア日立',
 };

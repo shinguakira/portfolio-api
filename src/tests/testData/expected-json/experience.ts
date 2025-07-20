@@ -45,10 +45,10 @@ export const experience_ja = [
     ],
   },
   {
-    company: '',
+    company: 'お客さま4',
     period: '2025年7月 - 現在',
     teamSize: '2人',
-    manMonth: '',
+    manMonth: '3人月',
     technologies: [
       'React',
       'TypeScript',
@@ -68,7 +68,7 @@ export const experience_ja = [
     archivement: ['未定'],
   },
   {
-    company: '',
+    company: 'お客さま3',
     period: '2025年3月 - 2025年6月',
     teamSize: '10人',
     manMonth: '',
@@ -95,7 +95,7 @@ export const experience_ja = [
     ],
   },
   {
-    company: '株式会社イースト・コースト・ワン',
+    company: 'お客さま2',
     period: '2024年10月 - 2024年2月',
     teamSize: '3',
     manMonth: '3,4人月',
@@ -112,7 +112,7 @@ export const experience_ja = [
     ],
   },
   {
-    company: '株式会社イースト・コースト・ワン',
+    company: 'お客さま2',
     period: '2024年10月 - 2024年11月(20日)',
     teamSize: '3',
     manMonth: '3,4人月',
@@ -133,7 +133,7 @@ export const experience_ja = [
     ],
   },
   {
-    company: '株式会社イースト・コースト・ワン',
+    company: 'お客さま2',
     period: '2024年5月 - 2024年2月',
     teamSize: '7-8',
     manMonth: '15+人月',
@@ -158,7 +158,7 @@ export const experience_ja = [
     ],
   },
   {
-    company: '株式会社イースト・コースト・ワン',
+    company: 'お客さま2',
     period: '2024年1月 - 2024年4月(4か月)',
     teamSize: '3-4',
     manMonth: '15人月',
@@ -183,8 +183,7 @@ export const experience_ja = [
     ],
   },
   {
-    company:
-      '株式会社スタッフサービス エンジニアリング(株式会社東日本技術研究所)',
+    company: 'お客さま1',
     period: '2023年6月 - 2023年12月(6か月)',
     teamSize: '4-10',
     manMonth: '不明(2021年頃スタート)',
@@ -214,8 +213,7 @@ export const experience_ja = [
     ],
   },
   {
-    company:
-      '株式会社スタッフサービス エンジニアリング(株式会社東日本技術研究所)',
+    company: 'お客さま1',
     period: '2023年4月 - 2023年6月(2ヶ月)',
     teamSize: '1',
     manMonth: '9人月',
@@ -296,9 +294,9 @@ export const experience_ja = [
 
 export const experience_en = [
   {
-    company: 'プライベート',
-    period: '2025年3月 - (現在)',
-    teamSize: '10人',
+    company: 'Private',
+    period: '2025-03 - current',
+    teamSize: '10',
     manMonth: '',
     technologies: [
       'React',
@@ -341,10 +339,10 @@ export const experience_en = [
     ],
   },
   {
-    company: '',
-    period: '2025年7月 - 現在',
-    teamSize: '2人',
-    manMonth: '',
+    company: 'Customer4',
+    period: '2025-07 - current',
+    teamSize: '2',
+    manMonth: '3 person-month',
     technologies: [
       'React',
       'TypeScript',
@@ -353,6 +351,7 @@ export const experience_en = [
       'Electron',
       'Node.js',
       'vite',
+      'vitest',
       'Python',
     ],
     projectOverview: 'Medical Stereo Camera Automatic Evaluation System',
@@ -364,8 +363,8 @@ export const experience_en = [
     archivement: ['未定'],
   },
   {
-    company: '',
-    period: '2025年3月 - 2025年6月',
+    company: 'Customer3',
+    period: '2025-03 - 2025-06',
     teamSize: '10人',
     manMonth: '',
     technologies: [
@@ -391,10 +390,10 @@ export const experience_en = [
     ],
   },
   {
-    company: '株式会社イースト・コースト・ワン',
-    period: '2024年10月 - 2024年2月',
+    company: 'Customer2',
+    period: '2024-10 - 2024-2',
     teamSize: '3',
-    manMonth: '3,4人月',
+    manMonth: '3,4 person-month',
     technologies: [],
     projectOverview: 'Customer Information Search and API Modification',
     role: 'Full Stack Developer (Specification, Development, Testing)',
@@ -408,10 +407,10 @@ export const experience_en = [
     ],
   },
   {
-    company: '株式会社イースト・コースト・ワン',
-    period: '2024年10月 - 2024年11月(20日)',
+    company: 'Customer2',
+    period: '2024-10 - 2024-11(20 days)',
     teamSize: '3',
-    manMonth: '3,4人月',
+    manMonth: '3,4 person-month',
     technologies: [
       'Java',
       'Springboot',
@@ -431,10 +430,10 @@ export const experience_en = [
     ],
   },
   {
-    company: '株式会社イースト・コースト・ワン',
-    period: '2024年5月 - 2024年2月',
+    company: 'Customer2',
+    period: '2024-05 - 2024-02',
     teamSize: '7-8',
-    manMonth: '15+人月',
+    manMonth: '15+ person-month',
     technologies: [
       'Java',
       'Springboot',
@@ -456,10 +455,10 @@ export const experience_en = [
     ],
   },
   {
-    company: '株式会社イースト・コースト・ワン',
-    period: '2024年1月 - 2024年4月(4か月)',
+    company: 'Customer2',
+    period: '2024-01 - 2024-04(4 months)',
     teamSize: '3-4',
-    manMonth: '15人月',
+    manMonth: '15 person-month',
     technologies: [
       'Java',
       'Springboot',
@@ -481,11 +480,10 @@ export const experience_en = [
     ],
   },
   {
-    company:
-      '株式会社スタッフサービス エンジニアリング(株式会社東日本技術研究所)',
-    period: '2023年6月 - 2023年12月(6か月)',
+    company: 'Customer1',
+    period: '2023-06 - 2023-12(6 months)',
     teamSize: '4-10',
-    manMonth: '不明(2021年頃スタート)',
+    manMonth: 'Unknown(2021 started)',
     technologies: [
       'C',
       'C++',
@@ -513,11 +511,10 @@ export const experience_en = [
     ],
   },
   {
-    company:
-      '株式会社スタッフサービス エンジニアリング(株式会社東日本技術研究所)',
-    period: '2023年4月 - 2023年6月(2ヶ月)',
+    company: 'Customer1',
+    period: '2023-04 - 2023-06(2 months)',
     teamSize: '1',
-    manMonth: '9人月',
+    manMonth: '9 person-month',
     technologies: [
       'C#',
       'Visual Studio2017',
