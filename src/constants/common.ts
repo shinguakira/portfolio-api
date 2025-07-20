@@ -1,7 +1,7 @@
 export const APP_NAME = 'My Portfolio API';
 export const API_VERSION = '1.0.0';
 
-export const onBusiness = 'practical';
+export const onBusiness = 'onBusiness';
 export const selfStudy = 'self-study';
 
 // skillset for Voice Of Customer Management System

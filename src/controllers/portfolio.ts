@@ -22,6 +22,7 @@ import {
   faqs,
   links,
   strongPoint,
+  otherSkills,
 } from '../constants/index.js';
 import {generatePortfolioPDF} from '../services/pdfService.js';
 import {SkillItem} from '@/types/skillItem.js';
@@ -107,6 +108,21 @@ export const getSkills = (
     res
       .status(200)
       .json({message: 'Skills data fetched successfully', data: skills});
+  } catch (error) {
+    res.status(500).json({message: 'Error fetching skills data', data: null});
+  }
+};
+export const getOtherSkills = (
+  req: Request,
+  res: ExpressResponse<Response<SkillItem[]>>
+) => {
+  try {
+    res
+      .status(200)
+      .json({
+        message: 'Other skills data fetched successfully',
+        data: otherSkills,
+      });
   } catch (error) {
     res.status(500).json({message: 'Error fetching skills data', data: null});
   }
