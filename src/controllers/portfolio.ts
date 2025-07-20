@@ -117,12 +117,10 @@ export const getOtherSkills = (
   res: ExpressResponse<Response<SkillItem[]>>
 ) => {
   try {
-    res
-      .status(200)
-      .json({
-        message: 'Other skills data fetched successfully',
-        data: otherSkills,
-      });
+    res.status(200).json({
+      message: 'Other skills data fetched successfully',
+      data: otherSkills,
+    });
   } catch (error) {
     res.status(500).json({message: 'Error fetching skills data', data: null});
   }
