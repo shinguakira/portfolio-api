@@ -1,11 +1,10 @@
 import {Links} from '../types/links.js';
 import {StrongPoint} from '../types/strongPoint.js';
-import {FaqProps} from '../types/faq.js';
-import {ChangelogProps} from '../types/changelog.js';
-import {CertificationItemProps} from '../types/certificationItem.js';
+import {Faq} from '../types/faq.js';
+import {Changelog} from '../types/changelog.js';
+import {CertificationItem} from '../types/certificationItem.js';
 import {Contact} from '../types/contact.js';
-import {EducationHistoryProps} from '../types/educationHistory.js';
-import {SkillItemProps} from '../types/skillItem.js';
+import {EducationHistory} from '../types/educationHistory.js';
 import {Project} from '../types/projectItem.js';
 import {WorkExperience} from '../types/workHistory.js';
 import {Request, Response as ExpressResponse} from 'express';
@@ -25,6 +24,7 @@ import {
   strongPoint,
 } from '../constants/index.js';
 import {generatePortfolioPDF} from '../services/pdfService.js';
+import {SkillItem} from '@/types/skillItem.js';
 
 // Get profile information
 export const getProfile = (
@@ -101,7 +101,7 @@ export const getProjects = (
 // Get skills
 export const getSkills = (
   req: Request,
-  res: ExpressResponse<Response<SkillItemProps[]>>
+  res: ExpressResponse<Response<SkillItem[]>>
 ) => {
   try {
     res
@@ -115,7 +115,7 @@ export const getSkills = (
 // Get education
 export const getEducation = (
   req: Request,
-  res: ExpressResponse<Response<EducationHistoryProps[]>>
+  res: ExpressResponse<Response<EducationHistory[]>>
 ) => {
   try {
     const lang = req.query.lang as string;
@@ -151,7 +151,7 @@ export const getContact = (
 
 export const getCertifications = (
   req: Request,
-  res: ExpressResponse<Response<CertificationItemProps[]>>
+  res: ExpressResponse<Response<CertificationItem[]>>
 ) => {
   try {
     const lang = req.query.lang as string;
@@ -175,7 +175,7 @@ export const getCertifications = (
 
 export const getChangelogs = (
   req: Request,
-  res: ExpressResponse<Response<ChangelogProps[]>>
+  res: ExpressResponse<Response<Changelog[]>>
 ) => {
   try {
     const localizedChangelogs = changelogs.map((item) => ({
@@ -200,7 +200,7 @@ export const getChangelogs = (
 
 export const getFaqs = (
   req: Request,
-  res: ExpressResponse<Response<FaqProps[]>>
+  res: ExpressResponse<Response<Faq[]>>
 ) => {
   try {
     const lang = req.query.lang as string;
@@ -235,10 +235,10 @@ export const getStrongPoints = (
   res: ExpressResponse<Response<StrongPoint[]>>
 ) => {
   try {
+    const lang = req.query.lang as string;
     const localizedStrongPoints = strongPoint.map((item) => ({
       size: item.size,
-      ja: item.ja,
-      en: item.en,
+      ...(lang === 'en' ? item.en : item.ja),
     }));
     res.status(200).json({
       message: 'Strong points data fetched successfully',

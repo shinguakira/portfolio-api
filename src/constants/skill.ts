@@ -1,5 +1,5 @@
 import {onBusiness, selfStudy} from './common.js';
-import type {SkillItemProps} from '../types/skillItem.js';
+import type {SkillItem} from '../types/skillItem.js';
 
 export const nextjsSkillSet = [
   'React',
@@ -40,7 +40,7 @@ export const T3StackSkillSet = [
 ];
 
 // main skills(Language,Libraries)
-export const skills: SkillItemProps[] = [
+export const skills: SkillItem[] = [
   {
     name: 'TypeScript',
     years: '1 year',
@@ -291,7 +291,7 @@ export const skills: SkillItemProps[] = [
 ];
 
 // otherSkills(IDE,Editor,Project Management Tool.etc)
-export const otherSkills: SkillItemProps[] = [
+export const otherSkills: SkillItem[] = [
   {
     name: 'Next.js Internationalization',
     years: '3 months',

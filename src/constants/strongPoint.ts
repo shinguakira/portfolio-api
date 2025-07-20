@@ -1,15 +1,6 @@
-export type MultilingualStrongPointContent = {
-  question: string;
-  answer: string;
-};
+import {MultilingualStrongPoint} from '../types/strongPoint.js';
 
-export type MultilingualStrongPointProps = {
-  size: string;
-  ja: MultilingualStrongPointContent;
-  en: MultilingualStrongPointContent;
-};
-
-export const strongPoint: MultilingualStrongPointProps[] = [
+export const strongPoint: MultilingualStrongPoint[] = [
   {
     size: 'large',
     ja: {

@@ -1,8 +1,8 @@
 import {LocalizedProfileData} from './profile.js';
 import {Project} from './projectItem.js';
 import {WorkExperience} from './workHistory.js';
-import {EducationHistoryProps} from './educationHistory.js';
-import {CertificationItemProps} from './certificationItem.js';
+import {EducationHistory} from './educationHistory.js';
+import {CertificationItem} from './certificationItem.js';
 import {StrongPoint} from './strongPoint.js';
 
 export interface BasePDFOptions {
@@ -13,8 +13,8 @@ export interface BasePDFOptions {
 export interface StandardPDFOptions extends BasePDFOptions {
   localizedProjects: Project[];
   localizedExperience: WorkExperience[];
-  localizedEducation: EducationHistoryProps[];
-  localizedCertifications: CertificationItemProps[];
+  localizedEducation: EducationHistory[];
+  localizedCertifications: CertificationItem[];
   localizedStrongPoints: StrongPoint[];
   includeProjects: boolean;
   includeExperience: boolean;
@@ -25,8 +25,8 @@ export interface StandardPDFOptions extends BasePDFOptions {
 export interface CompactPDFOptions extends BasePDFOptions {
   localizedProjects: Project[];
   localizedExperience: WorkExperience[];
-  localizedEducation: EducationHistoryProps[];
-  localizedCertifications: CertificationItemProps[];
+  localizedEducation: EducationHistory[];
+  localizedCertifications: CertificationItem[];
   localizedStrongPoints: StrongPoint[];
   includeProjects: boolean;
   includeExperience: boolean;
@@ -45,8 +45,8 @@ export interface TechnicalPDFOptions extends BasePDFOptions {
 export interface AcademicPDFOptions extends BasePDFOptions {
   localizedProjects: Project[];
   localizedExperience: WorkExperience[];
-  localizedEducation: EducationHistoryProps[];
-  localizedCertifications: CertificationItemProps[];
+  localizedEducation: EducationHistory[];
+  localizedCertifications: CertificationItem[];
   localizedStrongPoints: StrongPoint[];
   includeProjects: boolean;
   includeExperience: boolean;
@@ -57,5 +57,5 @@ export interface AcademicPDFOptions extends BasePDFOptions {
 export interface ModernPDFOptions extends BasePDFOptions {
   _localizedProjects: Project[];
   localizedExperience: WorkExperience[];
-  _localizedCertifications: CertificationItemProps[];
+  _localizedCertifications: CertificationItem[];
 }

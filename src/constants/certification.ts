@@ -1,19 +1,8 @@
 import {links} from './links.js';
+import {MultilingualCertificationItem} from '../types/certificationItem.js';
 
 const creadlyLink = links.creadlyLink;
 // object for certifications
-export type MultilingualCertificationItem = {
-  id: number;
-  organization: string;
-  date: string;
-  verifyLink: string;
-  ja: {
-    name: string;
-  };
-  en: {
-    name: string;
-  };
-};
 
 export const certifications: MultilingualCertificationItem[] = [
   {
