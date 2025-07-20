@@ -14,9 +14,9 @@ export type MultilingualEducationHistory = {
 };
 
 export type EducationHistory = {
-  school: string;
-  department: string;
   startYear: string;
   endYear: string;
+  school: string;
+  department: string;
   description: string;
 };

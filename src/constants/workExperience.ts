@@ -1,8 +1,6 @@
 import {receptionInnovationSkillSet, VOCSkillSet} from './skill.js';
 import {company} from './common.js';
-import {
-  MultilingualWorkExperience,
-} from '../types/workHistory.js';
+import {MultilingualWorkExperience} from '../types/workHistory.js';
 
 // object for work experience
 export const workExperiences: MultilingualWorkExperience[] = [

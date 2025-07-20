@@ -22,7 +22,7 @@ import {StrongPoint} from '../types/strongPoint.js';
 import {WorkExperience} from '../types/workHistory.js';
 import {Project} from '../types/projectItem.js';
 import {EducationHistory} from '../types/educationHistory.js';
-import {CertificationItemProps} from '../types/certificationItem.js';
+import {CertificationItem} from '../types/certificationItem.js';
 
 // Register fonts (optional - for better typography)
 // Font.register({
@@ -182,8 +182,7 @@ const createPortfolioPDF = ({
 
   const localizedStrongPoints = strongPoint.map((item) => ({
     size: item.size,
-    ja: item.ja,
-    en: item.en,
+    ...(lang === 'en' ? item.en : item.ja),
   }));
 
   // Switch between different format patterns
@@ -314,16 +313,8 @@ const createStandardPDF = ({
         ),
         ...localizedStrongPoints.map((point: StrongPoint, index: number) =>
           React.createElement(View, {key: index, style: {marginBottom: 8}}, [
-            React.createElement(
-              Text,
-              {style: styles.boldText},
-              lang === 'en' ? point.en.question : point.ja.question
-            ),
-            React.createElement(
-              Text,
-              {style: styles.text},
-              lang === 'en' ? point.en.answer : point.ja.answer
-            ),
+            React.createElement(Text, {style: styles.boldText}, point.question),
+            React.createElement(Text, {style: styles.text}, point.answer),
           ])
         ),
       ]),
@@ -492,7 +483,7 @@ const createStandardPDF = ({
                 lang === 'en' ? 'Certifications' : '資格・認定'
               ),
               ...localizedCertifications.map(
-                (cert: CertificationItemProps, index: number) =>
+                (cert: CertificationItem, index: number) =>
                   React.createElement(
                     View,
                     {key: index, style: styles.certificationItem},
@@ -689,7 +680,7 @@ const createCompactPDF = ({
                 ),
                 ...localizedCertifications
                   .slice(0, 5)
-                  .map((cert: CertificationItemProps, index: number) =>
+                  .map((cert: CertificationItem, index: number) =>
                     React.createElement(
                       Text,
                       {key: index, style: {fontSize: 9, marginBottom: 2}},
@@ -1052,7 +1043,7 @@ const createAcademicPDF = ({
               lang === 'en' ? 'Certifications & Licenses' : '資格・免許'
             ),
             ...localizedCertifications.map(
-              (cert: CertificationItemProps, index: number) =>
+              (cert: CertificationItem, index: number) =>
                 React.createElement(
                   View,
                   {key: index, style: {marginBottom: 10, paddingLeft: 10}},

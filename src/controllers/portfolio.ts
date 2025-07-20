@@ -2,7 +2,7 @@ import {Links} from '../types/links.js';
 import {StrongPoint} from '../types/strongPoint.js';
 import {Faq} from '../types/faq.js';
 import {Changelog} from '../types/changelog.js';
-import {CertificationItemProps} from '../types/certificationItem.js';
+import {CertificationItem} from '../types/certificationItem.js';
 import {Contact} from '../types/contact.js';
 import {EducationHistory} from '../types/educationHistory.js';
 import {Project} from '../types/projectItem.js';
@@ -151,7 +151,7 @@ export const getContact = (
 
 export const getCertifications = (
   req: Request,
-  res: ExpressResponse<Response<CertificationItemProps[]>>
+  res: ExpressResponse<Response<CertificationItem[]>>
 ) => {
   try {
     const lang = req.query.lang as string;
@@ -235,10 +235,10 @@ export const getStrongPoints = (
   res: ExpressResponse<Response<StrongPoint[]>>
 ) => {
   try {
+    const lang = req.query.lang as string;
     const localizedStrongPoints = strongPoint.map((item) => ({
       size: item.size,
-      ja: item.ja,
-      en: item.en,
+      ...(lang === 'en' ? item.en : item.ja),
     }));
     res.status(200).json({
       message: 'Strong points data fetched successfully',

@@ -1,6 +1,4 @@
-import {
-  MultilingualStrongPoint,
-} from '../types/strongPoint.js';
+import {MultilingualStrongPoint} from '../types/strongPoint.js';
 
 export const strongPoint: MultilingualStrongPoint[] = [
   {

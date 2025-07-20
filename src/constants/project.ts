@@ -15,7 +15,7 @@ const ragChatBotAkiraShinguPic = '/images/projects/rag-chatbot-akirashingu.jpg';
 const countryAppPic = '/images/projects/country-app.png'; // picture for country app
 const portfolioApiPic = '/images/projects/portfolio-api.png'; // picture for portfolio api
 
-import { MultilingualProject} from '../types/projectItem.js';
+import {MultilingualProject} from '../types/projectItem.js';
 
 export const projects: MultilingualProject[] = [
   {

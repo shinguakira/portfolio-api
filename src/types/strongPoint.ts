@@ -11,12 +11,6 @@ export type MultilingualStrongPoint = {
 
 export type StrongPoint = {
   size: string;
-  ja: {
-    question: string;
-    answer: string;
-  };
-  en: {
-    question: string;
-    answer: string;
-  };
+  question: string;
+  answer: string;
 };
