@@ -57,6 +57,7 @@ export const experience_ja = [
       'Electron',
       'Node.js',
       'vite',
+      'vitest',
       'Python',
     ],
     projectOverview: '医療ステレオカメラ自動評定システム',

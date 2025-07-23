@@ -12,7 +12,8 @@ import {Response} from '../types/response.js';
 import {LocalizedProfileData} from '../types/profile.js';
 import {
   profile,
-  workExperiences as experience,
+  workExperiences_ja,
+  workExperiences_en,
   projects,
   skills,
   educationHistory as education,
@@ -60,14 +61,8 @@ export const getExperience = (
 ) => {
   try {
     const lang = req.query.lang as string;
-    const localizedExperience: WorkExperience[] = experience.map((item) => ({
-      company: item.company,
-      period: item.period,
-      teamSize: item.teamSize,
-      manMonth: item.manMonth,
-      technologies: item.technologies,
-      ...(lang === 'en' ? item.en : item.ja),
-    }));
+    const localizedExperience: WorkExperience[] =
+      lang === 'en' ? workExperiences_en : workExperiences_ja;
     res.status(200).json({
       message: 'Experience data fetched successfully',
       data: localizedExperience,
