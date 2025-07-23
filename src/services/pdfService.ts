@@ -2,7 +2,8 @@ import {Document, Page, Text, View, StyleSheet, pdf} from '@react-pdf/renderer';
 import * as React from 'react';
 import {
   profile,
-  workExperiences,
+  workExperiences_ja,
+  workExperiences_en,
   projects,
   skills,
   educationHistory,
@@ -157,14 +158,8 @@ const createPortfolioPDF = ({
     ...(lang === 'en' ? project.en : project.ja),
   }));
 
-  const localizedExperience = workExperiences.map((item) => ({
-    company: item.company,
-    period: item.period,
-    teamSize: item.teamSize,
-    manMonth: item.manMonth,
-    technologies: item.technologies,
-    ...(lang === 'en' ? item.en : item.ja),
-  }));
+  const localizedExperience =
+    lang === 'en' ? workExperiences_en : workExperiences_ja;
 
   const localizedEducation = educationHistory.map((item) => ({
     startYear: item.startYear,

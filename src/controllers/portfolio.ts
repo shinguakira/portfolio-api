@@ -12,7 +12,8 @@ import {Response} from '../types/response.js';
 import {LocalizedProfileData} from '../types/profile.js';
 import {
   profile,
-  workExperiences as experience,
+  workExperiences_ja,
+  workExperiences_en,
   projects,
   skills,
   educationHistory as education,
@@ -22,6 +23,7 @@ import {
   faqs,
   links,
   strongPoint,
+  otherSkills,
 } from '../constants/index.js';
 import {generatePortfolioPDF} from '../services/pdfService.js';
 import {SkillItem} from '@/types/skillItem.js';
@@ -59,14 +61,8 @@ export const getExperience = (
 ) => {
   try {
     const lang = req.query.lang as string;
-    const localizedExperience: WorkExperience[] = experience.map((item) => ({
-      company: item.company,
-      period: item.period,
-      teamSize: item.teamSize,
-      manMonth: item.manMonth,
-      technologies: item.technologies,
-      ...(lang === 'en' ? item.en : item.ja),
-    }));
+    const localizedExperience: WorkExperience[] =
+      lang === 'en' ? workExperiences_en : workExperiences_ja;
     res.status(200).json({
       message: 'Experience data fetched successfully',
       data: localizedExperience,
@@ -107,6 +103,19 @@ export const getSkills = (
     res
       .status(200)
       .json({message: 'Skills data fetched successfully', data: skills});
+  } catch (error) {
+    res.status(500).json({message: 'Error fetching skills data', data: null});
+  }
+};
+export const getOtherSkills = (
+  req: Request,
+  res: ExpressResponse<Response<SkillItem[]>>
+) => {
+  try {
+    res.status(200).json({
+      message: 'Other skills data fetched successfully',
+      data: otherSkills,
+    });
   } catch (error) {
     res.status(500).json({message: 'Error fetching skills data', data: null});
   }

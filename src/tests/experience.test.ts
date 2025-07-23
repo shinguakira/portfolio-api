@@ -11,6 +11,7 @@ describe('GET /api/experience', () => {
     const response = await request(app).get('/api/experience');
     expect(response.status).toBe(200);
     expect(response.body.message).toBe('Experience data fetched successfully');
+    console.log(experience_ja);
     expect(response.body.data).toEqual(experience_ja);
   });
 
