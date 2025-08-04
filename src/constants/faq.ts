@@ -3,6 +3,20 @@ import {MultilingualFaq} from '../types/faq.js';
 export const faqs: MultilingualFaq[] = [
   {
     size: 'large',
+    category: 'Timeline',
+    ja: {
+      question: 'なぜフリーランスになられましたか?',
+      answer:
+        '元々SESというフリーランスとほぼ変わらない働き方をしていて、SESの会社に所属するよりも、より幅広い案件に参画することができ、報酬も多くなりやすいためです。SESの延長というところで、特にフリーランスに関して不安などない状態でした。',
+    },
+    en: {
+      question: 'Why did you become a freelancer?',
+      answer:
+        'I was working as a freelancer with a similar working method to SES, and I could participate in a wider range of projects and earn more. I was not worried about freelancing at the time of the extension of SES.',
+    },
+  },
+  {
+    size: 'large',
     category: 'Others',
     ja: {
       question: 'なぜWeb開発を専門としていますか？',
@@ -36,7 +50,7 @@ export const faqs: MultilingualFaq[] = [
       question:
         'なぜバックエンドではなく、フロントエンドをメインとしていますか？',
       answer:
-        'フロントエンドは、ユーザーが触れる一番近い部分である、画面の開発を行うため、より良い画面の開発はユーザーの満足度に直結しやすいためです。SPAが広がっていることにより、よりフロントエンドが担う部分が増え、フロントエンドの重要度が上がっていると感じます。またAWSやAzureなどのクラウドの使用が増え、それらの使用は基本的に従量課金であり、サーバーの負荷がかかるほどコストがかかります。今ではクライアント側の端末は基本的に計算処理を行うのに十分な環境が整っているため、よりクライアント側に処理を任せることで、サーバーの負担、コストを減らすという選択肢をとることもできるようになります。これらの理由で、フロントエンドをメインとしています。',
+        'フロントエンドは、ユーザーが触れる一番近い部分である、画面の開発を行うため、より良い画面の開発はユーザーの満足度に直結しやすいためです。SPAが広がっていることにより、よりフロントエンドが担う部分が増え、フロントエンドの重要度が上がっていると感じます。またAWSやAzureなどのクラウドの使用が増え、それらの使用は基本的に従量課金であり、サーバーの負荷がかかるほどコストがかかります。今ではクライアント側の端末は基本的に計算処理を行うのに十分な環境が整っているため、よりクライアント側に処理を任せることで、サーバーの負担、コストを減らすという選択肢をとることもできるようになります。複数のアプリで使用するから、セキュリティ的な理由からなどで、バックエンドが必須になりますが、あくまでそれは開発者側の都合でしかなく、フロントも同様ですが、フロントとバックの概念は関係ありません。ただそうなった場合に、ユーザーに必要とされるのは、画面付きのアプリであることが多いと感じます。(組み込みなどのソフトを除く)これらの理由で、フロントエンドをメインとしています。',
     },
     en: {
       question: 'Why do you focus on frontend rather than backend development?',
