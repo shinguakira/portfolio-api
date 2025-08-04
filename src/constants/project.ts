@@ -14,6 +14,8 @@ const TwodRpgPic = '/images/projects/2d-rpg-react.png'; // picture for 2d rpg
 const ragChatBotAkiraShinguPic = '/images/projects/rag-chatbot-akirashingu.jpg'; // picture for rag chatbot akira shingu
 const countryAppPic = '/images/projects/country-app.png'; // picture for country app
 const portfolioApiPic = '/images/projects/portfolio-api.png'; // picture for portfolio api
+const connectFourPic = '/images/projects/3dConnectFour.png'; // picture for 3d connect four
+const brightyPic = '/images/projects/brighty.png'; // picture for brighty
 
 import {MultilingualProject} from '../types/projectItem.js';
 
@@ -51,6 +53,93 @@ export const projects: MultilingualProject[] = [
       image: onDevelopingPic,
       githubUrl: '',
       liveUrl: '',
+    },
+  },
+  {
+    technologies: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'lucide-react',
+    ],
+    ja: {
+      title: 'Brighty コーチングマッチングアプリ',
+      description: `Brighty コーチングマッチングアプリ
+経歴に記載の元と同様のため、省略
+`,
+      image: connectFourPic,
+      githubUrl: 'https://github.com/shinguakira/electronSample',
+      liveUrl: '',
+    },
+    en: {
+      title: 'Brighty Coaching Matching App',
+      description: `Brighty Coaching Matching App
+Same as the one in the history, so omitted
+`,
+      image: connectFourPic,
+      githubUrl: 'https://github.com/shinguakira/electronSample',
+      liveUrl: '',
+    },
+  },
+  {
+    technologies: [
+      'Electron',
+      'Vite',
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'lucide-react',
+    ],
+    ja: {
+      title: 'Electron Vite Reactアプリ',
+      description: `Electron Vite Reactアプリ
+Python、exeなどを実行。Electronの一通りの機能を搭載したアプリ。
+インストール用のexeファイル作成予定。
+`,
+      image: connectFourPic,
+      githubUrl: 'https://github.com/shinguakira/electronSample',
+      liveUrl: '',
+    },
+    en: {
+      title: 'Electron Vite React App',
+      description: `An Electron Vite React app.
+You can run Python and exe files. It is an app that has all the features of Electron.
+Installable exe file creation is planned.`,
+      image: connectFourPic,
+      githubUrl: 'https://github.com/shinguakira/electronSample',
+      liveUrl: '',
+    },
+  },
+  {
+    technologies: [
+      'React',
+      'TypeScript',
+      'Next.js',
+      'Tailwind CSS',
+      'lucide-react',
+    ],
+    ja: {
+      title: '3D4目並べ',
+      description: `3D4目並べ
+ルームマッチングまで実装。実際の対戦は実装予定。
+AIとの対戦、同画面での2人対戦、ルームマッチング(予定)が可能。
+タイトル画面がランダムに変わる。使用するオブジェクトも選択可能。
+`,
+      image: connectFourPic,
+      githubUrl: 'https://github.com/shinguakira/3d-connect-four',
+      liveUrl: 'https://3d-connect-four-vfpy.vercel.app/',
+    },
+    en: {
+      title: '3D Connect Four',
+      description: `A 3D Connect Four game using the KaPlay library.
+Room matching is implemented. Actual play is planned.
+One-on-one play with AI, same-screen two-player play, and room matching (planned).
+The title screen changes randomly. The objects used can also be selected.
+`,
+      image: connectFourPic,
+      githubUrl: 'https://github.com/shinguakira/3d-connect-four',
+      liveUrl: 'https://3d-connect-four-vfpy.vercel.app/',
     },
   },
   {
