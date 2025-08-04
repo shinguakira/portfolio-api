@@ -2,7 +2,7 @@ export type SkillItem = {
   name: string;
   category: string;
   years: string;
-  proficyency?: string; // onBusiness or self-study
+  proficiency?: string; // onBusiness or self-study
   picture?: string; // url for skill picture
   pictureColor?: string; // color for skill picture
 };
