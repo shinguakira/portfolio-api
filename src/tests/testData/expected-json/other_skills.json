@@ -1,0 +1,122 @@
+[
+  {
+    "name": "VS Code(Typescript)",
+    "years": "1 year",
+    "category": "Others",
+    "proficiency": "onBusiness",
+    "picture": "/icons/VSCode.svg",
+    "pictureColor": "#007ACC"
+  },
+  {
+    "name": "Windsurf",
+    "years": "6 months",
+    "category": "Others",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Windsurf.svg",
+    "pictureColor": "#007ACC"
+  },
+  {
+    "name": "IntelliJ IDEA(Typescript)",
+    "years": "1 year",
+    "category": "Others",
+    "proficiency": "onBusiness",
+    "picture": "/icons/IntelliJIDEA.svg",
+    "pictureColor": "#000000"
+  },
+  {
+    "name": "Eclipse(Java,Javascript)",
+    "years": "6 months",
+    "category": "Others",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Eclipse.svg",
+    "pictureColor": "#0089D6"
+  },
+  {
+    "name": "Spring Tool Suite4(Java,Javascript)",
+    "years": "4 months",
+    "category": "Others",
+    "proficiency": "onBusiness",
+    "picture": "/icons/SpringToolSuite.svg",
+    "pictureColor": "#6DB33F"
+  },
+  {
+    "name": "StackBlitz(React)",
+    "years": "self-study",
+    "category": "Others",
+    "proficiency": "self-study",
+    "picture": "/icons/StackBlitz.svg",
+    "pictureColor": "#1269D3"
+  },
+  {
+    "name": "Visual Studio(C,C++,C#)",
+    "years": "8 months",
+    "category": "Others",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Visual-Studio-C-Cpp-CSharp.svg",
+    "pictureColor": "#5C2D91"
+  },
+  {
+    "name": "Git(Tortoise Git)",
+    "years": "1 year",
+    "category": "Others",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Git-Tortoise-Git.svg",
+    "pictureColor": "#F05032"
+  },
+  {
+    "name": "Github",
+    "years": "1 year",
+    "category": "Others",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Github.svg",
+    "pictureColor": "#181717"
+  },
+  {
+    "name": "Swagger",
+    "years": "6 months",
+    "category": "Others",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Swagger.svg",
+    "pictureColor": "#85EA2D"
+  },
+  {
+    "name": "Backlog",
+    "years": "1 year",
+    "category": "Others",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Backlog.svg",
+    "pictureColor": "#181717"
+  },
+  {
+    "name": "Redmine",
+    "years": "3 months",
+    "category": "Others",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Redmine.svg",
+    "pictureColor": "#B32024"
+  },
+  {
+    "name": "Asana",
+    "years": "1 month",
+    "category": "Others",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Asana.svg",
+    "pictureColor": "#F06A6A"
+  },
+  {
+    "name": "A5:SQL Mk-2",
+    "years": "1 year",
+    "category": "Others",
+    "proficiency": "onBusiness",
+    "picture": "/icons/A5SQLMk2.svg",
+    "pictureColor": "#336791"
+  },
+  {
+    "name": "Bun",
+    "years": "self-study",
+    "category": "Others",
+    "proficiency": "self-study",
+    "picture": "/icons/Bun.svg",
+    "pictureColor": "#000000"
+  }
+]

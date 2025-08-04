@@ -1,0 +1,314 @@
+[
+  {
+    "name": "TypeScript",
+    "years": "1 year 6 months",
+    "category": "Language",
+    "proficiency": "onBusiness",
+    "picture": "/icons/TypeScript.svg",
+    "pictureColor": "#3178C6"
+  },
+  {
+    "name": "JavaScript(include TypeScript)",
+    "years": "2 years",
+    "category": "Language",
+    "proficiency": "onBusiness",
+    "picture": "/icons/JavaScript.svg",
+    "pictureColor": "#F7DF1E"
+  },
+  {
+    "name": "Java",
+    "years": "1 year",
+    "category": "Language",
+    "proficiency": "onBusiness",
+    "picture": "/icons/React.svg",
+    "pictureColor": "#61DAFB"
+  },
+  {
+    "name": "C,C++,C#",
+    "years": "6 months",
+    "category": "Language",
+    "proficiency": "onBusiness",
+    "picture": "/icons/C-Cpp-CSharp.svg",
+    "pictureColor": "#00599C"
+  },
+  {
+    "name": "Python",
+    "years": "1 year",
+    "category": "Language",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Python.svg",
+    "pictureColor": "#3776AB"
+  },
+  {
+    "name": "React",
+    "years": "1 year 6 months",
+    "category": "Frontend",
+    "proficiency": "onBusiness",
+    "picture": "/icons/React.svg",
+    "pictureColor": "#61DAFB"
+  },
+  {
+    "name": "Next.js",
+    "years": "6 months",
+    "category": "Frontend",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Next.js.svg",
+    "pictureColor": "#000000"
+  },
+  {
+    "name": "Node.js",
+    "years": "1 year",
+    "category": "Backend",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Node.js.svg",
+    "pictureColor": "#5FA04E"
+  },
+  {
+    "name": "Express.js",
+    "years": "self-study",
+    "category": "Backend",
+    "proficiency": "self-study",
+    "picture": "/icons/Express.js.svg",
+    "pictureColor": "#5FA04E"
+  },
+  {
+    "name": "Hono.js",
+    "years": "self-study",
+    "category": "Backend",
+    "proficiency": "self-study",
+    "picture": "/icons/Hono.js.svg",
+    "pictureColor": "#E36002"
+  },
+  {
+    "name": "Springboot(Java)",
+    "years": "1 year",
+    "category": "Backend",
+    "proficiency": "onBusiness",
+    "picture": "/icons/SpringBoot.svg",
+    "pictureColor": "#6DB33F"
+  },
+  {
+    "name": "GraphQL",
+    "years": "1 year 6 months",
+    "category": "API",
+    "proficiency": "onBusiness",
+    "picture": "/icons/GraphQL.svg",
+    "pictureColor": "#E10098"
+  },
+  {
+    "name": "REST",
+    "years": "2 years",
+    "category": "API",
+    "proficiency": "onBusiness",
+    "picture": "/icons/REST.svg",
+    "pictureColor": "#61DAFB"
+  },
+  {
+    "name": "Axios(REST)",
+    "years": "1 year",
+    "category": "API",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Axios-REST.svg",
+    "pictureColor": "#311C87"
+  },
+  {
+    "name": "Redux",
+    "years": "self-study",
+    "category": "State Management",
+    "proficiency": "self-study",
+    "picture": "/icons/Redux.svg",
+    "pictureColor": "#764ABC"
+  },
+  {
+    "name": "Context API",
+    "years": "6 months",
+    "category": "State Management",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Redux.svg",
+    "pictureColor": "#764ABC"
+  },
+  {
+    "name": "Prisma",
+    "years": "self-study",
+    "category": "ORM",
+    "proficiency": "self-study",
+    "picture": "/icons/Prisma.svg",
+    "pictureColor": "#2D3748"
+  },
+  {
+    "name": "Selenium(Python)",
+    "years": "1 year",
+    "category": "Testing",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Selenium-Python.svg",
+    "pictureColor": "#43B02A"
+  },
+  {
+    "name": "Jest",
+    "years": "6 months",
+    "category": "Testing",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Jest.svg",
+    "pictureColor": "#C21325"
+  },
+  {
+    "name": "Vitest",
+    "years": "3 months",
+    "category": "Testing",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Vitest.svg",
+    "pictureColor": "#C21325"
+  },
+  {
+    "name": "BootStrap5",
+    "years": "1 year",
+    "category": "CSS",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Bootstrap5.svg",
+    "pictureColor": "#7952B3"
+  },
+  {
+    "name": "TailWindCSS",
+    "years": "self-study",
+    "category": "CSS",
+    "proficiency": "self-study",
+    "picture": "/icons/TailwindCSS.svg",
+    "pictureColor": "#06B6D4"
+  },
+  {
+    "name": "MySQL",
+    "years": "1 year",
+    "category": "Database",
+    "proficiency": "onBusiness",
+    "picture": "/icons/MySQL.svg",
+    "pictureColor": "#4479A1"
+  },
+  {
+    "name": "PostgresSQL",
+    "years": "6 months",
+    "category": "Database",
+    "proficiency": "onBusiness",
+    "picture": "/icons/PostgresSQL.svg",
+    "pictureColor": "#336791"
+  },
+  {
+    "name": "Redis",
+    "years": "6 months",
+    "category": "Database",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Redis.svg",
+    "pictureColor": "#4479A1"
+  },
+  {
+    "name": "Vercel",
+    "years": "6 months",
+    "category": "Database",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Vercel.svg",
+    "pictureColor": "#000000"
+  },
+  {
+    "name": "AWS",
+    "years": "3 months",
+    "category": "Cloud",
+    "proficiency": "onBusiness",
+    "picture": "/icons/AWS.svg",
+    "pictureColor": "#232F3E"
+  },
+  {
+    "name": "Azure",
+    "years": "1 year",
+    "category": "Cloud",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Azure.svg",
+    "pictureColor": "#0089D6"
+  },
+  {
+    "name": "Docker",
+    "years": "6 months",
+    "category": "Others",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Docker.svg",
+    "pictureColor": "#2496ED"
+  },
+  {
+    "name": "shadcn",
+    "years": "self-study",
+    "category": "Frontend",
+    "proficiency": "self-study",
+    "picture": "/icons/shadcn.svg",
+    "pictureColor": "#000000"
+  },
+  {
+    "name": "Material UI",
+    "years": "6 months",
+    "category": "Frontend",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Material-UI.svg",
+    "pictureColor": "#007FFF"
+  },
+  {
+    "name": "React Hook Form",
+    "years": "1 year 6 months",
+    "category": "Frontend",
+    "proficiency": "onBusiness",
+    "picture": "/icons/ReactHookForm.svg",
+    "pictureColor": "#FF6B35"
+  },
+  {
+    "name": "zod",
+    "years": "6 months",
+    "category": "Frontend",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Zod.svg",
+    "pictureColor": "#3E67B1"
+  },
+  {
+    "name": "NextAuth",
+    "years": "6 months",
+    "category": "Frontend",
+    "proficiency": "onBusiness",
+    "picture": "/icons/NextAuth.png",
+    "pictureColor": "#000000"
+  },
+  {
+    "name": "codegen",
+    "years": "6 months",
+    "category": "Frontend",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Codegen.svg",
+    "pictureColor": "#E10098"
+  },
+  {
+    "name": "Dwolla",
+    "years": "self-study",
+    "category": "Others",
+    "proficiency": "self-study",
+    "picture": "/icons/Dwolla.svg",
+    "pictureColor": "#FF6A13"
+  },
+  {
+    "name": "babylon.js",
+    "years": "self-study",
+    "category": "Frontend",
+    "proficiency": "self-study",
+    "picture": "/icons/BabylonJS.svg",
+    "pictureColor": "#BB464B"
+  },
+  {
+    "name": "kaPlay",
+    "years": "self-study",
+    "category": "Frontend",
+    "proficiency": "self-study",
+    "picture": "/icons/KaPlay.svg",
+    "pictureColor": "#4CAF50"
+  },
+  {
+    "name": "AstraDB",
+    "years": "self-study",
+    "category": "Database",
+    "proficiency": "self-study",
+    "picture": "/icons/AstraDB.svg",
+    "pictureColor": "#FF6B6B"
+  }
+]
