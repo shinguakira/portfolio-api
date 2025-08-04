@@ -19,7 +19,6 @@ describe('GET /api/projects', () => {
 
   it('should respond with a 200 status code and the English projects data when lang=en', async () => {
     const response = await request(app).get('/api/projects?lang=en');
-    console.log(JSON.stringify(response.body.data));
     const data = readFileSync(
       'src/tests/testData/expected-json/projects_en.json',
       'utf8'
