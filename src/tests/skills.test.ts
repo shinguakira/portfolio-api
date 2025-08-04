@@ -1,7 +1,6 @@
 import {describe, it, expect} from 'vitest';
 import request from 'supertest';
 import app from '../index.js';
-import {otherSkills, skills} from './testData/expected-json/skills.js';
 import {readFileSync} from 'fs';
 
 describe('GET /api/skills', () => {
