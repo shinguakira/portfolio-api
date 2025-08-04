@@ -62,7 +62,7 @@ export const skills: SkillItem[] = [
     years: '1 year',
     category: 'Language',
     proficiency: onBusiness,
-    picture: '/icons/React.svg',
+    picture: '/icons/Java.svg',
     pictureColor: '#61DAFB',
   },
   {
@@ -206,7 +206,7 @@ export const skills: SkillItem[] = [
     years: '1 year',
     category: 'CSS',
     proficiency: onBusiness,
-    picture: '/icons/Bootstrap5.svg',
+    picture: '/icons/BootStrap5.svg',
     pictureColor: '#7952B3',
   },
   {
@@ -214,7 +214,7 @@ export const skills: SkillItem[] = [
     years: selfStudy,
     category: 'CSS',
     proficiency: selfStudy,
-    picture: '/icons/TailwindCSS.svg',
+    picture: '/icons/TailWindCSS.svg',
     pictureColor: '#06B6D4',
   },
   {
