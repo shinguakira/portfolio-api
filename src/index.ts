@@ -12,6 +12,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Serve static files from public directory
+app.use(express.static('public'));
+
 // Routes
 app.use('/api', portfolioRoutes);
 
@@ -53,5 +56,13 @@ app.get('/', (req, res) => {
 });
 
 // Start server only if not in a test environment
+if (process.env.NODE_ENV !== 'test') {
+  const PORT = process.env.PORT || 3004;
+  app.listen(PORT, () => {
+    console.log(`🚀 Portfolio API Server running on port ${PORT}`);
+    console.log(`📍 Local: http://localhost:${PORT}`);
+    console.log(`🏥 Health: http://localhost:${PORT}/health`);
+  });
+}
 
 export default app;
