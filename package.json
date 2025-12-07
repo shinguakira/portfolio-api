@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@react-pdf/renderer": "^4.3.0",
+    "@shinguakira/portfolio-api-types": "^1.0.0",
     "@vendia/serverless-express": "^4.12.6",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
