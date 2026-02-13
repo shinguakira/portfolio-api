@@ -59,7 +59,7 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'Java',
-    years: '1 year',
+    years: '2 years',
     category: 'Language',
     proficiency: onBusiness,
     picture: '/icons/Java.svg',
@@ -75,7 +75,7 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'Python',
-    years: '1 year',
+    years: '2 years',
     category: 'Language',
     proficiency: onBusiness,
     picture: '/icons/Python.svg',
@@ -83,7 +83,7 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'React',
-    years: '1 year 6 months',
+    years: '2 years',
     category: 'Frontend',
     proficiency: onBusiness,
     picture: '/icons/React.svg',
@@ -91,7 +91,7 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'Next.js',
-    years: '6 months',
+    years: '1 year',
     category: 'Frontend',
     proficiency: onBusiness,
     picture: '/icons/Next.js.svg',
@@ -99,7 +99,7 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'Node.js',
-    years: '1 year',
+    years: '2 years',
     category: 'Backend',
     proficiency: onBusiness,
     picture: '/icons/Node.js.svg',
@@ -115,15 +115,15 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'Hono.js',
-    years: selfStudy,
+    years: '6 months',
     category: 'Backend',
-    proficiency: selfStudy,
+    proficiency: onBusiness,
     picture: '/icons/Hono.js.svg',
     pictureColor: '#E36002',
   },
   {
     name: 'Springboot(Java)',
-    years: '1 year',
+    years: '2 years',
     category: 'Backend',
     proficiency: onBusiness,
     picture: '/icons/SpringBoot.svg',
@@ -131,7 +131,7 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'GraphQL',
-    years: '1 year 6 months',
+    years: '2 years',
     category: 'API',
     proficiency: onBusiness,
     picture: '/icons/GraphQL.svg',
@@ -146,14 +146,6 @@ export const skills: SkillItem[] = [
     pictureColor: '#61DAFB',
   },
   {
-    name: 'Axios(REST)',
-    years: '1 year',
-    category: 'API',
-    proficiency: onBusiness,
-    picture: '/icons/Axios-REST.svg',
-    pictureColor: '#311C87',
-  },
-  {
     name: 'Redux',
     years: selfStudy,
     category: 'State Management',
@@ -163,7 +155,7 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'Context API',
-    years: '6 months',
+    years: '1 year',
     category: 'State Management',
     proficiency: onBusiness,
     picture: '/icons/Redux.svg',
@@ -186,6 +178,14 @@ export const skills: SkillItem[] = [
     pictureColor: '#43B02A',
   },
   {
+    name: 'Playwright(TypeScript)',
+    years: '1 year',
+    category: 'Testing',
+    proficiency: onBusiness,
+    picture: '/icons/Playwright.svg',
+    pictureColor: '#C21325',
+  },
+  {
     name: 'Jest',
     years: '6 months',
     category: 'Testing',
@@ -195,7 +195,7 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'Vitest',
-    years: '3 months',
+    years: '6 months',
     category: 'Testing',
     proficiency: onBusiness,
     picture: '/icons/Vitest.svg',
@@ -211,9 +211,9 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'TailWindCSS',
-    years: selfStudy,
+    years: '1 year',
     category: 'CSS',
-    proficiency: selfStudy,
+    proficiency: onBusiness,
     picture: '/icons/TailWindCSS.svg',
     pictureColor: '#06B6D4',
   },
@@ -227,7 +227,7 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'PostgresSQL',
-    years: '6 months',
+    years: '1 year',
     category: 'Database',
     proficiency: onBusiness,
     picture: '/icons/PostgresSQL.svg',
@@ -235,7 +235,7 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'Redis',
-    years: '6 months',
+    years: '1 year',
     category: 'Database',
     proficiency: onBusiness,
     picture: '/icons/Redis.svg',
@@ -243,7 +243,7 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'Vercel',
-    years: '6 months',
+    years: '1 year',
     category: 'Database',
     proficiency: onBusiness,
     picture: '/icons/Vercel.svg',
@@ -259,7 +259,7 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'Azure',
-    years: '1 year',
+    years: '2 years',
     category: 'Cloud',
     proficiency: onBusiness,
     picture: '/icons/Azure.svg',
@@ -267,7 +267,7 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'Docker',
-    years: '6 months',
+    years: '1 year',
     category: 'Others',
     proficiency: onBusiness,
     picture: '/icons/Docker.svg',
@@ -275,15 +275,15 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'shadcn',
-    years: selfStudy,
+    years: '1 year',
     category: 'Frontend',
-    proficiency: selfStudy,
+    proficiency: onBusiness,
     picture: '/icons/shadcn.svg',
     pictureColor: '#000000',
   },
   {
     name: 'Material UI',
-    years: '6 months',
+    years: '1 year',
     category: 'Frontend',
     proficiency: onBusiness,
     picture: '/icons/Material-UI.svg',
@@ -291,7 +291,7 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'React Hook Form',
-    years: '1 year 6 months',
+    years: '2 years',
     category: 'Frontend',
     proficiency: onBusiness,
     picture: '/icons/ReactHookForm.svg',
@@ -299,7 +299,7 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'zod',
-    years: '6 months',
+    years: '1 year',
     category: 'Frontend',
     proficiency: onBusiness,
     picture: '/icons/Zod.svg',
@@ -307,7 +307,7 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'NextAuth',
-    years: '6 months',
+    years: '1 year',
     category: 'Frontend',
     proficiency: onBusiness,
     picture: '/icons/NextAuth.png',
@@ -315,19 +315,11 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'codegen',
-    years: '6 months',
+    years: '1 year',
     category: 'Frontend',
     proficiency: onBusiness,
     picture: '/icons/Codegen.svg',
     pictureColor: '#E10098',
-  },
-  {
-    name: 'Dwolla',
-    years: selfStudy,
-    category: 'Others',
-    proficiency: selfStudy,
-    picture: '/icons/Dwolla.svg',
-    pictureColor: '#FF6A13',
   },
   {
     name: 'babylon.js',
@@ -346,10 +338,10 @@ export const skills: SkillItem[] = [
     pictureColor: '#4CAF50',
   },
   {
-    name: 'AstraDB',
-    years: selfStudy,
+    name: 'vectorDB(pgvector)',
+    years: "3 months",
     category: 'Database',
-    proficiency: selfStudy,
+    proficiency: onBusiness,
     picture: '/icons/AstraDB.svg',
     pictureColor: '#FF6B6B',
   },
@@ -359,7 +351,7 @@ export const skills: SkillItem[] = [
 export const otherSkills: SkillItem[] = [
   {
     name: 'VS Code(Typescript)',
-    years: '1 year',
+    years: '2 year',
     category: 'Others',
     proficiency: onBusiness,
     picture: '/icons/VSCode.svg',
@@ -367,7 +359,7 @@ export const otherSkills: SkillItem[] = [
   },
   {
     name: 'Windsurf',
-    years: '6 months',
+    years: '1 year',
     category: 'Others',
     proficiency: onBusiness,
     picture: '/icons/Windsurf.svg',
@@ -383,7 +375,7 @@ export const otherSkills: SkillItem[] = [
   },
   {
     name: 'Eclipse(Java,Javascript)',
-    years: '6 months',
+    years: '1 year',
     category: 'Others',
     proficiency: onBusiness,
     picture: '/icons/Eclipse.svg',
@@ -415,7 +407,7 @@ export const otherSkills: SkillItem[] = [
   },
   {
     name: 'Git(Tortoise Git)',
-    years: '1 year',
+    years: '2 year',
     category: 'Others',
     proficiency: onBusiness,
     picture: '/icons/Git-Tortoise-Git.svg',
@@ -423,7 +415,7 @@ export const otherSkills: SkillItem[] = [
   },
   {
     name: 'Github',
-    years: '1 year',
+    years: '2 year',
     category: 'Others',
     proficiency: onBusiness,
     picture: '/icons/Github.svg',
@@ -452,14 +444,6 @@ export const otherSkills: SkillItem[] = [
     proficiency: onBusiness,
     picture: '/icons/Redmine.svg',
     pictureColor: '#B32024',
-  },
-  {
-    name: 'Asana',
-    years: '1 month',
-    category: 'Others',
-    proficiency: onBusiness,
-    picture: '/icons/Asana.svg',
-    pictureColor: '#F06A6A',
   },
   {
     name: 'A5:SQL Mk-2',
