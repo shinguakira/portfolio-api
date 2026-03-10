@@ -13,11 +13,6 @@ export const profile = {
       url: 'https://linkedin.com/in/shinguakira',
       icon: 'linkedin',
     },
-    {
-      platform: 'Twitter',
-      url: 'https://twitter.com/shinguakira',
-      icon: 'twitter',
-    },
   ],
   ja: {
     title: 'フルスタックエンジニア',
