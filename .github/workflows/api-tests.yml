@@ -66,6 +66,7 @@ jobs:
   go-tests:
     name: Run Go Tests
     runs-on: ubuntu-latest
+    if: hashFiles('go/go.mod') != ''
     defaults:
       run:
         working-directory: go
@@ -91,6 +92,7 @@ jobs:
   rust-tests:
     name: Run Rust Tests
     runs-on: ubuntu-latest
+    if: hashFiles('rust/Cargo.toml') != ''
     defaults:
       run:
         working-directory: rust
@@ -119,6 +121,7 @@ jobs:
   haskell-tests:
     name: Run Haskell Tests
     runs-on: ubuntu-latest
+    if: hashFiles('haskell/stack.yaml') != ''
     defaults:
       run:
         working-directory: haskell

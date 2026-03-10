@@ -197,8 +197,8 @@ export const getChangelogs = (
       date: item.date,
       changes: item.changes.map((change) => ({
         type: change.type,
-        description:
-          lang === 'en' ? change.en.description : change.ja.description,
+        ja: change.ja,
+        en: change.en,
       })),
     }));
     res.status(200).json({
