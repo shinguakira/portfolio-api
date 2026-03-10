@@ -61,7 +61,7 @@ export const nextjsSkillSet: string[] = [
 export const company = {
   eastCoast: 'お客さま2',
   staffService: 'お客さま1',
-  higashiTechLab: '株式会社東日本技術研究所',
+  higashiTechLab: 'A社の子会社',
   hotelTerrace: '株式会社ホテルテラスザスクエア日立',
 };
 
