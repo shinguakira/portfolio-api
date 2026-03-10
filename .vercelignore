@@ -1,0 +1,26 @@
+# Other language backends
+go/
+rust/
+haskell/
+
+# Build artifacts
+dist/
+dist-scripts/
+coverage/
+
+# Dev/test files
+scripts/
+*.ps1
+test-extract.js
+nul
+
+# Large directories
+.git/
+
+# Documentation (not needed for deploy)
+AGENTS.md
+DEPLOYMENT.md
+HASKELL_BACKEND_INSTRUCTIONS.md
+RUST_BACKEND_INSTRUCTIONS.md
+TESTING.md
+README.md

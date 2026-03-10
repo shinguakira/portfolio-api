@@ -95,3 +95,14 @@ Desktop.ini
 /.serverless/cloudformation-template-update-stack.json
 /.serverless/portfolio-api.zip
 /.serverless/serverless-state.json
+
+# Go
+go/bin/
+go/vendor/
+
+# Rust
+rust/target/
+
+# Haskell
+haskell/.stack-work/
+haskell/*.cabal
