@@ -342,7 +342,7 @@ export const workExperiences_ja: WorkExperience[] = [
   },
   {
     company: '株式会社ホテルテラスザスクエア日立',
-    period: '2021年 - 2022年',
+    period: '2022年1月 - 2023年3月',
     teamSize: '',
     manMonth: '',
     technologies: [],
@@ -753,7 +753,7 @@ export const workExperiences_en: WorkExperience[] = [
       'Proposal of ideas or creation of prototypes to improve service',
     ],
     manMonth: '',
-    period: '2021 - 2022',
+    period: '2022-01 - 2023-03',
     projectOverview: 'Hotel Front Desk (Part-time)',
     role: '',
     teamSize: '',
