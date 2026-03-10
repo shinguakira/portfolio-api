@@ -1,0 +1,39 @@
+{
+  "name": "@shinguakira/portfolio-api-types",
+  "version": "1.0.0",
+  "description": "TypeScript types for Shingu Akira Portfolio API responses",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "portfolio",
+    "api",
+    "types",
+    "typescript"
+  ],
+  "author": "Shingu Akira",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shinguakira/portfolio-api"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
+}

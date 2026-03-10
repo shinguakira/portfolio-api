@@ -1,7 +1,6 @@
 import {describe, it, expect} from 'vitest';
 import request from 'supertest';
 import app from '../index.js';
-import {projects_ja, projects_en} from './testData/expected-json/projects.js';
 import {readFileSync} from 'fs';
 
 describe('GET /api/projects', () => {

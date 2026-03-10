@@ -1,5 +1,5 @@
 export const contact = {
-  email: 'contact@shinguakira.com',
+  email: 'shinguakira1022@gmail.com',
   phone: '+81 XX-XXXX-XXXX',
   address: 'Tokyo, Japan',
   socialMedia: {

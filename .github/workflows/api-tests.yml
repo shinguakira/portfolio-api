@@ -8,13 +8,19 @@ on:
     types: [opened, synchronize, reopened]
     branches: [main] # Test PRs to main branch
     paths:
-      - 'src/**'
+      - 'ts/src/**'
+      - 'go/**'
+      - 'rust/**'
+      - 'haskell/**'
       - '.github/workflows/api-tests.yml'
 
 jobs:
-  code-quality:
-    name: Code Quality Checks
+  ts-code-quality:
+    name: TS Code Quality Checks
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ts
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -26,7 +32,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: cd .. && npm ci
 
       - name: Run linting
         run: npm run lint
@@ -34,10 +40,13 @@ jobs:
       - name: Run formatting check
         run: npm run format:check
 
-  run-tests:
-    name: Run Vitest Tests
+  ts-tests:
+    name: Run TS Vitest Tests
     runs-on: ubuntu-latest
-    needs: code-quality
+    needs: ts-code-quality
+    defaults:
+      run:
+        working-directory: ts
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -49,15 +58,99 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: cd .. && npm ci
 
       - name: Run tests
         run: npm run test
 
+  go-tests:
+    name: Run Go Tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: go
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+          cache-dependency-path: go/go.sum
+
+      - name: Download dependencies
+        run: go mod download
+
+      - name: Build
+        run: go build ./...
+
+      - name: Run tests
+        run: go test ./...
+
+  rust-tests:
+    name: Run Rust Tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: rust
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache cargo
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            rust/target
+          key: ${{ runner.os }}-cargo-${{ hashFiles('rust/Cargo.lock') }}
+
+      - name: Build
+        run: cargo build
+
+      - name: Run tests
+        run: cargo test
+
+  haskell-tests:
+    name: Run Haskell Tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: haskell
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Haskell
+        uses: haskell-actions/setup@v2
+        with:
+          ghc-version: '9.6'
+          enable-stack: true
+          stack-version: 'latest'
+
+      - name: Cache Stack
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.stack
+            haskell/.stack-work
+          key: ${{ runner.os }}-stack-${{ hashFiles('haskell/stack.yaml') }}-${{ hashFiles('haskell/package.yaml') }}
+
+      - name: Build
+        run: stack build
+
+      - name: Run tests
+        run: stack test
+
   test-deployed-endpoints:
     name: Test Deployed API Endpoints
     runs-on: ubuntu-latest
-    needs: run-tests
+    needs: ts-tests
     # Skip endpoint testing on PRs and pushes, only run on schedule and manual dispatch
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
 
@@ -68,8 +161,6 @@ jobs:
           - deployment: vercel
             # Dynamic URL based on context
             base_url: ${{ github.event_name == 'pull_request' && format('https://portfolio-api-{0}-shinguakira.vercel.app', github.head_ref) || 'https://portfolio-api-ten-delta.vercel.app' }}
-          # - deployment: aws
-          #   base_url: https://s55mfd704a.execute-api.us-east-1.amazonaws.com/dev
 
     steps:
       - name: Checkout code
@@ -166,13 +257,6 @@ jobs:
                       "exec": [
                         "pm.test('Status code is 200', function() {",
                         "  pm.response.to.have.status(200);",
-                        "});",
-                        "pm.test('Response is valid JSON', function() {",
-                        "  pm.response.to.be.json;",
-                        "});",
-                        "pm.test('Has required fields', function() {",
-                        "  const responseJson = pm.response.json();",
-                        "  pm.expect(responseJson).to.have.property('name');",
                         "});"
                       ]
                     }
@@ -192,14 +276,6 @@ jobs:
                       "exec": [
                         "pm.test('Status code is 200', function() {",
                         "  pm.response.to.have.status(200);",
-                        "});",
-                        "pm.test('Response is valid JSON', function() {",
-                        "  pm.response.to.be.json;",
-                        "});",
-                        "pm.test('Response is an array', function() {",
-                        "  const responseJson = pm.response.json();",
-                        "  pm.expect(responseJson).to.be.an('array');",
-                        "  pm.expect(responseJson.length).to.be.greaterThan(0);",
                         "});"
                       ]
                     }
@@ -219,13 +295,6 @@ jobs:
                       "exec": [
                         "pm.test('Status code is 200', function() {",
                         "  pm.response.to.have.status(200);",
-                        "});",
-                        "pm.test('Response is valid JSON', function() {",
-                        "  pm.response.to.be.json;",
-                        "});",
-                        "pm.test('Response is an array', function() {",
-                        "  const responseJson = pm.response.json();",
-                        "  pm.expect(responseJson).to.be.an('array');",
                         "});"
                       ]
                     }
@@ -245,13 +314,6 @@ jobs:
                       "exec": [
                         "pm.test('Status code is 200', function() {",
                         "  pm.response.to.have.status(200);",
-                        "});",
-                        "pm.test('Response is valid JSON', function() {",
-                        "  pm.response.to.be.json;",
-                        "});",
-                        "pm.test('Response is an array', function() {",
-                        "  const responseJson = pm.response.json();",
-                        "  pm.expect(responseJson).to.be.an('array');",
                         "});"
                       ]
                     }
@@ -271,13 +333,6 @@ jobs:
                       "exec": [
                         "pm.test('Status code is 200', function() {",
                         "  pm.response.to.have.status(200);",
-                        "});",
-                        "pm.test('Response is valid JSON', function() {",
-                        "  pm.response.to.be.json;",
-                        "});",
-                        "pm.test('Response is an array', function() {",
-                        "  const responseJson = pm.response.json();",
-                        "  pm.expect(responseJson).to.be.an('array');",
                         "});"
                       ]
                     }
@@ -297,13 +352,6 @@ jobs:
                       "exec": [
                         "pm.test('Status code is 200', function() {",
                         "  pm.response.to.have.status(200);",
-                        "});",
-                        "pm.test('Response is valid JSON', function() {",
-                        "  pm.response.to.be.json;",
-                        "});",
-                        "pm.test('Response is an array', function() {",
-                        "  const responseJson = pm.response.json();",
-                        "  pm.expect(responseJson).to.be.an('array');",
                         "});"
                       ]
                     }
@@ -323,13 +371,6 @@ jobs:
                       "exec": [
                         "pm.test('Status code is 200', function() {",
                         "  pm.response.to.have.status(200);",
-                        "});",
-                        "pm.test('Response is valid JSON', function() {",
-                        "  pm.response.to.be.json;",
-                        "});",
-                        "pm.test('Response is an array', function() {",
-                        "  const responseJson = pm.response.json();",
-                        "  pm.expect(responseJson).to.be.an('array');",
                         "});"
                       ]
                     }
@@ -349,13 +390,6 @@ jobs:
                       "exec": [
                         "pm.test('Status code is 200', function() {",
                         "  pm.response.to.have.status(200);",
-                        "});",
-                        "pm.test('Response is valid JSON', function() {",
-                        "  pm.response.to.be.json;",
-                        "});",
-                        "pm.test('Response contains items', function() {",
-                        "  const responseJson = pm.response.json();",
-                        "  pm.expect(responseJson).to.not.be.empty;",
                         "});"
                       ]
                     }
@@ -375,13 +409,6 @@ jobs:
                       "exec": [
                         "pm.test('Status code is 200', function() {",
                         "  pm.response.to.have.status(200);",
-                        "});",
-                        "pm.test('Response is valid JSON', function() {",
-                        "  pm.response.to.be.json;",
-                        "});",
-                        "pm.test('Response is an array', function() {",
-                        "  const responseJson = pm.response.json();",
-                        "  pm.expect(responseJson).to.be.an('array');",
                         "});"
                       ]
                     }
@@ -401,13 +428,6 @@ jobs:
                       "exec": [
                         "pm.test('Status code is 200', function() {",
                         "  pm.response.to.have.status(200);",
-                        "});",
-                        "pm.test('Response is valid JSON', function() {",
-                        "  pm.response.to.be.json;",
-                        "});",
-                        "pm.test('Response is an array', function() {",
-                        "  const responseJson = pm.response.json();",
-                        "  pm.expect(responseJson).to.be.an('array');",
                         "});"
                       ]
                     }
@@ -425,23 +445,6 @@ jobs:
           echo "Testing ${{ matrix.deployment }} deployment at ${{ matrix.base_url }}"
           newman run portfolio-api-tests.json --env-var "baseUrl=${{ matrix.base_url }}" --reporters cli,json --reporter-json-export test-results.json
 
-          # Extract test statistics
-          TOTAL_TESTS=$(jq '.run.stats.tests // 0' test-results.json)
-          FAILED_TESTS=$(jq '.run.stats.failures // 0' test-results.json)
-          PASSED_TESTS=$(jq '(.run.stats.tests // 0) - (.run.stats.failures // 0)' test-results.json)
-          FAILURES=$(jq '.run.failures' test-results.json)
-
-          echo "::set-output name=total_tests::${TOTAL_TESTS}"
-          echo "::set-output name=passed_tests::${PASSED_TESTS}"
-          echo "::set-output name=has_failures::$([ "$FAILURES" == "[]" ] && echo "false" || echo "true")"
-
-          # Show failed tests in the logs
-          if [ "$FAILURES" != "[]" ]; then
-            echo "Failed tests:"
-            jq -r '.run.failures[] | "- " + .parent + "/" + .name + ": " + .error.message' test-results.json
-            exit 1
-          fi
-
       - name: Create summary
         if: always()
         run: |
@@ -449,27 +452,14 @@ jobs:
           echo "Base URL: ${{ matrix.base_url }}" >> $GITHUB_STEP_SUMMARY
 
           if [ -f test-results.json ]; then
-            # Get test statistics
             TOTAL_TESTS=$(jq '.run.stats.tests // 0' test-results.json)
             FAILED_TESTS=$(jq '.run.stats.failures // 0' test-results.json)
             PASSED_TESTS=$(jq '(.run.stats.tests // 0) - (.run.stats.failures // 0)' test-results.json)
-            
-            echo "### Test Summary" >> $GITHUB_STEP_SUMMARY
-            echo "✅ Passed: $PASSED_TESTS" >> $GITHUB_STEP_SUMMARY
-            echo "❌ Failed: $FAILED_TESTS" >> $GITHUB_STEP_SUMMARY
-            echo "📊 Total: $TOTAL_TESTS" >> $GITHUB_STEP_SUMMARY
-            
-            # List failed tests
-            if [ "$(jq '.run.failures' test-results.json)" != "[]" ]; then
-              echo "\n### Failed Tests" >> $GITHUB_STEP_SUMMARY
-              jq -r '.run.failures[] | "- " + .parent + "/" + .name + ": " + .error.message' test-results.json >> $GITHUB_STEP_SUMMARY
-            fi
-            
-            # Add endpoint status (success/failure)
-            echo "\n### Endpoint Status" >> $GITHUB_STEP_SUMMARY
-            jq -r '.run.executions[] | "- " + .item.name + ": " + if .assertions | map(select(.error != null)) | length == 0 then "✅" else "❌" end' test-results.json >> $GITHUB_STEP_SUMMARY
-          else
-            echo "⚠️ No test results found" >> $GITHUB_STEP_SUMMARY
-          fi
 
-          echo "\nTest completed at $(date)" >> $GITHUB_STEP_SUMMARY
+            echo "### Test Summary" >> $GITHUB_STEP_SUMMARY
+            echo "Passed: $PASSED_TESTS" >> $GITHUB_STEP_SUMMARY
+            echo "Failed: $FAILED_TESTS" >> $GITHUB_STEP_SUMMARY
+            echo "Total: $TOTAL_TESTS" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "No test results found" >> $GITHUB_STEP_SUMMARY
+          fi

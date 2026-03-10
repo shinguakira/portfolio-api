@@ -1,15 +1,20 @@
-import {Links} from '../types/links.js';
-import {StrongPoint} from '../types/strongPoint.js';
-import {Faq} from '../types/faq.js';
-import {Changelog} from '../types/changelog.js';
-import {CertificationItem} from '../types/certificationItem.js';
-import {Contact} from '../types/contact.js';
-import {EducationHistory} from '../types/educationHistory.js';
-import {Project} from '../types/projectItem.js';
-import {WorkExperience} from '../types/workHistory.js';
 import {Request, Response as ExpressResponse} from 'express';
-import {Response} from '../types/response.js';
-import {LocalizedProfileData} from '../types/profile.js';
+import type {
+  ApiResponse,
+  ProfileResponse,
+  ExperienceResponse,
+  ProjectsResponse,
+  SkillsResponse,
+  EducationResponse,
+  CertificationsResponse,
+  ChangelogResponse,
+  FaqResponse,
+  StrongPointsResponse,
+  ContactResponse,
+  LinksResponse,
+  WorkExperience,
+  Project,
+} from '@shinguakira/portfolio-api-types';
 import {
   profile,
   workExperiences_ja,
@@ -26,12 +31,11 @@ import {
   otherSkills,
 } from '../constants/index.js';
 import {generatePortfolioPDF} from '../services/pdfService.js';
-import {SkillItem} from '@/types/skillItem.js';
 
 // Get profile information
 export const getProfile = (
   req: Request,
-  res: ExpressResponse<Response<LocalizedProfileData>>
+  res: ExpressResponse<ApiResponse<ProfileResponse>>
 ) => {
   try {
     const lang = req.query.lang as string;
@@ -57,7 +61,7 @@ export const getProfile = (
 // Get professional experience
 export const getExperience = (
   req: Request,
-  res: ExpressResponse<Response<WorkExperience[]>>
+  res: ExpressResponse<ApiResponse<ExperienceResponse>>
 ) => {
   try {
     const lang = req.query.lang as string;
@@ -77,7 +81,7 @@ export const getExperience = (
 // Get projects
 export const getProjects = (
   req: Request,
-  res: ExpressResponse<Response<Project[]>>
+  res: ExpressResponse<ApiResponse<ProjectsResponse>>
 ) => {
   try {
     const lang = req.query.lang as string;
@@ -97,7 +101,7 @@ export const getProjects = (
 // Get skills
 export const getSkills = (
   req: Request,
-  res: ExpressResponse<Response<SkillItem[]>>
+  res: ExpressResponse<ApiResponse<SkillsResponse>>
 ) => {
   try {
     res
@@ -109,7 +113,7 @@ export const getSkills = (
 };
 export const getOtherSkills = (
   req: Request,
-  res: ExpressResponse<Response<SkillItem[]>>
+  res: ExpressResponse<ApiResponse<SkillsResponse>>
 ) => {
   try {
     res.status(200).json({
@@ -124,7 +128,7 @@ export const getOtherSkills = (
 // Get education
 export const getEducation = (
   req: Request,
-  res: ExpressResponse<Response<EducationHistory[]>>
+  res: ExpressResponse<ApiResponse<EducationResponse>>
 ) => {
   try {
     const lang = req.query.lang as string;
@@ -147,7 +151,7 @@ export const getEducation = (
 // Get contact information
 export const getContact = (
   req: Request,
-  res: ExpressResponse<Response<Contact>>
+  res: ExpressResponse<ApiResponse<ContactResponse>>
 ) => {
   try {
     res
@@ -160,7 +164,7 @@ export const getContact = (
 
 export const getCertifications = (
   req: Request,
-  res: ExpressResponse<Response<CertificationItem[]>>
+  res: ExpressResponse<ApiResponse<CertificationsResponse>>
 ) => {
   try {
     const lang = req.query.lang as string;
@@ -184,16 +188,17 @@ export const getCertifications = (
 
 export const getChangelogs = (
   req: Request,
-  res: ExpressResponse<Response<Changelog[]>>
+  res: ExpressResponse<ApiResponse<ChangelogResponse>>
 ) => {
   try {
-    const localizedChangelogs = changelogs.map((item) => ({
+    const lang = req.query.lang as string;
+    const localizedChangelogs: ChangelogResponse = changelogs.map((item) => ({
       version: item.version,
       date: item.date,
       changes: item.changes.map((change) => ({
         type: change.type,
-        ja: change.ja,
-        en: change.en,
+        description:
+          lang === 'en' ? change.en.description : change.ja.description,
       })),
     }));
     res.status(200).json({
@@ -209,7 +214,7 @@ export const getChangelogs = (
 
 export const getFaqs = (
   req: Request,
-  res: ExpressResponse<Response<Faq[]>>
+  res: ExpressResponse<ApiResponse<FaqResponse>>
 ) => {
   try {
     const lang = req.query.lang as string;
@@ -228,7 +233,7 @@ export const getFaqs = (
 
 export const getLinks = (
   req: Request,
-  res: ExpressResponse<Response<Links>>
+  res: ExpressResponse<ApiResponse<LinksResponse>>
 ) => {
   try {
     res
@@ -241,7 +246,7 @@ export const getLinks = (
 
 export const getStrongPoints = (
   req: Request,
-  res: ExpressResponse<Response<StrongPoint[]>>
+  res: ExpressResponse<ApiResponse<StrongPointsResponse>>
 ) => {
   try {
     const lang = req.query.lang as string;
