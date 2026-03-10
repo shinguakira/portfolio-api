@@ -1,7 +1,7 @@
 [
   {
     "name": "VS Code(Typescript)",
-    "years": "1 year",
+    "years": "2 year",
     "category": "Others",
     "proficiency": "onBusiness",
     "picture": "/icons/VSCode.svg",
@@ -9,7 +9,7 @@
   },
   {
     "name": "Windsurf",
-    "years": "6 months",
+    "years": "1 year",
     "category": "Others",
     "proficiency": "onBusiness",
     "picture": "/icons/Windsurf.svg",
@@ -25,7 +25,7 @@
   },
   {
     "name": "Eclipse(Java,Javascript)",
-    "years": "6 months",
+    "years": "1 year",
     "category": "Others",
     "proficiency": "onBusiness",
     "picture": "/icons/Eclipse.svg",
@@ -57,7 +57,7 @@
   },
   {
     "name": "Git(Tortoise Git)",
-    "years": "1 year",
+    "years": "2 year",
     "category": "Others",
     "proficiency": "onBusiness",
     "picture": "/icons/Git-Tortoise-Git.svg",
@@ -65,7 +65,7 @@
   },
   {
     "name": "Github",
-    "years": "1 year",
+    "years": "2 year",
     "category": "Others",
     "proficiency": "onBusiness",
     "picture": "/icons/Github.svg",
@@ -94,14 +94,6 @@
     "proficiency": "onBusiness",
     "picture": "/icons/Redmine.svg",
     "pictureColor": "#B32024"
-  },
-  {
-    "name": "Asana",
-    "years": "1 month",
-    "category": "Others",
-    "proficiency": "onBusiness",
-    "picture": "/icons/Asana.svg",
-    "pictureColor": "#F06A6A"
   },
   {
     "name": "A5:SQL Mk-2",

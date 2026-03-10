@@ -1,11 +1,10 @@
 export const contact = {
-  email: 'contact@shinguakira.com',
+  email: 'shinguakira1022@gmail.com',
   phone: '+81 XX-XXXX-XXXX',
   address: 'Tokyo, Japan',
   socialMedia: {
     linkedin: 'https://linkedin.com/in/shinguakira',
     github: 'https://github.com/shinguakira',
-    twitter: 'https://twitter.com/shinguakira',
   },
   preferredMethod: 'email',
   availableFor: [
