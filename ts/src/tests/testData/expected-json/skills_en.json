@@ -17,10 +17,10 @@
   },
   {
     "name": "Java",
-    "years": "1 year",
+    "years": "2 years",
     "category": "Language",
     "proficiency": "onBusiness",
-    "picture": "/icons/React.svg",
+    "picture": "/icons/Java.svg",
     "pictureColor": "#61DAFB"
   },
   {
@@ -33,7 +33,7 @@
   },
   {
     "name": "Python",
-    "years": "1 year",
+    "years": "2 years",
     "category": "Language",
     "proficiency": "onBusiness",
     "picture": "/icons/Python.svg",
@@ -41,7 +41,7 @@
   },
   {
     "name": "React",
-    "years": "1 year 6 months",
+    "years": "2 years",
     "category": "Frontend",
     "proficiency": "onBusiness",
     "picture": "/icons/React.svg",
@@ -49,7 +49,7 @@
   },
   {
     "name": "Next.js",
-    "years": "6 months",
+    "years": "1 year",
     "category": "Frontend",
     "proficiency": "onBusiness",
     "picture": "/icons/Next.js.svg",
@@ -57,7 +57,7 @@
   },
   {
     "name": "Node.js",
-    "years": "1 year",
+    "years": "2 years",
     "category": "Backend",
     "proficiency": "onBusiness",
     "picture": "/icons/Node.js.svg",
@@ -73,15 +73,15 @@
   },
   {
     "name": "Hono.js",
-    "years": "self-study",
+    "years": "6 months",
     "category": "Backend",
-    "proficiency": "self-study",
+    "proficiency": "onBusiness",
     "picture": "/icons/Hono.js.svg",
     "pictureColor": "#E36002"
   },
   {
     "name": "Springboot(Java)",
-    "years": "1 year",
+    "years": "2 years",
     "category": "Backend",
     "proficiency": "onBusiness",
     "picture": "/icons/SpringBoot.svg",
@@ -89,7 +89,7 @@
   },
   {
     "name": "GraphQL",
-    "years": "1 year 6 months",
+    "years": "2 years",
     "category": "API",
     "proficiency": "onBusiness",
     "picture": "/icons/GraphQL.svg",
@@ -104,14 +104,6 @@
     "pictureColor": "#61DAFB"
   },
   {
-    "name": "Axios(REST)",
-    "years": "1 year",
-    "category": "API",
-    "proficiency": "onBusiness",
-    "picture": "/icons/Axios-REST.svg",
-    "pictureColor": "#311C87"
-  },
-  {
     "name": "Redux",
     "years": "self-study",
     "category": "State Management",
@@ -121,7 +113,7 @@
   },
   {
     "name": "Context API",
-    "years": "6 months",
+    "years": "1 year",
     "category": "State Management",
     "proficiency": "onBusiness",
     "picture": "/icons/Redux.svg",
@@ -144,6 +136,14 @@
     "pictureColor": "#43B02A"
   },
   {
+    "name": "Playwright(TypeScript)",
+    "years": "1 year",
+    "category": "Testing",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Playwright.svg",
+    "pictureColor": "#C21325"
+  },
+  {
     "name": "Jest",
     "years": "6 months",
     "category": "Testing",
@@ -153,7 +153,7 @@
   },
   {
     "name": "Vitest",
-    "years": "3 months",
+    "years": "6 months",
     "category": "Testing",
     "proficiency": "onBusiness",
     "picture": "/icons/Vitest.svg",
@@ -164,15 +164,15 @@
     "years": "1 year",
     "category": "CSS",
     "proficiency": "onBusiness",
-    "picture": "/icons/Bootstrap5.svg",
+    "picture": "/icons/BootStrap5.svg",
     "pictureColor": "#7952B3"
   },
   {
     "name": "TailWindCSS",
-    "years": "self-study",
+    "years": "1 year",
     "category": "CSS",
-    "proficiency": "self-study",
-    "picture": "/icons/TailwindCSS.svg",
+    "proficiency": "onBusiness",
+    "picture": "/icons/TailWindCSS.svg",
     "pictureColor": "#06B6D4"
   },
   {
@@ -185,7 +185,7 @@
   },
   {
     "name": "PostgresSQL",
-    "years": "6 months",
+    "years": "1 year",
     "category": "Database",
     "proficiency": "onBusiness",
     "picture": "/icons/PostgresSQL.svg",
@@ -193,7 +193,7 @@
   },
   {
     "name": "Redis",
-    "years": "6 months",
+    "years": "1 year",
     "category": "Database",
     "proficiency": "onBusiness",
     "picture": "/icons/Redis.svg",
@@ -201,7 +201,7 @@
   },
   {
     "name": "Vercel",
-    "years": "6 months",
+    "years": "1 year",
     "category": "Database",
     "proficiency": "onBusiness",
     "picture": "/icons/Vercel.svg",
@@ -217,7 +217,7 @@
   },
   {
     "name": "Azure",
-    "years": "1 year",
+    "years": "2 years",
     "category": "Cloud",
     "proficiency": "onBusiness",
     "picture": "/icons/Azure.svg",
@@ -225,7 +225,7 @@
   },
   {
     "name": "Docker",
-    "years": "6 months",
+    "years": "1 year",
     "category": "Others",
     "proficiency": "onBusiness",
     "picture": "/icons/Docker.svg",
@@ -233,15 +233,15 @@
   },
   {
     "name": "shadcn",
-    "years": "self-study",
+    "years": "1 year",
     "category": "Frontend",
-    "proficiency": "self-study",
+    "proficiency": "onBusiness",
     "picture": "/icons/shadcn.svg",
     "pictureColor": "#000000"
   },
   {
     "name": "Material UI",
-    "years": "6 months",
+    "years": "1 year",
     "category": "Frontend",
     "proficiency": "onBusiness",
     "picture": "/icons/Material-UI.svg",
@@ -249,7 +249,7 @@
   },
   {
     "name": "React Hook Form",
-    "years": "1 year 6 months",
+    "years": "2 years",
     "category": "Frontend",
     "proficiency": "onBusiness",
     "picture": "/icons/ReactHookForm.svg",
@@ -257,7 +257,7 @@
   },
   {
     "name": "zod",
-    "years": "6 months",
+    "years": "1 year",
     "category": "Frontend",
     "proficiency": "onBusiness",
     "picture": "/icons/Zod.svg",
@@ -265,7 +265,7 @@
   },
   {
     "name": "NextAuth",
-    "years": "6 months",
+    "years": "1 year",
     "category": "Frontend",
     "proficiency": "onBusiness",
     "picture": "/icons/NextAuth.png",
@@ -273,19 +273,11 @@
   },
   {
     "name": "codegen",
-    "years": "6 months",
+    "years": "1 year",
     "category": "Frontend",
     "proficiency": "onBusiness",
     "picture": "/icons/Codegen.svg",
     "pictureColor": "#E10098"
-  },
-  {
-    "name": "Dwolla",
-    "years": "self-study",
-    "category": "Others",
-    "proficiency": "self-study",
-    "picture": "/icons/Dwolla.svg",
-    "pictureColor": "#FF6A13"
   },
   {
     "name": "babylon.js",
@@ -304,10 +296,10 @@
     "pictureColor": "#4CAF50"
   },
   {
-    "name": "AstraDB",
-    "years": "self-study",
+    "name": "vectorDB(pgvector)",
+    "years": "3 months",
     "category": "Database",
-    "proficiency": "self-study",
+    "proficiency": "onBusiness",
     "picture": "/icons/AstraDB.svg",
     "pictureColor": "#FF6B6B"
   }

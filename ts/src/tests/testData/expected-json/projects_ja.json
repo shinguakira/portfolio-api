@@ -16,6 +16,49 @@
   },
   {
     "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "lucide-react"
+    ],
+    "title": "Brighty コーチングマッチングアプリ",
+    "description": "Brighty コーチングマッチングアプリ\n経歴に記載の元と同様のため、省略\n",
+    "image": "/images/projects/3dConnectFour.png",
+    "githubUrl": "https://github.com/shinguakira/electronSample",
+    "liveUrl": ""
+  },
+  {
+    "technologies": [
+      "Electron",
+      "Vite",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "lucide-react"
+    ],
+    "title": "Electron Vite Reactアプリ",
+    "description": "Electron Vite Reactアプリ\nPython、exeなどを実行。Electronの一通りの機能を搭載したアプリ。\nインストール用のexeファイル作成予定。\n",
+    "image": "/images/projects/3dConnectFour.png",
+    "githubUrl": "https://github.com/shinguakira/electronSample",
+    "liveUrl": ""
+  },
+  {
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "lucide-react"
+    ],
+    "title": "3D4目並べ",
+    "description": "3D4目並べ\nルームマッチングまで実装。実際の対戦は実装予定。\nAIとの対戦、同画面での2人対戦、ルームマッチング(予定)が可能。\nタイトル画面がランダムに変わる。使用するオブジェクトも選択可能。\n",
+    "image": "/images/projects/3dConnectFour.png",
+    "githubUrl": "https://github.com/shinguakira/3d-connect-four",
+    "liveUrl": "https://3d-connect-four-vfpy.vercel.app/"
+  },
+  {
+    "technologies": [
       "React",
       "TypeScript",
       "Remix",
@@ -182,7 +225,8 @@
     "image": "/images/projects/chat-gpt-clone.png",
     "githubUrl": "https://github.com/shinguakira/gpt-clone",
     "liveUrl": ""
-  },  {
+  },
+  {
     "technologies": [
       "React",
       "TypeScript",

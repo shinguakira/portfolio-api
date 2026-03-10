@@ -156,12 +156,15 @@ export type StrongPointsResponse = StrongPoint[];
 // Changelog Types
 // ============================================
 
+export type ChangeType = 'feature' | 'improvement' | 'bugfix';
+
 export type ChangelogItem = {
   version: string;
   date: string;
   changes: {
-    type: 'feature' | 'improvement' | 'bugfix';
-    description: string;
+    type: ChangeType;
+    ja: { description: string };
+    en: { description: string };
   }[];
 };
 

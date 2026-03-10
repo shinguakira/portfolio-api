@@ -5,7 +5,6 @@ export const contact = {
   socialMedia: {
     linkedin: 'https://linkedin.com/in/shinguakira',
     github: 'https://github.com/shinguakira',
-    twitter: 'https://twitter.com/shinguakira',
   },
   preferredMethod: 'email',
   availableFor: [
