@@ -48,6 +48,8 @@ export const experience_ja = [
       'STT',
       'RAG',
       'pgvector',
+      'FHIR',
+      'DICOM',
     ],
     projectOverview: '世界規模の眼科医療業務支援アプリ',
     role: 'フルスタック開発者',
@@ -197,7 +199,7 @@ export const experience_ja = [
   },
   {
     company: 'お客さま2',
-    period: '2024年10月 - 2024年2月',
+    period: '2024年10月 - 2025年2月',
     teamSize: '3人',
     manMonth: '3,4人月',
     technologies: [],
@@ -235,7 +237,7 @@ export const experience_ja = [
   },
   {
     company: 'お客さま2',
-    period: '2024年5月 - 2024年2月',
+    period: '2024年5月 - 2025年2月',
     teamSize: '7-8',
     manMonth: '15+人月',
     technologies: [
@@ -443,6 +445,8 @@ export const experience_en = [
       'STT',
       'RAG',
       'pgvector',
+      'FHIR',
+      'DICOM',
     ],
     projectOverview:
       'Global Ophthalmology Medical Practice Support Application',
@@ -605,7 +609,7 @@ export const experience_en = [
       'Release is currently in integration testing and penetration testing phase. No issues as of December 1',
     ],
     manMonth: '3,4 person-month',
-    period: '2024-10 - 2024-2',
+    period: '2024-10 - 2025-02',
     projectOverview: 'Customer Information Search and API Modification',
     role: 'Full Stack Developer (Specification, Development, Testing)',
     teamSize: '3',
@@ -645,7 +649,7 @@ export const experience_en = [
       'Release is currently in integration testing and penetration testing phase. No issues as of December 1',
     ],
     manMonth: '15+ person-month',
-    period: '2024-05 - 2024-02',
+    period: '2024-05 - 2025-02',
     projectOverview: 'Reception Innovation Project',
     role: 'Full Stack Developer (Specification, Development, Testing)',
     teamSize: '7-8',
