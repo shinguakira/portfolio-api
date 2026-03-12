@@ -9,7 +9,6 @@ lazy_static! {
         social_links: vec![
             SocialLink { platform: "GitHub".to_string(), url: "https://github.com/shinguakira".to_string(), icon: "github".to_string() },
             SocialLink { platform: "LinkedIn".to_string(), url: "https://linkedin.com/in/shinguakira".to_string(), icon: "linkedin".to_string() },
-            SocialLink { platform: "Twitter".to_string(), url: "https://twitter.com/shinguakira".to_string(), icon: "twitter".to_string() },
         ],
         title: "フルスタックエンジニア".to_string(),
         summary: "React/TypeScript/Next.jsを中心としたWeb開発に従事するフルスタックエンジニア。".to_string(),
@@ -23,7 +22,6 @@ lazy_static! {
         social_links: vec![
             SocialLink { platform: "GitHub".to_string(), url: "https://github.com/shinguakira".to_string(), icon: "github".to_string() },
             SocialLink { platform: "LinkedIn".to_string(), url: "https://linkedin.com/in/shinguakira".to_string(), icon: "linkedin".to_string() },
-            SocialLink { platform: "Twitter".to_string(), url: "https://twitter.com/shinguakira".to_string(), icon: "twitter".to_string() },
         ],
         title: "Full Stack Developer".to_string(),
         summary: "Full stack developer working primarily with React, TypeScript, and Next.js for web development.".to_string(),
