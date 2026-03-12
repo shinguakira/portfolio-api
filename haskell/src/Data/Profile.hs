@@ -4,7 +4,7 @@ import Model.Profile (ProfileResponse(..), SocialLink(..))
 
 profileJA :: ProfileResponse
 profileJA = ProfileResponse
-  { prName = "Shingu Akira"
+  { prName = "Web Dev"
   , prLocation = "Tokyo, Japan"
   , prAvatarUrl = "https://example.com/avatar.jpg"
   , prSocialLinks =
@@ -18,7 +18,7 @@ profileJA = ProfileResponse
 
 profileEN :: ProfileResponse
 profileEN = ProfileResponse
-  { prName = "Shingu Akira"
+  { prName = "Web Dev"
   , prLocation = "Tokyo, Japan"
   , prAvatarUrl = "https://example.com/avatar.jpg"
   , prSocialLinks =

@@ -3,7 +3,7 @@ use crate::model::profile::{ProfileResponse, SocialLink};
 
 lazy_static! {
     pub static ref PROFILE_JA: ProfileResponse = ProfileResponse {
-        name: "Shingu Akira".to_string(),
+        name: "Web Dev".to_string(),
         location: "Tokyo, Japan".to_string(),
         avatar_url: "https://example.com/avatar.jpg".to_string(),
         social_links: vec![
@@ -16,7 +16,7 @@ lazy_static! {
     };
 
     pub static ref PROFILE_EN: ProfileResponse = ProfileResponse {
-        name: "Shingu Akira".to_string(),
+        name: "Web Dev".to_string(),
         location: "Tokyo, Japan".to_string(),
         avatar_url: "https://example.com/avatar.jpg".to_string(),
         social_links: vec![

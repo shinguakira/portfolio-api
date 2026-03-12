@@ -3,7 +3,7 @@ package data
 import "github.com/shinguakira/portfolio-api-go/model"
 
 var ProfileJA = model.ProfileResponse{
-	Name:      "Shingu Akira",
+	Name:      "Web Dev",
 	Location:  "Tokyo, Japan",
 	AvatarURL: "https://example.com/avatar.jpg",
 	SocialLinks: []model.SocialLink{
@@ -16,7 +16,7 @@ var ProfileJA = model.ProfileResponse{
 }
 
 var ProfileEN = model.ProfileResponse{
-	Name:      "Shingu Akira",
+	Name:      "Web Dev",
 	Location:  "Tokyo, Japan",
 	AvatarURL: "https://example.com/avatar.jpg",
 	SocialLinks: []model.SocialLink{
