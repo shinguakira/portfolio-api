@@ -1,89 +1,110 @@
 # Portfolio API
 
-A RESTful API built with Express.js and TypeScript that serves portfolio data for Shingu Akira's portfolio website.
+A multi-backend RESTful API that serves portfolio data for the portfolio website. Implemented in four languages — TypeScript, Go, Rust, and Haskell — all returning identical JSON responses. Bilingual (Japanese/English) support via `?lang=en` query parameter.
 
-## Features
+## Backends
 
-- Express.js backend with TypeScript
-- RESTful API endpoints for portfolio data
-- CORS enabled
-- Environment variable configuration
-- Ready for deployment to serverless platforms (Vercel, AWS Lambda, Azure Functions)
+| Backend | Framework | Port | Directory |
+|---------|-----------|------|-----------|
+| TypeScript | Express.js | 3004 | `ts/` |
+| Go | Chi | 3005 | `go/` |
+| Rust | Actix Web | 3006 | `rust/` |
+| Haskell | Scotty | 3007 | `haskell/` |
+
+TypeScript is the source of truth. All other backends mirror its data and response format.
 
 ## API Endpoints
 
-- `GET /api/profile`: Get personal profile information
-- `GET /api/experience`: Get professional experience
-- `GET /api/projects`: Get project portfolio (add `?featured=true` to filter featured projects)
-- `GET /api/skills`: Get skills (add `?category=frontend` to filter by category)
-- `GET /api/education`: Get educational background
-- `GET /api/contact`: Get contact information
-- `GET /health`: Health check endpoint
+All endpoints are under `/api/` and return JSON. Most support `?lang=en` for English (default: Japanese).
+
+| Endpoint | Description |
+|----------|-------------|
+| `GET /` | Welcome message with endpoint list |
+| `GET /health` | Health check |
+| `GET /api/profile` | Personal profile |
+| `GET /api/experience` | Professional experience |
+| `GET /api/projects` | Project portfolio |
+| `GET /api/skills` | Technical skills |
+| `GET /api/other-skills` | Other skills |
+| `GET /api/education` | Educational background |
+| `GET /api/contact` | Contact information |
+| `GET /api/certifications` | Certifications |
+| `GET /api/changelogs` | Changelogs |
+| `GET /api/faqs` | FAQs |
+| `GET /api/links` | External links |
+| `GET /api/strong-points` | Strong points |
+| `GET /api/notifications` | Notifications |
+| `GET /api/articles` | Articles (fetched from Qiita) |
+| `GET /api/download-pdf` | Download resume as PDF (`?format=compact\|executive\|technical\|academic\|modern`) |
+
+## Project Structure
+
+```
+portfolio-api/
+├── ts/                  # TypeScript backend (source of truth)
+├── go/                  # Go backend
+├── rust/                # Rust backend
+├── haskell/             # Haskell backend
+├── packages/            # Shared type package (@shinguakira/portfolio-api-types)
+├── public/images/       # Production images (served by Vercel)
+├── scripts/             # Utility scripts (image sync, etc.)
+└── vercel.json          # Vercel deployment config
+```
 
 ## Getting Started
 
-### Prerequisites
+### TypeScript
 
-- Node.js 14+ 
-- npm or yarn
-
-### Installation
-
-1. Clone the repository
-   ```
-   git clone https://github.com/shinguakira/portfolio-api.git
-   cd portfolio-api
-   ```
-
-2. Install dependencies
-   ```
-   npm install
-   ```
-
-3. Create a `.env` file by copying the example
-   ```
-   cp .env.example .env
-   ```
-
-4. Start the development server
-   ```
-   npm run dev
-   ```
-
-### Building for Production
-
+```bash
+cd ts
+npm install
+npm run dev        # Start dev server on port 3004
+npm test           # Run tests (vitest)
+npm run build      # Compile TypeScript
 ```
-npm run build
-npm start
+
+### Go
+
+```bash
+cd go
+go mod tidy
+go run .           # Start server on port 3005
+go test ./...      # Run tests
+```
+
+### Rust
+
+```bash
+cd rust
+cargo run          # Start server on port 3006
+cargo test         # Run tests
+```
+
+### Haskell
+
+```bash
+cd haskell
+stack build
+stack exec portfolio-api-haskell  # Start server on port 3007
+stack test                         # Run tests
 ```
 
 ## Deployment
 
-### Vercel
+Deployed on Vercel. The `vercel.json` routes:
+- `/images/*` → `public/images/` (static assets)
+- `/icons/*` → `ts/public/icons/` (static assets)
+- `/api/*` and `/` → TypeScript backend
 
-Create a `vercel.json` file:
+## Image Sync
 
-```json
-{
-  "version": 2,
-  "builds": [{ "src": "dist/index.js", "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "/dist/index.js" }]
-}
+Root `public/images/` is the production source of truth. Use the sync script to keep `ts/public/images/` in sync for local dev:
+
+```bash
+node scripts/sync-public.mjs             # Sync root → ts
+node scripts/sync-public.mjs --reverse   # Sync ts → root
+node scripts/sync-public.mjs --dry-run   # Preview changes
 ```
-
-Then deploy:
-
-```
-vercel deploy --prod
-```
-
-### AWS Lambda
-
-Follow the serverless framework guide for AWS Lambda deployment.
-
-### Azure Functions
-
-Follow the Azure Functions deployment guide using the Azure CLI.
 
 ## License
 
