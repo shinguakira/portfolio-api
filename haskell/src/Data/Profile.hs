@@ -10,7 +10,6 @@ profileJA = ProfileResponse
   , prSocialLinks =
       [ SocialLink { slPlatform = "GitHub", slUrl = "https://github.com/shinguakira", slIcon = "github" }
       , SocialLink { slPlatform = "LinkedIn", slUrl = "https://linkedin.com/in/shinguakira", slIcon = "linkedin" }
-      , SocialLink { slPlatform = "Twitter", slUrl = "https://twitter.com/shinguakira", slIcon = "twitter" }
       ]
   , prTitle = "フルスタックエンジニア"
   , prSummary = "React/TypeScript/Next.jsを中心としたWeb開発に従事するフルスタックエンジニア。"
@@ -25,7 +24,6 @@ profileEN = ProfileResponse
   , prSocialLinks =
       [ SocialLink { slPlatform = "GitHub", slUrl = "https://github.com/shinguakira", slIcon = "github" }
       , SocialLink { slPlatform = "LinkedIn", slUrl = "https://linkedin.com/in/shinguakira", slIcon = "linkedin" }
-      , SocialLink { slPlatform = "Twitter", slUrl = "https://twitter.com/shinguakira", slIcon = "twitter" }
       ]
   , prTitle = "Full Stack Developer"
   , prSummary = "Full stack developer working primarily with React, TypeScript, and Next.js for web development."
