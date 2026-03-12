@@ -156,7 +156,7 @@ export type StrongPointsResponse = StrongPoint[];
 // Changelog Types
 // ============================================
 
-export type ChangeType = 'feature' | 'improvement' | 'bugfix';
+export type ChangeType = "feature" | "improvement" | "bugfix";
 
 export type ChangelogItem = {
   version: string;
@@ -196,3 +196,46 @@ export type Links = {
 
 /** Response from GET /api/links */
 export type LinksResponse = Links;
+
+// ============================================
+// Notification Types
+// ============================================
+
+export type Notification = {
+  title: string;
+  content: string;
+  date: string;
+};
+
+/** Response from GET /api/notifications?lang=ja|en */
+export type NotificationsResponse = Notification[];
+
+// ============================================
+// Article Types
+// ============================================
+
+export type ArticleTag = {
+  name: string;
+  versions: string[];
+};
+
+export type Article = {
+  id: string;
+  title: string;
+  url: string;
+  created_at: string;
+  updated_at: string;
+  likes_count: number;
+  comments_count: number;
+  stocks_count: number;
+  reactions_count: number;
+  tags: ArticleTag[];
+};
+
+export type ArticlesData = {
+  totalCount: number;
+  articles: Article[];
+};
+
+/** Response from GET /api/articles */
+export type ArticlesResponse = ArticlesData;

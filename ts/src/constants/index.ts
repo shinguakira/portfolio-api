@@ -9,3 +9,4 @@ export * from './skill.js';
 export * from './strongPoint.js';
 export * from './workExperience.js';
 export * from './links.js';
+export * from './notification.js';

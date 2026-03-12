@@ -12,6 +12,8 @@ import type {
   StrongPointsResponse,
   ContactResponse,
   LinksResponse,
+  NotificationsResponse,
+  ArticlesResponse,
   WorkExperience,
   Project,
 } from '@shinguakira/portfolio-api-types';
@@ -29,6 +31,7 @@ import {
   links,
   strongPoint,
   otherSkills,
+  notifications,
 } from '../constants/index.js';
 import {generatePortfolioPDF} from '../services/pdfService.js';
 
@@ -262,6 +265,68 @@ export const getStrongPoints = (
     res
       .status(500)
       .json({message: 'Error fetching strong points data', data: null});
+  }
+};
+
+export const getNotifications = (
+  req: Request,
+  res: ExpressResponse<ApiResponse<NotificationsResponse>>
+) => {
+  try {
+    const lang = req.query.lang as string;
+    const localizedNotifications = notifications.map((item) => ({
+      date: item.date,
+      ...(lang === 'en' ? item.en : item.ja),
+    }));
+    res.status(200).json({
+      message: 'Notifications data fetched successfully',
+      data: localizedNotifications,
+    });
+  } catch (error) {
+    res
+      .status(500)
+      .json({message: 'Error fetching notifications data', data: null});
+  }
+};
+
+const QIITA_USER_ID = 'ShinguAkira';
+
+export const getArticles = async (
+  req: Request,
+  res: ExpressResponse<ApiResponse<ArticlesResponse>>
+) => {
+  try {
+    const response = await fetch(
+      `https://qiita.com/api/v2/users/${QIITA_USER_ID}/items?page=1&per_page=100`
+    );
+    if (!response.ok) {
+      res
+        .status(500)
+        .json({message: 'Error fetching articles from Qiita', data: null});
+      return;
+    }
+    const articles = await response.json();
+    const mappedArticles = articles.map(
+      (article: Record<string, unknown>) => ({
+        id: article.id,
+        title: article.title,
+        url: article.url,
+        created_at: article.created_at,
+        updated_at: article.updated_at,
+        likes_count: article.likes_count,
+        comments_count: article.comments_count,
+        stocks_count: article.stocks_count,
+        reactions_count: article.reactions_count,
+        tags: article.tags,
+      })
+    );
+    const data: ArticlesResponse = {
+      totalCount: mappedArticles.length,
+      articles: mappedArticles,
+    };
+    res.status(200).json({message: 'Articles data fetched successfully', data});
+  } catch (error) {
+    res.status(500).json({message: 'Error fetching articles data', data: null});
   }
 };
 

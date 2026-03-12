@@ -1,6 +1,6 @@
 {
   "name": "@shinguakira/portfolio-api-types",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "TypeScript types for Shingu Akira Portfolio API responses",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

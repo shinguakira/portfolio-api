@@ -3,11 +3,10 @@ export type ArticleProps = {
   title: string;
   url: string;
   created_at: string;
-  // ... add more fields if needed
-};
-
-type QiitaArticle = ArticleProps & {
-  //   likes_count: number;
-  //   tags: string[];
-  // add more fields for Qiita specific fields
+  updated_at: string;
+  likes_count: number;
+  comments_count: number;
+  stocks_count: number;
+  reactions_count: number;
+  tags: {name: string; versions: string[]}[];
 };
