@@ -3,7 +3,7 @@
   "installCommand": "npm install && npm run build --workspace=packages/portfolio-api-types",
   "builds": [
     {
-      "src": "ts/src/index.ts",
+      "src": "ts/src/handler.ts",
       "use": "@vercel/node"
     },
     {
@@ -30,11 +30,11 @@
     },
     {
       "src": "/api/(.*)",
-      "dest": "/ts/src/index.ts"
+      "dest": "/ts/src/handler.ts"
     },
     {
       "src": "/(.*)",
-      "dest": "/ts/src/index.ts"
+      "dest": "/ts/src/handler.ts"
     }
   ]
 }

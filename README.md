@@ -6,7 +6,7 @@ A multi-backend RESTful API that serves portfolio data for the portfolio website
 
 | Backend | Framework | Port | Directory |
 |---------|-----------|------|-----------|
-| TypeScript | Express.js | 3004 | `ts/` |
+| TypeScript | ElysiaJS | 3004 | `ts/` |
 | Go | Chi | 3005 | `go/` |
 | Rust | Actix Web | 3006 | `rust/` |
 | Haskell | Scotty | 3007 | `haskell/` |

@@ -1,24 +1,23 @@
 import {describe, it, expect} from 'vitest';
-import request from 'supertest';
-import app from '../index.js';
+import {GET} from './testHelper.js';
 
 describe('GET /api/articles', () => {
   it('should respond with a 200 status code and articles data with totalCount', async () => {
-    const response = await request(app).get('/api/articles');
-    expect(response.status).toBe(200);
-    expect(response.body.message).toBe('Articles data fetched successfully');
-    expect(response.body.data).toHaveProperty('totalCount');
-    expect(typeof response.body.data.totalCount).toBe('number');
-    expect(response.body.data.totalCount).toBeGreaterThan(0);
-    expect(Array.isArray(response.body.data.articles)).toBe(true);
-    expect(response.body.data.articles.length).toBe(
-      response.body.data.totalCount
+    const {status, body} = await GET('/api/articles');
+    expect(status).toBe(200);
+    expect(body.message).toBe('Articles data fetched successfully');
+    expect(body.data).toHaveProperty('totalCount');
+    expect(typeof body.data.totalCount).toBe('number');
+    expect(body.data.totalCount).toBeGreaterThan(0);
+    expect(Array.isArray(body.data.articles)).toBe(true);
+    expect(body.data.articles.length).toBe(
+      body.data.totalCount
     );
   });
 
   it('should contain the oldest 3 known articles with correct titles', async () => {
-    const response = await request(app).get('/api/articles');
-    const articles = response.body.data.articles;
+    const {body} = await GET('/api/articles');
+    const articles = body.data.articles;
 
     const oldestArticles = [
       {
@@ -45,8 +44,8 @@ describe('GET /api/articles', () => {
   });
 
   it('should have correct fields for each article', async () => {
-    const response = await request(app).get('/api/articles');
-    const article = response.body.data.articles[0];
+    const {body} = await GET('/api/articles');
+    const article = body.data.articles[0];
 
     expect(article).toHaveProperty('id');
     expect(article).toHaveProperty('title');

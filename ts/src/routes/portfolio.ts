@@ -1,4 +1,4 @@
-import {Router} from 'express';
+import {Elysia} from 'elysia';
 import {
   getProfile,
   getExperience,
@@ -17,23 +17,19 @@ import {
   downloadPortfolioPDF,
 } from '../controllers/portfolio.js';
 
-const router = Router();
-
-// Portfolio routes
-router.get('/profile', getProfile);
-router.get('/experience', getExperience);
-router.get('/projects', getProjects);
-router.get('/skills', getSkills);
-router.get('/education', getEducation);
-router.get('/contact', getContact);
-router.get('/certifications', getCertifications);
-router.get('/changelogs', getChangelogs);
-router.get('/faqs', getFaqs);
-router.get('/links', getLinks);
-router.get('/strong-points', getStrongPoints);
-router.get('/other-skills', getOtherSkills);
-router.get('/notifications', getNotifications);
-router.get('/articles', getArticles);
-router.get('/download-pdf', downloadPortfolioPDF);
-
-export {router};
+export const portfolioRoutes = new Elysia()
+  .get('/profile', getProfile)
+  .get('/experience', getExperience)
+  .get('/projects', getProjects)
+  .get('/skills', getSkills)
+  .get('/education', getEducation)
+  .get('/contact', getContact)
+  .get('/certifications', getCertifications)
+  .get('/changelogs', getChangelogs)
+  .get('/faqs', getFaqs)
+  .get('/links', getLinks)
+  .get('/strong-points', getStrongPoints)
+  .get('/other-skills', getOtherSkills)
+  .get('/notifications', getNotifications)
+  .get('/articles', getArticles)
+  .get('/download-pdf', downloadPortfolioPDF);
