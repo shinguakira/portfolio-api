@@ -8,7 +8,7 @@ import Data.Text (Text)
 import qualified Data.ByteString.Lazy as BL
 import Data.Time.Clock (getCurrentTime)
 import Data.Time.Format (formatTime, defaultTimeLocale)
-import Network.HTTP.Types.Status (status200)
+import Network.HTTP.Types.Status (status200, status500)
 import Network.HTTP.Types.Header (hContentType)
 
 import Model.Response (ApiResponse(..))
@@ -179,5 +179,5 @@ downloadPdf = do
       setHeader "Content-Length" $ TL.pack $ show (BL.length pdfBytes)
       raw pdfBytes
     Left err -> do
-      status status200
+      status status500
       json $ object ["error" .= (T.pack $ show err :: Text)]

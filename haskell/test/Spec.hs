@@ -6,8 +6,9 @@ import Network.HTTP.Types (status200)
 import Network.Wai (Application)
 import Web.Scotty (scottyApp)
 import Data.Aeson (Value(..), decode)
+import qualified Data.Aeson.KeyMap as KM
+import qualified Data.Aeson.Key as Key
 import qualified Data.ByteString.Lazy as BL
-import qualified Data.HashMap.Strict as HM
 
 import Handler.Portfolio (routes)
 
@@ -30,7 +31,7 @@ spec = with app $ do
         let body = simpleBody resp
         case decode body :: Maybe Value of
           Just (Object obj) -> do
-            HM.lookup "status" obj `shouldBe` Just (String "OK")
+            KM.lookup (Key.fromString "status") obj `shouldBe` Just (String "OK")
           _ -> expectationFailure "Expected JSON object with status field"
 
   describe "GET /" $ do
@@ -43,7 +44,7 @@ spec = with app $ do
         let body = simpleBody resp
         case decode body :: Maybe Value of
           Just (Object obj) -> do
-            case HM.lookup "endpoints" obj of
+            case KM.lookup (Key.fromString "endpoints") obj of
               Just (Array _) -> return ()
               _ -> expectationFailure "Expected endpoints array"
           _ -> expectationFailure "Expected JSON object"
@@ -64,7 +65,7 @@ spec = with app $ do
         let body = simpleBody resp
         case decode body :: Maybe Value of
           Just (Object obj) ->
-            HM.lookup "message" obj `shouldBe` Just (String "Profile data fetched successfully")
+            KM.lookup (Key.fromString "message") obj `shouldBe` Just (String "Profile data fetched successfully")
           _ -> expectationFailure "Expected JSON object"
 
   describe "GET /api/experience" $ do
@@ -77,7 +78,7 @@ spec = with app $ do
         let body = simpleBody resp
         case decode body :: Maybe Value of
           Just (Object obj) ->
-            HM.lookup "message" obj `shouldBe` Just (String "Experience data fetched successfully")
+            KM.lookup (Key.fromString "message") obj `shouldBe` Just (String "Experience data fetched successfully")
           _ -> expectationFailure "Expected JSON object"
 
   describe "GET /api/projects" $ do
@@ -94,7 +95,7 @@ spec = with app $ do
         let body = simpleBody resp
         case decode body :: Maybe Value of
           Just (Object obj) ->
-            HM.lookup "message" obj `shouldBe` Just (String "Skills data fetched successfully")
+            KM.lookup (Key.fromString "message") obj `shouldBe` Just (String "Skills data fetched successfully")
           _ -> expectationFailure "Expected JSON object"
 
   describe "GET /api/other-skills" $ do

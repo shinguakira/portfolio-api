@@ -1,43 +1,12 @@
-use actix_web::{test, web, App};
+use actix_web::test;
 use actix_web::http::StatusCode;
 use serde_json::Value;
 
-// Import the modules from the main crate
-use portfolio_api_rust::handler;
-
-fn create_test_app() -> actix_web::App<
-    impl actix_web::dev::ServiceFactory<
-        actix_web::dev::ServiceRequest,
-        Config = (),
-        Response = actix_web::dev::ServiceResponse,
-        Error = actix_web::Error,
-        InitError = (),
-    >,
-> {
-    App::new()
-        .route("/health", web::get().to(handler::portfolio::health))
-        .route("/", web::get().to(handler::portfolio::root))
-        .service(
-            web::scope("/api")
-                .route("/profile", web::get().to(handler::portfolio::get_profile))
-                .route("/experience", web::get().to(handler::portfolio::get_experience))
-                .route("/projects", web::get().to(handler::portfolio::get_projects))
-                .route("/skills", web::get().to(handler::portfolio::get_skills))
-                .route("/other-skills", web::get().to(handler::portfolio::get_other_skills))
-                .route("/education", web::get().to(handler::portfolio::get_education))
-                .route("/contact", web::get().to(handler::portfolio::get_contact))
-                .route("/certifications", web::get().to(handler::portfolio::get_certifications))
-                .route("/changelogs", web::get().to(handler::portfolio::get_changelogs))
-                .route("/faqs", web::get().to(handler::portfolio::get_faqs))
-                .route("/links", web::get().to(handler::portfolio::get_links))
-                .route("/strong-points", web::get().to(handler::portfolio::get_strong_points))
-                .route("/download-pdf", web::get().to(handler::portfolio::download_pdf)),
-        )
-}
+use portfolio_api_rust::create_app;
 
 #[actix_rt::test]
 async fn test_health_endpoint() {
-    let app = test::init_service(create_test_app()).await;
+    let app = test::init_service(create_app()).await;
     let req = test::TestRequest::get().uri("/health").to_request();
     let resp = test::call_service(&app, req).await;
 
@@ -50,7 +19,7 @@ async fn test_health_endpoint() {
 
 #[actix_rt::test]
 async fn test_root_endpoint() {
-    let app = test::init_service(create_test_app()).await;
+    let app = test::init_service(create_app()).await;
     let req = test::TestRequest::get().uri("/").to_request();
     let resp = test::call_service(&app, req).await;
 
@@ -64,7 +33,7 @@ async fn test_root_endpoint() {
 
 #[actix_rt::test]
 async fn test_profile_endpoint_default() {
-    let app = test::init_service(create_test_app()).await;
+    let app = test::init_service(create_app()).await;
     let req = test::TestRequest::get().uri("/api/profile").to_request();
     let resp = test::call_service(&app, req).await;
 
@@ -72,7 +41,7 @@ async fn test_profile_endpoint_default() {
 
     let body: Value = test::read_body_json(resp).await;
     assert_eq!(body["message"], "Profile data fetched successfully");
-    assert_eq!(body["data"]["name"], "Shingu Akira");
+    assert_eq!(body["data"]["name"], "Web Dev");
     assert!(body["data"]["title"].is_string());
     assert!(!body["data"]["title"].as_str().unwrap().is_empty());
     assert!(body["data"]["summary"].is_string());
@@ -81,7 +50,7 @@ async fn test_profile_endpoint_default() {
 
 #[actix_rt::test]
 async fn test_profile_endpoint_en() {
-    let app = test::init_service(create_test_app()).await;
+    let app = test::init_service(create_app()).await;
     let req = test::TestRequest::get().uri("/api/profile?lang=en").to_request();
     let resp = test::call_service(&app, req).await;
 
@@ -89,12 +58,12 @@ async fn test_profile_endpoint_en() {
 
     let body: Value = test::read_body_json(resp).await;
     assert_eq!(body["message"], "Profile data fetched successfully");
-    assert_eq!(body["data"]["name"], "Shingu Akira");
+    assert_eq!(body["data"]["name"], "Web Dev");
 }
 
 #[actix_rt::test]
 async fn test_profile_endpoint_ja() {
-    let app = test::init_service(create_test_app()).await;
+    let app = test::init_service(create_app()).await;
     let req = test::TestRequest::get().uri("/api/profile?lang=ja").to_request();
     let resp = test::call_service(&app, req).await;
 
@@ -102,12 +71,12 @@ async fn test_profile_endpoint_ja() {
 
     let body: Value = test::read_body_json(resp).await;
     assert_eq!(body["message"], "Profile data fetched successfully");
-    assert_eq!(body["data"]["name"], "Shingu Akira");
+    assert_eq!(body["data"]["name"], "Web Dev");
 }
 
 #[actix_rt::test]
 async fn test_experience_endpoint() {
-    let app = test::init_service(create_test_app()).await;
+    let app = test::init_service(create_app()).await;
 
     for lang_param in &["", "?lang=ja", "?lang=en"] {
         let uri = format!("/api/experience{}", lang_param);
@@ -125,7 +94,7 @@ async fn test_experience_endpoint() {
 
 #[actix_rt::test]
 async fn test_projects_endpoint() {
-    let app = test::init_service(create_test_app()).await;
+    let app = test::init_service(create_app()).await;
 
     for lang_param in &["", "?lang=ja", "?lang=en"] {
         let uri = format!("/api/projects{}", lang_param);
@@ -147,7 +116,7 @@ async fn test_projects_endpoint() {
 
 #[actix_rt::test]
 async fn test_skills_endpoint() {
-    let app = test::init_service(create_test_app()).await;
+    let app = test::init_service(create_app()).await;
     let req = test::TestRequest::get().uri("/api/skills").to_request();
     let resp = test::call_service(&app, req).await;
 
@@ -165,7 +134,7 @@ async fn test_skills_endpoint() {
 
 #[actix_rt::test]
 async fn test_other_skills_endpoint() {
-    let app = test::init_service(create_test_app()).await;
+    let app = test::init_service(create_app()).await;
     let req = test::TestRequest::get().uri("/api/other-skills").to_request();
     let resp = test::call_service(&app, req).await;
 
@@ -179,7 +148,7 @@ async fn test_other_skills_endpoint() {
 
 #[actix_rt::test]
 async fn test_education_endpoint() {
-    let app = test::init_service(create_test_app()).await;
+    let app = test::init_service(create_app()).await;
 
     for lang_param in &["", "?lang=ja", "?lang=en"] {
         let uri = format!("/api/education{}", lang_param);
@@ -200,7 +169,7 @@ async fn test_education_endpoint() {
 
 #[actix_rt::test]
 async fn test_contact_endpoint() {
-    let app = test::init_service(create_test_app()).await;
+    let app = test::init_service(create_app()).await;
     let req = test::TestRequest::get().uri("/api/contact").to_request();
     let resp = test::call_service(&app, req).await;
 
@@ -216,7 +185,7 @@ async fn test_contact_endpoint() {
 
 #[actix_rt::test]
 async fn test_certifications_endpoint() {
-    let app = test::init_service(create_test_app()).await;
+    let app = test::init_service(create_app()).await;
 
     for lang_param in &["", "?lang=ja", "?lang=en"] {
         let uri = format!("/api/certifications{}", lang_param);
@@ -237,7 +206,7 @@ async fn test_certifications_endpoint() {
 
 #[actix_rt::test]
 async fn test_changelogs_endpoint() {
-    let app = test::init_service(create_test_app()).await;
+    let app = test::init_service(create_app()).await;
 
     for lang_param in &["", "?lang=ja", "?lang=en"] {
         let uri = format!("/api/changelogs{}", lang_param);
@@ -260,7 +229,7 @@ async fn test_changelogs_endpoint() {
 
 #[actix_rt::test]
 async fn test_faqs_endpoint() {
-    let app = test::init_service(create_test_app()).await;
+    let app = test::init_service(create_app()).await;
 
     for lang_param in &["", "?lang=ja", "?lang=en"] {
         let uri = format!("/api/faqs{}", lang_param);
@@ -282,7 +251,7 @@ async fn test_faqs_endpoint() {
 
 #[actix_rt::test]
 async fn test_links_endpoint() {
-    let app = test::init_service(create_test_app()).await;
+    let app = test::init_service(create_app()).await;
     let req = test::TestRequest::get().uri("/api/links").to_request();
     let resp = test::call_service(&app, req).await;
 
@@ -295,7 +264,7 @@ async fn test_links_endpoint() {
 
 #[actix_rt::test]
 async fn test_strong_points_endpoint() {
-    let app = test::init_service(create_test_app()).await;
+    let app = test::init_service(create_app()).await;
 
     for lang_param in &["", "?lang=ja", "?lang=en"] {
         let uri = format!("/api/strong-points{}", lang_param);
@@ -317,7 +286,7 @@ async fn test_strong_points_endpoint() {
 
 #[actix_rt::test]
 async fn test_download_pdf_default() {
-    let app = test::init_service(create_test_app()).await;
+    let app = test::init_service(create_app()).await;
     let req = test::TestRequest::get().uri("/api/download-pdf").to_request();
     let resp = test::call_service(&app, req).await;
 
@@ -334,7 +303,7 @@ async fn test_download_pdf_default() {
 
 #[actix_rt::test]
 async fn test_download_pdf_formats() {
-    let app = test::init_service(create_test_app()).await;
+    let app = test::init_service(create_app()).await;
 
     let formats = vec![
         ("standard", "?lang=en"),
@@ -366,7 +335,7 @@ async fn test_download_pdf_formats() {
 
 #[actix_rt::test]
 async fn test_download_pdf_with_section_filters() {
-    let app = test::init_service(create_test_app()).await;
+    let app = test::init_service(create_app()).await;
     let req = test::TestRequest::get()
         .uri("/api/download-pdf?lang=en&projects=false&experience=false&certifications=false&education=false")
         .to_request();
@@ -378,7 +347,7 @@ async fn test_download_pdf_with_section_filters() {
 
 #[actix_rt::test]
 async fn test_content_type_json() {
-    let app = test::init_service(create_test_app()).await;
+    let app = test::init_service(create_app()).await;
 
     let endpoints = vec![
         "/health",
