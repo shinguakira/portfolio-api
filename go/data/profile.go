@@ -8,7 +8,6 @@ var ProfileJA = model.ProfileResponse{
 	AvatarURL: "https://example.com/avatar.jpg",
 	SocialLinks: []model.SocialLink{
 		{Platform: "GitHub", URL: "https://github.com/shinguakira", Icon: "github"},
-		{Platform: "LinkedIn", URL: "https://linkedin.com/in/shinguakira", Icon: "linkedin"},
 	},
 	Title:   "フルスタックエンジニア",
 	Summary: "React/TypeScript/Next.jsを中心としたWeb開発に従事するフルスタックエンジニア。",
@@ -21,7 +20,6 @@ var ProfileEN = model.ProfileResponse{
 	AvatarURL: "https://example.com/avatar.jpg",
 	SocialLinks: []model.SocialLink{
 		{Platform: "GitHub", URL: "https://github.com/shinguakira", Icon: "github"},
-		{Platform: "LinkedIn", URL: "https://linkedin.com/in/shinguakira", Icon: "linkedin"},
 	},
 	Title:   "Full Stack Developer",
 	Summary: "Full stack developer working primarily with React, TypeScript, and Next.js for web development.",

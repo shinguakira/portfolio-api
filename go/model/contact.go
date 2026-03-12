@@ -2,8 +2,7 @@ package model
 
 // SocialMedia represents social media account links.
 type SocialMedia struct {
-	LinkedIn string `json:"linkedin"`
-	Github   string `json:"github"`
+	Github string `json:"github"`
 }
 
 // ContactResponse represents the response details within a contact entry.

@@ -8,11 +8,6 @@ export const profile = {
       url: 'https://github.com/shinguakira',
       icon: 'github',
     },
-    {
-      platform: 'LinkedIn',
-      url: 'https://linkedin.com/in/shinguakira',
-      icon: 'linkedin',
-    },
   ],
   ja: {
     title: 'フルスタックエンジニア',

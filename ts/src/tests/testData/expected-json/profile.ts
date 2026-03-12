@@ -8,11 +8,6 @@ export const profile_ja = {
       url: 'https://github.com/shinguakira',
       icon: 'github',
     },
-    {
-      platform: 'LinkedIn',
-      url: 'https://linkedin.com/in/shinguakira',
-      icon: 'linkedin',
-    },
   ],
   title: 'フルスタックエンジニア',
   summary:
@@ -29,11 +24,6 @@ export const profile_en = {
       platform: 'GitHub',
       url: 'https://github.com/shinguakira',
       icon: 'github',
-    },
-    {
-      platform: 'LinkedIn',
-      url: 'https://linkedin.com/in/shinguakira',
-      icon: 'linkedin',
     },
   ],
   title: 'Full Stack Developer',

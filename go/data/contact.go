@@ -7,8 +7,7 @@ var ContactData = model.Contact{
 	Phone:   "+81 XX-XXXX-XXXX",
 	Address: "Tokyo, Japan",
 	SocialMedia: model.SocialMedia{
-		LinkedIn: "https://linkedin.com/in/shinguakira",
-		Github:   "https://github.com/shinguakira",
+		Github: "https://github.com/shinguakira",
 	},
 	PreferredMethod: "email",
 	AvailableFor: []string{

@@ -2,7 +2,6 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Clone)]
 pub struct SocialMedia {
-    pub linkedin: String,
     pub github: String,
 }
 

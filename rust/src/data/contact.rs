@@ -7,7 +7,6 @@ lazy_static! {
         phone: "+81 XX-XXXX-XXXX".to_string(),
         address: "Tokyo, Japan".to_string(),
         social_media: SocialMedia {
-            linkedin: "https://linkedin.com/in/shinguakira".to_string(),
             github: "https://github.com/shinguakira".to_string(),
         },
         preferred_method: "email".to_string(),
