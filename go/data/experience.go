@@ -74,7 +74,7 @@ var WorkExperiencesJA = []model.WorkExperience{
 		ManMonth: "",
 		Technologies: []string{
 			"React", "TypeScript", "Next.js", "(Ruby)", "Material UI", "React Hook Form",
-			"GraphQL", "PostgreSQL", "zod", "NextAuth0", "codegen", "Windsurf",
+			"GraphQL", "PostgreSQL", "zod", "NextAuth0", "codegen",
 			"Cloudinary", "Vercel", "Github", "RSend", "Metabase", "Redis",
 			"Sentry", "Figma", "Slack", "CodeRabbit",
 		},
@@ -388,7 +388,7 @@ var WorkExperiencesEN = []model.WorkExperience{
 		ManMonth: "",
 		Technologies: []string{
 			"React", "TypeScript", "Next.js", "(Ruby)", "Material UI", "React Hook Form",
-			"GraphQL", "PostgreSQL", "zod", "NextAuth0", "codegen", "Windsurf",
+			"GraphQL", "PostgreSQL", "zod", "NextAuth0", "codegen",
 			"Cloudinary", "Vercel", "Github", "RSend", "Metabase", "Redis",
 			"Sentry", "Figma", "Slack", "CodeRabbit",
 		},

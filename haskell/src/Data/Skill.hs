@@ -321,15 +321,7 @@ otherSkills =
       , skPicture      = Just "/icons/VSCode.svg"
       , skPictureColor = Just "#007ACC"
       }
-  , SkillItem
-      { skName         = "Windsurf"
-      , skCategory     = "Others"
-      , skYears        = "1 year"
-      , skProficiency  = Just "onBusiness"
-      , skPicture      = Just "/icons/Windsurf.svg"
-      , skPictureColor = Just "#007ACC"
-      }
-  , SkillItem
+, SkillItem
       { skName         = "IntelliJ IDEA(Typescript)"
       , skCategory     = "Others"
       , skYears        = "1 year"

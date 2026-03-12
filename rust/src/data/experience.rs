@@ -77,7 +77,7 @@ lazy_static! {
             man_month: "".to_string(),
             technologies: vec![
                 "React".to_string(), "TypeScript".to_string(), "Next.js".to_string(), "(Ruby)".to_string(), "Material UI".to_string(), "React Hook Form".to_string(),
-                "GraphQL".to_string(), "PostgreSQL".to_string(), "zod".to_string(), "NextAuth0".to_string(), "codegen".to_string(), "Windsurf".to_string(),
+                "GraphQL".to_string(), "PostgreSQL".to_string(), "zod".to_string(), "NextAuth0".to_string(), "codegen".to_string(),
                 "Cloudinary".to_string(), "Vercel".to_string(), "Github".to_string(), "RSend".to_string(), "Metabase".to_string(), "Redis".to_string(),
                 "Sentry".to_string(), "Figma".to_string(), "Slack".to_string(), "CodeRabbit".to_string(),
             ],
@@ -387,7 +387,7 @@ lazy_static! {
             man_month: "".to_string(),
             technologies: vec![
                 "React".to_string(), "TypeScript".to_string(), "Next.js".to_string(), "(Ruby)".to_string(), "Material UI".to_string(), "React Hook Form".to_string(),
-                "GraphQL".to_string(), "PostgreSQL".to_string(), "zod".to_string(), "NextAuth0".to_string(), "codegen".to_string(), "Windsurf".to_string(),
+                "GraphQL".to_string(), "PostgreSQL".to_string(), "zod".to_string(), "NextAuth0".to_string(), "codegen".to_string(),
                 "Cloudinary".to_string(), "Vercel".to_string(), "Github".to_string(), "RSend".to_string(), "Metabase".to_string(), "Redis".to_string(),
                 "Sentry".to_string(), "Figma".to_string(), "Slack".to_string(), "CodeRabbit".to_string(),
             ],

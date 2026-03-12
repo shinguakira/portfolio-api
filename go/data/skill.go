@@ -45,7 +45,6 @@ var Skills = []model.SkillItem{
 
 var OtherSkills = []model.SkillItem{
 	{Name: "VS Code(Typescript)", Years: "2 year", Category: "Others", Proficiency: "onBusiness", Picture: "/icons/VSCode.svg", PictureColor: "#007ACC"},
-	{Name: "Windsurf", Years: "1 year", Category: "Others", Proficiency: "onBusiness", Picture: "/icons/Windsurf.svg", PictureColor: "#007ACC"},
 	{Name: "IntelliJ IDEA(Typescript)", Years: "1 year", Category: "Others", Proficiency: "onBusiness", Picture: "/icons/IntelliJIDEA.svg", PictureColor: "#000000"},
 	{Name: "Eclipse(Java,Javascript)", Years: "1 year", Category: "Others", Proficiency: "onBusiness", Picture: "/icons/Eclipse.svg", PictureColor: "#0089D6"},
 	{Name: "Spring Tool Suite4(Java,Javascript)", Years: "4 months", Category: "Others", Proficiency: "onBusiness", Picture: "/icons/SpringToolSuite.svg", PictureColor: "#6DB33F"},

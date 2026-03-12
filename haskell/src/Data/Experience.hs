@@ -93,7 +93,7 @@ workExperiencesJA =
           ]
       , weTechnologies =
           [ "React", "TypeScript", "Next.js", "(Ruby)", "Material UI", "React Hook Form"
-          , "GraphQL", "PostgreSQL", "zod", "NextAuth0", "codegen", "Windsurf"
+          , "GraphQL", "PostgreSQL", "zod", "NextAuth0", "codegen"
           , "Cloudinary", "Vercel", "Github", "RSend", "Metabase", "Redis"
           , "Sentry", "Figma", "Slack", "CodeRabbit"
           ]
@@ -401,7 +401,7 @@ workExperiencesEN =
           ]
       , weTechnologies =
           [ "React", "TypeScript", "Next.js", "(Ruby)", "Material UI", "React Hook Form"
-          , "GraphQL", "PostgreSQL", "zod", "NextAuth0", "codegen", "Windsurf"
+          , "GraphQL", "PostgreSQL", "zod", "NextAuth0", "codegen"
           , "Cloudinary", "Vercel", "Github", "RSend", "Metabase", "Redis"
           , "Sentry", "Figma", "Slack", "CodeRabbit"
           ]

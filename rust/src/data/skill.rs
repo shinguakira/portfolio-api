@@ -45,7 +45,6 @@ lazy_static! {
 
     pub static ref OTHER_SKILLS: Vec<SkillItem> = vec![
         SkillItem { name: "VS Code(Typescript)".to_string(), years: "2 year".to_string(), category: "Others".to_string(), proficiency: Some("onBusiness".to_string()), picture: Some("/icons/VSCode.svg".to_string()), picture_color: Some("#007ACC".to_string()) },
-        SkillItem { name: "Windsurf".to_string(), years: "1 year".to_string(), category: "Others".to_string(), proficiency: Some("onBusiness".to_string()), picture: Some("/icons/Windsurf.svg".to_string()), picture_color: Some("#007ACC".to_string()) },
         SkillItem { name: "IntelliJ IDEA(Typescript)".to_string(), years: "1 year".to_string(), category: "Others".to_string(), proficiency: Some("onBusiness".to_string()), picture: Some("/icons/IntelliJIDEA.svg".to_string()), picture_color: Some("#000000".to_string()) },
         SkillItem { name: "Eclipse(Java,Javascript)".to_string(), years: "1 year".to_string(), category: "Others".to_string(), proficiency: Some("onBusiness".to_string()), picture: Some("/icons/Eclipse.svg".to_string()), picture_color: Some("#0089D6".to_string()) },
         SkillItem { name: "Spring Tool Suite4(Java,Javascript)".to_string(), years: "4 months".to_string(), category: "Others".to_string(), proficiency: Some("onBusiness".to_string()), picture: Some("/icons/SpringToolSuite.svg".to_string()), picture_color: Some("#6DB33F".to_string()) },
