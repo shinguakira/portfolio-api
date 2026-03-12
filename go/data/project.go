@@ -14,10 +14,10 @@ var ProjectsJA = []model.Project{
 	{
 		Title:        "Brighty コーチングマッチングアプリ",
 		Description:  "Brighty コーチングマッチングアプリ\n経歴に記載の元と同様のため、省略\n",
-		Image:        "/images/projects/3dConnectFour.png",
+		Image:        "/images/projects/brighty.png",
 		Technologies: []string{"Next.js", "React", "TypeScript", "Tailwind CSS", "lucide-react"},
-		GithubURL:    "https://github.com/shinguakira/electronSample",
-		LiveURL:      "",
+		GithubURL:    "",
+		LiveURL:      "https://www.brighty.site",
 	},
 	{
 		Title:        "VSCode風ポートフォリオサイト",
@@ -153,10 +153,10 @@ var ProjectsEN = []model.Project{
 	{
 		Title:        "Brighty Coaching Matching App",
 		Description:  "Brighty Coaching Matching App\nSame as the one in the history, so omitted\n",
-		Image:        "/images/projects/3dConnectFour.png",
+		Image:        "/images/projects/brighty.png",
 		Technologies: []string{"Next.js", "React", "TypeScript", "Tailwind CSS", "lucide-react"},
-		GithubURL:    "https://github.com/shinguakira/electronSample",
-		LiveURL:      "",
+		GithubURL:    "",
+		LiveURL:      "https://www.brighty.site",
 	},
 	{
 		Title:        "VSCode-Style Portfolio Website",

@@ -69,7 +69,7 @@ export const projects: MultilingualProject[] = [
       description: `Brighty コーチングマッチングアプリ
 経歴に記載の元と同様のため、省略
 `,
-      image: connectFourPic,
+      image: brightyPic,
       githubUrl: "",
       liveUrl: 'https://www.brighty.site',
     },
@@ -78,7 +78,7 @@ export const projects: MultilingualProject[] = [
       description: `Brighty Coaching Matching App
 Same as the one in the history, so omitted
 `,
-      image: connectFourPic,
+      image: brightyPic,
       githubUrl: "",
       liveUrl: 'https://www.brighty.site',
     },

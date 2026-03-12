@@ -14,10 +14,10 @@ lazy_static! {
         Project {
             title: "Brighty コーチングマッチングアプリ".to_string(),
             description: "Brighty コーチングマッチングアプリ\n経歴に記載の元と同様のため、省略\n".to_string(),
-            image: "/images/projects/3dConnectFour.png".to_string(),
+            image: "/images/projects/brighty.png".to_string(),
             technologies: vec!["Next.js".to_string(), "React".to_string(), "TypeScript".to_string(), "Tailwind CSS".to_string(), "lucide-react".to_string()],
-            github_url: "https://github.com/shinguakira/electronSample".to_string(),
-            live_url: "".to_string(),
+            github_url: "".to_string(),
+            live_url: "https://www.brighty.site".to_string(),
         },
         Project {
             title: "VSCode風ポートフォリオサイト".to_string(),
@@ -153,10 +153,10 @@ lazy_static! {
         Project {
             title: "Brighty Coaching Matching App".to_string(),
             description: "Brighty Coaching Matching App\nSame as the one in the history, so omitted\n".to_string(),
-            image: "/images/projects/3dConnectFour.png".to_string(),
+            image: "/images/projects/brighty.png".to_string(),
             technologies: vec!["Next.js".to_string(), "React".to_string(), "TypeScript".to_string(), "Tailwind CSS".to_string(), "lucide-react".to_string()],
-            github_url: "https://github.com/shinguakira/electronSample".to_string(),
-            live_url: "".to_string(),
+            github_url: "".to_string(),
+            live_url: "https://www.brighty.site".to_string(),
         },
         Project {
             title: "VSCode-Style Portfolio Website".to_string(),

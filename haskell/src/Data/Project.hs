@@ -17,10 +17,10 @@ projectsJA =
   , Project
       { projTitle = "Brighty \12467\12540\12481\12531\12464\12510\12483\12481\12531\12464\12450\12503\12522"
       , projDescription = "Brighty \12467\12540\12481\12531\12464\12510\12483\12481\12531\12464\12450\12503\12522\n\32076\27508\12395\35352\36617\12398\20803\12392\21516\27096\12398\12383\12417\12289\30465\30053\n"
-      , projImage = "/images/projects/3dConnectFour.png"
+      , projImage = "/images/projects/brighty.png"
       , projTechnologies = ["Next.js", "React", "TypeScript", "Tailwind CSS", "lucide-react"]
-      , projGithubUrl = "https://github.com/shinguakira/electronSample"
-      , projLiveUrl = ""
+      , projGithubUrl = ""
+      , projLiveUrl = "https://www.brighty.site"
       }
   , Project
       { projTitle = "VSCode\39080\12509\12540\12488\12501\12457\12522\12458\12469\12452\12488"
@@ -157,10 +157,10 @@ projectsEN =
   , Project
       { projTitle = "Brighty Coaching Matching App"
       , projDescription = "Brighty Coaching Matching App\nSame as the one in the history, so omitted\n"
-      , projImage = "/images/projects/3dConnectFour.png"
+      , projImage = "/images/projects/brighty.png"
       , projTechnologies = ["Next.js", "React", "TypeScript", "Tailwind CSS", "lucide-react"]
-      , projGithubUrl = "https://github.com/shinguakira/electronSample"
-      , projLiveUrl = ""
+      , projGithubUrl = ""
+      , projLiveUrl = "https://www.brighty.site"
       }
   , Project
       { projTitle = "VSCode-Style Portfolio Website"
