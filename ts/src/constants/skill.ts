@@ -437,15 +437,7 @@ export const otherSkills: SkillItem[] = [
     picture: '/icons/Backlog.svg',
     pictureColor: '#181717',
   },
-  {
-    name: 'Redmine',
-    years: '3 months',
-    category: 'Others',
-    proficiency: onBusiness,
-    picture: '/icons/Redmine.svg',
-    pictureColor: '#B32024',
-  },
-  {
+{
     name: 'A5:SQL Mk-2',
     years: '1 year',
     category: 'Others',

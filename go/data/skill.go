@@ -55,7 +55,6 @@ var OtherSkills = []model.SkillItem{
 	{Name: "Github", Years: "2 year", Category: "Others", Proficiency: "onBusiness", Picture: "/icons/Github.svg", PictureColor: "#181717"},
 	{Name: "Swagger", Years: "6 months", Category: "Others", Proficiency: "onBusiness", Picture: "/icons/Swagger.svg", PictureColor: "#85EA2D"},
 	{Name: "Backlog", Years: "1 year", Category: "Others", Proficiency: "onBusiness", Picture: "/icons/Backlog.svg", PictureColor: "#181717"},
-	{Name: "Redmine", Years: "3 months", Category: "Others", Proficiency: "onBusiness", Picture: "/icons/Redmine.svg", PictureColor: "#B32024"},
 	{Name: "A5:SQL Mk-2", Years: "1 year", Category: "Others", Proficiency: "onBusiness", Picture: "/icons/A5SQLMk2.svg", PictureColor: "#336791"},
 	{Name: "Bun", Years: "self-study", Category: "Others", Proficiency: "self-study", Picture: "/icons/Bun.svg", PictureColor: "#000000"},
 }

@@ -55,7 +55,6 @@ lazy_static! {
         SkillItem { name: "Github".to_string(), years: "2 year".to_string(), category: "Others".to_string(), proficiency: Some("onBusiness".to_string()), picture: Some("/icons/Github.svg".to_string()), picture_color: Some("#181717".to_string()) },
         SkillItem { name: "Swagger".to_string(), years: "6 months".to_string(), category: "Others".to_string(), proficiency: Some("onBusiness".to_string()), picture: Some("/icons/Swagger.svg".to_string()), picture_color: Some("#85EA2D".to_string()) },
         SkillItem { name: "Backlog".to_string(), years: "1 year".to_string(), category: "Others".to_string(), proficiency: Some("onBusiness".to_string()), picture: Some("/icons/Backlog.svg".to_string()), picture_color: Some("#181717".to_string()) },
-        SkillItem { name: "Redmine".to_string(), years: "3 months".to_string(), category: "Others".to_string(), proficiency: Some("onBusiness".to_string()), picture: Some("/icons/Redmine.svg".to_string()), picture_color: Some("#B32024".to_string()) },
         SkillItem { name: "A5:SQL Mk-2".to_string(), years: "1 year".to_string(), category: "Others".to_string(), proficiency: Some("onBusiness".to_string()), picture: Some("/icons/A5SQLMk2.svg".to_string()), picture_color: Some("#336791".to_string()) },
         SkillItem { name: "Bun".to_string(), years: "self-study".to_string(), category: "Others".to_string(), proficiency: Some("self-study".to_string()), picture: Some("/icons/Bun.svg".to_string()), picture_color: Some("#000000".to_string()) },
     ];

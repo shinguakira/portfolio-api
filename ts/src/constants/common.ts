@@ -32,7 +32,6 @@ export const receptionInnovationSkillSet: string[] = [
   'Bootstrap5',
   'Azure(App Service,Azure Functions)',
   'Backlog',
-  'Redmine',
   'Swagger',
   'アジャイル開発(スクラム)',
 ];

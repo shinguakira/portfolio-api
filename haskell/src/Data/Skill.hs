@@ -401,15 +401,7 @@ otherSkills =
       , skPicture      = Just "/icons/Backlog.svg"
       , skPictureColor = Just "#181717"
       }
-  , SkillItem
-      { skName         = "Redmine"
-      , skCategory     = "Others"
-      , skYears        = "3 months"
-      , skProficiency  = Just "onBusiness"
-      , skPicture      = Just "/icons/Redmine.svg"
-      , skPictureColor = Just "#B32024"
-      }
-  , SkillItem
+, SkillItem
       { skName         = "A5:SQL Mk-2"
       , skCategory     = "Others"
       , skYears        = "1 year"
