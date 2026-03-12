@@ -1,18 +1,6 @@
-import {Request, Response as ExpressResponse} from 'express';
+import type {Context} from 'elysia';
 import type {
-  ApiResponse,
-  ProfileResponse,
-  ExperienceResponse,
-  ProjectsResponse,
-  SkillsResponse,
-  EducationResponse,
-  CertificationsResponse,
   ChangelogResponse,
-  FaqResponse,
-  StrongPointsResponse,
-  ContactResponse,
-  LinksResponse,
-  NotificationsResponse,
   ArticlesResponse,
   WorkExperience,
   Project,
@@ -36,15 +24,11 @@ import {
 import {generatePortfolioPDF} from '../services/pdfService.js';
 
 // Get profile information
-export const getProfile = (
-  req: Request,
-  res: ExpressResponse<ApiResponse<ProfileResponse>>
-) => {
+export const getProfile = ({query, set}: Context) => {
   try {
-    const lang = req.query.lang as string;
+    const lang = query.lang as string;
     const localizedData = lang === 'en' ? profile.en : profile.ja;
 
-    // Combine base profile data with localized content
     const profileData = {
       name: profile.name,
       location: profile.location,
@@ -53,124 +37,101 @@ export const getProfile = (
       ...localizedData,
     };
 
-    res
-      .status(200)
-      .json({message: 'Profile data fetched successfully', data: profileData});
+    return {message: 'Profile data fetched successfully', data: profileData};
   } catch (error) {
-    res.status(500).json({message: 'Error fetching profile data', data: null});
+    set.status = 500;
+    return {message: 'Error fetching profile data', data: null};
   }
 };
 
 // Get professional experience
-export const getExperience = (
-  req: Request,
-  res: ExpressResponse<ApiResponse<ExperienceResponse>>
-) => {
+export const getExperience = ({query, set}: Context) => {
   try {
-    const lang = req.query.lang as string;
+    const lang = query.lang as string;
     const localizedExperience: WorkExperience[] =
       lang === 'en' ? workExperiences_en : workExperiences_ja;
-    res.status(200).json({
+    return {
       message: 'Experience data fetched successfully',
       data: localizedExperience,
-    });
+    };
   } catch (error) {
-    res
-      .status(500)
-      .json({message: 'Error fetching experience data', data: null});
+    set.status = 500;
+    return {message: 'Error fetching experience data', data: null};
   }
 };
 
 // Get projects
-export const getProjects = (
-  req: Request,
-  res: ExpressResponse<ApiResponse<ProjectsResponse>>
-) => {
+export const getProjects = ({query, set}: Context) => {
   try {
-    const lang = req.query.lang as string;
+    const lang = query.lang as string;
     const localizedProjects: Project[] = projects.map((project) => ({
       technologies: project.technologies,
       ...(lang === 'en' ? project.en : project.ja),
     }));
-    res.status(200).json({
+    return {
       message: 'Projects data fetched successfully',
       data: localizedProjects,
-    });
+    };
   } catch (error) {
-    res.status(500).json({message: 'Error fetching projects data', data: null});
+    set.status = 500;
+    return {message: 'Error fetching projects data', data: null};
   }
 };
 
 // Get skills
-export const getSkills = (
-  req: Request,
-  res: ExpressResponse<ApiResponse<SkillsResponse>>
-) => {
+export const getSkills = ({set}: Context) => {
   try {
-    res
-      .status(200)
-      .json({message: 'Skills data fetched successfully', data: skills});
+    return {message: 'Skills data fetched successfully', data: skills};
   } catch (error) {
-    res.status(500).json({message: 'Error fetching skills data', data: null});
+    set.status = 500;
+    return {message: 'Error fetching skills data', data: null};
   }
 };
-export const getOtherSkills = (
-  req: Request,
-  res: ExpressResponse<ApiResponse<SkillsResponse>>
-) => {
+
+export const getOtherSkills = ({set}: Context) => {
   try {
-    res.status(200).json({
+    return {
       message: 'Other skills data fetched successfully',
       data: otherSkills,
-    });
+    };
   } catch (error) {
-    res.status(500).json({message: 'Error fetching skills data', data: null});
+    set.status = 500;
+    return {message: 'Error fetching skills data', data: null};
   }
 };
 
 // Get education
-export const getEducation = (
-  req: Request,
-  res: ExpressResponse<ApiResponse<EducationResponse>>
-) => {
+export const getEducation = ({query, set}: Context) => {
   try {
-    const lang = req.query.lang as string;
+    const lang = query.lang as string;
     const localizedEducation = education.map((item) => ({
       startYear: item.startYear,
       endYear: item.endYear,
       ...(lang === 'en' ? item.en : item.ja),
     }));
-    res.status(200).json({
+    return {
       message: 'Education data fetched successfully',
       data: localizedEducation,
-    });
+    };
   } catch (error) {
-    res
-      .status(500)
-      .json({message: 'Error fetching education data', data: null});
+    set.status = 500;
+    return {message: 'Error fetching education data', data: null};
   }
 };
 
 // Get contact information
-export const getContact = (
-  req: Request,
-  res: ExpressResponse<ApiResponse<ContactResponse>>
-) => {
+export const getContact = ({set}: Context) => {
   try {
-    res
-      .status(200)
-      .json({message: 'Contact data fetched successfully', data: contact});
+    return {message: 'Contact data fetched successfully', data: contact};
   } catch (error) {
-    res.status(500).json({message: 'Error fetching contact data', data: null});
+    set.status = 500;
+    return {message: 'Error fetching contact data', data: null};
   }
 };
 
-export const getCertifications = (
-  req: Request,
-  res: ExpressResponse<ApiResponse<CertificationsResponse>>
-) => {
+export const getCertifications = ({query, set}: Context) => {
   try {
-    const lang = req.query.lang as string;
+    const lang = query.lang as string;
     const localizedCertifications = certifications.map((item) => ({
       id: item.id,
       organization: item.organization,
@@ -178,23 +139,18 @@ export const getCertifications = (
       verifyLink: item.verifyLink,
       ...(lang === 'en' ? item.en : item.ja),
     }));
-    res.status(200).json({
+    return {
       message: 'Certifications data fetched successfully',
       data: localizedCertifications,
-    });
+    };
   } catch (error) {
-    res
-      .status(500)
-      .json({message: 'Error fetching certifications data', data: null});
+    set.status = 500;
+    return {message: 'Error fetching certifications data', data: null};
   }
 };
 
-export const getChangelogs = (
-  req: Request,
-  res: ExpressResponse<ApiResponse<ChangelogResponse>>
-) => {
+export const getChangelogs = ({set}: Context) => {
   try {
-    const lang = req.query.lang as string;
     const localizedChangelogs: ChangelogResponse = changelogs.map((item) => ({
       version: item.version,
       date: item.date,
@@ -204,106 +160,84 @@ export const getChangelogs = (
         en: change.en,
       })),
     }));
-    res.status(200).json({
+    return {
       message: 'Changelogs data fetched successfully',
       data: localizedChangelogs,
-    });
+    };
   } catch (error) {
-    res
-      .status(500)
-      .json({message: 'Error fetching changelogs data', data: null});
+    set.status = 500;
+    return {message: 'Error fetching changelogs data', data: null};
   }
 };
 
-export const getFaqs = (
-  req: Request,
-  res: ExpressResponse<ApiResponse<FaqResponse>>
-) => {
+export const getFaqs = ({query, set}: Context) => {
   try {
-    const lang = req.query.lang as string;
+    const lang = query.lang as string;
     const localizedFaqs = faqs.map((item) => ({
       size: item.size,
       category: item.category,
       ...(lang === 'en' ? item.en : item.ja),
     }));
-    res
-      .status(200)
-      .json({message: 'FAQs data fetched successfully', data: localizedFaqs});
+    return {message: 'FAQs data fetched successfully', data: localizedFaqs};
   } catch (error) {
-    res.status(500).json({message: 'Error fetching FAQs data', data: null});
+    set.status = 500;
+    return {message: 'Error fetching FAQs data', data: null};
   }
 };
 
-export const getLinks = (
-  req: Request,
-  res: ExpressResponse<ApiResponse<LinksResponse>>
-) => {
+export const getLinks = ({set}: Context) => {
   try {
-    res
-      .status(200)
-      .json({message: 'Links data fetched successfully', data: links});
+    return {message: 'Links data fetched successfully', data: links};
   } catch (error) {
-    res.status(500).json({message: 'Error fetching links data', data: null});
+    set.status = 500;
+    return {message: 'Error fetching links data', data: null};
   }
 };
 
-export const getStrongPoints = (
-  req: Request,
-  res: ExpressResponse<ApiResponse<StrongPointsResponse>>
-) => {
+export const getStrongPoints = ({query, set}: Context) => {
   try {
-    const lang = req.query.lang as string;
+    const lang = query.lang as string;
     const localizedStrongPoints = strongPoint.map((item) => ({
       size: item.size,
       ...(lang === 'en' ? item.en : item.ja),
     }));
-    res.status(200).json({
+    return {
       message: 'Strong points data fetched successfully',
       data: localizedStrongPoints,
-    });
+    };
   } catch (error) {
-    res
-      .status(500)
-      .json({message: 'Error fetching strong points data', data: null});
+    set.status = 500;
+    return {message: 'Error fetching strong points data', data: null};
   }
 };
 
-export const getNotifications = (
-  req: Request,
-  res: ExpressResponse<ApiResponse<NotificationsResponse>>
-) => {
+export const getNotifications = ({query, set}: Context) => {
   try {
-    const lang = req.query.lang as string;
+    const lang = query.lang as string;
     const localizedNotifications = notifications.map((item) => ({
       date: item.date,
       ...(lang === 'en' ? item.en : item.ja),
     }));
-    res.status(200).json({
+    return {
       message: 'Notifications data fetched successfully',
       data: localizedNotifications,
-    });
+    };
   } catch (error) {
-    res
-      .status(500)
-      .json({message: 'Error fetching notifications data', data: null});
+    set.status = 500;
+    return {message: 'Error fetching notifications data', data: null};
   }
 };
 
 const QIITA_USER_ID = 'ShinguAkira';
 
-export const getArticles = async (
-  req: Request,
-  res: ExpressResponse<ApiResponse<ArticlesResponse>>
-) => {
+export const getArticles = async ({set}: Context) => {
   try {
     const response = await fetch(
       `https://qiita.com/api/v2/users/${QIITA_USER_ID}/items?page=1&per_page=100`
     );
     if (!response.ok) {
-      res
-        .status(500)
-        .json({message: 'Error fetching articles from Qiita', data: null});
-      return;
+      set.status = 500;
+      return {message: 'Error fetching articles from Qiita', data: null};
     }
     const articles = await response.json();
     const mappedArticles = articles.map(
@@ -324,23 +258,21 @@ export const getArticles = async (
       totalCount: mappedArticles.length,
       articles: mappedArticles,
     };
-    res.status(200).json({message: 'Articles data fetched successfully', data});
+    return {message: 'Articles data fetched successfully', data};
   } catch (error) {
-    res.status(500).json({message: 'Error fetching articles data', data: null});
+    set.status = 500;
+    return {message: 'Error fetching articles data', data: null};
   }
 };
 
-export const downloadPortfolioPDF = async (
-  req: Request,
-  res: ExpressResponse
-) => {
+export const downloadPortfolioPDF = async ({query, set}: Context) => {
   try {
-    const lang = (req.query.lang as string) || 'en';
-    const format = (req.query.format as string) || 'standard';
-    const includeProjects = req.query.projects !== 'false';
-    const includeExperience = req.query.experience !== 'false';
-    const includeCertifications = req.query.certifications !== 'false';
-    const includeEducation = req.query.education !== 'false';
+    const lang = (query.lang as string) || 'en';
+    const format = (query.format as string) || 'standard';
+    const includeProjects = query.projects !== 'false';
+    const includeExperience = query.experience !== 'false';
+    const includeCertifications = query.certifications !== 'false';
+    const includeEducation = query.education !== 'false';
 
     const pdfBuffer = await generatePortfolioPDF({
       lang,
@@ -359,16 +291,17 @@ export const downloadPortfolioPDF = async (
 
     const filename = `portfolio_${lang === 'en' ? 'english' : 'japanese'}_${new Date().toISOString().split('T')[0]}.pdf`;
 
-    res.setHeader('Content-Type', 'application/pdf');
-    res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
-    res.setHeader('Content-Length', pdfBuffer.length);
+    set.headers['content-type'] = 'application/pdf';
+    set.headers['content-disposition'] = `attachment; filename="${filename}"`;
+    set.headers['content-length'] = String(pdfBuffer.length);
 
-    res.send(Buffer.from(pdfBuffer));
+    return new Response(Buffer.from(pdfBuffer));
   } catch (error) {
     console.error('PDF Generation Error:', error);
-    res.status(500).json({
+    set.status = 500;
+    return {
       message: 'Error generating portfolio PDF',
       data: null,
-    });
+    };
   }
 };
