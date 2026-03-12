@@ -1,5 +1,5 @@
 export const profile = {
-  name: 'Shingu Akira',
+  name: 'Web Dev',
   location: 'Tokyo, Japan',
   avatarUrl: 'https://example.com/avatar.jpg',
   socialLinks: [
@@ -7,11 +7,6 @@ export const profile = {
       platform: 'GitHub',
       url: 'https://github.com/shinguakira',
       icon: 'github',
-    },
-    {
-      platform: 'LinkedIn',
-      url: 'https://linkedin.com/in/shinguakira',
-      icon: 'linkedin',
     },
   ],
   ja: {

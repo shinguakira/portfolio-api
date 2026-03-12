@@ -3,7 +3,6 @@ export const contact = {
   phone: '+81 XX-XXXX-XXXX',
   address: 'Tokyo, Japan',
   socialMedia: {
-    linkedin: 'https://linkedin.com/in/shinguakira',
     github: 'https://github.com/shinguakira',
   },
   preferredMethod: 'email',

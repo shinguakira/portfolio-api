@@ -1,0 +1,28 @@
+[package]
+name = "portfolio-api-rust"
+version = "1.0.0"
+edition = "2021"
+
+[lib]
+name = "portfolio_api_rust"
+path = "src/lib.rs"
+
+[[bin]]
+name = "portfolio-api-rust"
+path = "src/main.rs"
+
+[dependencies]
+actix-web = "4"
+actix-cors = "0.7"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+chrono = { version = "0.4", features = ["serde"] }
+env_logger = "0.11"
+log = "0.4"
+printpdf = "0.7"
+lazy_static = "1.4"
+tokio = { version = "1", features = ["full"] }
+
+[dev-dependencies]
+actix-rt = "2"
+reqwest = { version = "0.12", features = ["json"] }

@@ -357,15 +357,7 @@ export const otherSkills: SkillItem[] = [
     picture: '/icons/VSCode.svg',
     pictureColor: '#007ACC',
   },
-  {
-    name: 'Windsurf',
-    years: '1 year',
-    category: 'Others',
-    proficiency: onBusiness,
-    picture: '/icons/Windsurf.svg',
-    pictureColor: '#007ACC',
-  },
-  {
+{
     name: 'IntelliJ IDEA(Typescript)',
     years: '1 year',
     category: 'Others',
@@ -437,15 +429,7 @@ export const otherSkills: SkillItem[] = [
     picture: '/icons/Backlog.svg',
     pictureColor: '#181717',
   },
-  {
-    name: 'Redmine',
-    years: '3 months',
-    category: 'Others',
-    proficiency: onBusiness,
-    picture: '/icons/Redmine.svg',
-    pictureColor: '#B32024',
-  },
-  {
+{
     name: 'A5:SQL Mk-2',
     years: '1 year',
     category: 'Others',

@@ -1,5 +1,5 @@
 export const profile_ja = {
-  name: 'Shingu Akira',
+  name: 'Web Dev',
   location: 'Tokyo, Japan',
   avatarUrl: 'https://example.com/avatar.jpg',
   socialLinks: [
@@ -7,11 +7,6 @@ export const profile_ja = {
       platform: 'GitHub',
       url: 'https://github.com/shinguakira',
       icon: 'github',
-    },
-    {
-      platform: 'LinkedIn',
-      url: 'https://linkedin.com/in/shinguakira',
-      icon: 'linkedin',
     },
   ],
   title: 'フルスタックエンジニア',
@@ -21,7 +16,7 @@ export const profile_ja = {
 };
 
 export const profile_en = {
-  name: 'Shingu Akira',
+  name: 'Web Dev',
   location: 'Tokyo, Japan',
   avatarUrl: 'https://example.com/avatar.jpg',
   socialLinks: [
@@ -29,11 +24,6 @@ export const profile_en = {
       platform: 'GitHub',
       url: 'https://github.com/shinguakira',
       icon: 'github',
-    },
-    {
-      platform: 'LinkedIn',
-      url: 'https://linkedin.com/in/shinguakira',
-      icon: 'linkedin',
     },
   ],
   title: 'Full Stack Developer',
