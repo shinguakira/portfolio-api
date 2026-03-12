@@ -62,14 +62,4 @@ const app = new Elysia({adapter: node()})
   }))
   .group('/api', (app) => app.use(portfolioRoutes));
 
-// Start server only if not in a test environment
-if (process.env.NODE_ENV !== 'test') {
-  const PORT = Number(process.env.PORT) || 3004;
-  app.listen(PORT, () => {
-    console.log(`🚀 Portfolio API Server running on port ${PORT}`);
-    console.log(`📍 Local: http://localhost:${PORT}`);
-    console.log(`🏥 Health: http://localhost:${PORT}/health`);
-  });
-}
-
 export default app;
