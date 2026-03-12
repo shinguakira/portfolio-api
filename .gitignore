@@ -88,6 +88,8 @@ Desktop.ini
 
 # Compiled output
 /dist
+ts/dist/
+packages/*/dist/
 /tmp
 
 .vercel
