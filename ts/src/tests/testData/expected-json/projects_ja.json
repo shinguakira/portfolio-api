@@ -25,8 +25,42 @@
     "title": "Brighty コーチングマッチングアプリ",
     "description": "Brighty コーチングマッチングアプリ\n経歴に記載の元と同様のため、省略\n",
     "image": "/images/projects/3dConnectFour.png",
-    "githubUrl": "https://github.com/shinguakira/electronSample",
-    "liveUrl": ""
+    "githubUrl": "",
+    "liveUrl": "https://www.brighty.site"
+  },
+  {
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "next-intl",
+      "Playwright",
+      "lucide-react",
+      "Vercel"
+    ],
+    "title": "VSCode風ポートフォリオサイト",
+    "description": "Visual Studio Codeのエディタ画面を再現したポートフォリオサイト\nタイトルバー、アクティビティバー、サイドバー、タブ、ターミナル、ステータスバーを忠実に再現。\nプロフィール、プロジェクト、スキル等の8セクションをIDEのファイルのように閲覧可能。\n3種類のビジュアルテーマ、日英バイリンガル対応、Playwrightによる184件のスナップショットテスト搭載。\n",
+    "image": "/images/projects/vscode-portfolio.png",
+    "githubUrl": "https://github.com/shinguakira/vscode-portfolio",
+    "liveUrl": "https://v0-project-steel-nine.vercel.app/"
+  },
+  {
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "next-intl",
+      "Playwright",
+      "lucide-react",
+      "Vercel"
+    ],
+    "title": "VSCode風ポートフォリオサイト（個人版）",
+    "description": "VSCode風ポートフォリオの個人カスタマイズ版\nNext.js 16 + React 19 + Tailwind CSS v4へのアップグレード版。\nセクションごとに3種類のビジュアルテーマ（Modern, Innovative, Professional）を搭載。\n拡張機能ギャラリー、設定パネル、チュートリアルオーバーレイ、Git履歴パネル等の追加機能あり。\n",
+    "image": "/images/projects/vscode-portfolio.png",
+    "githubUrl": "https://github.com/shinguakira/my-vscode-portfolio",
+    "liveUrl": "https://v0-project-steel-nine.vercel.app/"
   },
   {
     "technologies": [
