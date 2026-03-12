@@ -19,6 +19,42 @@ export const projects_ja = [
     technologies: [
       'React',
       'TypeScript',
+      'Next.js',
+      'Tailwind CSS',
+      'next-intl',
+      'Playwright',
+      'lucide-react',
+      'Vercel',
+    ],
+    title: 'VSCode風ポートフォリオサイト',
+    description:
+      'Visual Studio Codeのエディタ画面を再現したポートフォリオサイト\nタイトルバー、アクティビティバー、サイドバー、タブ、ターミナル、ステータスバーを忠実に再現。\nプロフィール、プロジェクト、スキル等の8セクションをIDEのファイルのように閲覧可能。\n3種類のビジュアルテーマ、日英バイリンガル対応、Playwrightによる184件のスナップショットテスト搭載。\n',
+    image: '/images/projects/vscode-portfolio.png',
+    githubUrl: 'https://github.com/shinguakira/vscode-portfolio',
+    liveUrl: 'https://v0-project-steel-nine.vercel.app/',
+  },
+  {
+    technologies: [
+      'React',
+      'TypeScript',
+      'Next.js',
+      'Tailwind CSS',
+      'next-intl',
+      'Playwright',
+      'lucide-react',
+      'Vercel',
+    ],
+    title: 'VSCode風ポートフォリオサイト（個人版）',
+    description:
+      'VSCode風ポートフォリオの個人カスタマイズ版\nNext.js 16 + React 19 + Tailwind CSS v4へのアップグレード版。\nセクションごとに3種類のビジュアルテーマ（Modern, Innovative, Professional）を搭載。\n拡張機能ギャラリー、設定パネル、チュートリアルオーバーレイ、Git履歴パネル等の追加機能あり。\n',
+    image: '/images/projects/vscode-portfolio.png',
+    githubUrl: 'https://github.com/shinguakira/my-vscode-portfolio',
+    liveUrl: 'https://v0-project-steel-nine.vercel.app/',
+  },
+  {
+    technologies: [
+      'React',
+      'TypeScript',
       'Remix',
       'Hono.js',
       'DB(未定)',
@@ -218,6 +254,42 @@ export const projects_en = [
     image: '/images/projects/onDeveloping.jpg',
     githubUrl: '',
     liveUrl: '',
+  },
+  {
+    technologies: [
+      'React',
+      'TypeScript',
+      'Next.js',
+      'Tailwind CSS',
+      'next-intl',
+      'Playwright',
+      'lucide-react',
+      'Vercel',
+    ],
+    title: 'VSCode-Style Portfolio Website',
+    description:
+      'A portfolio website that replicates the Visual Studio Code editor interface.\nFaithfully reproduces title bar, activity bar, sidebar, tabs, terminal, and status bar.\nBrowse 8 portfolio sections (Profile, Projects, Skills, etc.) as if they were files in an IDE.\nFeatures 3 visual themes, bilingual Japanese/English support, and 184 Playwright snapshot tests.\n',
+    image: '/images/projects/vscode-portfolio.png',
+    githubUrl: 'https://github.com/shinguakira/vscode-portfolio',
+    liveUrl: 'https://v0-project-steel-nine.vercel.app/',
+  },
+  {
+    technologies: [
+      'React',
+      'TypeScript',
+      'Next.js',
+      'Tailwind CSS',
+      'next-intl',
+      'Playwright',
+      'lucide-react',
+      'Vercel',
+    ],
+    title: 'VSCode-Style Portfolio Website (Personal Edition)',
+    description:
+      'A personal customization of the VSCode-style portfolio.\nUpgraded to Next.js 16 + React 19 + Tailwind CSS v4.\nFeatures 3 visual theme variants (Modern, Innovative, Professional) per section.\nIncludes extensions gallery, settings panel, tutorial overlay, and git history panel.\n',
+    image: '/images/projects/vscode-portfolio.png',
+    githubUrl: 'https://github.com/shinguakira/my-vscode-portfolio',
+    liveUrl: 'https://v0-project-steel-nine.vercel.app/',
   },
   {
     technologies: [

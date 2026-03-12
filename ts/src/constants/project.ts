@@ -14,6 +14,7 @@ const TwodRpgPic = '/images/projects/2d-rpg-react.png'; // picture for 2d rpg
 const ragChatBotAkiraShinguPic = '/images/projects/rag-chatbot-akirashingu.jpg'; // picture for rag chatbot akira shingu
 const countryAppPic = '/images/projects/country-app.png'; // picture for country app
 const portfolioApiPic = '/images/projects/portfolio-api.png'; // picture for portfolio api
+const vscodePortfolioPic = '/images/projects/vscode-portfolio.png'; // picture for vscode portfolio
 const connectFourPic = '/images/projects/3dConnectFour.png'; // picture for 3d connect four
 const brightyPic = '/images/projects/brighty.png'; // picture for brighty
 
@@ -68,18 +69,86 @@ export const projects: MultilingualProject[] = [
       description: `Brighty コーチングマッチングアプリ
 経歴に記載の元と同様のため、省略
 `,
-      image: connectFourPic,
-      githubUrl: 'https://github.com/shinguakira/electronSample',
-      liveUrl: '',
+      image: brightyPic,
+      githubUrl: "",
+      liveUrl: 'https://www.brighty.site',
     },
     en: {
       title: 'Brighty Coaching Matching App',
       description: `Brighty Coaching Matching App
 Same as the one in the history, so omitted
 `,
-      image: connectFourPic,
-      githubUrl: 'https://github.com/shinguakira/electronSample',
-      liveUrl: '',
+      image: brightyPic,
+      githubUrl: "",
+      liveUrl: 'https://www.brighty.site',
+    },
+  },
+  {
+    technologies: [
+      'React',
+      'TypeScript',
+      'Next.js',
+      'Tailwind CSS',
+      'next-intl',
+      'Playwright',
+      'lucide-react',
+      'Vercel',
+    ],
+    ja: {
+      title: 'VSCode風ポートフォリオサイト',
+      description: `Visual Studio Codeのエディタ画面を再現したポートフォリオサイト
+タイトルバー、アクティビティバー、サイドバー、タブ、ターミナル、ステータスバーを忠実に再現。
+プロフィール、プロジェクト、スキル等の8セクションをIDEのファイルのように閲覧可能。
+3種類のビジュアルテーマ、日英バイリンガル対応、Playwrightによる184件のスナップショットテスト搭載。
+`,
+      image: vscodePortfolioPic,
+      githubUrl: 'https://github.com/shinguakira/vscode-portfolio',
+      liveUrl: 'https://v0-project-steel-nine.vercel.app/',
+    },
+    en: {
+      title: 'VSCode-Style Portfolio Website',
+      description: `A portfolio website that replicates the Visual Studio Code editor interface.
+Faithfully reproduces title bar, activity bar, sidebar, tabs, terminal, and status bar.
+Browse 8 portfolio sections (Profile, Projects, Skills, etc.) as if they were files in an IDE.
+Features 3 visual themes, bilingual Japanese/English support, and 184 Playwright snapshot tests.
+`,
+      image: vscodePortfolioPic,
+      githubUrl: 'https://github.com/shinguakira/vscode-portfolio',
+      liveUrl: 'https://v0-project-steel-nine.vercel.app/',
+    },
+  },
+  {
+    technologies: [
+      'React',
+      'TypeScript',
+      'Next.js',
+      'Tailwind CSS',
+      'next-intl',
+      'Playwright',
+      'lucide-react',
+      'Vercel',
+    ],
+    ja: {
+      title: 'VSCode風ポートフォリオサイト（個人版）',
+      description: `VSCode風ポートフォリオの個人カスタマイズ版
+Next.js 16 + React 19 + Tailwind CSS v4へのアップグレード版。
+セクションごとに3種類のビジュアルテーマ（Modern, Innovative, Professional）を搭載。
+拡張機能ギャラリー、設定パネル、チュートリアルオーバーレイ、Git履歴パネル等の追加機能あり。
+`,
+      image: vscodePortfolioPic,
+      githubUrl: 'https://github.com/shinguakira/my-vscode-portfolio',
+      liveUrl: 'https://v0-project-steel-nine.vercel.app/',
+    },
+    en: {
+      title: 'VSCode-Style Portfolio Website (Personal Edition)',
+      description: `A personal customization of the VSCode-style portfolio.
+Upgraded to Next.js 16 + React 19 + Tailwind CSS v4.
+Features 3 visual theme variants (Modern, Innovative, Professional) per section.
+Includes extensions gallery, settings panel, tutorial overlay, and git history panel.
+`,
+      image: vscodePortfolioPic,
+      githubUrl: 'https://github.com/shinguakira/my-vscode-portfolio',
+      liveUrl: 'https://v0-project-steel-nine.vercel.app/',
     },
   },
   {

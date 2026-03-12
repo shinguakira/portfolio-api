@@ -24,9 +24,43 @@
     ],
     "title": "Brighty Coaching Matching App",
     "description": "Brighty Coaching Matching App\nSame as the one in the history, so omitted\n",
-    "image": "/images/projects/3dConnectFour.png",
-    "githubUrl": "https://github.com/shinguakira/electronSample",
-    "liveUrl": ""
+    "image": "/images/projects/brighty.png",
+    "githubUrl": "",
+    "liveUrl": "https://www.brighty.site"
+  },
+  {
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "next-intl",
+      "Playwright",
+      "lucide-react",
+      "Vercel"
+    ],
+    "title": "VSCode-Style Portfolio Website",
+    "description": "A portfolio website that replicates the Visual Studio Code editor interface.\nFaithfully reproduces title bar, activity bar, sidebar, tabs, terminal, and status bar.\nBrowse 8 portfolio sections (Profile, Projects, Skills, etc.) as if they were files in an IDE.\nFeatures 3 visual themes, bilingual Japanese/English support, and 184 Playwright snapshot tests.\n",
+    "image": "/images/projects/vscode-portfolio.png",
+    "githubUrl": "https://github.com/shinguakira/vscode-portfolio",
+    "liveUrl": "https://v0-project-steel-nine.vercel.app/"
+  },
+  {
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "next-intl",
+      "Playwright",
+      "lucide-react",
+      "Vercel"
+    ],
+    "title": "VSCode-Style Portfolio Website (Personal Edition)",
+    "description": "A personal customization of the VSCode-style portfolio.\nUpgraded to Next.js 16 + React 19 + Tailwind CSS v4.\nFeatures 3 visual theme variants (Modern, Innovative, Professional) per section.\nIncludes extensions gallery, settings panel, tutorial overlay, and git history panel.\n",
+    "image": "/images/projects/vscode-portfolio.png",
+    "githubUrl": "https://github.com/shinguakira/my-vscode-portfolio",
+    "liveUrl": "https://v0-project-steel-nine.vercel.app/"
   },
   {
     "technologies": [

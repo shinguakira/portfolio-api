@@ -17,10 +17,26 @@ projectsJA =
   , Project
       { projTitle = "Brighty \12467\12540\12481\12531\12464\12510\12483\12481\12531\12464\12450\12503\12522"
       , projDescription = "Brighty \12467\12540\12481\12531\12464\12510\12483\12481\12531\12464\12450\12503\12522\n\32076\27508\12395\35352\36617\12398\20803\12392\21516\27096\12398\12383\12417\12289\30465\30053\n"
-      , projImage = "/images/projects/3dConnectFour.png"
+      , projImage = "/images/projects/brighty.png"
       , projTechnologies = ["Next.js", "React", "TypeScript", "Tailwind CSS", "lucide-react"]
-      , projGithubUrl = "https://github.com/shinguakira/electronSample"
-      , projLiveUrl = ""
+      , projGithubUrl = ""
+      , projLiveUrl = "https://www.brighty.site"
+      }
+  , Project
+      { projTitle = "VSCode\39080\12509\12540\12488\12501\12457\12522\12458\12469\12452\12488"
+      , projDescription = "Visual Studio Code\12398\12456\12487\12451\12479\30011\38754\12434\20877\29694\12375\12383\12509\12540\12488\12501\12457\12522\12458\12469\12452\12488\n\12479\12452\12488\12523\12496\12540\12289\12450\12463\12486\12451\12499\12486\12451\12496\12540\12289\12469\12452\12489\12496\12540\12289\12479\12502\12289\12479\12540\12511\12490\12523\12289\12473\12486\12540\12479\12473\12496\12540\12434\24544\23455\12395\20877\29694\12290\n\12503\12525\12501\12451\12540\12523\12289\12503\12525\12472\12455\12463\12488\12289\12473\12461\12523\31561\12398\65304\12475\12463\12471\12519\12531\12434IDE\12398\12501\12449\12452\12523\12398\12424\12358\12395\38322\35239\21487\33021\12290\n\65299\31278\39006\12398\12499\12472\12517\12450\12523\12486\12540\12510\12289\26085\33521\12496\12452\12522\12531\12460\12523\23550\24540\12289Playwright\12395\12424\12427\65297\65304\65300\20214\12398\12473\12490\12483\12503\12471\12519\12483\12488\12486\12473\12488\25645\36617\12290"
+      , projImage = "/images/projects/vscode-portfolio.png"
+      , projTechnologies = ["React", "TypeScript", "Next.js", "Tailwind CSS", "next-intl", "Playwright", "lucide-react", "Vercel"]
+      , projGithubUrl = "https://github.com/shinguakira/vscode-portfolio"
+      , projLiveUrl = "https://v0-project-steel-nine.vercel.app/"
+      }
+  , Project
+      { projTitle = "VSCode\39080\12509\12540\12488\12501\12457\12522\12458\12469\12452\12488\65288\20491\20154\29256\65289"
+      , projDescription = "VSCode\39080\12509\12540\12488\12501\12457\12522\12458\12398\20491\20154\12459\12473\12479\12510\12452\12474\29256\nNext.js 16 + React 19 + Tailwind CSS v4\12408\12398\12450\12483\12503\12464\12524\12540\12489\29256\12290\n\12475\12463\12471\12519\12531\12372\12392\12395\65299\31278\39006\12398\12499\12472\12517\12450\12523\12486\12540\12510\65288Modern, Innovative, Professional\65289\12434\25645\36617\12290\n\25313\24373\27231\33021\12462\12515\12521\12522\12540\12289\35373\23450\12497\12493\12523\12289\12481\12517\12540\12488\12522\12450\12523\12458\12540\12496\12540\12524\12452\12289Git\23653\27508\12497\12493\12523\31561\12398\36861\21152\27231\33021\12354\12426\12290"
+      , projImage = "/images/projects/vscode-portfolio.png"
+      , projTechnologies = ["React", "TypeScript", "Next.js", "Tailwind CSS", "next-intl", "Playwright", "lucide-react", "Vercel"]
+      , projGithubUrl = "https://github.com/shinguakira/my-vscode-portfolio"
+      , projLiveUrl = "https://v0-project-steel-nine.vercel.app/"
       }
   , Project
       { projTitle = "Electron Vite React\12450\12503\12522"
@@ -141,10 +157,26 @@ projectsEN =
   , Project
       { projTitle = "Brighty Coaching Matching App"
       , projDescription = "Brighty Coaching Matching App\nSame as the one in the history, so omitted\n"
-      , projImage = "/images/projects/3dConnectFour.png"
+      , projImage = "/images/projects/brighty.png"
       , projTechnologies = ["Next.js", "React", "TypeScript", "Tailwind CSS", "lucide-react"]
-      , projGithubUrl = "https://github.com/shinguakira/electronSample"
-      , projLiveUrl = ""
+      , projGithubUrl = ""
+      , projLiveUrl = "https://www.brighty.site"
+      }
+  , Project
+      { projTitle = "VSCode-Style Portfolio Website"
+      , projDescription = "A portfolio website that replicates the Visual Studio Code editor interface.\nFaithfully reproduces title bar, activity bar, sidebar, tabs, terminal, and status bar.\nBrowse 8 portfolio sections (Profile, Projects, Skills, etc.) as if they were files in an IDE.\nFeatures 3 visual themes, bilingual Japanese/English support, and 184 Playwright snapshot tests."
+      , projImage = "/images/projects/vscode-portfolio.png"
+      , projTechnologies = ["React", "TypeScript", "Next.js", "Tailwind CSS", "next-intl", "Playwright", "lucide-react", "Vercel"]
+      , projGithubUrl = "https://github.com/shinguakira/vscode-portfolio"
+      , projLiveUrl = "https://v0-project-steel-nine.vercel.app/"
+      }
+  , Project
+      { projTitle = "VSCode-Style Portfolio Website (Personal Edition)"
+      , projDescription = "A personal customization of the VSCode-style portfolio.\nUpgraded to Next.js 16 + React 19 + Tailwind CSS v4.\nFeatures 3 visual theme variants (Modern, Innovative, Professional) per section.\nIncludes extensions gallery, settings panel, tutorial overlay, and git history panel."
+      , projImage = "/images/projects/vscode-portfolio.png"
+      , projTechnologies = ["React", "TypeScript", "Next.js", "Tailwind CSS", "next-intl", "Playwright", "lucide-react", "Vercel"]
+      , projGithubUrl = "https://github.com/shinguakira/my-vscode-portfolio"
+      , projLiveUrl = "https://v0-project-steel-nine.vercel.app/"
       }
   , Project
       { projTitle = "Electron Vite React App"
