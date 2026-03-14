@@ -248,7 +248,7 @@ var WorkExperiencesJA = []model.WorkExperience{
 		},
 	},
 	{
-		Company:         "株式会社ホテルテラスザスクエア日立",
+		Company:         "ホテル",
 		Period:          "2022年1月 - 2023年3月",
 		TeamSize:        "",
 		ManMonth:        "",
@@ -562,7 +562,7 @@ var WorkExperiencesEN = []model.WorkExperience{
 		},
 	},
 	{
-		Company:         "株式会社ホテルテラスザスクエア日立",
+		Company:         "ホテル",
 		Period:          "2022-01 - 2023-03",
 		TeamSize:        "",
 		ManMonth:        "",
