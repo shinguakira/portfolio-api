@@ -123,13 +123,13 @@ export const faqs: MultilingualFaq[] = [
     ja: {
       question: '開発なのになぜAWSの資格を多く取得されていますか？',
       answer:
-        '現在の会社が、AWSのパートナーになることを目指しているため、AWSの資格取得を推奨していること、AWS All Certified Engineerの表彰により、会社の知名度向上に微力ながら助力できると考えたためです。また認知度のない資格を取得しても、評価されない可能性があったためです。',
+        '以前の会社が、AWSのパートナーになることを目指していたため、AWSの資格取得を推奨していたこと、AWS All Certified Engineerの表彰により、お客さまの知名度向上に微力ながら助力できると考えたためです。また認知度のない資格を取得しても、評価されない可能性があったためです。',
     },
     en: {
       question:
         'As a developer, why have you obtained so many AWS certifications?',
       answer:
-        "My current company aims to become an AWS partner, so they encourage obtaining AWS certifications. I believed that achieving AWS All Certified Engineer recognition could help increase the company's visibility. Additionally, obtaining certifications that lack recognition might not be valued as highly.",
+        "My previous company aimed to become an AWS partner, so they encouraged obtaining AWS certifications. I believed that achieving AWS All Certified Engineer recognition could help increase the client's visibility. Additionally, obtaining certifications that lack recognition might not be valued as highly.",
     },
   },
   {
@@ -150,14 +150,14 @@ export const faqs: MultilingualFaq[] = [
     size: 'large',
     category: 'Timeline',
     ja: {
-      question: '現在転職を考えている理由は何ですか？',
+      question: '以前の会社から転職を考えた理由は何ですか？',
       answer:
-        '会社が方向転換をし、ローコードを主体に受託開発を進めたいと考えており、私の考えと相反するためです。フルスクラッチで、技術力が求められる環境での開発を行いと考えています。また、現在の会社はJavaの案件がメインであり、現在携わっている案件以外に携わるとなった場合に、Javaの案件もしくは、ローコードのプロジェクトしかない可能性があるためです。',
+        '会社が方向転換をし、ローコードを主体に受託開発を進めたいと考えており、私の考えと相反するためです。フルスクラッチで、技術力が求められる環境での開発を行いたいと考えていました。また、以前の会社はJavaの案件がメインであり、当時携わっていた案件以外に携わるとなった場合に、Javaの案件もしくは、ローコードのプロジェクトしかない可能性があったためです。',
     },
     en: {
-      question: 'Why are you considering changing jobs now?',
+      question: 'Why did you decide to leave your previous company?',
       answer:
-        'My company has shifted direction and wants to focus on low-code development for contract projects, which contradicts my own goals. I want to work in an environment that requires technical skills and full-scratch development. Additionally, my current company primarily handles Java projects, so if I were to work on something other than my current project, I might only have options for Java or low-code projects.',
+        'The company shifted direction and wanted to focus on low-code development for contract projects, which contradicted my goals. I wanted to work in an environment that requires technical skills and full-scratch development. Additionally, my previous company primarily handled Java projects, so if I were to work on something other than the project I was on, I might only have had options for Java or low-code projects.',
     },
   },
 ];

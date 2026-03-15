@@ -21,12 +21,12 @@ lazy_static! {
         StrongPoint {
             size: "large".to_string(),
             question: "自己研鑽能力".to_string(),
-            answer: "平日、休日問わず、プライベートの時間を技術力向上、会社の貢献のために時間を使うことができる。\nなおかつ、実際に資格取得など、目に見える形で自己研鑽の結果を出すことができる。\n学生時代のスポーツで磨いた競争力、本来の負けず嫌いのため、仕事のどのような部分(テスト作業)でも自身の知識になりそうなものを積極的に探究し、吸収する。\nA社(A社の子会社)では自己学習力の向上を掲げており、最初に携わったModbusの通信プログラムの開発では、「何がわからないかわからない」状態からなんとかほとんど自己学習のみで開発を行うことができました。\n\nB社では、Webの開発に対してほぼ未経験、Reactも未経験の状態かつ、同チームに有識者がいない状態で、無事プロジェクトを完遂することができました。".to_string(),
+            answer: "平日、休日問わず、プライベートの時間を技術力向上、クライアントへの貢献のために時間を使うことができる。\nなおかつ、実際に資格取得など、目に見える形で自己研鑽の結果を出すことができる。\n学生時代のスポーツで磨いた競争力、本来の負けず嫌いのため、仕事のどのような部分(テスト作業)でも自身の知識になりそうなものを積極的に探究し、吸収する。\nA社(A社の子会社)では自己学習力の向上を掲げており、最初に携わったModbusの通信プログラムの開発では、「何がわからないかわからない」状態からなんとかほとんど自己学習のみで開発を行うことができました。\n\nB社では、Webの開発に対してほぼ未経験、Reactも未経験の状態かつ、同チームに有識者がいない状態で、無事プロジェクトを完遂することができました。".to_string(),
         },
         StrongPoint {
             size: "small".to_string(),
             question: "会社への貢献とビジネスへの理解".to_string(),
-            answer: "Freelancers.com にて案件を自分で取得し、翻訳業務を行っている経験があるため、仕事の大まかな全体の流れを理解しています。ただ与えられた仕事をこなすだけでなく、どうやったら会社の利益になるかを考え、いただいている給料を超える利益を会社に提供できることを目標し業務に取り組みます。\n現在の会社で、どうやって受託の案件を獲得するかを模索する中で、受託の際には、フェーズごとに契約を行う、SES のビジネス形態と受託のビジネス形態はどう違うかなど、同年代、同経験数では比較的に身についていない知識を持っています。\n".to_string(),
+            answer: "Freelancers.com にて案件を自分で取得し、翻訳業務を行っている経験があるため、仕事の大まかな全体の流れを理解しています。ただ与えられた仕事をこなすだけでなく、どうやったらクライアントの利益になるかを考え、いただく報酬を超える利益をクライアントに提供できることを目標し業務に取り組みます。\n以前の会社で、どうやって受託の案件を獲得するかを模索する中で、受託の際には、フェーズごとに契約を行う、SES のビジネス形態と受託のビジネス形態はどう違うかなど、同年代、同経験数では比較的に身についていない知識を持っています。\n".to_string(),
         },
         StrongPoint {
             size: "medium".to_string(),
@@ -69,12 +69,12 @@ lazy_static! {
         StrongPoint {
             size: "large".to_string(),
             question: "Self-Improvement Ability".to_string(),
-            answer: "I can dedicate my private time to improving technical skills and contributing to the company, regardless of whether it's a weekday or weekend.\nMoreover, I can demonstrate tangible results of self-improvement, such as obtaining certifications.\nWith competitive spirit honed through sports during my student years and my inherently competitive nature, I actively explore and absorb anything that could enhance my knowledge in any aspect of work, including testing.\nAt Company A (Subsidiary of Company A), which emphasized self-learning ability, I was able to develop a Modbus communication program almost entirely through self-study, starting from a state where \"I didn't know what I didn't know.\"\n\nAt Company B, I successfully completed a project in web development with almost no prior experience, no experience with React, and no experts on the team.".to_string(),
+            answer: "I can dedicate my private time to improving technical skills and contributing to clients, regardless of whether it's a weekday or weekend.\nMoreover, I can demonstrate tangible results of self-improvement, such as obtaining certifications.\nWith competitive spirit honed through sports during my student years and my inherently competitive nature, I actively explore and absorb anything that could enhance my knowledge in any aspect of work, including testing.\nAt Company A (Subsidiary of Company A), which emphasized self-learning ability, I was able to develop a Modbus communication program almost entirely through self-study, starting from a state where \"I didn't know what I didn't know.\"\n\nAt Company B, I successfully completed a project in web development with almost no prior experience, no experience with React, and no experts on the team.".to_string(),
         },
         StrongPoint {
             size: "small".to_string(),
             question: "Business Understanding and Company Contribution".to_string(),
-            answer: "Having acquired projects and performed translation work on Freelancers.com, I understand the general workflow of business. I approach work with the goal of not just completing assigned tasks, but considering how to benefit the company and provide value that exceeds my salary.\nIn my current company, while exploring how to acquire contract projects, I've gained knowledge that is relatively uncommon among peers of my age and experience level, such as understanding phase-by-phase contracting and the differences between SES (System Engineering Service) and contract business models.\n".to_string(),
+            answer: "Having acquired projects and performed translation work on Freelancers.com, I understand the general workflow of business. I approach work with the goal of not just completing assigned tasks, but considering how to benefit the client and provide value that exceeds my compensation.\nAt a previous company, while exploring how to acquire contract projects, I gained knowledge that is relatively uncommon among peers of my age and experience level, such as understanding phase-by-phase contracting and the differences between SES (System Engineering Service) and contract business models.\n".to_string(),
         },
         StrongPoint {
             size: "medium".to_string(),
