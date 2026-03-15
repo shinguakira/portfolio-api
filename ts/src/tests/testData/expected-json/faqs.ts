@@ -62,7 +62,7 @@ export const faqs_ja = [
     category: 'Certification',
     question: '開発なのになぜAWSの資格を多く取得されていますか？',
     answer:
-      '以前の会社が、AWSのパートナーになることを目指していたため、AWSの資格取得を推奨していたこと、AWS All Certified Engineerの表彰により、お客さまの知名度向上に微力ながら助力できると考えたためです。また認知度のない資格を取得しても、評価されない可能性があったためです。',
+      '2社目の会社が、AWSのパートナーになることを目指していたため、AWSの資格取得を推奨していたこと、AWS All Certified Engineerの表彰により、お客さまの知名度向上に微力ながら助力できると考えたためです。また認知度のない資格を取得しても、評価されない可能性があったためです。',
   },
   {
     size: 'large',
@@ -74,9 +74,9 @@ export const faqs_ja = [
   {
     size: 'large',
     category: 'Timeline',
-    question: '以前の会社から転職を考えた理由は何ですか？',
+    question: '2社目の会社から転職を考えた理由は何ですか？',
     answer:
-      '会社が方向転換をし、ローコードを主体に受託開発を進めたいと考えており、私の考えと相反するためです。フルスクラッチで、技術力が求められる環境での開発を行いたいと考えていました。また、以前の会社はJavaの案件がメインであり、当時携わっていた案件以外に携わるとなった場合に、Javaの案件もしくは、ローコードのプロジェクトしかない可能性があったためです。',
+      '会社が方向転換をし、ローコードを主体に受託開発を進めたいと考えており、私の考えと相反するためです。フルスクラッチで、技術力が求められる環境での開発を行いたいと考えていました。また、2社目の会社はJavaの案件がメインであり、当時携わっていた案件以外に携わるとなった場合に、Javaの案件もしくは、ローコードのプロジェクトしかない可能性があったためです。',
   },
 ];
 
@@ -145,7 +145,7 @@ export const faqs_en = [
     question:
       'As a developer, why have you obtained so many AWS certifications?',
     answer:
-      "My previous company aimed to become an AWS partner, so they encouraged obtaining AWS certifications. I believed that achieving AWS All Certified Engineer recognition could help increase the client's visibility. Additionally, obtaining certifications that lack recognition might not be valued as highly.",
+      "My second company aimed to become an AWS partner, so they encouraged obtaining AWS certifications. I believed that achieving AWS All Certified Engineer recognition could help increase the client's visibility. Additionally, obtaining certifications that lack recognition might not be valued as highly.",
   },
   {
     size: 'large',
@@ -157,8 +157,8 @@ export const faqs_en = [
   {
     size: 'large',
     category: 'Timeline',
-    question: 'Why did you decide to leave your previous company?',
+    question: 'Why did you decide to leave your second company?',
     answer:
-      'The company shifted direction and wanted to focus on low-code development for contract projects, which contradicted my goals. I wanted to work in an environment that requires technical skills and full-scratch development. Additionally, my previous company primarily handled Java projects, so if I were to work on something other than the project I was on, I might only have had options for Java or low-code projects.',
+      'The company shifted direction and wanted to focus on low-code development for contract projects, which contradicted my goals. I wanted to work in an environment that requires technical skills and full-scratch development. Additionally, my second company primarily handled Java projects, so if I were to work on something other than the project I was on, I might only have had options for Java or low-code projects.',
   },
 ];

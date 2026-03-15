@@ -55,7 +55,7 @@ lazy_static! {
             size: "large".to_string(),
             category: "Certification".to_string(),
             question: "開発なのになぜAWSの資格を多く取得されていますか？".to_string(),
-            answer: "以前の会社が、AWSのパートナーになることを目指していたため、AWSの資格取得を推奨していたこと、AWS All Certified Engineerの表彰により、お客さまの知名度向上に微力ながら助力できると考えたためです。また認知度のない資格を取得しても、評価されない可能性があったためです。".to_string(),
+            answer: "2社目の会社が、AWSのパートナーになることを目指していたため、AWSの資格取得を推奨していたこと、AWS All Certified Engineerの表彰により、お客さまの知名度向上に微力ながら助力できると考えたためです。また認知度のない資格を取得しても、評価されない可能性があったためです。".to_string(),
         },
         Faq {
             size: "large".to_string(),
@@ -66,8 +66,8 @@ lazy_static! {
         Faq {
             size: "large".to_string(),
             category: "Timeline".to_string(),
-            question: "以前の会社から転職を考えた理由は何ですか？".to_string(),
-            answer: "会社が方向転換をし、ローコードを主体に受託開発を進めたいと考えており、私の考えと相反するためです。フルスクラッチで、技術力が求められる環境での開発を行いたいと考えていました。また、以前の会社はJavaの案件がメインであり、当時携わっていた案件以外に携わるとなった場合に、Javaの案件もしくは、ローコードのプロジェクトしかない可能性があったためです。".to_string(),
+            question: "2社目の会社から転職を考えた理由は何ですか？".to_string(),
+            answer: "会社が方向転換をし、ローコードを主体に受託開発を進めたいと考えており、私の考えと相反するためです。フルスクラッチで、技術力が求められる環境での開発を行いたいと考えていました。また、2社目の会社はJavaの案件がメインであり、当時携わっていた案件以外に携わるとなった場合に、Javaの案件もしくは、ローコードのプロジェクトしかない可能性があったためです。".to_string(),
         },
     ];
 
@@ -124,7 +124,7 @@ lazy_static! {
             size: "large".to_string(),
             category: "Certification".to_string(),
             question: "As a developer, why have you obtained so many AWS certifications?".to_string(),
-            answer: "My previous company aimed to become an AWS partner, so they encouraged obtaining AWS certifications. I believed that achieving AWS All Certified Engineer recognition could help increase the client's visibility. Additionally, obtaining certifications that lack recognition might not be valued as highly.".to_string(),
+            answer: "My second company aimed to become an AWS partner, so they encouraged obtaining AWS certifications. I believed that achieving AWS All Certified Engineer recognition could help increase the client's visibility. Additionally, obtaining certifications that lack recognition might not be valued as highly.".to_string(),
         },
         Faq {
             size: "large".to_string(),
@@ -135,8 +135,8 @@ lazy_static! {
         Faq {
             size: "large".to_string(),
             category: "Timeline".to_string(),
-            question: "Why did you decide to leave your previous company?".to_string(),
-            answer: "The company shifted direction and wanted to focus on low-code development for contract projects, which contradicted my goals. I wanted to work in an environment that requires technical skills and full-scratch development. Additionally, my previous company primarily handled Java projects, so if I were to work on something other than the project I was on, I might only have had options for Java or low-code projects.".to_string(),
+            question: "Why did you decide to leave your second company?".to_string(),
+            answer: "The company shifted direction and wanted to focus on low-code development for contract projects, which contradicted my goals. I wanted to work in an environment that requires technical skills and full-scratch development. Additionally, my second company primarily handled Java projects, so if I were to work on something other than the project I was on, I might only have had options for Java or low-code projects.".to_string(),
         },
     ];
 }

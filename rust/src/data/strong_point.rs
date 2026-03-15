@@ -26,7 +26,7 @@ lazy_static! {
         StrongPoint {
             size: "small".to_string(),
             question: "会社への貢献とビジネスへの理解".to_string(),
-            answer: "Freelancers.com にて案件を自分で取得し、翻訳業務を行っている経験があるため、仕事の大まかな全体の流れを理解しています。ただ与えられた仕事をこなすだけでなく、どうやったらクライアントの利益になるかを考え、いただく報酬を超える利益をクライアントに提供できることを目標し業務に取り組みます。\n以前の会社で、どうやって受託の案件を獲得するかを模索する中で、受託の際には、フェーズごとに契約を行う、SES のビジネス形態と受託のビジネス形態はどう違うかなど、同年代、同経験数では比較的に身についていない知識を持っています。\n".to_string(),
+            answer: "Freelancers.com にて案件を自分で取得し、翻訳業務を行っている経験があるため、仕事の大まかな全体の流れを理解しています。ただ与えられた仕事をこなすだけでなく、どうやったらクライアントの利益になるかを考え、いただく報酬を超える利益をクライアントに提供できることを目標し業務に取り組みます。\n2社目の会社で、どうやって受託の案件を獲得するかを模索する中で、受託の際には、フェーズごとに契約を行う、SES のビジネス形態と受託のビジネス形態はどう違うかなど、同年代、同経験数では比較的に身についていない知識を持っています。\n".to_string(),
         },
         StrongPoint {
             size: "medium".to_string(),
@@ -74,7 +74,7 @@ lazy_static! {
         StrongPoint {
             size: "small".to_string(),
             question: "Business Understanding and Company Contribution".to_string(),
-            answer: "Having acquired projects and performed translation work on Freelancers.com, I understand the general workflow of business. I approach work with the goal of not just completing assigned tasks, but considering how to benefit the client and provide value that exceeds my compensation.\nAt a previous company, while exploring how to acquire contract projects, I gained knowledge that is relatively uncommon among peers of my age and experience level, such as understanding phase-by-phase contracting and the differences between SES (System Engineering Service) and contract business models.\n".to_string(),
+            answer: "Having acquired projects and performed translation work on Freelancers.com, I understand the general workflow of business. I approach work with the goal of not just completing assigned tasks, but considering how to benefit the client and provide value that exceeds my compensation.\nAt my second company, while exploring how to acquire contract projects, I gained knowledge that is relatively uncommon among peers of my age and experience level, such as understanding phase-by-phase contracting and the differences between SES (System Engineering Service) and contract business models.\n".to_string(),
         },
         StrongPoint {
             size: "medium".to_string(),
