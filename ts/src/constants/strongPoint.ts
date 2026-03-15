@@ -5,7 +5,7 @@ export const strongPoint: MultilingualStrongPoint[] = [
     size: 'large',
     ja: {
       question: '新しい知識の習得、適応の早さ',
-      answer: `新しい知識への習得の早さに自信があります。A社やB社では、どちらも未知の言語、技術ですが、知識がある人にも劣らず、プロジェクトを完遂することができました。
+      answer: `新しい知識への習得の早さに自信があります。どの案件でも、未知の言語や技術であっても、知識がある人にも劣らず、プロジェクトを完遂することができました。
 これらの経験が、習得の早さの証明になります。
 現在の私のスキルに不足を感じられた場合でも、実際は想像以上の早さでスキル不足を埋めることができます。
 基本的に入社までにも時間があるため、使用している環境の情報をいただけましたら、よりスムーズに案件に参画が可能です。
@@ -14,7 +14,7 @@ export const strongPoint: MultilingualStrongPoint[] = [
     },
     en: {
       question: 'Quick Learning and Adaptability',
-      answer: `I am confident in my ability to quickly learn new knowledge. At both Company A and Company B, I was able to complete projects using unfamiliar languages and technologies, performing as well as those with prior knowledge.
+      answer: `I am confident in my ability to quickly learn new knowledge. In every project, I was able to complete work using unfamiliar languages and technologies, performing as well as those with prior knowledge.
 These experiences demonstrate my quick learning ability.
 Even if you feel my current skills are lacking, I can fill those gaps faster than you might expect.
 Since there is typically time before starting a new position, if you can provide information about your environment, I can prepare for a smoother transition to your projects.
@@ -48,13 +48,13 @@ For B2C websites, I deepen my understanding of the system by actually accessing 
     ja: {
       question: '自発能力',
       answer: `指示された内容のみならず、そのチーム、プロジェクトにおいて足りていないものをなんでも可能な範囲で行います。「時間的余裕があれば」自分のプロジェクトのみならず、他関連するシステムの情報を確認することで、システム全体の知識を深めることができます。
-B社では、要件からタスクの割り出し各人へのタスクの割り振り、新人への教育資料の作成を行いました。
+どの案件でも、要件からタスクの割り出し、各人へのタスクの割り振り、新人への教育資料の作成を行いました。
 `,
     },
     en: {
       question: 'Self-Initiative',
       answer: `I not only complete assigned tasks but also address any deficiencies in the team or project within my capabilities. When time permits, I deepen my knowledge of the entire system by examining information about related systems beyond my own project.
-At Company B, I identified tasks from requirements, assigned them to team members based on their abilities, and created educational materials for new employees.
+In every project, I identified tasks from requirements, assigned them to team members based on their abilities, and created educational materials for new employees.
 `,
     },
   },
@@ -65,18 +65,16 @@ At Company B, I identified tasks from requirements, assigned them to team member
       answer: `業務時間外でも技術力向上やクライアントへの貢献に取り組むことができる。
 なおかつ、実際に資格取得など、目に見える形で自己研鑽の結果を出すことができる。
 学生時代のスポーツで磨いた競争力、本来の負けず嫌いのため、仕事のどのような部分(テスト作業)でも自身の知識になりそうなものを積極的に探究し、吸収する。
-A社(A社の子会社)では自己学習力の向上を掲げており、最初に携わったModbusの通信プログラムの開発では、「何がわからないかわからない」状態からなんとかほとんど自己学習のみで開発を行うことができました。
-
-B社では、Webの開発に対してほぼ未経験、Reactも未経験の状態かつ、同チームに有識者がいない状態で、無事プロジェクトを完遂することができました。`,
+どの案件でも自己学習力を発揮しており、最初に携わったModbusの通信プログラムの開発では、「何がわからないかわからない」状態からほとんど自己学習のみで開発を行うことができました。
+Webの開発に対してほぼ未経験、Reactも未経験の状態かつ、同チームに有識者がいない状態でも、無事プロジェクトを完遂することができました。`,
     },
     en: {
       question: 'Self-Improvement Ability',
       answer: `I continuously work on improving my technical skills and contributing to clients.
 Moreover, I can demonstrate tangible results of self-improvement, such as obtaining certifications.
 With competitive spirit honed through sports during my student years and my inherently competitive nature, I actively explore and absorb anything that could enhance my knowledge in any aspect of work, including testing.
-At Company A (Subsidiary of Company A), which emphasized self-learning ability, I was able to develop a Modbus communication program almost entirely through self-study, starting from a state where "I didn't know what I didn't know."
-
-At Company B, I successfully completed a project in web development with almost no prior experience, no experience with React, and no experts on the team.`,
+In every project, I leverage my self-learning ability. I was able to develop a Modbus communication program almost entirely through self-study, starting from a state where "I didn't know what I didn't know."
+I also successfully completed a web development project with almost no prior experience, no experience with React, and no experts on the team.`,
     },
   },
   {
@@ -146,14 +144,14 @@ I once had an experience where I was overly considerate of system users, which i
       answer: `学生時代から人に物事を教えたりする経験があり、家庭教師のアルバイトでは、指導させていただいたお子様を見事志望校へ合格させることができました。
 ホテルでの経験も合わせまして、人の気持ちにたった指導を行うことができるため、わかりやすく、指導することができます。
 
-ホテルのアルバイト、A社、B社いずれの職場でも、新人の教育を行ったり、新人教育用の資料作成を行い、教育に貢献出来ました。`,
+どの職場でも、新人の教育を行ったり、新人教育用の資料作成を行い、教育に貢献出来ました。`,
     },
     en: {
       question: 'Teaching Skills Developed Through Tutoring',
       answer: `I have experience teaching others since my student days, and as a private tutor, I successfully helped a student gain admission to their desired school.
 Combined with my hotel experience, I can provide instruction that considers others' feelings, making my teaching clear and easy to understand.
 
-In all my workplaces—the hotel part-time job, Company A, and Company B—I contributed to education by training new employees and creating educational materials for newcomers.`,
+In every workplace, I contributed to education by training new employees and creating educational materials for newcomers.`,
     },
   },
   {

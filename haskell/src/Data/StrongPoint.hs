@@ -12,7 +12,7 @@ strongPointsJA =
   [ StrongPoint
       { spSize = "large"
       , spQuestion = "新しい知識の習得、適応の早さ"
-      , spAnswer = "新しい知識への習得の早さに自信があります。A社やB社では、どちらも未知の言語、技術ですが、知識がある人にも劣らず、プロジェクトを完遂することができました。\nこれらの経験が、習得の早さの証明になります。\n現在の私のスキルに不足を感じられた場合でも、実際は想像以上の早さでスキル不足を埋めることができます。\n基本的に入社までにも時間があるため、使用している環境の情報をいただけましたら、よりスムーズに案件に参画が可能です。\n新しい言語での開発時、各プロジェクトのルール、ベストプラクティスに従うには、1-3か月以上かかりますが、「動くもの」を作るのであれば、1週間ほどで十分な知識を身に着けることができます。\n"
+      , spAnswer = "新しい知識への習得の早さに自信があります。どの案件でも、未知の言語や技術であっても、知識がある人にも劣らず、プロジェクトを完遂することができました。\nこれらの経験が、習得の早さの証明になります。\n現在の私のスキルに不足を感じられた場合でも、実際は想像以上の早さでスキル不足を埋めることができます。\n基本的に入社までにも時間があるため、使用している環境の情報をいただけましたら、よりスムーズに案件に参画が可能です。\n新しい言語での開発時、各プロジェクトのルール、ベストプラクティスに従うには、1-3か月以上かかりますが、「動くもの」を作るのであれば、1週間ほどで十分な知識を身に着けることができます。\n"
       }
   , StrongPoint
       { spSize = "large"
@@ -22,12 +22,12 @@ strongPointsJA =
   , StrongPoint
       { spSize = "large"
       , spQuestion = "自発能力"
-      , spAnswer = "指示された内容のみならず、そのチーム、プロジェクトにおいて足りていないものをなんでも可能な範囲で行います。「時間的余裕があれば」自分のプロジェクトのみならず、他関連するシステムの情報を確認することで、システム全体の知識を深めることができます。\nB社では、要件からタスクの割り出し各人へのタスクの割り振り、新人への教育資料の作成を行いました。\n"
+      , spAnswer = "指示された内容のみならず、そのチーム、プロジェクトにおいて足りていないものをなんでも可能な範囲で行います。「時間的余裕があれば」自分のプロジェクトのみならず、他関連するシステムの情報を確認することで、システム全体の知識を深めることができます。\nどの案件でも、要件からタスクの割り出し、各人へのタスクの割り振り、新人への教育資料の作成を行いました。\n"
       }
   , StrongPoint
       { spSize = "large"
       , spQuestion = "自己研鑽能力"
-      , spAnswer = "業務時間外でも技術力向上やクライアントへの貢献に取り組むことができる。\nなおかつ、実際に資格取得など、目に見える形で自己研鑽の結果を出すことができる。\n学生時代のスポーツで磨いた競争力、本来の負けず嫌いのため、仕事のどのような部分(テスト作業)でも自身の知識になりそうなものを積極的に探究し、吸収する。\nA社(A社の子会社)では自己学習力の向上を掲げており、最初に携わったModbusの通信プログラムの開発では、「何がわからないかわからない」状態からなんとかほとんど自己学習のみで開発を行うことができました。\n\nB社では、Webの開発に対してほぼ未経験、Reactも未経験の状態かつ、同チームに有識者がいない状態で、無事プロジェクトを完遂することができました。"
+      , spAnswer = "業務時間外でも技術力向上やクライアントへの貢献に取り組むことができる。\nなおかつ、実際に資格取得など、目に見える形で自己研鑽の結果を出すことができる。\n学生時代のスポーツで磨いた競争力、本来の負けず嫌いのため、仕事のどのような部分(テスト作業)でも自身の知識になりそうなものを積極的に探究し、吸収する。\nどの案件でも自己学習力を発揮しており、最初に携わったModbusの通信プログラムの開発では、「何がわからないかわからない」状態からほとんど自己学習のみで開発を行うことができました。\nWebの開発に対してほぼ未経験、Reactも未経験の状態かつ、同チームに有識者がいない状態でも、無事プロジェクトを完遂することができました。"
       }
   , StrongPoint
       { spSize = "small"
@@ -52,7 +52,7 @@ strongPointsJA =
   , StrongPoint
       { spSize = "large"
       , spQuestion = "学生時代と家庭教師のアルバイトで培った教育力"
-      , spAnswer = "学生時代から人に物事を教えたりする経験があり、家庭教師のアルバイトでは、指導させていただいたお子様を見事志望校へ合格させることができました。\nホテルでの経験も合わせまして、人の気持ちにたった指導を行うことができるため、わかりやすく、指導することができます。\n\nホテルのアルバイト、A社、B社いずれの職場でも、新人の教育を行ったり、新人教育用の資料作成を行い、教育に貢献出来ました。"
+      , spAnswer = "学生時代から人に物事を教えたりする経験があり、家庭教師のアルバイトでは、指導させていただいたお子様を見事志望校へ合格させることができました。\nホテルでの経験も合わせまして、人の気持ちにたった指導を行うことができるため、わかりやすく、指導することができます。\n\nどの職場でも、新人の教育を行ったり、新人教育用の資料作成を行い、教育に貢献出来ました。"
       }
   , StrongPoint
       { spSize = "small"
@@ -76,7 +76,7 @@ strongPointsEN =
   [ StrongPoint
       { spSize = "large"
       , spQuestion = "Quick Learning and Adaptability"
-      , spAnswer = "I am confident in my ability to quickly learn new knowledge. At both Company A and Company B, I was able to complete projects using unfamiliar languages and technologies, performing as well as those with prior knowledge.\nThese experiences demonstrate my quick learning ability.\nEven if you feel my current skills are lacking, I can fill those gaps faster than you might expect.\nSince there is typically time before starting a new position, if you can provide information about your environment, I can prepare for a smoother transition to your projects.\nWhile it may take 1-3 months to follow project rules and best practices when developing in a new language, I can acquire sufficient knowledge to create \"working solutions\" in about a week.\n"
+      , spAnswer = "I am confident in my ability to quickly learn new knowledge. In every project, I was able to complete work using unfamiliar languages and technologies, performing as well as those with prior knowledge.\nThese experiences demonstrate my quick learning ability.\nEven if you feel my current skills are lacking, I can fill those gaps faster than you might expect.\nSince there is typically time before starting a new position, if you can provide information about your environment, I can prepare for a smoother transition to your projects.\nWhile it may take 1-3 months to follow project rules and best practices when developing in a new language, I can acquire sufficient knowledge to create \"working solutions\" in about a week.\n"
       }
   , StrongPoint
       { spSize = "large"
@@ -86,12 +86,12 @@ strongPointsEN =
   , StrongPoint
       { spSize = "large"
       , spQuestion = "Self-Initiative"
-      , spAnswer = "I not only complete assigned tasks but also address any deficiencies in the team or project within my capabilities. When time permits, I deepen my knowledge of the entire system by examining information about related systems beyond my own project.\nAt Company B, I identified tasks from requirements, assigned them to team members based on their abilities, and created educational materials for new employees.\n"
+      , spAnswer = "I not only complete assigned tasks but also address any deficiencies in the team or project within my capabilities. When time permits, I deepen my knowledge of the entire system by examining information about related systems beyond my own project.\nIn every project, I identified tasks from requirements, assigned them to team members based on their abilities, and created educational materials for new employees.\n"
       }
   , StrongPoint
       { spSize = "large"
       , spQuestion = "Self-Improvement Ability"
-      , spAnswer = "I continuously work on improving my technical skills and contributing to clients.\nMoreover, I can demonstrate tangible results of self-improvement, such as obtaining certifications.\nWith competitive spirit honed through sports during my student years and my inherently competitive nature, I actively explore and absorb anything that could enhance my knowledge in any aspect of work, including testing.\nAt Company A (Subsidiary of Company A), which emphasized self-learning ability, I was able to develop a Modbus communication program almost entirely through self-study, starting from a state where \"I didn't know what I didn't know.\"\n\nAt Company B, I successfully completed a project in web development with almost no prior experience, no experience with React, and no experts on the team."
+      , spAnswer = "I continuously work on improving my technical skills and contributing to clients.\nMoreover, I can demonstrate tangible results of self-improvement, such as obtaining certifications.\nWith competitive spirit honed through sports during my student years and my inherently competitive nature, I actively explore and absorb anything that could enhance my knowledge in any aspect of work, including testing.\nIn every project, I leverage my self-learning ability. I was able to develop a Modbus communication program almost entirely through self-study, starting from a state where \"I didn't know what I didn't know.\"\nI also successfully completed a web development project with almost no prior experience, no experience with React, and no experts on the team."
       }
   , StrongPoint
       { spSize = "small"
@@ -116,7 +116,7 @@ strongPointsEN =
   , StrongPoint
       { spSize = "large"
       , spQuestion = "Teaching Skills Developed Through Tutoring"
-      , spAnswer = "I have experience teaching others since my student days, and as a private tutor, I successfully helped a student gain admission to their desired school.\nCombined with my hotel experience, I can provide instruction that considers others' feelings, making my teaching clear and easy to understand.\n\nIn all my workplaces\x{2014}the hotel part-time job, Company A, and Company B\x{2014}I contributed to education by training new employees and creating educational materials for newcomers."
+      , spAnswer = "I have experience teaching others since my student days, and as a private tutor, I successfully helped a student gain admission to their desired school.\nCombined with my hotel experience, I can provide instruction that considers others' feelings, making my teaching clear and easy to understand.\n\nIn every workplace, I contributed to education by training new employees and creating educational materials for newcomers."
       }
   , StrongPoint
       { spSize = "small"
