@@ -250,7 +250,7 @@ lazy_static! {
             ],
         },
         WorkExperience {
-            company: "株式会社ホテルテラスザスクエア日立".to_string(),
+            company: "ホテル".to_string(),
             period: "2022年1月 - 2023年3月".to_string(),
             team_size: "".to_string(),
             man_month: "".to_string(),
@@ -560,7 +560,7 @@ lazy_static! {
             ],
         },
         WorkExperience {
-            company: "株式会社ホテルテラスザスクエア日立".to_string(),
+            company: "ホテル".to_string(),
             period: "2022-01 - 2023-03".to_string(),
             team_size: "".to_string(),
             man_month: "".to_string(),

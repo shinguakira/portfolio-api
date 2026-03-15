@@ -3,7 +3,7 @@ export const strongPoints_ja = [
     size: 'large',
     question: '新しい知識の習得、適応の早さ',
     answer:
-      '新しい知識への習得の早さに自信があります。A社やB社では、どちらも未知の言語、技術ですが、知識がある人にも劣らず、プロジェクトを完遂することができました。\nこれらの経験が、習得の早さの証明になります。\n現在の私のスキルに不足を感じられた場合でも、実際は想像以上の早さでスキル不足を埋めることができます。\n基本的に入社までにも時間があるため、使用している環境の情報をいただけましたら、よりスムーズに案件に参画が可能です。\n新しい言語での開発時、各プロジェクトのルール、ベストプラクティスに従うには、1-3か月以上かかりますが、「動くもの」を作るのであれば、1週間ほどで十分な知識を身に着けることができます。\n',
+      '新しい知識への習得の早さに自信があります。どの案件でも、未知の言語や技術であっても、知識がある人にも劣らず、プロジェクトを完遂することができました。\nこれらの経験が、習得の早さの証明になります。\n現在の私のスキルに不足を感じられた場合でも、実際は想像以上の早さでスキル不足を埋めることができます。\n基本的に入社までにも時間があるため、使用している環境の情報をいただけましたら、よりスムーズに案件に参画が可能です。\n新しい言語での開発時、各プロジェクトのルール、ベストプラクティスに従うには、1-3か月以上かかりますが、「動くもの」を作るのであれば、1週間ほどで十分な知識を身に着けることができます。\n',
   },
   {
     size: 'large',
@@ -15,19 +15,19 @@ export const strongPoints_ja = [
     size: 'large',
     question: '自発能力',
     answer:
-      '指示された内容のみならず、そのチーム、プロジェクトにおいて足りていないものをなんでも可能な範囲で行います。「時間的余裕があれば」自分のプロジェクトのみならず、他関連するシステムの情報を確認することで、システム全体の知識を深めることができます。\nB社では、要件からタスクの割り出し各人へのタスクの割り振り、新人への教育資料の作成を行いました。\n',
+      '指示された内容のみならず、そのチーム、プロジェクトにおいて足りていないものをなんでも可能な範囲で行います。「時間的余裕があれば」自分のプロジェクトのみならず、他関連するシステムの情報を確認することで、システム全体の知識を深めることができます。\nどの案件でも、要件からタスクの割り出し、各人へのタスクの割り振り、新人への教育資料の作成を行いました。\n',
   },
   {
     size: 'large',
     question: '自己研鑽能力',
     answer:
-      '平日、休日問わず、プライベートの時間を技術力向上、会社の貢献のために時間を使うことができる。\nなおかつ、実際に資格取得など、目に見える形で自己研鑽の結果を出すことができる。\n学生時代のスポーツで磨いた競争力、本来の負けず嫌いのため、仕事のどのような部分(テスト作業)でも自身の知識になりそうなものを積極的に探究し、吸収する。\nA社(A社の子会社)では自己学習力の向上を掲げており、最初に携わったModbusの通信プログラムの開発では、「何がわからないかわからない」状態からなんとかほとんど自己学習のみで開発を行うことができました。\n\nB社では、Webの開発に対してほぼ未経験、Reactも未経験の状態かつ、同チームに有識者がいない状態で、無事プロジェクトを完遂することができました。',
+      '業務時間外でも技術力向上やクライアントへの貢献に取り組むことができる。\nなおかつ、実際に資格取得など、目に見える形で自己研鑽の結果を出すことができる。\n学生時代のスポーツで磨いた競争力、本来の負けず嫌いのため、仕事のどのような部分(テスト作業)でも自身の知識になりそうなものを積極的に探究し、吸収する。\nどの案件でも自己学習力を発揮しており、最初に携わったModbusの通信プログラムの開発では、「何がわからないかわからない」状態からほとんど自己学習のみで開発を行うことができました。\nWebの開発に対してほぼ未経験、Reactも未経験の状態かつ、同チームに有識者がいない状態でも、無事プロジェクトを完遂することができました。',
   },
   {
     size: 'small',
     question: '会社への貢献とビジネスへの理解',
     answer:
-      'Freelancers.com にて案件を自分で取得し、翻訳業務を行っている経験があるため、仕事の大まかな全体の流れを理解しています。ただ与えられた仕事をこなすだけでなく、どうやったら会社の利益になるかを考え、いただいている給料を超える利益を会社に提供できることを目標し業務に取り組みます。\n現在の会社で、どうやって受託の案件を獲得するかを模索する中で、受託の際には、フェーズごとに契約を行う、SES のビジネス形態と受託のビジネス形態はどう違うかなど、同年代、同経験数では比較的に身についていない知識を持っています。\n',
+      'Freelancers.com にて案件を自分で取得し、翻訳業務を行っている経験があるため、仕事の大まかな全体の流れを理解しています。ただ与えられた仕事をこなすだけでなく、どうやったらクライアントの利益になるかを考え、いただく報酬を超える利益をクライアントに提供できることを目標し業務に取り組みます。\n2社目の会社で、どうやって受託の案件を獲得するかを模索する中で、受託の際には、フェーズごとに契約を行う、SES のビジネス形態と受託のビジネス形態はどう違うかなど、同年代、同経験数では比較的に身についていない知識を持っています。\n',
   },
   {
     size: 'medium',
@@ -51,7 +51,25 @@ export const strongPoints_ja = [
     size: 'large',
     question: '学生時代と家庭教師のアルバイトで培った教育力',
     answer:
-      '学生時代から人に物事を教えたりする経験があり、家庭教師のアルバイトでは、指導させていただいたお子様を見事志望校へ合格させることができました。\nホテルでの経験も合わせまして、人の気持ちにたった指導を行うことができるため、わかりやすく、指導することができます。\n\nホテルのアルバイト、A社、B社いずれの職場でも、新人の教育を行ったり、新人教育用の資料作成を行い、教育に貢献出来ました。',
+      '学生時代から人に物事を教えたりする経験があり、家庭教師のアルバイトでは、指導させていただいたお子様を見事志望校へ合格させることができました。\nホテルでの経験も合わせまして、人の気持ちにたった指導を行うことができるため、わかりやすく、指導することができます。\n\nどの職場でも、新人の教育を行ったり、新人教育用の資料作成を行い、教育に貢献出来ました。',
+  },
+  {
+    size: 'small',
+    question: '高い場合分け能力',
+    answer:
+      '想定される事象や条件を網羅的に洗い出し、ロジックの不整合やバグの発生、リスクを未然に防ぐことができます。',
+  },
+  {
+    size: 'medium',
+    question: 'アイデア実現能力と問題解決力',
+    answer:
+      'お客さまもしくは自分が提案したアイデアを実装に落とし込むことができます。単にお客さまの要望を満たすだけでなく、根本の問題や本当に実現したいことを確認し、それに応じた代替案を提案します。モックなどを駆使し、アイデアの詳細を詰めて実現を促進します。',
+  },
+  {
+    size: 'small',
+    question: '複雑な問題やバグの対処力',
+    answer:
+      'もぐら叩きのように再発する問題やバグの対処に強みがあります。場合分け能力の高さを活かし、全体の整合性を考慮した上で、難解なコードやスパゲッティコード上での問題解決、最後の詰めの実装を得意としています。',
   },
 ];
 
@@ -60,7 +78,7 @@ export const strongPoints_en = [
     size: 'large',
     question: 'Quick Learning and Adaptability',
     answer:
-      'I am confident in my ability to quickly learn new knowledge. At both Company A and Company B, I was able to complete projects using unfamiliar languages and technologies, performing as well as those with prior knowledge.\nThese experiences demonstrate my quick learning ability.\nEven if you feel my current skills are lacking, I can fill those gaps faster than you might expect.\nSince there is typically time before starting a new position, if you can provide information about your environment, I can prepare for a smoother transition to your projects.\nWhile it may take 1-3 months to follow project rules and best practices when developing in a new language, I can acquire sufficient knowledge to create "working solutions" in about a week.\n',
+      'I am confident in my ability to quickly learn new knowledge. In every project, I was able to complete work using unfamiliar languages and technologies, performing as well as those with prior knowledge.\nThese experiences demonstrate my quick learning ability.\nEven if you feel my current skills are lacking, I can fill those gaps faster than you might expect.\nSince there is typically time before starting a new position, if you can provide information about your environment, I can prepare for a smoother transition to your projects.\nWhile it may take 1-3 months to follow project rules and best practices when developing in a new language, I can acquire sufficient knowledge to create "working solutions" in about a week.\n',
   },
   {
     size: 'large',
@@ -72,19 +90,19 @@ export const strongPoints_en = [
     size: 'large',
     question: 'Self-Initiative',
     answer:
-      'I not only complete assigned tasks but also address any deficiencies in the team or project within my capabilities. When time permits, I deepen my knowledge of the entire system by examining information about related systems beyond my own project.\nAt Company B, I identified tasks from requirements, assigned them to team members based on their abilities, and created educational materials for new employees.\n',
+      'I not only complete assigned tasks but also address any deficiencies in the team or project within my capabilities. When time permits, I deepen my knowledge of the entire system by examining information about related systems beyond my own project.\nIn every project, I identified tasks from requirements, assigned them to team members based on their abilities, and created educational materials for new employees.\n',
   },
   {
     size: 'large',
     question: 'Self-Improvement Ability',
     answer:
-      "I can dedicate my private time to improving technical skills and contributing to the company, regardless of whether it's a weekday or weekend.\nMoreover, I can demonstrate tangible results of self-improvement, such as obtaining certifications.\nWith competitive spirit honed through sports during my student years and my inherently competitive nature, I actively explore and absorb anything that could enhance my knowledge in any aspect of work, including testing.\nAt Company A (Subsidiary of Company A), which emphasized self-learning ability, I was able to develop a Modbus communication program almost entirely through self-study, starting from a state where \"I didn't know what I didn't know.\"\n\nAt Company B, I successfully completed a project in web development with almost no prior experience, no experience with React, and no experts on the team.",
+      "I continuously work on improving my technical skills and contributing to clients.\nMoreover, I can demonstrate tangible results of self-improvement, such as obtaining certifications.\nWith competitive spirit honed through sports during my student years and my inherently competitive nature, I actively explore and absorb anything that could enhance my knowledge in any aspect of work, including testing.\nIn every project, I leverage my self-learning ability. I was able to develop a Modbus communication program almost entirely through self-study, starting from a state where \"I didn't know what I didn't know.\"\nI also successfully completed a web development project with almost no prior experience, no experience with React, and no experts on the team.",
   },
   {
     size: 'small',
     question: 'Business Understanding and Company Contribution',
     answer:
-      "Having acquired projects and performed translation work on Freelancers.com, I understand the general workflow of business. I approach work with the goal of not just completing assigned tasks, but considering how to benefit the company and provide value that exceeds my salary.\nIn my current company, while exploring how to acquire contract projects, I've gained knowledge that is relatively uncommon among peers of my age and experience level, such as understanding phase-by-phase contracting and the differences between SES (System Engineering Service) and contract business models.\n",
+      "Having acquired projects and performed translation work on Freelancers.com, I understand the general workflow of business. I approach work with the goal of not just completing assigned tasks, but considering how to benefit the client and provide value that exceeds my compensation.\nAt my second company, while exploring how to acquire contract projects, I gained knowledge that is relatively uncommon among peers of my age and experience level, such as understanding phase-by-phase contracting and the differences between SES (System Engineering Service) and contract business models.\n",
   },
   {
     size: 'medium',
@@ -108,6 +126,24 @@ export const strongPoints_en = [
     size: 'large',
     question: 'Teaching Skills Developed Through Tutoring',
     answer:
-      "I have experience teaching others since my student days, and as a private tutor, I successfully helped a student gain admission to their desired school.\nCombined with my hotel experience, I can provide instruction that considers others' feelings, making my teaching clear and easy to understand.\n\nIn all my workplaces—the hotel part-time job, Company A, and Company B—I contributed to education by training new employees and creating educational materials for newcomers.",
+      "I have experience teaching others since my student days, and as a private tutor, I successfully helped a student gain admission to their desired school.\nCombined with my hotel experience, I can provide instruction that considers others' feelings, making my teaching clear and easy to understand.\n\nIn every workplace, I contributed to education by training new employees and creating educational materials for newcomers.",
+  },
+  {
+    size: 'small',
+    question: 'Comprehensive Conditional Analysis',
+    answer:
+      'I can exhaustively identify anticipated scenarios and conditions, preventing logical inconsistencies, bugs, and risks before they occur.',
+  },
+  {
+    size: 'medium',
+    question: 'Idea Realization and Problem-Solving',
+    answer:
+      'I can translate ideas — whether proposed by clients or myself — into working implementations. Rather than simply fulfilling requests, I identify the underlying problem and what clients truly want to achieve, then propose suitable alternatives. I leverage mockups and other tools to refine idea details and drive realization.',
+  },
+  {
+    size: 'small',
+    question: 'Handling Complex Problems and Persistent Bugs',
+    answer:
+      'I excel at resolving recurring whack-a-mole problems and bugs. Leveraging my strong conditional analysis skills, I consider overall system consistency to solve problems in complex or spaghetti code and handle the final critical implementation details.',
   },
 ];

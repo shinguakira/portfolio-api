@@ -337,7 +337,7 @@ export const experience_ja = [
     ],
   },
   {
-    company: '株式会社ホテルテラスザスクエア日立',
+    company: 'ホテル',
     period: '2022年1月 - 2023年3月',
     teamSize: '',
     manMonth: '',
@@ -743,7 +743,7 @@ export const experience_en = [
     archivement: [
       'Improved efficiency of document creation using Excel. Created manuals for handling English-speaking customers and managed system migration, completing the tasks without issues',
     ],
-    company: '株式会社ホテルテラスザスクエア日立',
+    company: 'ホテル',
     description: [
       'Customer service at the front desk (including international guests)',
       'Management of customer data',

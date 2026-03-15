@@ -61,7 +61,7 @@ export const company = {
   eastCoast: 'お客さま2',
   staffService: 'お客さま1',
   higashiTechLab: 'A社の子会社',
-  hotelTerrace: '株式会社ホテルテラスザスクエア日立',
+  hotelTerrace: 'ホテル',
 };
 
 // type for links

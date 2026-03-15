@@ -250,7 +250,7 @@ workExperiencesJA =
           ]
       }
   , WorkExperience
-      { weCompany = "株式会社ホテルテラスザスクエア日立"
+      { weCompany = "ホテル"
       , weProjectOverview = "フロント(アルバイト)"
       , wePeriod = "2022年1月 - 2023年3月"
       , weTeamSize = ""
@@ -558,7 +558,7 @@ workExperiencesEN =
           ]
       }
   , WorkExperience
-      { weCompany = "株式会社ホテルテラスザスクエア日立"
+      { weCompany = "ホテル"
       , weProjectOverview = "Hotel Front Desk (Part-time)"
       , wePeriod = "2022-01 - 2023-03"
       , weTeamSize = ""
