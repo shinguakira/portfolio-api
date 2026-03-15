@@ -43,7 +43,7 @@ var FaqsJA = []model.Faq{
 		Size:     "large",
 		Category: "Certification",
 		Question: "資格を取得されている理由は何ですか？",
-		Answer:   "経験年数が少ないうちは、一緒に仕事するまでは、どうしても実力がないと判断されがちです。「資格取得している=技術力がある」というよりは、プライベートの時間およびお金を仕事のために使用できるという証明になります。多くの資格を取得していることで、「仕事のためにプライベートを犠牲にすることができる」、「努力する力」、「知識習得能力の高さ」のいずれかを証明できます。資格認定団体という第3者が資格取得を保証していることにより、これらの3ついずれかの能力は自称ではなく第3者に保証された確かなものだと証明できます。私の情報を確認された際に、(良いか悪いかは置いておきまして)他の人と何か違うと感じていただければ、成功だと感じています。",
+		Answer:   "経験年数が少ないうちは、一緒に仕事するまでは、どうしても実力がないと判断されがちです。多くの資格を取得していることで、「努力する力」、「知識習得能力の高さ」のいずれかを証明できます。資格認定団体という第3者が資格取得を保証していることにより、これらのいずれかの能力は自称ではなく第3者に保証された確かなものだと証明できます。私の情報を確認された際に、(良いか悪いかは置いておきまして)他の人と何か違うと感じていただければ、成功だと感じています。",
 	},
 	{
 		Size:     "large",
@@ -112,7 +112,7 @@ var FaqsEN = []model.Faq{
 		Size:     "large",
 		Category: "Certification",
 		Question: "Why do you obtain so many certifications?",
-		Answer:   "When you have limited years of experience, people tend to judge your abilities negatively until they work with you. Rather than suggesting that 'having certifications equals technical skill,' it demonstrates that I can dedicate my private time and money to my profession. Obtaining numerous certifications proves at least one of these qualities: 'ability to sacrifice personal time for work,' 'capacity for effort,' or 'high aptitude for knowledge acquisition.' Since these certifications are validated by third-party certification bodies, these abilities are objectively verified rather than self-proclaimed. When someone reviews my information, I consider it a success if they feel there's something different about me (whether that's perceived positively or negatively).",
+		Answer:   "When you have limited years of experience, people tend to judge your abilities negatively until they work with you. Obtaining numerous certifications proves at least one of these qualities: 'capacity for effort' or 'high aptitude for knowledge acquisition.' Since these certifications are validated by third-party certification bodies, these abilities are objectively verified rather than self-proclaimed. When someone reviews my information, I consider it a success if they feel there's something different about me (whether that's perceived positively or negatively).",
 	},
 	{
 		Size:     "large",

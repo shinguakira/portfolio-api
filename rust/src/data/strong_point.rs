@@ -21,7 +21,7 @@ lazy_static! {
         StrongPoint {
             size: "large".to_string(),
             question: "自己研鑽能力".to_string(),
-            answer: "平日、休日問わず、プライベートの時間を技術力向上、クライアントへの貢献のために時間を使うことができる。\nなおかつ、実際に資格取得など、目に見える形で自己研鑽の結果を出すことができる。\n学生時代のスポーツで磨いた競争力、本来の負けず嫌いのため、仕事のどのような部分(テスト作業)でも自身の知識になりそうなものを積極的に探究し、吸収する。\nA社(A社の子会社)では自己学習力の向上を掲げており、最初に携わったModbusの通信プログラムの開発では、「何がわからないかわからない」状態からなんとかほとんど自己学習のみで開発を行うことができました。\n\nB社では、Webの開発に対してほぼ未経験、Reactも未経験の状態かつ、同チームに有識者がいない状態で、無事プロジェクトを完遂することができました。".to_string(),
+            answer: "業務時間外でも技術力向上やクライアントへの貢献に取り組むことができる。\nなおかつ、実際に資格取得など、目に見える形で自己研鑽の結果を出すことができる。\n学生時代のスポーツで磨いた競争力、本来の負けず嫌いのため、仕事のどのような部分(テスト作業)でも自身の知識になりそうなものを積極的に探究し、吸収する。\nA社(A社の子会社)では自己学習力の向上を掲げており、最初に携わったModbusの通信プログラムの開発では、「何がわからないかわからない」状態からなんとかほとんど自己学習のみで開発を行うことができました。\n\nB社では、Webの開発に対してほぼ未経験、Reactも未経験の状態かつ、同チームに有識者がいない状態で、無事プロジェクトを完遂することができました。".to_string(),
         },
         StrongPoint {
             size: "small".to_string(),
@@ -69,7 +69,7 @@ lazy_static! {
         StrongPoint {
             size: "large".to_string(),
             question: "Self-Improvement Ability".to_string(),
-            answer: "I can dedicate my private time to improving technical skills and contributing to clients, regardless of whether it's a weekday or weekend.\nMoreover, I can demonstrate tangible results of self-improvement, such as obtaining certifications.\nWith competitive spirit honed through sports during my student years and my inherently competitive nature, I actively explore and absorb anything that could enhance my knowledge in any aspect of work, including testing.\nAt Company A (Subsidiary of Company A), which emphasized self-learning ability, I was able to develop a Modbus communication program almost entirely through self-study, starting from a state where \"I didn't know what I didn't know.\"\n\nAt Company B, I successfully completed a project in web development with almost no prior experience, no experience with React, and no experts on the team.".to_string(),
+            answer: "I continuously work on improving my technical skills and contributing to clients.\nMoreover, I can demonstrate tangible results of self-improvement, such as obtaining certifications.\nWith competitive spirit honed through sports during my student years and my inherently competitive nature, I actively explore and absorb anything that could enhance my knowledge in any aspect of work, including testing.\nAt Company A (Subsidiary of Company A), which emphasized self-learning ability, I was able to develop a Modbus communication program almost entirely through self-study, starting from a state where \"I didn't know what I didn't know.\"\n\nAt Company B, I successfully completed a project in web development with almost no prior experience, no experience with React, and no experts on the team.".to_string(),
         },
         StrongPoint {
             size: "small".to_string(),
