@@ -54,6 +54,21 @@ strongPointsJA =
       , spQuestion = "学生時代と家庭教師のアルバイトで培った教育力"
       , spAnswer = "学生時代から人に物事を教えたりする経験があり、家庭教師のアルバイトでは、指導させていただいたお子様を見事志望校へ合格させることができました。\nホテルでの経験も合わせまして、人の気持ちにたった指導を行うことができるため、わかりやすく、指導することができます。\n\nホテルのアルバイト、A社、B社いずれの職場でも、新人の教育を行ったり、新人教育用の資料作成を行い、教育に貢献出来ました。"
       }
+  , StrongPoint
+      { spSize = "small"
+      , spQuestion = "高い場合分け能力"
+      , spAnswer = "想定される事象や条件を網羅的に洗い出し、ロジックの不整合やバグの発生、リスクを未然に防ぐことができます。"
+      }
+  , StrongPoint
+      { spSize = "medium"
+      , spQuestion = "アイデア実現能力と問題解決力"
+      , spAnswer = "お客さまもしくは自分が提案したアイデアを実装に落とし込むことができます。単にお客さまの要望を満たすだけでなく、根本の問題や本当に実現したいことを確認し、それに応じた代替案を提案します。モックなどを駆使し、アイデアの詳細を詰めて実現を促進します。"
+      }
+  , StrongPoint
+      { spSize = "small"
+      , spQuestion = "複雑な問題やバグの対処力"
+      , spAnswer = "もぐら叩きのように再発する問題やバグの対処に強みがあります。場合分け能力の高さを活かし、全体の整合性を考慮した上で、難解なコードやスパゲッティコード上での問題解決、最後の詰めの実装を得意としています。"
+      }
   ]
 
 strongPointsEN :: [StrongPoint]
@@ -102,5 +117,20 @@ strongPointsEN =
       { spSize = "large"
       , spQuestion = "Teaching Skills Developed Through Tutoring"
       , spAnswer = "I have experience teaching others since my student days, and as a private tutor, I successfully helped a student gain admission to their desired school.\nCombined with my hotel experience, I can provide instruction that considers others' feelings, making my teaching clear and easy to understand.\n\nIn all my workplaces\x{2014}the hotel part-time job, Company A, and Company B\x{2014}I contributed to education by training new employees and creating educational materials for newcomers."
+      }
+  , StrongPoint
+      { spSize = "small"
+      , spQuestion = "Comprehensive Conditional Analysis"
+      , spAnswer = "I can exhaustively identify anticipated scenarios and conditions, preventing logical inconsistencies, bugs, and risks before they occur."
+      }
+  , StrongPoint
+      { spSize = "medium"
+      , spQuestion = "Idea Realization and Problem-Solving"
+      , spAnswer = "I can translate ideas \x{2014} whether proposed by clients or myself \x{2014} into working implementations. Rather than simply fulfilling requests, I identify the underlying problem and what clients truly want to achieve, then propose suitable alternatives. I leverage mockups and other tools to refine idea details and drive realization."
+      }
+  , StrongPoint
+      { spSize = "small"
+      , spQuestion = "Handling Complex Problems and Persistent Bugs"
+      , spAnswer = "I excel at resolving recurring whack-a-mole problems and bugs. Leveraging my strong conditional analysis skills, I consider overall system consistency to solve problems in complex or spaghetti code and handle the final critical implementation details."
       }
   ]
