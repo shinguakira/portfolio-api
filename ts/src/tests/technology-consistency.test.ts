@@ -11,10 +11,69 @@ const allSkillNames = [
   ...otherSkills.map(s => s.name),
 ];
 
+// Techs used in projects/experiences that are not tracked in skills/otherSkills
+const excludedTechs = new Set([
+  // External services & APIs
+  'Appwrite',
+  'Dwolla',
+  'OpenAI API',
+  'Google Map API',
+  'Google Text-to-Speech API',
+  'Youtube Data API',
+  '@ai-sdk/react',
+  'AstraDB(Apache Cassandra)',
+  'Cloudinary',
+  'Sentry',
+  'Supabase',
+  'Slack',
+  'RSend',
+  'Ollama',
+  'Figma',
+  'Metabase',
+  'CodeRabbit',
+  // Frameworks & libraries
+  'Styled Components',
+  'tRPC',
+  'Angular',
+  'Electron',
+  'Remix',
+  'Vite',
+  'FastAPI',
+  'Drizzle',
+  'Turborepo',
+  'Playwright',
+  'lucide-react',
+  'next-intl',
+  'Windows Form',
+  // Cloud & infra
+  'AWS Lambda',
+  'AWS S3',
+  'Azure DevOps',
+  'Azure Pipelines',
+  'Azure Repos',
+  'Azure Web Apps',
+  'Cloudflare Workers',
+  'Oracle Cloud',
+  'Kubernetes',
+  // Domain-specific
+  'DICOM',
+  'FHIR',
+  'HDB',
+  'PDB',
+  'Modbus',
+  'Omron製PLC',
+  'RAG',
+  'STT',
+  'TTS',
+  'Whisper(local)',
+  '(Ruby)',
+  'DB(未定)',
+]);
+
 describe('Project technologies should reference existing skills', () => {
   projects.forEach((project, index) => {
     const title = project.en.title || project.ja.title;
-    project.technologies.forEach(tech => {
+    project.technologies.filter(t => !excludedTechs.has(t)).forEach(tech => {
       it(`"${tech}" in project "${title}" (index ${index}) should exist in skills`, () => {
         expect(
           allSkillNames,
@@ -29,7 +88,7 @@ describe('Work experience (JA) technologies should reference existing skills', (
   workExperiences_ja.forEach((exp, index) => {
     if (exp.technologies.length === 0) return;
     const label = `${exp.company} - ${exp.projectOverview}`;
-    exp.technologies.forEach(tech => {
+    exp.technologies.filter(t => !excludedTechs.has(t)).forEach(tech => {
       it(`"${tech}" in experience "${label}" (index ${index}) should exist in skills`, () => {
         expect(
           allSkillNames,
@@ -44,7 +103,7 @@ describe('Work experience (EN) technologies should reference existing skills', (
   workExperiences_en.forEach((exp, index) => {
     if (exp.technologies.length === 0) return;
     const label = `${exp.company} - ${exp.projectOverview}`;
-    exp.technologies.forEach(tech => {
+    exp.technologies.filter(t => !excludedTechs.has(t)).forEach(tech => {
       it(`"${tech}" in experience "${label}" (index ${index}) should exist in skills`, () => {
         expect(
           allSkillNames,
