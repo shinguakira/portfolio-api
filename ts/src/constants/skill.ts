@@ -1,43 +1,5 @@
-import {onBusiness, selfStudy} from './common.js';
-import type {SkillItem} from '../types/skillItem.js';
-
-export const nextjsSkillSet = [
-  'React',
-  'TypeScript',
-  'Next.js',
-  'Tailwind CSS',
-  'Shadcn/ui',
-  'Vercel',
-];
-
-export const receptionInnovationSkillSet = [
-  'Java',
-  'Springboot',
-  'TypeScript',
-  'React',
-  'Git',
-  'Github',
-  'Swagger',
-];
-
-export const VOCSkillSet = [
-  'Java',
-  'Springboot',
-  'TypeScript',
-  'React',
-  'Git',
-  'Github',
-  'Swagger',
-];
-
-export const T3StackSkillSet = [
-  'Next.js',
-  'TypeScript',
-  'Tailwind CSS',
-  'tRPC',
-  'Prisma',
-  'NextAuth.js',
-];
+import {onBusiness, selfStudy} from './common';
+import type {SkillItem} from '../types/skillItem';
 
 // main skills(Language,Libraries)
 export const skills: SkillItem[] = [
@@ -210,7 +172,7 @@ export const skills: SkillItem[] = [
     pictureColor: '#7952B3',
   },
   {
-    name: 'TailWindCSS',
+    name: 'Tailwind CSS',
     years: '1 year',
     category: 'CSS',
     proficiency: onBusiness,
@@ -226,7 +188,7 @@ export const skills: SkillItem[] = [
     pictureColor: '#4479A1',
   },
   {
-    name: 'PostgresSQL',
+    name: 'PostgreSQL',
     years: '1 year',
     category: 'Database',
     proficiency: onBusiness,
@@ -445,4 +407,106 @@ export const otherSkills: SkillItem[] = [
     picture: '/icons/Bun.svg',
     pictureColor: '#000000',
   },
+];
+
+// type-safe skill name accessor
+// S.typescript => 'TypeScript', S.nextJs => 'Next.js', etc.
+const allSkills = [...skills, ...otherSkills];
+const n = <T extends typeof allSkills[number]['name']>(name: T): T => {
+  if (!allSkills.some(skill => skill.name === name)) {
+    throw new Error(`Skill not found: ${name}`);
+  }
+  return name;
+};
+
+export const S = {
+  typescript: n('TypeScript'),
+  javascript: n('JavaScript(include TypeScript)'),
+  java: n('Java'),
+  cFamily: n('C,C++,C#'),
+  python: n('Python'),
+  react: n('React'),
+  nextJs: n('Next.js'),
+  nodeJs: n('Node.js'),
+  expressJs: n('Express.js'),
+  honoJs: n('Hono.js'),
+  springboot: n('Springboot(Java)'),
+  graphql: n('GraphQL'),
+  rest: n('REST'),
+  redux: n('Redux'),
+  contextApi: n('Context API'),
+  prisma: n('Prisma'),
+  selenium: n('Selenium(Python)'),
+  playwright: n('Playwright(TypeScript)'),
+  jest: n('Jest'),
+  vitest: n('Vitest'),
+  bootstrap5: n('BootStrap5'),
+  tailwind: n('Tailwind CSS'),
+  mysql: n('MySQL'),
+  postgresql: n('PostgreSQL'),
+  redis: n('Redis'),
+  vercel: n('Vercel'),
+  aws: n('AWS'),
+  azure: n('Azure'),
+  docker: n('Docker'),
+  shadcn: n('shadcn'),
+  materialUi: n('Material UI'),
+  reactHookForm: n('React Hook Form'),
+  zod: n('zod'),
+  nextAuth: n('NextAuth'),
+  codegen: n('codegen'),
+  babylonJs: n('babylon.js'),
+  kaPlay: n('kaPlay'),
+  vectorDb: n('vectorDB(pgvector)'),
+  vsCode: n('VS Code(Typescript)'),
+  intellij: n('IntelliJ IDEA(Typescript)'),
+  eclipse: n('Eclipse(Java,Javascript)'),
+  sts4: n('Spring Tool Suite4(Java,Javascript)'),
+  stackBlitz: n('StackBlitz(React)'),
+  visualStudio: n('Visual Studio(C,C++,C#)'),
+  git: n('Git(Tortoise Git)'),
+  github: n('Github'),
+  swagger: n('Swagger'),
+  backlog: n('Backlog'),
+  a5sql: n('A5:SQL Mk-2'),
+  bun: n('Bun'),
+} as const;
+
+// skill sets
+export const nextjsSkillSet = [
+  S.react,
+  S.typescript,
+  S.nextJs,
+  S.tailwind,
+  S.shadcn,
+  S.vercel,
+];
+
+export const receptionInnovationSkillSet = [
+  S.java,
+  S.springboot,
+  S.typescript,
+  S.react,
+  S.git,
+  S.github,
+  S.swagger,
+];
+
+export const VOCSkillSet = [
+  S.java,
+  S.springboot,
+  S.typescript,
+  S.react,
+  S.git,
+  S.github,
+  S.swagger,
+];
+
+export const T3StackSkillSet = [
+  S.nextJs,
+  S.typescript,
+  S.tailwind,
+  'tRPC',
+  S.prisma,
+  S.nextAuth,
 ];

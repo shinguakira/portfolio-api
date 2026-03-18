@@ -5,11 +5,11 @@
       "TypeScript",
       "Next.js",
       "Tailwind CSS",
-      "Shadcn/ui",
+      "shadcn",
       "Vercel"
     ],
     "title": "開発予定を考えているアプリ",
-    "description": "[採用サイト間のプロフィール自動入力(データ連携)]\n[画像認識を使用した何か]\n[Visual Studioのプロジェクトファイル変換アプリ]\n[何かのマッチングアプリ]\n[何かのサイトのadvanced検索]\n[オンライン会議アプリ]\n[タイピング×パワハラ3Dボット]\n[タイピング×Google Map]\n[タイピング×2Dゲーム]  \n",
+    "description": "[採用サイト間のプロフィール自動入力(データ連携)]\n[画像認識を使用した何か]\n[Visual Studioのプロジェクトファイル変換アプリ]\n[何かのマッチングアプリ]\n[何かのサイトのadvanced検索]\n[オンライン会議アプリ]\n[タイピング×パワハラ3Dボット]\n[タイピング×Google Map]\n[タイピング×2Dゲーム]\n",
     "image": "/images/projects/onDeveloping.jpg",
     "githubUrl": "",
     "liveUrl": ""
@@ -141,7 +141,7 @@
       "TypeScript",
       "Next.js",
       "Tailwind CSS",
-      "Shadcn/ui",
+      "shadcn",
       "Vercel",
       "AstraDB(Apache Cassandra)",
       "@ai-sdk/react",
@@ -161,10 +161,10 @@
       "TypeScript",
       "Next.js",
       "Tailwind CSS",
-      "Shadcn/ui",
+      "shadcn",
       "Vercel",
       "Hono.js",
-      "Redis(Upstash)",
+      "Redis",
       "Bun",
       "shadcn",
       "lucide-react"
@@ -181,7 +181,7 @@
       "TypeScript",
       "Next.js",
       "Tailwind CSS",
-      "Shadcn/ui",
+      "shadcn",
       "Vercel",
       "Sentry",
       "Appwrite",
@@ -202,7 +202,7 @@
       "Tailwind CSS",
       "tRPC",
       "Prisma",
-      "NextAuth.js",
+      "NextAuth",
       "Google Map API",
       "shadcn",
       "lucide-react"
@@ -219,7 +219,7 @@
       "TypeScript",
       "Next.js",
       "Tailwind CSS",
-      "Shadcn/ui",
+      "shadcn",
       "Vercel",
       "Youtube Data API",
       "shadcn",
@@ -234,13 +234,13 @@
   {
     "technologies": [
       "React",
-      "Typescript",
+      "TypeScript",
       "Next.js",
       "Styled Components",
       "Vercel",
       "Google Text-to-Speech API",
       "OpenAI API",
-      "babyron.js"
+      "babylon.js"
     ],
     "title": "パワハラ訓練3Dチャットボット",
     "description": "パワハラ気質の上司になりきったチャットボットと会話ができるアプリ\n※開発者は考案者ではありません。\n会話の内容は、OpenAIのGPT-4を使用しています。\n他のリポジトリをfolkして、要件に合うようにカスタマイズしています。\n元のソースとの変更点\n・パワハラ上司っぽい会話内容\n・一定の期間(30秒)ごとに特定の音声付きチャットをボットが送信する。十数パターンあります。",
@@ -252,7 +252,7 @@
     "technologies": [
       "React",
       "Vite",
-      "Typescript"
+      "TypeScript"
     ],
     "title": "ChatGPT クローン",
     "description": "フロントVite,React,バックExpress.js使用のChatGPTクローン",
@@ -266,7 +266,7 @@
       "TypeScript",
       "Next.js",
       "Tailwind CSS",
-      "Shadcn/ui",
+      "shadcn",
       "Vercel",
       "lucide-react"
     ],

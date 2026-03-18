@@ -5,11 +5,11 @@
       "TypeScript",
       "Next.js",
       "Tailwind CSS",
-      "Shadcn/ui",
+      "shadcn",
       "Vercel"
     ],
     "title": "Planned Applications",
-    "description": "[Auto-fill Profile Data Across Recruitment Sites]\n[Image Recognition Application]\n[Visual Studio Project File Converter]\n[Matching Application]\n[Advanced Search for Various Websites]\n[Online Meeting Application]\n[Typing Game with 3D Harassment Bot]\n[Typing Game with Google Map Integration]\n[Typing Game with 2D Game Elements]  \n",
+    "description": "[Auto-fill Profile Data Across Recruitment Sites]\n[Image Recognition Application]\n[Visual Studio Project File Converter]\n[Matching Application]\n[Advanced Search for Various Websites]\n[Online Meeting Application]\n[Typing Game with 3D Harassment Bot]\n[Typing Game with Google Map Integration]\n[Typing Game with 2D Game Elements]\n",
     "image": "/images/projects/onDeveloping.jpg",
     "githubUrl": "",
     "liveUrl": ""
@@ -141,7 +141,7 @@
       "TypeScript",
       "Next.js",
       "Tailwind CSS",
-      "Shadcn/ui",
+      "shadcn",
       "Vercel",
       "AstraDB(Apache Cassandra)",
       "@ai-sdk/react",
@@ -161,10 +161,10 @@
       "TypeScript",
       "Next.js",
       "Tailwind CSS",
-      "Shadcn/ui",
+      "shadcn",
       "Vercel",
       "Hono.js",
-      "Redis(Upstash)",
+      "Redis",
       "Bun",
       "shadcn",
       "lucide-react"
@@ -181,7 +181,7 @@
       "TypeScript",
       "Next.js",
       "Tailwind CSS",
-      "Shadcn/ui",
+      "shadcn",
       "Vercel",
       "Sentry",
       "Appwrite",
@@ -202,7 +202,7 @@
       "Tailwind CSS",
       "tRPC",
       "Prisma",
-      "NextAuth.js",
+      "NextAuth",
       "Google Map API",
       "shadcn",
       "lucide-react"
@@ -219,7 +219,7 @@
       "TypeScript",
       "Next.js",
       "Tailwind CSS",
-      "Shadcn/ui",
+      "shadcn",
       "Vercel",
       "Youtube Data API",
       "shadcn",
@@ -234,13 +234,13 @@
   {
     "technologies": [
       "React",
-      "Typescript",
+      "TypeScript",
       "Next.js",
       "Styled Components",
       "Vercel",
       "Google Text-to-Speech API",
       "OpenAI API",
-      "babyron.js"
+      "babylon.js"
     ],
     "title": "Workplace Harassment Training 3D Chatbot",
     "description": "An application where you can converse with a chatbot that acts like a boss with harassment tendencies.\n*Note: I am not the original creator of this concept.\nThe conversation content uses OpenAI's GPT-4.\nI forked another repository and customized it to meet the requirements.\nChanges from the original source:\n- Conversation content mimicking a harassing boss\n- The bot sends specific voice-enabled chats at regular intervals (30 seconds). There are over a dozen patterns.",
@@ -252,7 +252,7 @@
     "technologies": [
       "React",
       "Vite",
-      "Typescript"
+      "TypeScript"
     ],
     "title": "ChatGPT Clone",
     "description": "A ChatGPT clone using Vite, React for frontend and Express.js for backend",
@@ -266,7 +266,7 @@
       "TypeScript",
       "Next.js",
       "Tailwind CSS",
-      "Shadcn/ui",
+      "shadcn",
       "Vercel",
       "lucide-react"
     ],

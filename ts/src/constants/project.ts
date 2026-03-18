@@ -1,5 +1,5 @@
-import {nextjsSkillSet, T3StackSkillSet} from './skill.js';
-import {links} from './links.js';
+import {nextjsSkillSet, T3StackSkillSet, S} from './skill';
+import {links} from './links';
 
 const tmpPic = '/images/profile/developer-pic-1.png'; // ポートフォリオサイトの画像
 const chatGptColonePic = '/images/projects/chat-gpt-clone.png'; // ChatGPT クローンの画像
@@ -18,7 +18,7 @@ const vscodePortfolioPic = '/images/projects/vscode-portfolio.png'; // picture f
 const connectFourPic = '/images/projects/3dConnectFour.png'; // picture for 3d connect four
 const brightyPic = '/images/projects/brighty.png'; // picture for brighty
 
-import {MultilingualProject} from '../types/projectItem.js';
+import {MultilingualProject} from '../types/projectItem';
 
 export const projects: MultilingualProject[] = [
   {
@@ -33,7 +33,7 @@ export const projects: MultilingualProject[] = [
 [オンライン会議アプリ]
 [タイピング×パワハラ3Dボット]
 [タイピング×Google Map]
-[タイピング×2Dゲーム]  
+[タイピング×2Dゲーム]
 `,
       image: onDevelopingPic,
       githubUrl: '',
@@ -49,7 +49,7 @@ export const projects: MultilingualProject[] = [
 [Online Meeting Application]
 [Typing Game with 3D Harassment Bot]
 [Typing Game with Google Map Integration]
-[Typing Game with 2D Game Elements]  
+[Typing Game with 2D Game Elements]
 `,
       image: onDevelopingPic,
       githubUrl: '',
@@ -58,10 +58,10 @@ export const projects: MultilingualProject[] = [
   },
   {
     technologies: [
-      'Next.js',
-      'React',
-      'TypeScript',
-      'Tailwind CSS',
+      S.nextJs,
+      S.react,
+      S.typescript,
+      S.tailwind,
       'lucide-react',
     ],
     ja: {
@@ -85,14 +85,14 @@ Same as the one in the history, so omitted
   },
   {
     technologies: [
-      'React',
-      'TypeScript',
-      'Next.js',
-      'Tailwind CSS',
+      S.react,
+      S.typescript,
+      S.nextJs,
+      S.tailwind,
       'next-intl',
       'Playwright',
       'lucide-react',
-      'Vercel',
+      S.vercel,
     ],
     ja: {
       title: 'VSCode風ポートフォリオサイト',
@@ -119,14 +119,14 @@ Features 3 visual themes, bilingual Japanese/English support, and 184 Playwright
   },
   {
     technologies: [
-      'React',
-      'TypeScript',
-      'Next.js',
-      'Tailwind CSS',
+      S.react,
+      S.typescript,
+      S.nextJs,
+      S.tailwind,
       'next-intl',
       'Playwright',
       'lucide-react',
-      'Vercel',
+      S.vercel,
     ],
     ja: {
       title: 'VSCode風ポートフォリオサイト（個人版）',
@@ -155,9 +155,9 @@ Includes extensions gallery, settings panel, tutorial overlay, and git history p
     technologies: [
       'Electron',
       'Vite',
-      'React',
-      'TypeScript',
-      'Tailwind CSS',
+      S.react,
+      S.typescript,
+      S.tailwind,
       'lucide-react',
     ],
     ja: {
@@ -182,10 +182,10 @@ Installable exe file creation is planned.`,
   },
   {
     technologies: [
-      'React',
-      'TypeScript',
-      'Next.js',
-      'Tailwind CSS',
+      S.react,
+      S.typescript,
+      S.nextJs,
+      S.tailwind,
       'lucide-react',
     ],
     ja: {
@@ -213,14 +213,14 @@ The title screen changes randomly. The objects used can also be selected.
   },
   {
     technologies: [
-      'React',
-      'TypeScript',
+      S.react,
+      S.typescript,
       'Remix',
-      'Hono.js',
+      S.honoJs,
       'DB(未定)',
-      'Tailwind CSS',
+      S.tailwind,
       'lucide-react',
-      'kaPlay',
+      S.kaPlay,
     ],
     ja: {
       title: '2Dゲーム',
@@ -246,7 +246,7 @@ I'm learning about the characteristics and optimization of libraries that I migh
     },
   },
   {
-    technologies: ['TypeScript', 'Express.js', 'AWS Lambda'],
+    technologies: [S.typescript, S.expressJs, 'AWS Lambda'],
     ja: {
       title: '神宮章情報取得API',
       description: `神宮章情報取得API
@@ -270,11 +270,11 @@ Data is defined in JSON without a database.
   },
   {
     technologies: [
-      'React',
-      'TypeScript',
+      S.react,
+      S.typescript,
       'Remix',
-      'Context API',
-      'Tailwind CSS',
+      S.contextApi,
+      S.tailwind,
       'lucide-react',
     ],
     ja: {
@@ -303,7 +303,7 @@ Considering implementations to link with typing games and search for more detail
       'AstraDB(Apache Cassandra)',
       '@ai-sdk/react',
       'OpenAI API',
-      'shadcn',
+      S.shadcn,
       'lucide-react',
     ],
     ja: {
@@ -331,10 +331,10 @@ Similar behavior to an Amazon Kendra-based RAG chatbot.
   {
     technologies: [
       ...nextjsSkillSet,
-      'Hono.js',
-      'Redis(Upstash)',
-      'Bun',
-      'shadcn',
+      S.honoJs,
+      S.redis,
+      S.bun,
+      S.shadcn,
       'lucide-react',
     ],
     ja: {
@@ -364,7 +364,7 @@ You can select different sound effects to play with your preferred audio feedbac
       'Sentry',
       'Appwrite',
       'Dwolla',
-      'shadcn',
+      S.shadcn,
       'lucide-react',
     ],
     ja: {
@@ -388,7 +388,7 @@ You can select different sound effects to play with your preferred audio feedbac
     technologies: [
       ...T3StackSkillSet,
       'Google Map API',
-      'shadcn',
+      S.shadcn,
       'lucide-react',
     ],
     ja: {
@@ -412,7 +412,7 @@ You can select different sound effects to play with your preferred audio feedbac
     technologies: [
       ...nextjsSkillSet,
       'Youtube Data API',
-      'shadcn',
+      S.shadcn,
       'lucide-react',
     ],
     ja: {
@@ -438,14 +438,14 @@ Planning to develop versions for other services as well.`,
   },
   {
     technologies: [
-      'React',
-      'Typescript',
-      'Next.js',
+      S.react,
+      S.typescript,
+      S.nextJs,
       'Styled Components',
-      'Vercel',
+      S.vercel,
       'Google Text-to-Speech API',
       'OpenAI API',
-      'babyron.js',
+      S.babylonJs,
     ],
     ja: {
       title: 'パワハラ訓練3Dチャットボット',
@@ -475,7 +475,7 @@ Changes from the original source:
     },
   },
   {
-    technologies: ['React', 'Vite', 'Typescript'],
+    technologies: [S.react, 'Vite', S.typescript],
     ja: {
       title: 'ChatGPT クローン',
       description: 'フロントVite,React,バックExpress.js使用のChatGPTクローン',

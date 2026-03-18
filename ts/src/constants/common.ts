@@ -6,10 +6,10 @@ export const selfStudy = 'self-study';
 
 // skillset for Voice Of Customer Management System
 export const VOCSkillSet: string[] = [
-  'Typescript',
+  'TypeScript',
   'React',
   'Java',
-  'Springboot',
+  'Springboot(Java)',
   'MySQL',
   'Selenium(Python)',
   'Mybatis(Java ORM)',
@@ -18,7 +18,7 @@ export const VOCSkillSet: string[] = [
   'アジャイル開発(スクラム)',
 ];
 export const receptionInnovationSkillSet: string[] = [
-  'Typescript',
+  'TypeScript',
   'React',
   'Node.js',
   'MySQL',
@@ -40,7 +40,7 @@ export const receptionInnovationSkillSet: string[] = [
  */
 export const T3StackSkillSet: string[] = [
   'React',
-  'Typescript',
+  'TypeScript',
   'Next.js',
   'Prisma(or Drizzle)',
   'tRPC',
@@ -51,9 +51,10 @@ export const T3StackSkillSet: string[] = [
  */
 export const nextjsSkillSet: string[] = [
   'React',
-  'Typescript',
+  'TypeScript',
   'Next.js',
   'Tailwind CSS',
+  'shadcn',
   'Vercel',
 ];
 // company names that I worked for
