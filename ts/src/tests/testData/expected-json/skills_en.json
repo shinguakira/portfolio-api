@@ -302,5 +302,213 @@
     "proficiency": "onBusiness",
     "picture": "/icons/AstraDB.svg",
     "pictureColor": "#FF6B6B"
+  },
+  {
+    "name": "Supabase",
+    "years": "self-study",
+    "category": "Database",
+    "proficiency": "self-study",
+    "picture": "/icons/Supabase.svg",
+    "pictureColor": "#3ECF8E"
+  },
+  {
+    "name": "Drizzle",
+    "years": "self-study",
+    "category": "ORM",
+    "proficiency": "self-study",
+    "picture": "/icons/Drizzle.svg",
+    "pictureColor": "#C5F74F"
+  },
+  {
+    "name": "Remix",
+    "years": "self-study",
+    "category": "Frontend",
+    "proficiency": "self-study",
+    "picture": "/icons/Remix.svg",
+    "pictureColor": "#000000"
+  },
+  {
+    "name": "Electron",
+    "years": "self-study",
+    "category": "Frontend",
+    "proficiency": "self-study",
+    "picture": "/icons/Electron.svg",
+    "pictureColor": "#47848F"
+  },
+  {
+    "name": "Vite",
+    "years": "1 year",
+    "category": "Frontend",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Vite.svg",
+    "pictureColor": "#646CFF"
+  },
+  {
+    "name": "Turborepo",
+    "years": "self-study",
+    "category": "Frontend",
+    "proficiency": "self-study",
+    "picture": "/icons/Turborepo.svg",
+    "pictureColor": "#EF4444"
+  },
+  {
+    "name": "lucide-react",
+    "years": "1 year",
+    "category": "Frontend",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Lucide.svg",
+    "pictureColor": "#F56565"
+  },
+  {
+    "name": "next-intl",
+    "years": "6 months",
+    "category": "Frontend",
+    "proficiency": "onBusiness",
+    "picture": "/icons/NextIntl.svg",
+    "pictureColor": "#000000"
+  },
+  {
+    "name": "Playwright",
+    "years": "1 year",
+    "category": "Testing",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Playwright.svg",
+    "pictureColor": "#2EAD33"
+  },
+  {
+    "name": "Sentry",
+    "years": "6 months",
+    "category": "Testing",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Sentry.svg",
+    "pictureColor": "#362D59"
+  },
+  {
+    "name": "AWS Lambda",
+    "years": "3 months",
+    "category": "Cloud",
+    "proficiency": "onBusiness",
+    "picture": "/icons/AWSLambda.svg",
+    "pictureColor": "#FF9900"
+  },
+  {
+    "name": "AWS S3",
+    "years": "3 months",
+    "category": "Cloud",
+    "proficiency": "onBusiness",
+    "picture": "/icons/AWSS3.svg",
+    "pictureColor": "#569A31"
+  },
+  {
+    "name": "Azure DevOps",
+    "years": "1 year",
+    "category": "Cloud",
+    "proficiency": "onBusiness",
+    "picture": "/icons/AzureDevOps.svg",
+    "pictureColor": "#0078D7"
+  },
+  {
+    "name": "Azure Pipelines",
+    "years": "1 year",
+    "category": "Cloud",
+    "proficiency": "onBusiness",
+    "picture": "/icons/AzurePipelines.svg",
+    "pictureColor": "#2560E0"
+  },
+  {
+    "name": "Azure Repos",
+    "years": "1 year",
+    "category": "Cloud",
+    "proficiency": "onBusiness",
+    "picture": "/icons/AzureRepos.svg",
+    "pictureColor": "#0078D7"
+  },
+  {
+    "name": "Azure Web Apps",
+    "years": "1 year",
+    "category": "Cloud",
+    "proficiency": "onBusiness",
+    "picture": "/icons/AzureWebApps.svg",
+    "pictureColor": "#0078D7"
+  },
+  {
+    "name": "Cloudflare Workers",
+    "years": "self-study",
+    "category": "Cloud",
+    "proficiency": "self-study",
+    "picture": "/icons/CloudflareWorkers.svg",
+    "pictureColor": "#F38020"
+  },
+  {
+    "name": "Ollama",
+    "years": "self-study",
+    "category": "API",
+    "proficiency": "self-study",
+    "picture": "/icons/Ollama.svg",
+    "pictureColor": "#000000"
+  },
+  {
+    "name": "RAG",
+    "years": "3 months",
+    "category": "API",
+    "proficiency": "onBusiness",
+    "picture": "/icons/RAG.svg",
+    "pictureColor": "#FF6B6B"
+  },
+  {
+    "name": "STT",
+    "years": "3 months",
+    "category": "API",
+    "proficiency": "onBusiness",
+    "picture": "/icons/STT.svg",
+    "pictureColor": "#4A90D9"
+  },
+  {
+    "name": "TTS",
+    "years": "3 months",
+    "category": "API",
+    "proficiency": "onBusiness",
+    "picture": "/icons/TTS.svg",
+    "pictureColor": "#4A90D9"
+  },
+  {
+    "name": "Whisper(local)",
+    "years": "3 months",
+    "category": "API",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Whisper.svg",
+    "pictureColor": "#000000"
+  },
+  {
+    "name": "Cloudinary",
+    "years": "6 months",
+    "category": "Others",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Cloudinary.svg",
+    "pictureColor": "#3448C5"
+  },
+  {
+    "name": "RSend",
+    "years": "6 months",
+    "category": "Others",
+    "proficiency": "onBusiness",
+    "picture": "/icons/RSend.svg",
+    "pictureColor": "#000000"
+  },
+  {
+    "name": "DICOM",
+    "years": "6 months",
+    "category": "Others",
+    "proficiency": "onBusiness",
+    "picture": "/icons/DICOM.svg",
+    "pictureColor": "#1D4ED8"
+  },
+  {
+    "name": "FHIR",
+    "years": "6 months",
+    "category": "Others",
+    "proficiency": "onBusiness",
+    "picture": "/icons/FHIR.svg",
+    "pictureColor": "#E44D26"
   }
 ]

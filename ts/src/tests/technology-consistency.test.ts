@@ -11,9 +11,10 @@ const allSkillNames = [
   ...otherSkills.map(s => s.name),
 ];
 
-// Techs used in projects/experiences that are not tracked in skills/otherSkills
+// Techs used in projects/experiences that are intentionally not tracked in skills/otherSkills
+// NOTE: Do NOT add to this list unless explicitly instructed by the user.
 const excludedTechs = new Set([
-  // External services & APIs
+  // Category 2: projects
   'Appwrite',
   'Dwolla',
   'OpenAI API',
@@ -22,53 +23,27 @@ const excludedTechs = new Set([
   'Youtube Data API',
   '@ai-sdk/react',
   'AstraDB(Apache Cassandra)',
-  'Cloudinary',
-  'Sentry',
-  'Supabase',
-  'Slack',
-  'RSend',
-  'Ollama',
-  'Figma',
-  'Metabase',
-  'CodeRabbit',
-  // Frameworks & libraries
   'Styled Components',
   'tRPC',
-  'Angular',
-  'Electron',
-  'Remix',
-  'Vite',
-  'FastAPI',
-  'Drizzle',
-  'Turborepo',
-  'Playwright',
-  'lucide-react',
-  'next-intl',
-  'Windows Form',
-  // Cloud & infra
-  'AWS Lambda',
-  'AWS S3',
-  'Azure DevOps',
-  'Azure Pipelines',
-  'Azure Repos',
-  'Azure Web Apps',
-  'Cloudflare Workers',
-  'Oracle Cloud',
-  'Kubernetes',
-  // Domain-specific
-  'DICOM',
-  'FHIR',
-  'HDB',
-  'PDB',
-  'Modbus',
-  'Omron製PLC',
-  'RAG',
-  'STT',
-  'TTS',
-  'Whisper(local)',
-  '(Ruby)',
   'DB(未定)',
   'Prisma(or Drizzle)',
+  // Category 3: experiences
+  'Angular',
+  'FastAPI',
+  'Kubernetes',
+  'Figma',
+  'Slack',
+  'CodeRabbit',
+  'Metabase',
+  'Oracle Cloud',
+  'Modbus',
+  'Omron製PLC',
+  'Windows Form',
+  'HDB',
+  'PDB',
+  'Visual Studio 2010,2015,2019',
+  'Visual Studio2017',
+  '(Ruby)',
 ]);
 
 describe('Project technologies should reference existing skills', () => {
