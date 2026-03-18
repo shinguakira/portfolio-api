@@ -1,5 +1,5 @@
 import {describe, it, expect} from 'vitest';
-import {readdirSync, readFileSync, statSync} from 'fs';
+import {readdirSync, readFileSync} from 'fs';
 import {join, relative} from 'path';
 
 const rootDir = join(__dirname, '../../..');
@@ -23,9 +23,11 @@ describe('public/images and ts/public/images should be in sync', () => {
   const sourceFiles = getAllFiles(sourceDir);
   const targetFiles = new Set(getAllFiles(targetDir));
 
-  sourceFiles.forEach(rel => {
+  sourceFiles.forEach((rel) => {
     it(`"${rel}" from public/images should exist in ts/public/images`, () => {
-      expect(targetFiles.has(rel), `Missing in ts/public/images: ${rel}`).toBe(true);
+      expect(targetFiles.has(rel), `Missing in ts/public/images: ${rel}`).toBe(
+        true
+      );
     });
 
     it(`"${rel}" should have identical content in both directories`, () => {
@@ -36,9 +38,12 @@ describe('public/images and ts/public/images should be in sync', () => {
   });
 
   const sourceSet = new Set(sourceFiles);
-  getAllFiles(targetDir).forEach(rel => {
+  getAllFiles(targetDir).forEach((rel) => {
     it(`"${rel}" in ts/public/images should also exist in public/images`, () => {
-      expect(sourceSet.has(rel), `Extra file in ts/public/images not in source: ${rel}`).toBe(true);
+      expect(
+        sourceSet.has(rel),
+        `Extra file in ts/public/images not in source: ${rel}`
+      ).toBe(true);
     });
   });
 });
