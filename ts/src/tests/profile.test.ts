@@ -1,6 +1,6 @@
 import {describe, it, expect} from 'vitest';
-import {GET} from './testHelper';
-import {profile_ja, profile_en} from './testData/expected-json/profile';
+import {GET} from './testHelper.js';
+import {profile_ja, profile_en} from './testData/expected-json/profile.js';
 
 describe('GET /api/profile', () => {
   it('should respond with a 200 status code and the Japanese profile data by default', async () => {

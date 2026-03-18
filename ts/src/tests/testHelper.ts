@@ -1,4 +1,4 @@
-import app from '../index';
+import app from '../index.js';
 
 export async function GET(path: string) {
   const response = await app.handle(new Request(`http://localhost${path}`));

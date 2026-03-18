@@ -1,5 +1,5 @@
-import {WorkExperience} from '../types/workHistory';
-import {S} from './skill';
+import {WorkExperience} from '../types/workHistory.js';
+import {S} from './skill.js';
 
 // This file contains the actual production work experience data
 // It should match the structure expected by tests but remain independent

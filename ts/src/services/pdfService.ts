@@ -10,7 +10,7 @@ import {
   contact,
   certifications,
   strongPoint,
-} from '../constants/index';
+} from '../constants/index.js';
 import {
   StandardPDFOptions,
   CompactPDFOptions,
@@ -18,12 +18,12 @@ import {
   TechnicalPDFOptions,
   AcademicPDFOptions,
   ModernPDFOptions,
-} from '../types/pdfTypes';
-import {StrongPoint} from '../types/strongPoint';
-import {WorkExperience} from '../types/workHistory';
-import {Project} from '../types/projectItem';
-import {EducationHistory} from '../types/educationHistory';
-import {CertificationItem} from '../types/certificationItem';
+} from '../types/pdfTypes.js';
+import {StrongPoint} from '../types/strongPoint.js';
+import {WorkExperience} from '../types/workHistory.js';
+import {Project} from '../types/projectItem.js';
+import {EducationHistory} from '../types/educationHistory.js';
+import {CertificationItem} from '../types/certificationItem.js';
 
 // Register fonts (optional - for better typography)
 // Font.register({

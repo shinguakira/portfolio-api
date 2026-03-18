@@ -1,5 +1,5 @@
-import {nextjsSkillSet, T3StackSkillSet, S} from './skill';
-import {links} from './links';
+import {nextjsSkillSet, T3StackSkillSet, S} from './skill.js';
+import {links} from './links.js';
 
 const tmpPic = '/images/profile/developer-pic-1.png'; // ポートフォリオサイトの画像
 const chatGptColonePic = '/images/projects/chat-gpt-clone.png'; // ChatGPT クローンの画像
@@ -18,7 +18,7 @@ const vscodePortfolioPic = '/images/projects/vscode-portfolio.png'; // picture f
 const connectFourPic = '/images/projects/3dConnectFour.png'; // picture for 3d connect four
 const brightyPic = '/images/projects/brighty.png'; // picture for brighty
 
-import {MultilingualProject} from '../types/projectItem';
+import {MultilingualProject} from '../types/projectItem.js';
 
 export const projects: MultilingualProject[] = [
   {

@@ -1,5 +1,5 @@
-import {onBusiness, selfStudy} from './common';
-import type {SkillItem} from '../types/skillItem';
+import {onBusiness, selfStudy} from './common.js';
+import type {SkillItem} from '../types/skillItem.js';
 
 // main skills(Language,Libraries)
 export const skills: SkillItem[] = [

@@ -1,7 +1,7 @@
 import {describe, it, expect} from 'vitest';
 import {existsSync, readdirSync} from 'fs';
 import {join} from 'path';
-import {skills, otherSkills} from '../constants/skill';
+import {skills, otherSkills} from '../constants/skill.js';
 
 const publicDir = join(__dirname, '../../public');
 const iconsDir = join(publicDir, 'icons');

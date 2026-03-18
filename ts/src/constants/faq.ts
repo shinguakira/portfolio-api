@@ -1,4 +1,4 @@
-import {MultilingualFaq} from '../types/faq';
+import {MultilingualFaq} from '../types/faq.js';
 
 export const faqs: MultilingualFaq[] = [
   {

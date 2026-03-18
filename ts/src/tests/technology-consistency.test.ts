@@ -1,10 +1,10 @@
 import {describe, it, expect} from 'vitest';
-import {skills, otherSkills} from '../constants/skill';
-import {projects} from '../constants/project';
+import {skills, otherSkills} from '../constants/skill.js';
+import {projects} from '../constants/project.js';
 import {
   workExperiences_ja,
   workExperiences_en,
-} from '../constants/workExperience';
+} from '../constants/workExperience.js';
 
 const allSkillNames = [
   ...skills.map((s) => s.name),

@@ -1,9 +1,9 @@
-import {LocalizedProfileData} from './profile';
-import {Project} from './projectItem';
-import {WorkExperience} from './workHistory';
-import {EducationHistory} from './educationHistory';
-import {CertificationItem} from './certificationItem';
-import {StrongPoint} from './strongPoint';
+import {LocalizedProfileData} from './profile.js';
+import {Project} from './projectItem.js';
+import {WorkExperience} from './workHistory.js';
+import {EducationHistory} from './educationHistory.js';
+import {CertificationItem} from './certificationItem.js';
+import {StrongPoint} from './strongPoint.js';
 
 export interface BasePDFOptions {
   lang: string;
