@@ -154,7 +154,7 @@ export const getChangelogs = ({set}: Context) => {
     const localizedChangelogs: ChangelogResponse = changelogs.map((item) => ({
       version: item.version,
       date: item.date,
-      changes: item.changes.map((change) => ({
+      changes: item.changes.map((change: (typeof item.changes)[number]) => ({
         type: change.type,
         ja: change.ja,
         en: change.en,
