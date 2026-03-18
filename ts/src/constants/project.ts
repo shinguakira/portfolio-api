@@ -57,7 +57,7 @@ export const projects: MultilingualProject[] = [
     },
   },
   {
-    technologies: [S.nextJs, S.react, S.typescript, S.tailwind, 'lucide-react'],
+    technologies: [S.nextJs, S.react, S.typescript, S.tailwind, S.lucideReact],
     ja: {
       title: 'Brighty コーチングマッチングアプリ',
       description: `Brighty コーチングマッチングアプリ
@@ -83,9 +83,9 @@ Same as the one in the history, so omitted
       S.typescript,
       S.nextJs,
       S.tailwind,
-      'next-intl',
-      'Playwright',
-      'lucide-react',
+      S.nextIntl,
+      S.playwrightStandalone,
+      S.lucideReact,
       S.vercel,
     ],
     ja: {
@@ -117,9 +117,9 @@ Features 3 visual themes, bilingual Japanese/English support, and 184 Playwright
       S.typescript,
       S.nextJs,
       S.tailwind,
-      'next-intl',
-      'Playwright',
-      'lucide-react',
+      S.nextIntl,
+      S.playwrightStandalone,
+      S.lucideReact,
       S.vercel,
     ],
     ja: {
@@ -147,12 +147,12 @@ Includes extensions gallery, settings panel, tutorial overlay, and git history p
   },
   {
     technologies: [
-      'Electron',
-      'Vite',
+      S.electron,
+      S.vite,
       S.react,
       S.typescript,
       S.tailwind,
-      'lucide-react',
+      S.lucideReact,
     ],
     ja: {
       title: 'Electron Vite Reactアプリ',
@@ -175,7 +175,7 @@ Installable exe file creation is planned.`,
     },
   },
   {
-    technologies: [S.react, S.typescript, S.nextJs, S.tailwind, 'lucide-react'],
+    technologies: [S.react, S.typescript, S.nextJs, S.tailwind, S.lucideReact],
     ja: {
       title: '3D4目並べ',
       description: `3D4目並べ
@@ -203,11 +203,11 @@ The title screen changes randomly. The objects used can also be selected.
     technologies: [
       S.react,
       S.typescript,
-      'Remix',
+      S.remix,
       S.honoJs,
       'DB(未定)',
       S.tailwind,
-      'lucide-react',
+      S.lucideReact,
       S.kaPlay,
     ],
     ja: {
@@ -234,7 +234,7 @@ I'm learning about the characteristics and optimization of libraries that I migh
     },
   },
   {
-    technologies: [S.typescript, S.expressJs, 'AWS Lambda'],
+    technologies: [S.typescript, S.expressJs, S.awsLambda],
     ja: {
       title: '神宮章情報取得API',
       description: `神宮章情報取得API
@@ -260,10 +260,10 @@ Data is defined in JSON without a database.
     technologies: [
       S.react,
       S.typescript,
-      'Remix',
+      S.remix,
       S.contextApi,
       S.tailwind,
-      'lucide-react',
+      S.lucideReact,
     ],
     ja: {
       title: '国検索アプリ',
@@ -291,7 +291,7 @@ Considering implementations to link with typing games and search for more detail
       'AstraDB(Apache Cassandra)',
       '@ai-sdk/react',
       'OpenAI API',
-      'lucide-react',
+      S.lucideReact,
     ],
     ja: {
       title: '神宮章情報用RAGチャットボット',
@@ -316,13 +316,7 @@ Similar behavior to an Amazon Kendra-based RAG chatbot.
     },
   },
   {
-    technologies: [
-      ...nextjsSkillSet,
-      S.honoJs,
-      S.redis,
-      S.bun,
-      'lucide-react',
-    ],
+    technologies: [...nextjsSkillSet, S.honoJs, S.redis, S.bun, S.lucideReact],
     ja: {
       title: 'タイピングゲーム',
       description: `タイピングゲーム
@@ -347,10 +341,10 @@ You can select different sound effects to play with your preferred audio feedbac
   {
     technologies: [
       ...nextjsSkillSet,
-      'Sentry',
+      S.sentry,
       'Appwrite',
       'Dwolla',
-      'lucide-react',
+      S.lucideReact,
     ],
     ja: {
       title: 'バンキングアプリ',
@@ -374,7 +368,7 @@ You can select different sound effects to play with your preferred audio feedbac
       ...T3StackSkillSet,
       'Google Map API',
       S.shadcn,
-      'lucide-react',
+      S.lucideReact,
     ],
     ja: {
       title: '現在いる最寄り駅の飲食店情報リスト表示アプリ',
@@ -394,11 +388,7 @@ You can select different sound effects to play with your preferred audio feedbac
     },
   },
   {
-    technologies: [
-      ...nextjsSkillSet,
-      'Youtube Data API',
-      'lucide-react',
-    ],
+    technologies: [...nextjsSkillSet, 'Youtube Data API', S.lucideReact],
     ja: {
       title: 'Youtube動画のadvanced検索(随時更新中)',
       description: `Youtubeの詳細検索サイト
@@ -459,7 +449,7 @@ Changes from the original source:
     },
   },
   {
-    technologies: [S.react, 'Vite', S.typescript],
+    technologies: [S.react, S.vite, S.typescript],
     ja: {
       title: 'ChatGPT クローン',
       description: 'フロントVite,React,バックExpress.js使用のChatGPTクローン',
@@ -477,7 +467,7 @@ Changes from the original source:
     },
   },
   {
-    technologies: [...nextjsSkillSet, 'lucide-react'],
+    technologies: [...nextjsSkillSet, S.lucideReact],
     ja: {
       title: 'ポートフォリオWebサイト',
       description: '経歴、職務経歴等の情報を記載',
