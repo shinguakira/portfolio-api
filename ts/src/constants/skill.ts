@@ -617,7 +617,7 @@ export const otherSkills: SkillItem[] = [
   },
 ];
 
-// type-safe skill name accessor
+// runtime-validated skill name accessor
 // S.typescript => 'TypeScript', S.nextJs => 'Next.js', etc.
 const allSkills = [...skills, ...otherSkills];
 const n = <T extends (typeof allSkills)[number]['name']>(name: T): T => {

@@ -291,7 +291,6 @@ Considering implementations to link with typing games and search for more detail
       'AstraDB(Apache Cassandra)',
       '@ai-sdk/react',
       'OpenAI API',
-      S.shadcn,
       'lucide-react',
     ],
     ja: {
@@ -322,7 +321,6 @@ Similar behavior to an Amazon Kendra-based RAG chatbot.
       S.honoJs,
       S.redis,
       S.bun,
-      S.shadcn,
       'lucide-react',
     ],
     ja: {
@@ -352,7 +350,6 @@ You can select different sound effects to play with your preferred audio feedbac
       'Sentry',
       'Appwrite',
       'Dwolla',
-      S.shadcn,
       'lucide-react',
     ],
     ja: {
@@ -400,7 +397,6 @@ You can select different sound effects to play with your preferred audio feedbac
     technologies: [
       ...nextjsSkillSet,
       'Youtube Data API',
-      S.shadcn,
       'lucide-react',
     ],
     ja: {

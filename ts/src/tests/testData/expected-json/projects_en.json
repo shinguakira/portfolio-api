@@ -146,7 +146,6 @@
       "AstraDB(Apache Cassandra)",
       "@ai-sdk/react",
       "OpenAI API",
-      "shadcn",
       "lucide-react"
     ],
     "title": "RAG Chatbot for Akira Shingu Information",
@@ -166,7 +165,6 @@
       "Hono.js",
       "Redis",
       "Bun",
-      "shadcn",
       "lucide-react"
     ],
     "title": "Typing Game",
@@ -186,7 +184,6 @@
       "Sentry",
       "Appwrite",
       "Dwolla",
-      "shadcn",
       "lucide-react"
     ],
     "title": "Banking App",
@@ -222,7 +219,6 @@
       "shadcn",
       "Vercel",
       "Youtube Data API",
-      "shadcn",
       "lucide-react"
     ],
     "title": "Advanced YouTube Video Search (Regularly Updated)",

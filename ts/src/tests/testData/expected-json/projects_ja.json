@@ -146,7 +146,6 @@
       "AstraDB(Apache Cassandra)",
       "@ai-sdk/react",
       "OpenAI API",
-      "shadcn",
       "lucide-react"
     ],
     "title": "神宮章情報用RAGチャットボット",
@@ -166,7 +165,6 @@
       "Hono.js",
       "Redis",
       "Bun",
-      "shadcn",
       "lucide-react"
     ],
     "title": "タイピングゲーム",
@@ -186,7 +184,6 @@
       "Sentry",
       "Appwrite",
       "Dwolla",
-      "shadcn",
       "lucide-react"
     ],
     "title": "バンキングアプリ",
@@ -222,7 +219,6 @@
       "shadcn",
       "Vercel",
       "Youtube Data API",
-      "shadcn",
       "lucide-react"
     ],
     "title": "Youtube動画のadvanced検索(随時更新中)",
