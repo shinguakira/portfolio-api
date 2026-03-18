@@ -301,7 +301,7 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'vectorDB(pgvector)',
-    years: "3 months",
+    years: '3 months',
     category: 'Database',
     proficiency: onBusiness,
     picture: '/icons/AstraDB.svg',
@@ -527,7 +527,7 @@ export const otherSkills: SkillItem[] = [
     picture: '/icons/VSCode.svg',
     pictureColor: '#007ACC',
   },
-{
+  {
     name: 'IntelliJ IDEA(Typescript)',
     years: '1 year',
     category: 'Others',
@@ -599,7 +599,7 @@ export const otherSkills: SkillItem[] = [
     picture: '/icons/Backlog.svg',
     pictureColor: '#181717',
   },
-{
+  {
     name: 'A5:SQL Mk-2',
     years: '1 year',
     category: 'Others',
@@ -620,8 +620,8 @@ export const otherSkills: SkillItem[] = [
 // type-safe skill name accessor
 // S.typescript => 'TypeScript', S.nextJs => 'Next.js', etc.
 const allSkills = [...skills, ...otherSkills];
-const n = <T extends typeof allSkills[number]['name']>(name: T): T => {
-  if (!allSkills.some(skill => skill.name === name)) {
+const n = <T extends (typeof allSkills)[number]['name']>(name: T): T => {
+  if (!allSkills.some((skill) => skill.name === name)) {
     throw new Error(`Skill not found: ${name}`);
   }
   return name;

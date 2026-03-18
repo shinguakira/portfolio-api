@@ -10,9 +10,7 @@ describe('GET /api/articles', () => {
     expect(typeof body.data.totalCount).toBe('number');
     expect(body.data.totalCount).toBeGreaterThan(0);
     expect(Array.isArray(body.data.articles)).toBe(true);
-    expect(body.data.articles.length).toBe(
-      body.data.totalCount
-    );
+    expect(body.data.articles.length).toBe(body.data.totalCount);
   });
 
   it('should contain the oldest 3 known articles with correct titles', async () => {
@@ -35,9 +33,7 @@ describe('GET /api/articles', () => {
     ];
 
     for (const expected of oldestArticles) {
-      const found = articles.find(
-        (a: {id: string}) => a.id === expected.id
-      );
+      const found = articles.find((a: {id: string}) => a.id === expected.id);
       expect(found).toBeDefined();
       expect(found.title).toBe(expected.title);
     }

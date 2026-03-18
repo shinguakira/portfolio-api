@@ -15,9 +15,10 @@ const allowedOrigins = process.env.ALLOWED_ORIGINS
 const app = new Elysia({adapter: node()})
   .use(
     cors({
-      origin: allowedOrigins.length === 1 && allowedOrigins[0] === '*'
-        ? true
-        : allowedOrigins,
+      origin:
+        allowedOrigins.length === 1 && allowedOrigins[0] === '*'
+          ? true
+          : allowedOrigins,
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
       allowedHeaders: ['Content-Type', 'Authorization'],
       credentials: true,

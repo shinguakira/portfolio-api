@@ -96,13 +96,13 @@ export const strongPoints_en = [
     size: 'large',
     question: 'Self-Improvement Ability',
     answer:
-      "I continuously work on improving my technical skills and contributing to clients.\nMoreover, I can demonstrate tangible results of self-improvement, such as obtaining certifications.\nWith competitive spirit honed through sports during my student years and my inherently competitive nature, I actively explore and absorb anything that could enhance my knowledge in any aspect of work, including testing.\nIn every project, I leverage my self-learning ability. I was able to develop a Modbus communication program almost entirely through self-study, starting from a state where \"I didn't know what I didn't know.\"\nI also successfully completed a web development project with almost no prior experience, no experience with React, and no experts on the team.",
+      'I continuously work on improving my technical skills and contributing to clients.\nMoreover, I can demonstrate tangible results of self-improvement, such as obtaining certifications.\nWith competitive spirit honed through sports during my student years and my inherently competitive nature, I actively explore and absorb anything that could enhance my knowledge in any aspect of work, including testing.\nIn every project, I leverage my self-learning ability. I was able to develop a Modbus communication program almost entirely through self-study, starting from a state where "I didn\'t know what I didn\'t know."\nI also successfully completed a web development project with almost no prior experience, no experience with React, and no experts on the team.',
   },
   {
     size: 'small',
     question: 'Business Understanding and Company Contribution',
     answer:
-      "Having acquired projects and performed translation work on Freelancers.com, I understand the general workflow of business. I approach work with the goal of not just completing assigned tasks, but considering how to benefit the client and provide value that exceeds my compensation.\nAt my second company, while exploring how to acquire contract projects, I gained knowledge that is relatively uncommon among peers of my age and experience level, such as understanding phase-by-phase contracting and the differences between SES (System Engineering Service) and contract business models.\n",
+      'Having acquired projects and performed translation work on Freelancers.com, I understand the general workflow of business. I approach work with the goal of not just completing assigned tasks, but considering how to benefit the client and provide value that exceeds my compensation.\nAt my second company, while exploring how to acquire contract projects, I gained knowledge that is relatively uncommon among peers of my age and experience level, such as understanding phase-by-phase contracting and the differences between SES (System Engineering Service) and contract business models.\n',
   },
   {
     size: 'medium',

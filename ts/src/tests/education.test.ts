@@ -1,9 +1,6 @@
 import {describe, it, expect} from 'vitest';
 import {GET} from './testHelper';
-import {
-  education_ja,
-  education_en,
-} from './testData/expected-json/education';
+import {education_ja, education_en} from './testData/expected-json/education';
 
 describe('GET /api/education', () => {
   it('should respond with a 200 status code and the Japanese education data by default', async () => {

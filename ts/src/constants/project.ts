@@ -57,20 +57,14 @@ export const projects: MultilingualProject[] = [
     },
   },
   {
-    technologies: [
-      S.nextJs,
-      S.react,
-      S.typescript,
-      S.tailwind,
-      'lucide-react',
-    ],
+    technologies: [S.nextJs, S.react, S.typescript, S.tailwind, 'lucide-react'],
     ja: {
       title: 'Brighty コーチングマッチングアプリ',
       description: `Brighty コーチングマッチングアプリ
 経歴に記載の元と同様のため、省略
 `,
       image: brightyPic,
-      githubUrl: "",
+      githubUrl: '',
       liveUrl: 'https://www.brighty.site',
     },
     en: {
@@ -79,7 +73,7 @@ export const projects: MultilingualProject[] = [
 Same as the one in the history, so omitted
 `,
       image: brightyPic,
-      githubUrl: "",
+      githubUrl: '',
       liveUrl: 'https://www.brighty.site',
     },
   },
@@ -181,13 +175,7 @@ Installable exe file creation is planned.`,
     },
   },
   {
-    technologies: [
-      S.react,
-      S.typescript,
-      S.nextJs,
-      S.tailwind,
-      'lucide-react',
-    ],
+    technologies: [S.react, S.typescript, S.nextJs, S.tailwind, 'lucide-react'],
     ja: {
       title: '3D4目並べ',
       description: `3D4目並べ
