@@ -68,6 +68,7 @@ const excludedTechs = new Set([
   'Whisper(local)',
   '(Ruby)',
   'DB(未定)',
+  'Prisma(or Drizzle)',
 ]);
 
 describe('Project technologies should reference existing skills', () => {

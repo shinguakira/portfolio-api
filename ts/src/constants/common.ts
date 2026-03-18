@@ -4,59 +4,6 @@ export const API_VERSION = '1.0.0';
 export const onBusiness = 'onBusiness';
 export const selfStudy = 'self-study';
 
-// skillset for Voice Of Customer Management System
-export const VOCSkillSet: string[] = [
-  'TypeScript',
-  'React',
-  'Java',
-  'Springboot(Java)',
-  'MySQL',
-  'Selenium(Python)',
-  'Mybatis(Java ORM)',
-  'axios',
-  'Backlog',
-  'アジャイル開発(スクラム)',
-];
-export const receptionInnovationSkillSet: string[] = [
-  'TypeScript',
-  'React',
-  'Node.js',
-  'MySQL',
-  'Selenium(Python)',
-  'little state machine',
-  'React Hook Form',
-  'axios',
-  'TypeORM',
-  'class-validator',
-  'Apollo Client Server(GraphQL)',
-  'Bootstrap5',
-  'Azure(App Service,Azure Functions)',
-  'Backlog',
-  'Swagger',
-  'アジャイル開発(スクラム)',
-];
-/**
- *  skillset for T3Stack
- */
-export const T3StackSkillSet: string[] = [
-  'React',
-  'TypeScript',
-  'Next.js',
-  'Prisma(or Drizzle)',
-  'tRPC',
-  'Tailwind CSS',
-];
-/**
- * skillset imported with create-next-app
- */
-export const nextjsSkillSet: string[] = [
-  'React',
-  'TypeScript',
-  'Next.js',
-  'Tailwind CSS',
-  'shadcn',
-  'Vercel',
-];
 // company names that I worked for
 export const company = {
   eastCoast: 'お客さま2',

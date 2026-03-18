@@ -483,30 +483,42 @@ export const nextjsSkillSet = [
 ];
 
 export const receptionInnovationSkillSet = [
-  S.java,
-  S.springboot,
   S.typescript,
   S.react,
-  S.git,
-  S.github,
+  S.nodeJs,
+  S.mysql,
+  S.selenium,
+  'little state machine',
+  S.reactHookForm,
+  'axios',
+  'TypeORM',
+  'class-validator',
+  'Apollo Client Server(GraphQL)',
+  S.bootstrap5,
+  'Azure(App Service,Azure Functions)',
+  S.backlog,
   S.swagger,
+  'アジャイル開発(スクラム)',
 ];
 
 export const VOCSkillSet = [
-  S.java,
-  S.springboot,
   S.typescript,
   S.react,
-  S.git,
-  S.github,
-  S.swagger,
+  S.java,
+  S.springboot,
+  S.mysql,
+  S.selenium,
+  'Mybatis(Java ORM)',
+  'axios',
+  S.backlog,
+  'アジャイル開発(スクラム)',
 ];
 
 export const T3StackSkillSet = [
-  S.nextJs,
+  S.react,
   S.typescript,
-  S.tailwind,
+  S.nextJs,
+  'Prisma(or Drizzle)',
   'tRPC',
-  S.prisma,
-  S.nextAuth,
+  S.tailwind,
 ];

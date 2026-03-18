@@ -197,12 +197,12 @@
   },
   {
     "technologies": [
-      "Next.js",
+      "React",
       "TypeScript",
-      "Tailwind CSS",
+      "Next.js",
+      "Prisma(or Drizzle)",
       "tRPC",
-      "Prisma",
-      "NextAuth",
+      "Tailwind CSS",
       "Google Map API",
       "shadcn",
       "lucide-react"
