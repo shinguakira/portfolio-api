@@ -154,7 +154,7 @@ export const getChangelogs = ({set}: Context) => {
     const localizedChangelogs: ChangelogResponse = changelogs.map((item) => ({
       version: item.version,
       date: item.date,
-      changes: item.changes.map((change) => ({
+      changes: item.changes.map((change: (typeof item.changes)[number]) => ({
         type: change.type,
         ja: change.ja,
         en: change.en,
@@ -240,20 +240,18 @@ export const getArticles = async ({set}: Context) => {
       return {message: 'Error fetching articles from Qiita', data: null};
     }
     const articles = await response.json();
-    const mappedArticles = articles.map(
-      (article: Record<string, unknown>) => ({
-        id: article.id,
-        title: article.title,
-        url: article.url,
-        created_at: article.created_at,
-        updated_at: article.updated_at,
-        likes_count: article.likes_count,
-        comments_count: article.comments_count,
-        stocks_count: article.stocks_count,
-        reactions_count: article.reactions_count,
-        tags: article.tags,
-      })
-    );
+    const mappedArticles = articles.map((article: Record<string, unknown>) => ({
+      id: article.id,
+      title: article.title,
+      url: article.url,
+      created_at: article.created_at,
+      updated_at: article.updated_at,
+      likes_count: article.likes_count,
+      comments_count: article.comments_count,
+      stocks_count: article.stocks_count,
+      reactions_count: article.reactions_count,
+      tags: article.tags,
+    }));
     const data: ArticlesResponse = {
       totalCount: mappedArticles.length,
       articles: mappedArticles,

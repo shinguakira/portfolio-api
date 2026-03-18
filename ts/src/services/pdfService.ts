@@ -277,11 +277,6 @@ const createStandardPDF = ({
             contact.socialMedia.github
           ),
           React.createElement(Text, {key: 'address'}, contact.address),
-          React.createElement(
-            Text,
-            {key: 'linkedin'},
-            contact.socialMedia.linkedin
-          ),
         ]),
       ]),
 
@@ -546,7 +541,7 @@ const createCompactPDF = ({
             React.createElement(
               Text,
               {style: {fontSize: 9, color: '#666'}},
-              `${contact.email} | ${contact.socialMedia.github} | ${contact.socialMedia.linkedin}`
+              `${contact.email} | ${contact.socialMedia.github}`
             ),
           ]
         ),
@@ -727,7 +722,7 @@ const createExecutivePDF = ({
             React.createElement(
               Text,
               {style: {fontSize: 11, color: '#666', marginTop: 5}},
-              `${contact.email} | ${contact.socialMedia.linkedin}`
+              `${contact.email} | ${contact.socialMedia.github}`
             ),
           ]
         ),
@@ -1141,7 +1136,7 @@ const createModernPDF = ({
             React.createElement(
               Text,
               {style: {fontSize: 10, opacity: 0.8, marginTop: 8}},
-              `${contact.email} • ${contact.socialMedia.linkedin} • ${contact.socialMedia.github}`
+              `${contact.email} • ${contact.socialMedia.github}`
             ),
           ]
         ),

@@ -1,4 +1,4 @@
-import {nextjsSkillSet, T3StackSkillSet} from './skill.js';
+import {nextjsSkillSet, T3StackSkillSet, S} from './skill.js';
 import {links} from './links.js';
 
 const tmpPic = '/images/profile/developer-pic-1.png'; // ポートフォリオサイトの画像
@@ -33,7 +33,7 @@ export const projects: MultilingualProject[] = [
 [オンライン会議アプリ]
 [タイピング×パワハラ3Dボット]
 [タイピング×Google Map]
-[タイピング×2Dゲーム]  
+[タイピング×2Dゲーム]
 `,
       image: onDevelopingPic,
       githubUrl: '',
@@ -49,7 +49,7 @@ export const projects: MultilingualProject[] = [
 [Online Meeting Application]
 [Typing Game with 3D Harassment Bot]
 [Typing Game with Google Map Integration]
-[Typing Game with 2D Game Elements]  
+[Typing Game with 2D Game Elements]
 `,
       image: onDevelopingPic,
       githubUrl: '',
@@ -57,20 +57,14 @@ export const projects: MultilingualProject[] = [
     },
   },
   {
-    technologies: [
-      'Next.js',
-      'React',
-      'TypeScript',
-      'Tailwind CSS',
-      'lucide-react',
-    ],
+    technologies: [S.nextJs, S.react, S.typescript, S.tailwind, S.lucideReact],
     ja: {
       title: 'Brighty コーチングマッチングアプリ',
       description: `Brighty コーチングマッチングアプリ
 経歴に記載の元と同様のため、省略
 `,
       image: brightyPic,
-      githubUrl: "",
+      githubUrl: '',
       liveUrl: 'https://www.brighty.site',
     },
     en: {
@@ -79,20 +73,20 @@ export const projects: MultilingualProject[] = [
 Same as the one in the history, so omitted
 `,
       image: brightyPic,
-      githubUrl: "",
+      githubUrl: '',
       liveUrl: 'https://www.brighty.site',
     },
   },
   {
     technologies: [
-      'React',
-      'TypeScript',
-      'Next.js',
-      'Tailwind CSS',
-      'next-intl',
-      'Playwright',
-      'lucide-react',
-      'Vercel',
+      S.react,
+      S.typescript,
+      S.nextJs,
+      S.tailwind,
+      S.nextIntl,
+      S.playwrightStandalone,
+      S.lucideReact,
+      S.vercel,
     ],
     ja: {
       title: 'VSCode風ポートフォリオサイト',
@@ -119,14 +113,14 @@ Features 3 visual themes, bilingual Japanese/English support, and 184 Playwright
   },
   {
     technologies: [
-      'React',
-      'TypeScript',
-      'Next.js',
-      'Tailwind CSS',
-      'next-intl',
-      'Playwright',
-      'lucide-react',
-      'Vercel',
+      S.react,
+      S.typescript,
+      S.nextJs,
+      S.tailwind,
+      S.nextIntl,
+      S.playwrightStandalone,
+      S.lucideReact,
+      S.vercel,
     ],
     ja: {
       title: 'VSCode風ポートフォリオサイト（個人版）',
@@ -153,12 +147,12 @@ Includes extensions gallery, settings panel, tutorial overlay, and git history p
   },
   {
     technologies: [
-      'Electron',
-      'Vite',
-      'React',
-      'TypeScript',
-      'Tailwind CSS',
-      'lucide-react',
+      S.electron,
+      S.vite,
+      S.react,
+      S.typescript,
+      S.tailwind,
+      S.lucideReact,
     ],
     ja: {
       title: 'Electron Vite Reactアプリ',
@@ -181,13 +175,7 @@ Installable exe file creation is planned.`,
     },
   },
   {
-    technologies: [
-      'React',
-      'TypeScript',
-      'Next.js',
-      'Tailwind CSS',
-      'lucide-react',
-    ],
+    technologies: [S.react, S.typescript, S.nextJs, S.tailwind, S.lucideReact],
     ja: {
       title: '3D4目並べ',
       description: `3D4目並べ
@@ -213,14 +201,14 @@ The title screen changes randomly. The objects used can also be selected.
   },
   {
     technologies: [
-      'React',
-      'TypeScript',
-      'Remix',
-      'Hono.js',
+      S.react,
+      S.typescript,
+      S.remix,
+      S.honoJs,
       'DB(未定)',
-      'Tailwind CSS',
-      'lucide-react',
-      'kaPlay',
+      S.tailwind,
+      S.lucideReact,
+      S.kaPlay,
     ],
     ja: {
       title: '2Dゲーム',
@@ -246,7 +234,7 @@ I'm learning about the characteristics and optimization of libraries that I migh
     },
   },
   {
-    technologies: ['TypeScript', 'Express.js', 'AWS Lambda'],
+    technologies: [S.typescript, S.expressJs, S.awsLambda],
     ja: {
       title: '神宮章情報取得API',
       description: `神宮章情報取得API
@@ -270,12 +258,12 @@ Data is defined in JSON without a database.
   },
   {
     technologies: [
-      'React',
-      'TypeScript',
-      'Remix',
-      'Context API',
-      'Tailwind CSS',
-      'lucide-react',
+      S.react,
+      S.typescript,
+      S.remix,
+      S.contextApi,
+      S.tailwind,
+      S.lucideReact,
     ],
     ja: {
       title: '国検索アプリ',
@@ -303,8 +291,7 @@ Considering implementations to link with typing games and search for more detail
       'AstraDB(Apache Cassandra)',
       '@ai-sdk/react',
       'OpenAI API',
-      'shadcn',
-      'lucide-react',
+      S.lucideReact,
     ],
     ja: {
       title: '神宮章情報用RAGチャットボット',
@@ -329,14 +316,7 @@ Similar behavior to an Amazon Kendra-based RAG chatbot.
     },
   },
   {
-    technologies: [
-      ...nextjsSkillSet,
-      'Hono.js',
-      'Redis(Upstash)',
-      'Bun',
-      'shadcn',
-      'lucide-react',
-    ],
+    technologies: [...nextjsSkillSet, S.honoJs, S.redis, S.bun, S.lucideReact],
     ja: {
       title: 'タイピングゲーム',
       description: `タイピングゲーム
@@ -361,11 +341,10 @@ You can select different sound effects to play with your preferred audio feedbac
   {
     technologies: [
       ...nextjsSkillSet,
-      'Sentry',
+      S.sentry,
       'Appwrite',
       'Dwolla',
-      'shadcn',
-      'lucide-react',
+      S.lucideReact,
     ],
     ja: {
       title: 'バンキングアプリ',
@@ -388,8 +367,8 @@ You can select different sound effects to play with your preferred audio feedbac
     technologies: [
       ...T3StackSkillSet,
       'Google Map API',
-      'shadcn',
-      'lucide-react',
+      S.shadcn,
+      S.lucideReact,
     ],
     ja: {
       title: '現在いる最寄り駅の飲食店情報リスト表示アプリ',
@@ -409,12 +388,7 @@ You can select different sound effects to play with your preferred audio feedbac
     },
   },
   {
-    technologies: [
-      ...nextjsSkillSet,
-      'Youtube Data API',
-      'shadcn',
-      'lucide-react',
-    ],
+    technologies: [...nextjsSkillSet, 'Youtube Data API', S.lucideReact],
     ja: {
       title: 'Youtube動画のadvanced検索(随時更新中)',
       description: `Youtubeの詳細検索サイト
@@ -438,14 +412,14 @@ Planning to develop versions for other services as well.`,
   },
   {
     technologies: [
-      'React',
-      'Typescript',
-      'Next.js',
+      S.react,
+      S.typescript,
+      S.nextJs,
       'Styled Components',
-      'Vercel',
+      S.vercel,
       'Google Text-to-Speech API',
       'OpenAI API',
-      'babyron.js',
+      S.babylonJs,
     ],
     ja: {
       title: 'パワハラ訓練3Dチャットボット',
@@ -475,7 +449,7 @@ Changes from the original source:
     },
   },
   {
-    technologies: ['React', 'Vite', 'Typescript'],
+    technologies: [S.react, S.vite, S.typescript],
     ja: {
       title: 'ChatGPT クローン',
       description: 'フロントVite,React,バックExpress.js使用のChatGPTクローン',
@@ -493,7 +467,7 @@ Changes from the original source:
     },
   },
   {
-    technologies: [...nextjsSkillSet, 'lucide-react'],
+    technologies: [...nextjsSkillSet, S.lucideReact],
     ja: {
       title: 'ポートフォリオWebサイト',
       description: '経歴、職務経歴等の情報を記載',

@@ -1,4 +1,4 @@
-import {Changelog} from '@/types/changelog.js';
+import {Changelog} from '../types/changelog.js';
 
 /**
  * constans for changelog history
