@@ -1,6 +1,6 @@
 import {describe, it, expect} from 'vitest';
-import {GET} from './testHelper.js';
-import {links} from '../constants/links.js';
+import {GET} from './testHelper';
+import {links} from '../constants/links';
 
 describe('GET /api/links', () => {
   it('should respond with a 200 status code and the links data', async () => {

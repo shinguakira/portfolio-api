@@ -20,8 +20,8 @@ import {
   strongPoint,
   otherSkills,
   notifications,
-} from '../constants/index.js';
-import {generatePortfolioPDF} from '../services/pdfService.js';
+} from '../constants/index';
+import {generatePortfolioPDF} from '../services/pdfService';
 
 // Get profile information
 export const getProfile = ({query, set}: Context) => {

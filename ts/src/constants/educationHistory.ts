@@ -1,4 +1,4 @@
-import {MultilingualEducationHistory} from '../types/educationHistory.js';
+import {MultilingualEducationHistory} from '../types/educationHistory';
 
 export const educationHistory: MultilingualEducationHistory[] = [
   {

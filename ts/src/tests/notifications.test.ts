@@ -1,9 +1,9 @@
 import {describe, it, expect} from 'vitest';
-import {GET} from './testHelper.js';
+import {GET} from './testHelper';
 import {
   notifications_ja,
   notifications_en,
-} from './testData/expected-json/notifications.js';
+} from './testData/expected-json/notifications';
 
 describe('GET /api/notifications', () => {
   it('should respond with a 200 status code and the Japanese notifications data by default', async () => {

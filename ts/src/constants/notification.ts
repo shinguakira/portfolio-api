@@ -1,4 +1,4 @@
-import {MultilingualNotification} from '../types/notification.js';
+import {MultilingualNotification} from '../types/notification';
 
 export const notifications: MultilingualNotification[] = [
   {

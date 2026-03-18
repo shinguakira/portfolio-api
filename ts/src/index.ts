@@ -3,7 +3,7 @@ import {node} from '@elysiajs/node';
 import {cors} from '@elysiajs/cors';
 import {staticPlugin} from '@elysiajs/static';
 import dotenv from 'dotenv';
-import {portfolioRoutes} from './routes/portfolio.js';
+import {portfolioRoutes} from './routes/portfolio';
 
 // Load environment variables
 dotenv.config();

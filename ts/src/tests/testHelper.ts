@@ -1,4 +1,4 @@
-import app from '../index.js';
+import app from '../index';
 
 export async function GET(path: string) {
   const response = await app.handle(

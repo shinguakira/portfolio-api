@@ -1,5 +1,5 @@
-import {links} from './links.js';
-import {MultilingualCertificationItem} from '../types/certificationItem.js';
+import {links} from './links';
+import {MultilingualCertificationItem} from '../types/certificationItem';
 
 const creadlyLink = links.creadlyLink;
 // object for certifications

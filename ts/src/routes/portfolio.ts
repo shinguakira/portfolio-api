@@ -15,7 +15,7 @@ import {
   getNotifications,
   getArticles,
   downloadPortfolioPDF,
-} from '../controllers/portfolio.js';
+} from '../controllers/portfolio';
 
 export const portfolioRoutes = new Elysia()
   .get('/profile', getProfile)

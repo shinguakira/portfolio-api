@@ -1,9 +1,9 @@
 import {describe, it, expect} from 'vitest';
-import {GET} from './testHelper.js';
+import {GET} from './testHelper';
 import {
   experience_ja,
   experience_en,
-} from './testData/expected-json/experience.js';
+} from './testData/expected-json/experience';
 
 describe('GET /api/experience', () => {
   it('should respond with a 200 status code and the Japanese experience data by default', async () => {

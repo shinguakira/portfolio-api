@@ -1,5 +1,5 @@
 import {describe, it, expect} from 'vitest';
-import {GET} from './testHelper.js';
+import {GET} from './testHelper';
 import {readFileSync} from 'fs';
 
 describe('GET /api/skills', () => {

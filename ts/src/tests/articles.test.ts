@@ -1,5 +1,5 @@
 import {describe, it, expect} from 'vitest';
-import {GET} from './testHelper.js';
+import {GET} from './testHelper';
 
 describe('GET /api/articles', () => {
   it('should respond with a 200 status code and articles data with totalCount', async () => {

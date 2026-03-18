@@ -1,6 +1,6 @@
 import {describe, it, expect} from 'vitest';
-import {GET} from './testHelper.js';
-import {contact} from './testData/expected-json/contact.js';
+import {GET} from './testHelper';
+import {contact} from './testData/expected-json/contact';
 
 describe('GET /api/contact', () => {
   it('should respond with a 200 status code and the contact data', async () => {

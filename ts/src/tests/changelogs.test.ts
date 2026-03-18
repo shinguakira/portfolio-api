@@ -1,9 +1,9 @@
 import {describe, it, expect} from 'vitest';
-import {GET} from './testHelper.js';
+import {GET} from './testHelper';
 import {
   changelogs_ja,
   changelogs_en,
-} from './testData/expected-json/changelogs.js';
+} from './testData/expected-json/changelogs';
 
 describe('GET /api/changelogs', () => {
   it('should respond with a 200 status code and the Japanese changelogs data by default', async () => {
