@@ -57,10 +57,10 @@ export const workExperiences_ja: WorkExperience[] = [
       S.fhir,
       S.dicom,
     ],
-    projectOverview: '世界規模の眼科医療業務支援アプリ',
+    projectOverview: '世界規模の医療業務支援アプリ',
     role: 'フルスタック開発者',
     description: [
-      'アメリカ、ヨーロッパなどの世界規模で展開する眼科医療向けアプリ。AIを使った業務の補助も含む',
+      '世界規模で展開する医療向けアプリ',
     ],
     archivement: [
       'subversionからgitへの移行',
@@ -95,9 +95,9 @@ export const workExperiences_ja: WorkExperience[] = [
       S.rag,
       S.vectorDb,
     ],
-    projectOverview: '社内ツール開発（AI業務効率化・チャットボット）',
+    projectOverview: '社内ツール開発',
     role: 'フルスタック開発者',
-    description: ['AIを使った業務効率化ツール、チャットボットの開発'],
+    description: ['社内ツール開発'],
     archivement: [
       'subversionからgitへの移行',
       'CI/CDパイプラインの構築',
@@ -451,12 +451,9 @@ export const workExperiences_en: WorkExperience[] = [
       S.fhir,
       S.dicom,
     ],
-    projectOverview:
-      'Global Ophthalmology Medical Practice Support Application',
+    projectOverview: 'Global Medical Practice Support Application',
     role: 'Full Stack Developer',
-    description: [
-      'Application for ophthalmology medical practices deployed globally in the US, Europe, and other regions. Includes AI-powered business assistance',
-    ],
+    description: ['Medical application deployed globally'],
     archivement: [
       'Migration from Subversion to Git',
       'CI/CD pipeline construction',
@@ -490,12 +487,9 @@ export const workExperiences_en: WorkExperience[] = [
       S.rag,
       S.vectorDb,
     ],
-    projectOverview:
-      'Internal Tools Development (AI Business Efficiency & Chatbot)',
+    projectOverview: 'Internal Tools Development',
     role: 'Full Stack Developer',
-    description: [
-      'Development of AI-powered business efficiency tools and chatbots',
-    ],
+    description: ['Internal tools development'],
     archivement: [
       'Migration from Subversion to Git',
       'CI/CD pipeline construction',
