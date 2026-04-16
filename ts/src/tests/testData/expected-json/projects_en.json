@@ -114,8 +114,8 @@
       "Express.js",
       "AWS Lambda"
     ],
-    "title": "Akira Shingu Information API",
-    "description": "An API for retrieving information about Akira Shingu.\nCreated to reduce maintenance time for portfolio creation and resume processing.\nData is defined in JSON without a database.\n",
+    "title": "Portfolio Information API",
+    "description": "An API for retrieving portfolio information.\nCreated to reduce maintenance time for portfolio creation and resume processing.\nData is defined in JSON without a database.\n",
     "image": "/images/projects/portfolio-api.png",
     "githubUrl": "https://github.com/shinguakira/portfolio-api",
     "liveUrl": "https://portfolio-api-ten-delta.vercel.app/"
@@ -148,9 +148,9 @@
       "OpenAI API",
       "lucide-react"
     ],
-    "title": "RAG Chatbot for Akira Shingu Information",
-    "description": "A RAG chatbot that retrieves information about Akira Shingu from loaded vector data.\nRequires adjustment of vector approximation and appropriate data segmentation for accuracy improvement.\nSimilar behavior to an Amazon Kendra-based RAG chatbot.\n",
-    "image": "/images/projects/rag-chatbot-akirashingu.jpg",
+    "title": "Portfolio Information RAG Chatbot",
+    "description": "A RAG chatbot that retrieves portfolio information from loaded vector data.\nRequires adjustment of vector approximation and appropriate data segmentation for accuracy improvement.\nSimilar behavior to an Amazon Kendra-based RAG chatbot.\n",
+    "image": "/images/projects/rag-chatbot.jpg",
     "githubUrl": "https://github.com/shinguakira/rag-skill-match",
     "liveUrl": ""
   },

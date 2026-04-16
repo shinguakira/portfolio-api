@@ -3,7 +3,7 @@ use crate::model::contact::{Contact, ContactResponseInfo, SocialMedia};
 
 lazy_static! {
     pub static ref CONTACT_DATA: Contact = Contact {
-        email: "shinguakira1022@gmail.com".to_string(),
+        email: "user@example.com".to_string(),
         phone: "+81 XX-XXXX-XXXX".to_string(),
         address: "Tokyo, Japan".to_string(),
         social_media: SocialMedia {

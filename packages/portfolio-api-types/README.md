@@ -1,6 +1,6 @@
 # @shinguakira/portfolio-api-types
 
-TypeScript types for Shingu Akira Portfolio API responses.
+TypeScript types for Portfolio API responses.
 
 ## Installation
 

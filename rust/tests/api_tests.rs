@@ -26,7 +26,7 @@ async fn test_root_endpoint() {
     assert_eq!(resp.status(), StatusCode::OK);
 
     let body: Value = test::read_body_json(resp).await;
-    assert_eq!(body["message"], "Welcome to Shingu Akira Portfolio API");
+    assert_eq!(body["message"], "Welcome to Portfolio API");
     assert!(body["endpoints"].is_array());
     assert!(body["endpoints"].as_array().unwrap().len() > 0);
 }

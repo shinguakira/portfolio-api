@@ -71,9 +71,9 @@ export const projects_ja = [
   },
   {
     technologies: ['TypeScript', 'Express.js', 'AWS Lambda'],
-    title: '神宮章情報取得API',
+    title: 'ポートフォリオ情報取得API',
     description:
-      '神宮章情報取得API\nポートフォリオを別パターン作成や、履歴書作成処理のために、メンテナンス時間削減のため、共通に使用できるAPI\nデータはDBなしでjsonで定義。\n',
+      'ポートフォリオ情報取得API\nポートフォリオを別パターン作成や、履歴書作成処理のために、メンテナンス時間削減のため、共通に使用できるAPI\nデータはDBなしでjsonで定義。\n',
     image: '/images/projects/portfolio-api.png',
     githubUrl: 'https://github.com/shinguakira/portfolio-api',
     liveUrl: 'https://portfolio-api-ten-delta.vercel.app/',
@@ -107,10 +107,10 @@ export const projects_ja = [
       'OpenAI API',
       'lucide-react',
     ],
-    title: '神宮章情報用RAGチャットボット',
+    title: 'ポートフォリオ情報用RAGチャットボット',
     description:
-      '神宮章情報用RAGチャットボット\n読み込ませたベクトル情報から神宮章に関する情報を取得するRAGチャットボット\n精度向上のためベクトルの近似の調整や、データの区切りの適切かが必要そう。\nAmazon Kendraを使ったRAGチャットボットに似た挙動\n',
-    image: '/images/projects/rag-chatbot-akirashingu.jpg',
+      'ポートフォリオ情報用RAGチャットボット\n読み込ませたベクトル情報からポートフォリオに関する情報を取得するRAGチャットボット\n精度向上のためベクトルの近似の調整や、データの区切りの適切かが必要そう。\nAmazon Kendraを使ったRAGチャットボットに似た挙動\n',
+    image: '/images/projects/rag-chatbot.jpg',
     githubUrl: 'https://github.com/shinguakira/rag-skill-match',
     liveUrl: '',
   },
@@ -307,9 +307,9 @@ export const projects_en = [
   },
   {
     technologies: ['TypeScript', 'Express.js', 'AWS Lambda'],
-    title: 'Akira Shingu Information API',
+    title: 'Portfolio Information API',
     description:
-      'An API for retrieving information about Akira Shingu.\nCreated to reduce maintenance time for portfolio creation and resume processing.\nData is defined in JSON without a database.\n',
+      'An API for retrieving portfolio information.\nCreated to reduce maintenance time for portfolio creation and resume processing.\nData is defined in JSON without a database.\n',
     image: '/images/projects/portfolio-api.png',
     githubUrl: 'https://github.com/shinguakira/portfolio-api',
     liveUrl: 'https://portfolio-api-ten-delta.vercel.app/',
@@ -343,10 +343,10 @@ export const projects_en = [
       'OpenAI API',
       'lucide-react',
     ],
-    title: 'RAG Chatbot for Akira Shingu Information',
+    title: 'Portfolio Information RAG Chatbot',
     description:
-      'A RAG chatbot that retrieves information about Akira Shingu from loaded vector data.\nRequires adjustment of vector approximation and appropriate data segmentation for accuracy improvement.\nSimilar behavior to an Amazon Kendra-based RAG chatbot.\n',
-    image: '/images/projects/rag-chatbot-akirashingu.jpg',
+      'A RAG chatbot that retrieves portfolio information from loaded vector data.\nRequires adjustment of vector approximation and appropriate data segmentation for accuracy improvement.\nSimilar behavior to an Amazon Kendra-based RAG chatbot.\n',
+    image: '/images/projects/rag-chatbot.jpg',
     githubUrl: 'https://github.com/shinguakira/rag-skill-match',
     liveUrl: '',
   },
