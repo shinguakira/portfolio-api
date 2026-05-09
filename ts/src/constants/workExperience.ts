@@ -59,9 +59,7 @@ export const workExperiences_ja: WorkExperience[] = [
     ],
     projectOverview: '世界規模の医療業務支援アプリ',
     role: 'フルスタック開発者',
-    description: [
-      '世界規模で展開する医療向けアプリ',
-    ],
+    description: ['世界規模で展開する医療向けアプリ'],
     archivement: [
       'subversionからgitへの移行',
       'CI/CDパイプラインの構築',
@@ -181,6 +179,8 @@ export const workExperiences_ja: WorkExperience[] = [
     teamSize: '10人',
     manMonth: '',
     technologies: [
+      S.java,
+      S.springboot,
       'Angular',
       S.typescript,
       S.postgresql,
@@ -189,6 +189,7 @@ export const workExperiences_ja: WorkExperience[] = [
       S.awsLambda,
       S.python,
       'Kubernetes',
+      'マイナンバー',
     ],
     projectOverview: '住宅ローンシステムのOracleクラウド移行',
     role: 'フルスタック開発者',
@@ -203,11 +204,24 @@ export const workExperiences_ja: WorkExperience[] = [
     ],
   },
   {
+    company: 'お客さま3',
+    period: '2025年5月 - 2025年6月',
+    teamSize: '10人',
+    manMonth: '',
+    technologies: ['Angular', S.typescript, S.postgresql, 'マイナンバー'],
+    projectOverview: '住民税申告システム',
+    role: 'フルスタック開発者',
+    description: ['源泉徴収情報入力のフォーム画面作成2週間ほど'],
+    archivement: [
+      '緊急で人が足りないということで、仕様も要件もわかっていない住民税申告システムの源泉徴収関連情報を入力する複雑な計100程度のフォーム画面の実装及び、jestのカバレッジ100%を2週間でやりとげました。',
+    ],
+  },
+  {
     company: 'お客さま2',
     period: '2024年10月 - 2025年2月',
     teamSize: '3人',
     manMonth: '3,4人月',
-    technologies: [],
+    technologies: [S.typescript, S.azure, 'AzureFunctions'],
     projectOverview: 'お客さま情報検索、取得、特定APIの改修',
     role: 'フルスタック(基本詳細仕様書作成、開発、テスト)',
     description: [
@@ -232,6 +246,7 @@ export const workExperiences_ja: WorkExperience[] = [
       S.git,
       S.github,
       S.swagger,
+      S.azure,
     ],
     projectOverview: 'お客さまの声のシステム追加改修',
     role: 'フルスタック(基本詳細仕様書作成、開発、テスト)',
@@ -253,6 +268,8 @@ export const workExperiences_ja: WorkExperience[] = [
       S.git,
       S.github,
       S.swagger,
+      S.azure,
+      S.azureWebApps,
     ],
     projectOverview: '受付革新プロジェクト',
     role: 'フルスタック(基本詳細仕様書作成、開発、テスト)',
@@ -573,6 +590,8 @@ export const workExperiences_en: WorkExperience[] = [
     teamSize: '10',
     manMonth: '',
     technologies: [
+      S.java,
+      S.springboot,
       'Angular',
       S.typescript,
       S.postgresql,
@@ -581,6 +600,7 @@ export const workExperiences_en: WorkExperience[] = [
       S.awsLambda,
       S.python,
       'Kubernetes',
+      'マイナンバー',
     ],
     projectOverview: 'Mortgage System Migration to Oracle Cloud',
     role: 'Full Stack Developer',
@@ -592,6 +612,21 @@ export const workExperiences_en: WorkExperience[] = [
     ],
     archivement: [
       'I understood both existing and new environment specifications while conducting research and creating design documents for migration by consulting extensive documentation and subject matter experts. I also supported team members who joined at the same time with technical issues, contributing to the smooth progress of the project.',
+    ],
+  },
+  {
+    company: 'Customer3',
+    period: '2025-05 - 2025-06',
+    teamSize: '10',
+    manMonth: '',
+    technologies: ['Angular', S.typescript, S.postgresql, 'マイナンバー'],
+    projectOverview: 'Resident Tax Declaration System',
+    role: 'Full Stack Developer',
+    description: [
+      'Implementation of withholding tax information input form screens (about 2 weeks)',
+    ],
+    archivement: [
+      'Due to an urgent shortage of personnel, I implemented approximately 100 complex form screens for inputting withholding tax-related information in the resident tax declaration system, despite not knowing the specifications or requirements, and achieved 100% Jest coverage within 2 weeks.',
     ],
   },
   {
@@ -609,7 +644,7 @@ export const workExperiences_en: WorkExperience[] = [
     projectOverview: 'Customer Information Search and API Modification',
     role: 'Full Stack Developer (Specification, Development, Testing)',
     teamSize: '3',
-    technologies: [],
+    technologies: [S.typescript, S.azure, 'AzureFunctions'],
   },
   {
     archivement: [
@@ -632,6 +667,7 @@ export const workExperiences_en: WorkExperience[] = [
       S.git,
       S.github,
       S.swagger,
+      S.azure,
     ],
   },
   {
@@ -657,6 +693,8 @@ export const workExperiences_en: WorkExperience[] = [
       S.git,
       S.github,
       S.swagger,
+      S.azure,
+      S.azureWebApps,
     ],
   },
   {

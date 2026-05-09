@@ -44,6 +44,8 @@ const excludedTechs = new Set([
   'Visual Studio 2010,2015,2019',
   'Visual Studio2017',
   '(Ruby)',
+  'マイナンバー',
+  'AzureFunctions',
 ]);
 
 describe('Project technologies should reference existing skills', () => {

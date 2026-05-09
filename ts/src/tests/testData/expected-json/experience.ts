@@ -51,11 +51,9 @@ export const experience_ja = [
       'FHIR',
       'DICOM',
     ],
-    projectOverview: '世界規模の眼科医療業務支援アプリ',
+    projectOverview: '世界規模の医療業務支援アプリ',
     role: 'フルスタック開発者',
-    description: [
-      'アメリカ、ヨーロッパなどの世界規模で展開する眼科医療向けアプリ。AIを使った業務の補助も含む',
-    ],
+    description: ['世界規模で展開する医療向けアプリ'],
     archivement: [
       'subversionからgitへの移行',
       'CI/CDパイプラインの構築',
@@ -89,9 +87,9 @@ export const experience_ja = [
       'RAG',
       'vectorDB(pgvector)',
     ],
-    projectOverview: '社内ツール開発（AI業務効率化・チャットボット）',
+    projectOverview: '社内ツール開発',
     role: 'フルスタック開発者',
-    description: ['AIを使った業務効率化ツール、チャットボットの開発'],
+    description: ['社内ツール開発'],
     archivement: [
       'subversionからgitへの移行',
       'CI/CDパイプラインの構築',
@@ -175,6 +173,8 @@ export const experience_ja = [
     teamSize: '10人',
     manMonth: '',
     technologies: [
+      'Java',
+      'Springboot(Java)',
       'Angular',
       'TypeScript',
       'PostgreSQL',
@@ -183,6 +183,7 @@ export const experience_ja = [
       'AWS Lambda',
       'Python',
       'Kubernetes',
+      'マイナンバー',
     ],
     projectOverview: '住宅ローンシステムのOracleクラウド移行',
     role: 'フルスタック開発者',
@@ -197,11 +198,24 @@ export const experience_ja = [
     ],
   },
   {
+    company: 'お客さま3',
+    period: '2025年5月 - 2025年6月',
+    teamSize: '10人',
+    manMonth: '',
+    technologies: ['Angular', 'TypeScript', 'PostgreSQL', 'マイナンバー'],
+    projectOverview: '住民税申告システム',
+    role: 'フルスタック開発者',
+    description: ['源泉徴収情報入力のフォーム画面作成2週間ほど'],
+    archivement: [
+      '緊急で人が足りないということで、仕様も要件もわかっていない住民税申告システムの源泉徴収関連情報を入力する複雑な計100程度のフォーム画面の実装及び、jestのカバレッジ100%を2週間でやりとげました。',
+    ],
+  },
+  {
     company: 'お客さま2',
     period: '2024年10月 - 2025年2月',
     teamSize: '3人',
     manMonth: '3,4人月',
-    technologies: [],
+    technologies: ['TypeScript', 'Azure', 'AzureFunctions'],
     projectOverview: 'お客さま情報検索、取得、特定APIの改修',
     role: 'フルスタック(基本詳細仕様書作成、開発、テスト)',
     description: [
@@ -226,6 +240,7 @@ export const experience_ja = [
       'Git(Tortoise Git)',
       'Github',
       'Swagger',
+      'Azure',
     ],
     projectOverview: 'お客さまの声のシステム追加改修',
     role: 'フルスタック(基本詳細仕様書作成、開発、テスト)',
@@ -247,6 +262,8 @@ export const experience_ja = [
       'Git(Tortoise Git)',
       'Github',
       'Swagger',
+      'Azure',
+      'Azure Web Apps',
     ],
     projectOverview: '受付革新プロジェクト',
     role: 'フルスタック(基本詳細仕様書作成、開発、テスト)',
@@ -445,12 +462,9 @@ export const experience_en = [
       'FHIR',
       'DICOM',
     ],
-    projectOverview:
-      'Global Ophthalmology Medical Practice Support Application',
+    projectOverview: 'Global Medical Practice Support Application',
     role: 'Full Stack Developer',
-    description: [
-      'Application for ophthalmology medical practices deployed globally in the US, Europe, and other regions. Includes AI-powered business assistance',
-    ],
+    description: ['Medical application deployed globally'],
     archivement: [
       'Migration from Subversion to Git',
       'CI/CD pipeline construction',
@@ -484,12 +498,9 @@ export const experience_en = [
       'RAG',
       'vectorDB(pgvector)',
     ],
-    projectOverview:
-      'Internal Tools Development (AI Business Efficiency & Chatbot)',
+    projectOverview: 'Internal Tools Development',
     role: 'Full Stack Developer',
-    description: [
-      'Development of AI-powered business efficiency tools and chatbots',
-    ],
+    description: ['Internal tools development'],
     archivement: [
       'Migration from Subversion to Git',
       'CI/CD pipeline construction',
@@ -573,6 +584,8 @@ export const experience_en = [
     teamSize: '10',
     manMonth: '',
     technologies: [
+      'Java',
+      'Springboot(Java)',
       'Angular',
       'TypeScript',
       'PostgreSQL',
@@ -581,6 +594,7 @@ export const experience_en = [
       'AWS Lambda',
       'Python',
       'Kubernetes',
+      'マイナンバー',
     ],
     projectOverview: 'Mortgage System Migration to Oracle Cloud',
     role: 'Full Stack Developer',
@@ -592,6 +606,21 @@ export const experience_en = [
     ],
     archivement: [
       'I understood both existing and new environment specifications while conducting research and creating design documents for migration by consulting extensive documentation and subject matter experts. I also supported team members who joined at the same time with technical issues, contributing to the smooth progress of the project.',
+    ],
+  },
+  {
+    company: 'Customer3',
+    period: '2025-05 - 2025-06',
+    teamSize: '10',
+    manMonth: '',
+    technologies: ['Angular', 'TypeScript', 'PostgreSQL', 'マイナンバー'],
+    projectOverview: 'Resident Tax Declaration System',
+    role: 'Full Stack Developer',
+    description: [
+      'Implementation of withholding tax information input form screens (about 2 weeks)',
+    ],
+    archivement: [
+      'Due to an urgent shortage of personnel, I implemented approximately 100 complex form screens for inputting withholding tax-related information in the resident tax declaration system, despite not knowing the specifications or requirements, and achieved 100% Jest coverage within 2 weeks.',
     ],
   },
   {
@@ -609,7 +638,7 @@ export const experience_en = [
     projectOverview: 'Customer Information Search and API Modification',
     role: 'Full Stack Developer (Specification, Development, Testing)',
     teamSize: '3',
-    technologies: [],
+    technologies: ['TypeScript', 'Azure', 'AzureFunctions'],
   },
   {
     archivement: [
@@ -632,6 +661,7 @@ export const experience_en = [
       'Git(Tortoise Git)',
       'Github',
       'Swagger',
+      'Azure',
     ],
   },
   {
@@ -657,6 +687,8 @@ export const experience_en = [
       'Git(Tortoise Git)',
       'Github',
       'Swagger',
+      'Azure',
+      'Azure Web Apps',
     ],
   },
   {
