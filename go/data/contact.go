@@ -3,7 +3,7 @@ package data
 import "github.com/shinguakira/portfolio-api-go/model"
 
 var ContactData = model.Contact{
-	Email:   "shinguakira1022@gmail.com",
+	Email:   "user@example.com",
 	Phone:   "+81 XX-XXXX-XXXX",
 	Address: "Tokyo, Japan",
 	SocialMedia: model.SocialMedia{

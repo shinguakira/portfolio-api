@@ -60,7 +60,7 @@ healthHandler = do
 rootHandler :: ActionM ()
 rootHandler = do
   json $ object
-    [ "message" .= ("Welcome to Shingu Akira Portfolio API" :: Text)
+    [ "message" .= ("Welcome to Portfolio API" :: Text)
     , "version" .= ("1.0.0" :: Text)
     , "endpoints" .= (
         [ object ["path" .= ("/health" :: Text), "description" .= ("Health check endpoint" :: Text)]

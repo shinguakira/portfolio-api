@@ -68,7 +68,7 @@ func TestRootEndpoint(t *testing.T) {
 	if err := json.Unmarshal(w.Body.Bytes(), &result); err != nil {
 		t.Fatalf("failed to parse response: %v", err)
 	}
-	if result["message"] != "Welcome to Shingu Akira Portfolio API" {
+	if result["message"] != "Welcome to Portfolio API" {
 		t.Errorf("unexpected message: %v", result["message"])
 	}
 	endpoints, ok := result["endpoints"].([]interface{})
@@ -88,9 +88,9 @@ func TestProfileEndpoint(t *testing.T) {
 		lang     string
 		wantName string
 	}{
-		{"default (ja)", "", "Shingu Akira"},
-		{"japanese", "ja", "Shingu Akira"},
-		{"english", "en", "Shingu Akira"},
+		{"default (ja)", "", "Web Dev"},
+		{"japanese", "ja", "Web Dev"},
+		{"english", "en", "Web Dev"},
 	}
 
 	for _, tt := range tests {

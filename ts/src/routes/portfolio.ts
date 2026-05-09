@@ -15,6 +15,7 @@ import {
   getNotifications,
   getArticles,
   downloadPortfolioPDF,
+  downloadPortfolioExcel,
 } from '../controllers/portfolio.js';
 
 export const portfolioRoutes = new Elysia()
@@ -32,4 +33,5 @@ export const portfolioRoutes = new Elysia()
   .get('/other-skills', getOtherSkills)
   .get('/notifications', getNotifications)
   .get('/articles', getArticles)
-  .get('/download-pdf', downloadPortfolioPDF);
+  .get('/download-pdf', downloadPortfolioPDF)
+  .get('/download-excel', downloadPortfolioExcel);

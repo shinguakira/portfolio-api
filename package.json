@@ -2,7 +2,7 @@
   "name": "portfolio-api",
   "version": "1.0.0",
   "private": true,
-  "description": "API for Shingu Akira Portfolio (TypeScript + Go)",
+  "description": "API for Portfolio (TypeScript + Go)",
   "workspaces": [
     "ts",
     "packages/*"

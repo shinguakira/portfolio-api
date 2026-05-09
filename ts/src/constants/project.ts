@@ -11,7 +11,7 @@ const restaurantAroundStationPic =
 const bankingAppPic = '/images/projects/banking-app.png'; // picture for banking app
 const typingGamePic = '/images/projects/typing-game.png'; // picture for typing game
 const TwodRpgPic = '/images/projects/2d-rpg-react.png'; // picture for 2d rpg
-const ragChatBotAkiraShinguPic = '/images/projects/rag-chatbot-akirashingu.jpg'; // picture for rag chatbot akira shingu
+const ragChatBotPic = '/images/projects/rag-chatbot.jpg'; // picture for rag chatbot
 const countryAppPic = '/images/projects/country-app.png'; // picture for country app
 const portfolioApiPic = '/images/projects/portfolio-api.png'; // picture for portfolio api
 const vscodePortfolioPic = '/images/projects/vscode-portfolio.png'; // picture for vscode portfolio
@@ -29,7 +29,6 @@ export const projects: MultilingualProject[] = [
 [画像認識を使用した何か]
 [Visual Studioのプロジェクトファイル変換アプリ]
 [何かのマッチングアプリ]
-[何かのサイトのadvanced検索]
 [オンライン会議アプリ]
 [タイピング×パワハラ3Dボット]
 [タイピング×Google Map]
@@ -45,7 +44,6 @@ export const projects: MultilingualProject[] = [
 [Image Recognition Application]
 [Visual Studio Project File Converter]
 [Matching Application]
-[Advanced Search for Various Websites]
 [Online Meeting Application]
 [Typing Game with 3D Harassment Bot]
 [Typing Game with Google Map Integration]
@@ -236,8 +234,8 @@ I'm learning about the characteristics and optimization of libraries that I migh
   {
     technologies: [S.typescript, S.expressJs, S.awsLambda],
     ja: {
-      title: '神宮章情報取得API',
-      description: `神宮章情報取得API
+      title: 'ポートフォリオ情報取得API',
+      description: `ポートフォリオ情報取得API
 ポートフォリオを別パターン作成や、履歴書作成処理のために、メンテナンス時間削減のため、共通に使用できるAPI
 データはDBなしでjsonで定義。
 `,
@@ -246,8 +244,8 @@ I'm learning about the characteristics and optimization of libraries that I migh
       liveUrl: 'https://portfolio-api-ten-delta.vercel.app/',
     },
     en: {
-      title: 'Akira Shingu Information API',
-      description: `An API for retrieving information about Akira Shingu.
+      title: 'Portfolio Information API',
+      description: `An API for retrieving portfolio information.
 Created to reduce maintenance time for portfolio creation and resume processing.
 Data is defined in JSON without a database.
 `,
@@ -294,23 +292,23 @@ Considering implementations to link with typing games and search for more detail
       S.lucideReact,
     ],
     ja: {
-      title: '神宮章情報用RAGチャットボット',
-      description: `神宮章情報用RAGチャットボット
-読み込ませたベクトル情報から神宮章に関する情報を取得するRAGチャットボット
+      title: 'ポートフォリオ情報用RAGチャットボット',
+      description: `ポートフォリオ情報用RAGチャットボット
+読み込ませたベクトル情報からポートフォリオに関する情報を取得するRAGチャットボット
 精度向上のためベクトルの近似の調整や、データの区切りの適切かが必要そう。
 Amazon Kendraを使ったRAGチャットボットに似た挙動
 `,
-      image: ragChatBotAkiraShinguPic,
+      image: ragChatBotPic,
       githubUrl: 'https://github.com/shinguakira/rag-skill-match',
       liveUrl: '',
     },
     en: {
-      title: 'RAG Chatbot for Akira Shingu Information',
-      description: `A RAG chatbot that retrieves information about Akira Shingu from loaded vector data.
+      title: 'Portfolio Information RAG Chatbot',
+      description: `A RAG chatbot that retrieves portfolio information from loaded vector data.
 Requires adjustment of vector approximation and appropriate data segmentation for accuracy improvement.
 Similar behavior to an Amazon Kendra-based RAG chatbot.
 `,
-      image: ragChatBotAkiraShinguPic,
+      image: ragChatBotPic,
       githubUrl: 'https://github.com/shinguakira/rag-skill-match',
       liveUrl: '',
     },

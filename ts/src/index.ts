@@ -31,7 +31,7 @@ const app = new Elysia({adapter: node()})
     timestamp: new Date().toISOString(),
   }))
   .get('/', () => ({
-    message: 'Welcome to Shingu Akira Portfolio API',
+    message: 'Welcome to Portfolio API',
     version: process.env.npm_package_version || '1.0.0',
     endpoints: [
       {path: '/health', description: 'Health check endpoint'},

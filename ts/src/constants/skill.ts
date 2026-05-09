@@ -206,7 +206,7 @@ export const skills: SkillItem[] = [
   {
     name: 'Vercel',
     years: '1 year',
-    category: 'Database',
+    category: 'Cloud',
     proficiency: onBusiness,
     picture: '/icons/Vercel.svg',
     pictureColor: '#000000',
@@ -278,7 +278,7 @@ export const skills: SkillItem[] = [
   {
     name: 'codegen',
     years: '1 year',
-    category: 'Frontend',
+    category: 'Others',
     proficiency: onBusiness,
     picture: '/icons/Codegen.svg',
     pictureColor: '#E10098',
@@ -342,7 +342,7 @@ export const skills: SkillItem[] = [
   {
     name: 'Vite',
     years: '1 year',
-    category: 'Frontend',
+    category: 'Others',
     proficiency: onBusiness,
     picture: '/icons/Vite.svg',
     pictureColor: '#646CFF',
@@ -350,7 +350,7 @@ export const skills: SkillItem[] = [
   {
     name: 'Turborepo',
     years: selfStudy,
-    category: 'Frontend',
+    category: 'Others',
     proficiency: selfStudy,
     picture: '/icons/Turborepo.svg',
     pictureColor: '#EF4444',
@@ -382,7 +382,7 @@ export const skills: SkillItem[] = [
   {
     name: 'Sentry',
     years: '6 months',
-    category: 'Testing',
+    category: 'Others',
     proficiency: onBusiness,
     picture: '/icons/Sentry.svg',
     pictureColor: '#362D59',
@@ -446,7 +446,7 @@ export const skills: SkillItem[] = [
   {
     name: 'Ollama',
     years: selfStudy,
-    category: 'API',
+    category: 'AI',
     proficiency: selfStudy,
     picture: '/icons/Ollama.svg',
     pictureColor: '#000000',
@@ -454,7 +454,7 @@ export const skills: SkillItem[] = [
   {
     name: 'RAG',
     years: '3 months',
-    category: 'API',
+    category: 'AI',
     proficiency: onBusiness,
     picture: '/icons/RAG.svg',
     pictureColor: '#FF6B6B',
@@ -462,7 +462,7 @@ export const skills: SkillItem[] = [
   {
     name: 'STT',
     years: '3 months',
-    category: 'API',
+    category: 'AI',
     proficiency: onBusiness,
     picture: '/icons/STT.svg',
     pictureColor: '#4A90D9',
@@ -470,7 +470,7 @@ export const skills: SkillItem[] = [
   {
     name: 'TTS',
     years: '3 months',
-    category: 'API',
+    category: 'AI',
     proficiency: onBusiness,
     picture: '/icons/TTS.svg',
     pictureColor: '#4A90D9',
@@ -478,7 +478,7 @@ export const skills: SkillItem[] = [
   {
     name: 'Whisper(local)',
     years: '3 months',
-    category: 'API',
+    category: 'AI',
     proficiency: onBusiness,
     picture: '/icons/Whisper.svg',
     pictureColor: '#000000',

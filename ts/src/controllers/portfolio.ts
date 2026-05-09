@@ -22,6 +22,7 @@ import {
   notifications,
 } from '../constants/index.js';
 import {generatePortfolioPDF} from '../services/pdfService.js';
+import {generatePortfolioExcel} from '../services/excelService.js';
 
 // Get profile information
 export const getProfile = ({query, set}: Context) => {
@@ -266,7 +267,6 @@ export const getArticles = async ({set}: Context) => {
 export const downloadPortfolioPDF = async ({query, set}: Context) => {
   try {
     const lang = (query.lang as string) || 'en';
-    const format = (query.format as string) || 'standard';
     const includeProjects = query.projects !== 'false';
     const includeExperience = query.experience !== 'false';
     const includeCertifications = query.certifications !== 'false';
@@ -274,13 +274,6 @@ export const downloadPortfolioPDF = async ({query, set}: Context) => {
 
     const pdfBuffer = await generatePortfolioPDF({
       lang,
-      format: format as
-        | 'standard'
-        | 'compact'
-        | 'executive'
-        | 'technical'
-        | 'academic'
-        | 'modern',
       includeProjects,
       includeExperience,
       includeCertifications,
@@ -301,5 +294,26 @@ export const downloadPortfolioPDF = async ({query, set}: Context) => {
       message: 'Error generating portfolio PDF',
       data: null,
     };
+  }
+};
+
+export const downloadPortfolioExcel = async ({query, set}: Context) => {
+  try {
+    const lang = ((query.lang as string) || 'en') as 'en' | 'ja';
+
+    const buf = await generatePortfolioExcel({lang});
+
+    const filename = `portfolio_${lang === 'en' ? 'english' : 'japanese'}_${new Date().toISOString().split('T')[0]}.xlsx`;
+
+    set.headers['content-type'] =
+      'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+    set.headers['content-disposition'] = `attachment; filename="${filename}"`;
+    set.headers['content-length'] = String(buf.length);
+
+    return new Response(buf);
+  } catch (error) {
+    console.error('Excel Generation Error:', error);
+    set.status = 500;
+    return {message: 'Error generating portfolio Excel', data: null};
   }
 };

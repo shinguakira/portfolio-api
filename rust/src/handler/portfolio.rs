@@ -50,7 +50,7 @@ pub async fn health() -> HttpResponse {
 
 pub async fn root() -> HttpResponse {
     HttpResponse::Ok().json(RootResponse {
-        message: "Welcome to Shingu Akira Portfolio API".to_string(),
+        message: "Welcome to Portfolio API".to_string(),
         version: "1.0.0".to_string(),
         endpoints: vec![
             EndpointInfo { path: "/health".to_string(), description: "Health check endpoint".to_string() },

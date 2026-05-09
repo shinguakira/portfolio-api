@@ -4,11 +4,11 @@ import Model.Contact (Contact(..), SocialMedia(..), ContactResponseInfo(..))
 
 contactData :: Contact
 contactData = Contact
-  { ctEmail = "shinguakira1022@gmail.com"
+  { ctEmail = "user@example.com"
   , ctPhone = "+81 XX-XXXX-XXXX"
   , ctAddress = "Tokyo, Japan"
   , ctSocialMedia = SocialMedia
-      { smLinkedin = "https://linkedin.com/in/shinguakira"
+      { smLinkedin = "https://linkedin.com/in/username"
       , smGithub = "https://github.com/shinguakira"
       }
   , ctPreferredMethod = "email"

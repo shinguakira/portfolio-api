@@ -63,8 +63,8 @@ projectsJA =
       , projLiveUrl = ""
       }
   , Project
-      { projTitle = "\31070\23470\31456\24773\22577\21462\24471API"
-      , projDescription = "\31070\23470\31456\24773\22577\21462\24471API\n\12509\12540\12488\12501\12457\12522\12458\12434\21029\12497\12479\12540\12531\20316\25104\12420\12289\23653\27508\26360\20316\25104\20966\29702\12398\12383\12417\12395\12289\12513\12531\12486\12490\12531\12473\26178\38291\21066\28187\12398\12383\12417\12289\20849\36890\12395\20351\29992\12391\12365\12427API\n\12487\12540\12479\12399DB\12394\12375\12391json\12391\23450\32681\12290\n"
+      { projTitle = "\12509\12540\12488\12501\12457\12522\12458\24773\22577\21462\24471API"
+      , projDescription = "\12509\12540\12488\12501\12457\12522\12458\24773\22577\21462\24471API\n\12509\12540\12488\12501\12457\12522\12458\12434\21029\12497\12479\12540\12531\20316\25104\12420\12289\23653\27508\26360\20316\25104\20966\29702\12398\12383\12417\12395\12289\12513\12531\12486\12490\12531\12473\26178\38291\21066\28187\12398\12383\12417\12289\20849\36890\12395\20351\29992\12391\12365\12427API\n\12487\12540\12479\12399DB\12394\12375\12391json\12391\23450\32681\12290\n"
       , projImage = "/images/projects/portfolio-api.png"
       , projTechnologies = ["TypeScript", "Express.js", "AWS Lambda"]
       , projGithubUrl = "https://github.com/shinguakira/portfolio-api"
@@ -79,9 +79,9 @@ projectsJA =
       , projLiveUrl = "https://country-app-remix.vercel.app/"
       }
   , Project
-      { projTitle = "\31070\23470\31456\24773\22577\29992RAG\12481\12515\12483\12488\12508\12483\12488"
-      , projDescription = "\31070\23470\31456\24773\22577\29992RAG\12481\12515\12483\12488\12508\12483\12488\n\35501\12415\36796\12414\12379\12383\12505\12463\12488\12523\24773\22577\12363\12425\31070\23470\31456\12395\38306\12377\12427\24773\22577\12434\21462\24471\12377\12427RAG\12481\12515\12483\12488\12508\12483\12488\n\31934\24230\21521\19978\12398\12383\12417\12505\12463\12488\12523\12398\36817\20284\12398\35519\25972\12420\12289\12487\12540\12479\12398\21306\20999\12426\12398\36969\20999\12363\12364\24517\35201\12381\12358\12290\nAmazon Kendra\12434\20351\12387\12383RAG\12481\12515\12483\12488\12508\12483\12488\12395\20284\12383\25369\21205\n"
-      , projImage = "/images/projects/rag-chatbot-akirashingu.jpg"
+      { projTitle = "\12509\12540\12488\12501\12457\12522\12458\24773\22577\29992RAG\12481\12515\12483\12488\12508\12483\12488"
+      , projDescription = "\12509\12540\12488\12501\12457\12522\12458\24773\22577\29992RAG\12481\12515\12483\12488\12508\12483\12488\n\35501\12415\36796\12414\12379\12383\12505\12463\12488\12523\24773\22577\12363\12425\12509\12540\12488\12501\12457\12522\12458\12395\38306\12377\12427\24773\22577\12434\21462\24471\12377\12427RAG\12481\12515\12483\12488\12508\12483\12488\n\31934\24230\21521\19978\12398\12383\12417\12505\12463\12488\12523\12398\36817\20284\12398\35519\25972\12420\12289\12487\12540\12479\12398\21306\20999\12426\12398\36969\20999\12363\12364\24517\35201\12381\12358\12290\nAmazon Kendra\12434\20351\12387\12383RAG\12481\12515\12483\12488\12508\12483\12488\12395\20284\12383\25369\21205\n"
+      , projImage = "/images/projects/rag-chatbot.jpg"
       , projTechnologies = ["React", "TypeScript", "Next.js", "Tailwind CSS", "Shadcn/ui", "Vercel", "AstraDB(Apache Cassandra)", "@ai-sdk/react", "OpenAI API", "shadcn", "lucide-react"]
       , projGithubUrl = "https://github.com/shinguakira/rag-skill-match"
       , projLiveUrl = ""
@@ -203,8 +203,8 @@ projectsEN =
       , projLiveUrl = ""
       }
   , Project
-      { projTitle = "Akira Shingu Information API"
-      , projDescription = "An API for retrieving information about Akira Shingu.\nCreated to reduce maintenance time for portfolio creation and resume processing.\nData is defined in JSON without a database.\n"
+      { projTitle = "Portfolio Information API"
+      , projDescription = "An API for retrieving portfolio information.\nCreated to reduce maintenance time for portfolio creation and resume processing.\nData is defined in JSON without a database.\n"
       , projImage = "/images/projects/portfolio-api.png"
       , projTechnologies = ["TypeScript", "Express.js", "AWS Lambda"]
       , projGithubUrl = "https://github.com/shinguakira/portfolio-api"
@@ -219,9 +219,9 @@ projectsEN =
       , projLiveUrl = "https://country-app-remix.vercel.app/"
       }
   , Project
-      { projTitle = "RAG Chatbot for Akira Shingu Information"
-      , projDescription = "A RAG chatbot that retrieves information about Akira Shingu from loaded vector data.\nRequires adjustment of vector approximation and appropriate data segmentation for accuracy improvement.\nSimilar behavior to an Amazon Kendra-based RAG chatbot.\n"
-      , projImage = "/images/projects/rag-chatbot-akirashingu.jpg"
+      { projTitle = "Portfolio Information RAG Chatbot"
+      , projDescription = "A RAG chatbot that retrieves portfolio information from loaded vector data.\nRequires adjustment of vector approximation and appropriate data segmentation for accuracy improvement.\nSimilar behavior to an Amazon Kendra-based RAG chatbot.\n"
+      , projImage = "/images/projects/rag-chatbot.jpg"
       , projTechnologies = ["React", "TypeScript", "Next.js", "Tailwind CSS", "Shadcn/ui", "Vercel", "AstraDB(Apache Cassandra)", "@ai-sdk/react", "OpenAI API", "shadcn", "lucide-react"]
       , projGithubUrl = "https://github.com/shinguakira/rag-skill-match"
       , projLiveUrl = ""

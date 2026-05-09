@@ -1,7 +1,7 @@
 {
   "name": "@shinguakira/portfolio-api-types",
   "version": "1.2.0",
-  "description": "TypeScript types for Shingu Akira Portfolio API responses",
+  "description": "TypeScript types for Portfolio API responses",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
@@ -20,7 +20,7 @@
     "types",
     "typescript"
   ],
-  "author": "Shingu Akira",
+  "author": "shinguakira",
   "license": "MIT",
   "repository": {
     "type": "git",

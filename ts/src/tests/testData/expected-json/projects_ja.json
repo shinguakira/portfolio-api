@@ -9,7 +9,7 @@
       "Vercel"
     ],
     "title": "開発予定を考えているアプリ",
-    "description": "[採用サイト間のプロフィール自動入力(データ連携)]\n[画像認識を使用した何か]\n[Visual Studioのプロジェクトファイル変換アプリ]\n[何かのマッチングアプリ]\n[何かのサイトのadvanced検索]\n[オンライン会議アプリ]\n[タイピング×パワハラ3Dボット]\n[タイピング×Google Map]\n[タイピング×2Dゲーム]\n",
+    "description": "[採用サイト間のプロフィール自動入力(データ連携)]\n[画像認識を使用した何か]\n[Visual Studioのプロジェクトファイル変換アプリ]\n[何かのマッチングアプリ]\n[オンライン会議アプリ]\n[タイピング×パワハラ3Dボット]\n[タイピング×Google Map]\n[タイピング×2Dゲーム]\n",
     "image": "/images/projects/onDeveloping.jpg",
     "githubUrl": "",
     "liveUrl": ""
@@ -114,8 +114,8 @@
       "Express.js",
       "AWS Lambda"
     ],
-    "title": "神宮章情報取得API",
-    "description": "神宮章情報取得API\nポートフォリオを別パターン作成や、履歴書作成処理のために、メンテナンス時間削減のため、共通に使用できるAPI\nデータはDBなしでjsonで定義。\n",
+    "title": "ポートフォリオ情報取得API",
+    "description": "ポートフォリオ情報取得API\nポートフォリオを別パターン作成や、履歴書作成処理のために、メンテナンス時間削減のため、共通に使用できるAPI\nデータはDBなしでjsonで定義。\n",
     "image": "/images/projects/portfolio-api.png",
     "githubUrl": "https://github.com/shinguakira/portfolio-api",
     "liveUrl": "https://portfolio-api-ten-delta.vercel.app/"
@@ -148,9 +148,9 @@
       "OpenAI API",
       "lucide-react"
     ],
-    "title": "神宮章情報用RAGチャットボット",
-    "description": "神宮章情報用RAGチャットボット\n読み込ませたベクトル情報から神宮章に関する情報を取得するRAGチャットボット\n精度向上のためベクトルの近似の調整や、データの区切りの適切かが必要そう。\nAmazon Kendraを使ったRAGチャットボットに似た挙動\n",
-    "image": "/images/projects/rag-chatbot-akirashingu.jpg",
+    "title": "ポートフォリオ情報用RAGチャットボット",
+    "description": "ポートフォリオ情報用RAGチャットボット\n読み込ませたベクトル情報からポートフォリオに関する情報を取得するRAGチャットボット\n精度向上のためベクトルの近似の調整や、データの区切りの適切かが必要そう。\nAmazon Kendraを使ったRAGチャットボットに似た挙動\n",
+    "image": "/images/projects/rag-chatbot.jpg",
     "githubUrl": "https://github.com/shinguakira/rag-skill-match",
     "liveUrl": ""
   },
