@@ -151,13 +151,13 @@ const styles = StyleSheet.create({
   },
 });
 
-interface PDFGenerationOptions {
+type PDFGenerationOptions = {
   lang?: string;
   includeProjects?: boolean;
   includeExperience?: boolean;
   includeCertifications?: boolean;
   includeEducation?: boolean;
-}
+};
 
 // Standard format — full info, ordered: Summary → Skills → Experience → Education → Certifications → Strong Points → FAQ → Projects
 const createStandardPDF = ({
