@@ -11,14 +11,14 @@ import (
 	"github.com/shinguakira/portfolio-api-go/service"
 )
 
-func respondJSON(w http.ResponseWriter, status int, payload interface{}) {
+func respondJSON(w http.ResponseWriter, status int, payload any) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(status)
 	json.NewEncoder(w).Encode(payload)
 }
 
 func respondError(w http.ResponseWriter, status int, message string) {
-	respondJSON(w, status, model.ApiResponse[interface{}]{
+	respondJSON(w, status, model.ApiResponse[any]{
 		Message: message,
 		Data:    nil,
 	})
@@ -38,7 +38,7 @@ func Root(w http.ResponseWriter, r *http.Request) {
 		Path        string `json:"path"`
 		Description string `json:"description"`
 	}
-	respondJSON(w, http.StatusOK, map[string]interface{}{
+	respondJSON(w, http.StatusOK, map[string]any{
 		"message": "Welcome to Portfolio API",
 		"version": "1.0.0",
 		"endpoints": []Endpoint{

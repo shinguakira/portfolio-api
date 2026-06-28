@@ -42,7 +42,7 @@ func TestHealthEndpoint(t *testing.T) {
 		t.Errorf("expected status 200, got %d", w.Code)
 	}
 
-	var result map[string]interface{}
+	var result map[string]any
 	if err := json.Unmarshal(w.Body.Bytes(), &result); err != nil {
 		t.Fatalf("failed to parse response: %v", err)
 	}
@@ -64,14 +64,14 @@ func TestRootEndpoint(t *testing.T) {
 		t.Errorf("expected status 200, got %d", w.Code)
 	}
 
-	var result map[string]interface{}
+	var result map[string]any
 	if err := json.Unmarshal(w.Body.Bytes(), &result); err != nil {
 		t.Fatalf("failed to parse response: %v", err)
 	}
 	if result["message"] != "Welcome to Portfolio API" {
 		t.Errorf("unexpected message: %v", result["message"])
 	}
-	endpoints, ok := result["endpoints"].([]interface{})
+	endpoints, ok := result["endpoints"].([]any)
 	if !ok {
 		t.Fatal("expected endpoints to be an array")
 	}
