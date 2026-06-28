@@ -39,8 +39,8 @@ func Root(w http.ResponseWriter, r *http.Request) {
 		Description string `json:"description"`
 	}
 	respondJSON(w, http.StatusOK, map[string]any{
-		"message": "Welcome to Portfolio API",
-		"version": "1.0.0",
+		"message": WelcomeMessage,
+		"version": APIVersion,
 		"endpoints": []Endpoint{
 			{Path: "/health", Description: "Health check endpoint"},
 			{Path: "/api/profile", Description: "Get profile information"},
