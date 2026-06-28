@@ -34,27 +34,10 @@ func Health(w http.ResponseWriter, r *http.Request) {
 
 // GET /
 func Root(w http.ResponseWriter, r *http.Request) {
-	type Endpoint struct {
-		Path        string `json:"path"`
-		Description string `json:"description"`
-	}
 	respondJSON(w, http.StatusOK, map[string]any{
-		"message": WelcomeMessage,
-		"version": APIVersion,
-		"endpoints": []Endpoint{
-			{Path: "/health", Description: "Health check endpoint"},
-			{Path: "/api/profile", Description: "Get profile information"},
-			{Path: "/api/skills", Description: "Get skills information"},
-			{Path: "/api/projects", Description: "Get projects information"},
-			{Path: "/api/experience", Description: "Get work experience information"},
-			{Path: "/api/education", Description: "Get education history"},
-			{Path: "/api/certifications", Description: "Get certification information"},
-			{Path: "/api/faqs", Description: "Get FAQs"},
-			{Path: "/api/links", Description: "Get important links"},
-			{Path: "/api/strong-points", Description: "Get strong points information"},
-			{Path: "/api/changelogs", Description: "Get changelog history"},
-			{Path: "/api/download-pdf", Description: "Download portfolio as PDF (query: lang=en|ja, format=standard|compact|executive|technical|academic|modern, projects=true|false, experience=true|false, certifications=true|false, education=true|false)"},
-		},
+		"message":   WelcomeMessage,
+		"version":   APIVersion,
+		"endpoints": RootEndpoints,
 	})
 }
 
