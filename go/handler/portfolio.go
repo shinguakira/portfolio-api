@@ -34,11 +34,7 @@ func Health(w http.ResponseWriter, r *http.Request) {
 
 // GET /
 func Root(w http.ResponseWriter, r *http.Request) {
-	respondJSON(w, http.StatusOK, map[string]any{
-		"message":   WelcomeMessage,
-		"version":   APIVersion,
-		"endpoints": RootEndpoints,
-	})
+	respondJSON(w, http.StatusOK, RootResponse)
 }
 
 // GET /api/profile?lang=en|ja
