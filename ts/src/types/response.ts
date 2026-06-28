@@ -1,4 +1,4 @@
-export interface Response {
+export type Response<T> = {
   message: string;
-  data?: any;
-}
+  data?: T | null;
+};
