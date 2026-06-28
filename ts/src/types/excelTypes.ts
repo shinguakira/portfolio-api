@@ -1,6 +1,6 @@
-export type ExcelGenerationOptions = {
+export interface ExcelGenerationOptions {
   lang: 'en' | 'ja';
-};
+}
 
 export const CATEGORY_COLORS: Record<string, {fill: string; font: string}> = {
   Language: {fill: 'FFE8F5E9', font: 'FF1B5E20'},

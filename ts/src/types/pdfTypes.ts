@@ -5,7 +5,7 @@ import {EducationHistory} from './educationHistory.js';
 import {CertificationItem} from './certificationItem.js';
 import {StrongPoint} from './strongPoint.js';
 
-export type StandardPDFOptions = {
+export interface StandardPDFOptions {
   lang: string;
   profileData: LocalizedProfileData;
   localizedProjects: Project[];
@@ -17,4 +17,4 @@ export type StandardPDFOptions = {
   includeExperience: boolean;
   includeCertifications: boolean;
   includeEducation: boolean;
-};
+}
