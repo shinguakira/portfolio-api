@@ -310,7 +310,7 @@ export const downloadPortfolioExcel = async ({query, set}: Context) => {
     set.headers['content-disposition'] = `attachment; filename="${filename}"`;
     set.headers['content-length'] = String(buf.length);
 
-    return new Response(buf);
+    return new Response(Buffer.from(buf));
   } catch (error) {
     console.error('Excel Generation Error:', error);
     set.status = 500;

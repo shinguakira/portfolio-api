@@ -8,19 +8,8 @@ async function main() {
   await mkdir(OUTPUT_DIR, {recursive: true});
   console.log('Generating sample files to', OUTPUT_DIR);
 
-  const pdfFormats = [
-    'standard',
-    'compact',
-    'executive',
-    'technical',
-    'academic',
-    'modern',
-    'timeline',
-  ] as const;
-
   const buf = await generatePortfolioPDF({
     lang: 'en',
-    format: 'standard',
     includeProjects: true,
     includeExperience: true,
     includeCertifications: true,
