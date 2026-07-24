@@ -388,15 +388,6 @@ export const skills: SkillItem[] = [
     enabled: false, // hidden: niche i18n lib
   },
   {
-    name: 'Playwright',
-    years: '1 year',
-    category: 'Testing',
-    proficiency: onBusiness,
-    picture: '/icons/Playwright.svg',
-    pictureColor: '#2EAD33',
-    enabled: false, // hidden: merged into Playwright(TypeScript); still used as a project tag
-  },
-  {
     name: 'Sentry',
     years: '6 months',
     category: 'Others',
@@ -705,7 +696,6 @@ export const S = {
   turborepo: n('Turborepo'),
   lucideReact: n('lucide-react'),
   nextIntl: n('next-intl'),
-  playwrightStandalone: n('Playwright'),
   sentry: n('Sentry'),
   awsLambda: n('AWS Lambda'),
   awsS3: n('AWS S3'),
