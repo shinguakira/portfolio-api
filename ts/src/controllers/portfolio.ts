@@ -20,6 +20,7 @@ import {
   strongPoint,
   otherSkills,
   notifications,
+  enabledSkills,
 } from '../constants/index.js';
 import {generatePortfolioPDF} from '../services/pdfService.js';
 import {generatePortfolioExcel} from '../services/excelService.js';
@@ -82,7 +83,10 @@ export const getProjects = ({query, set}: Context) => {
 // Get skills
 export const getSkills = ({set}: Context) => {
   try {
-    return {message: 'Skills data fetched successfully', data: skills};
+    return {
+      message: 'Skills data fetched successfully',
+      data: enabledSkills(skills),
+    };
   } catch (error) {
     set.status = 500;
     return {message: 'Error fetching skills data', data: null};
@@ -93,7 +97,7 @@ export const getOtherSkills = ({set}: Context) => {
   try {
     return {
       message: 'Other skills data fetched successfully',
-      data: otherSkills,
+      data: enabledSkills(otherSkills),
     };
   } catch (error) {
     set.status = 500;

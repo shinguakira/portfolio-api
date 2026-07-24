@@ -1,6 +1,15 @@
 import {onBusiness, selfStudy} from './common.js';
 import type {SkillItem} from '../types/skillItem.js';
 
+// Return only the enabled skills, with the internal `enabled` flag stripped so
+// the response shape is identical to before (consumers never see the flag).
+// `enabled === false` excludes an entry; undefined/`true` keeps it — so with no
+// flags set, every skill is enabled.
+export const enabledSkills = (items: SkillItem[]): SkillItem[] =>
+  items
+    .filter((item) => item.enabled !== false)
+    .map(({enabled: _enabled, ...rest}) => rest);
+
 // main skills(Language,Libraries)
 export const skills: SkillItem[] = [
   {
