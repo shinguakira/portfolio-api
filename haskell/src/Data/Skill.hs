@@ -118,14 +118,6 @@ skills =
       , skPictureColor = Just "#764ABC"
       }
   , SkillItem
-      { skName         = "Context API"
-      , skCategory     = "State Management"
-      , skYears        = "1 year"
-      , skProficiency  = Just "onBusiness"
-      , skPicture      = Just "/icons/Redux.svg"
-      , skPictureColor = Just "#764ABC"
-      }
-  , SkillItem
       { skName         = "Prisma"
       , skCategory     = "ORM"
       , skYears        = "self-study"
@@ -278,30 +270,6 @@ skills =
       , skPictureColor = Just "#000000"
       }
   , SkillItem
-      { skName         = "codegen"
-      , skCategory     = "Frontend"
-      , skYears        = "1 year"
-      , skProficiency  = Just "onBusiness"
-      , skPicture      = Just "/icons/Codegen.svg"
-      , skPictureColor = Just "#E10098"
-      }
-  , SkillItem
-      { skName         = "babylon.js"
-      , skCategory     = "Frontend"
-      , skYears        = "self-study"
-      , skProficiency  = Just "self-study"
-      , skPicture      = Just "/icons/BabylonJS.svg"
-      , skPictureColor = Just "#BB464B"
-      }
-  , SkillItem
-      { skName         = "kaPlay"
-      , skCategory     = "Frontend"
-      , skYears        = "self-study"
-      , skProficiency  = Just "self-study"
-      , skPicture      = Just "/icons/KaPlay.svg"
-      , skPictureColor = Just "#4CAF50"
-      }
-  , SkillItem
       { skName         = "vectorDB(pgvector)"
       , skCategory     = "Database"
       , skYears        = "3 months"
@@ -346,14 +314,6 @@ otherSkills =
       , skPictureColor = Just "#6DB33F"
       }
   , SkillItem
-      { skName         = "StackBlitz(React)"
-      , skCategory     = "Others"
-      , skYears        = "self-study"
-      , skProficiency  = Just "self-study"
-      , skPicture      = Just "/icons/StackBlitz.svg"
-      , skPictureColor = Just "#1269D3"
-      }
-  , SkillItem
       { skName         = "Visual Studio(C,C++,C#)"
       , skCategory     = "Others"
       , skYears        = "8 months"
@@ -392,14 +352,6 @@ otherSkills =
       , skProficiency  = Just "onBusiness"
       , skPicture      = Just "/icons/Backlog.svg"
       , skPictureColor = Just "#181717"
-      }
-, SkillItem
-      { skName         = "A5:SQL Mk-2"
-      , skCategory     = "Others"
-      , skYears        = "1 year"
-      , skProficiency  = Just "onBusiness"
-      , skPicture      = Just "/icons/A5SQLMk2.svg"
-      , skPictureColor = Just "#336791"
       }
   , SkillItem
       { skName         = "Bun"

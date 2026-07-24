@@ -17,7 +17,6 @@ var Skills = []model.SkillItem{
 	{Name: "GraphQL", Years: "2 years", Category: "API", Proficiency: "onBusiness", Picture: "/icons/GraphQL.svg", PictureColor: "#E10098"},
 	{Name: "REST", Years: "2 years", Category: "API", Proficiency: "onBusiness", Picture: "/icons/REST.svg", PictureColor: "#61DAFB"},
 	{Name: "Redux", Years: "self-study", Category: "State Management", Proficiency: "self-study", Picture: "/icons/Redux.svg", PictureColor: "#764ABC"},
-	{Name: "Context API", Years: "1 year", Category: "State Management", Proficiency: "onBusiness", Picture: "/icons/Redux.svg", PictureColor: "#764ABC"},
 	{Name: "Prisma", Years: "self-study", Category: "ORM", Proficiency: "self-study", Picture: "/icons/Prisma.svg", PictureColor: "#2D3748"},
 	{Name: "Selenium(Python)", Years: "1 year", Category: "Testing", Proficiency: "onBusiness", Picture: "/icons/Selenium-Python.svg", PictureColor: "#43B02A"},
 	{Name: "Playwright(TypeScript)", Years: "1 year", Category: "Testing", Proficiency: "onBusiness", Picture: "/icons/Playwright.svg", PictureColor: "#C21325"},
@@ -37,9 +36,6 @@ var Skills = []model.SkillItem{
 	{Name: "React Hook Form", Years: "2 years", Category: "Frontend", Proficiency: "onBusiness", Picture: "/icons/ReactHookForm.svg", PictureColor: "#FF6B35"},
 	{Name: "zod", Years: "1 year", Category: "Frontend", Proficiency: "onBusiness", Picture: "/icons/Zod.svg", PictureColor: "#3E67B1"},
 	{Name: "NextAuth", Years: "1 year", Category: "Frontend", Proficiency: "onBusiness", Picture: "/icons/NextAuth.png", PictureColor: "#000000"},
-	{Name: "codegen", Years: "1 year", Category: "Frontend", Proficiency: "onBusiness", Picture: "/icons/Codegen.svg", PictureColor: "#E10098"},
-	{Name: "babylon.js", Years: "self-study", Category: "Frontend", Proficiency: "self-study", Picture: "/icons/BabylonJS.svg", PictureColor: "#BB464B"},
-	{Name: "kaPlay", Years: "self-study", Category: "Frontend", Proficiency: "self-study", Picture: "/icons/KaPlay.svg", PictureColor: "#4CAF50"},
 	{Name: "vectorDB(pgvector)", Years: "3 months", Category: "Database", Proficiency: "onBusiness", Picture: "/icons/AstraDB.svg", PictureColor: "#FF6B6B"},
 }
 
@@ -48,12 +44,10 @@ var OtherSkills = []model.SkillItem{
 	{Name: "IntelliJ IDEA(Typescript)", Years: "1 year", Category: "Others", Proficiency: "onBusiness", Picture: "/icons/IntelliJIDEA.svg", PictureColor: "#000000"},
 	{Name: "Eclipse(Java,Javascript)", Years: "1 year", Category: "Others", Proficiency: "onBusiness", Picture: "/icons/Eclipse.svg", PictureColor: "#0089D6"},
 	{Name: "Spring Tool Suite4(Java,Javascript)", Years: "4 months", Category: "Others", Proficiency: "onBusiness", Picture: "/icons/SpringToolSuite.svg", PictureColor: "#6DB33F"},
-	{Name: "StackBlitz(React)", Years: "self-study", Category: "Others", Proficiency: "self-study", Picture: "/icons/StackBlitz.svg", PictureColor: "#1269D3"},
 	{Name: "Visual Studio(C,C++,C#)", Years: "8 months", Category: "Others", Proficiency: "onBusiness", Picture: "/icons/Visual-Studio-C-Cpp-CSharp.svg", PictureColor: "#5C2D91"},
 	{Name: "Git(Tortoise Git)", Years: "2 year", Category: "Others", Proficiency: "onBusiness", Picture: "/icons/Git-Tortoise-Git.svg", PictureColor: "#F05032"},
 	{Name: "Github", Years: "2 year", Category: "Others", Proficiency: "onBusiness", Picture: "/icons/Github.svg", PictureColor: "#181717"},
 	{Name: "Swagger", Years: "6 months", Category: "Others", Proficiency: "onBusiness", Picture: "/icons/Swagger.svg", PictureColor: "#85EA2D"},
 	{Name: "Backlog", Years: "1 year", Category: "Others", Proficiency: "onBusiness", Picture: "/icons/Backlog.svg", PictureColor: "#181717"},
-	{Name: "A5:SQL Mk-2", Years: "1 year", Category: "Others", Proficiency: "onBusiness", Picture: "/icons/A5SQLMk2.svg", PictureColor: "#336791"},
 	{Name: "Bun", Years: "self-study", Category: "Others", Proficiency: "self-study", Picture: "/icons/Bun.svg", PictureColor: "#000000"},
 }
