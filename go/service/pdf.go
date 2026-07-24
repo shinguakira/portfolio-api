@@ -276,7 +276,7 @@ func createCompactPDF(opts PDFOptions) ([]byte, error) {
 	pdf.CellFormat(0, 6, profileData.Title, "", 1, "", false, 0, "")
 	pdf.SetFont("Helvetica", "", 9)
 	pdf.SetTextColor(102, 102, 102)
-	pdf.CellFormat(0, 5, data.ContactData.Email+" | "+data.ContactData.SocialMedia.Github+" | "+data.ContactData.SocialMedia.LinkedIn, "", 1, "", false, 0, "")
+	pdf.CellFormat(0, 5, data.ContactData.Email+" | "+data.ContactData.SocialMedia.Github, "", 1, "", false, 0, "")
 	pdf.Ln(4)
 
 	// Summary
@@ -378,7 +378,7 @@ func createExecutivePDF(opts PDFOptions) ([]byte, error) {
 	pdf.CellFormat(0, 7, profileData.Title, "", 1, "", false, 0, "")
 	pdf.SetFont("Helvetica", "", 11)
 	pdf.SetTextColor(102, 102, 102)
-	pdf.CellFormat(0, 6, data.ContactData.Email+" | "+data.ContactData.SocialMedia.LinkedIn, "", 1, "", false, 0, "")
+	pdf.CellFormat(0, 6, data.ContactData.Email+" | "+data.ContactData.SocialMedia.Github, "", 1, "", false, 0, "")
 	pdf.Ln(8)
 
 	// Executive Summary
@@ -579,7 +579,7 @@ func createModernPDF(opts PDFOptions) ([]byte, error) {
 	pdf.SetFont("Helvetica", "", 13)
 	pdf.CellFormat(0, 7, profileData.Title, "", 1, "C", false, 0, "")
 	pdf.SetFont("Helvetica", "", 10)
-	contactLine := data.ContactData.Email + " | " + data.ContactData.SocialMedia.LinkedIn + " | " + data.ContactData.SocialMedia.Github
+	contactLine := data.ContactData.Email + " | " + data.ContactData.SocialMedia.Github
 	pdf.CellFormat(0, 6, contactLine, "", 1, "C", false, 0, "")
 	pdf.SetY(50)
 

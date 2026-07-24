@@ -1,0 +1,335 @@
+// Portfolio API の gRPC 定義ファイル(スキーマ)。
+//
+// このファイルが「契約(コントラクト)」です。ここに書いた service / rpc / message を
+// もとに、`buf generate` が Go のサーバ用・クライアント用コードを自動生成します。
+// REST でいう「URL と JSON の形」を、gRPC ではこの .proto で厳密に定義します。
+
+// proto3 は Protocol Buffers の文法バージョン。今はこれが標準です。
+syntax = "proto3";
+
+// package は proto 上の名前空間。バージョンを含めるのが慣習(portfolio.v1)。
+// 将来 v2 を作っても v1 と共存できます。
+package portfolio.v1;
+
+// 生成される Go コードのパッケージ(import パス;パッケージ名)を指定します。
+// gen/portfolio/v1 ディレクトリに、パッケージ名 portfoliov1 で出力されます。
+option go_package = "github.com/shinguakira/portfolio-api-go/gen/portfolio/v1;portfoliov1";
+
+// =============================================================================
+// service = gRPC の「サービス(=エンドポイントの集合)」。REST のルータに相当。
+// rpc     = 呼び出せる「メソッド(=1 つの API)」。REST の 1 エンドポイントに相当。
+//           rpc 名前(リクエスト型) returns (レスポンス型); という形で書きます。
+// =============================================================================
+service PortfolioService {
+  // ヘルスチェック(REST の GET /health 相当)
+  rpc HealthCheck(HealthCheckRequest) returns (HealthCheckResponse);
+
+  // プロフィール取得(REST の GET /api/profile?lang= 相当)
+  rpc GetProfile(GetProfileRequest) returns (GetProfileResponse);
+
+  // 職務経歴(GET /api/experience?lang=)
+  rpc GetExperience(GetExperienceRequest) returns (GetExperienceResponse);
+
+  // プロジェクト(GET /api/projects?lang=)
+  rpc GetProjects(GetProjectsRequest) returns (GetProjectsResponse);
+
+  // スキル(GET /api/skills)
+  rpc GetSkills(GetSkillsRequest) returns (GetSkillsResponse);
+
+  // その他スキル(GET /api/other-skills)
+  rpc GetOtherSkills(GetOtherSkillsRequest) returns (GetOtherSkillsResponse);
+
+  // 学歴(GET /api/education?lang=)
+  rpc GetEducation(GetEducationRequest) returns (GetEducationResponse);
+
+  // 連絡先(GET /api/contact)
+  rpc GetContact(GetContactRequest) returns (GetContactResponse);
+
+  // 資格(GET /api/certifications?lang=)
+  rpc GetCertifications(GetCertificationsRequest) returns (GetCertificationsResponse);
+
+  // 変更履歴(GET /api/changelogs?lang=)
+  rpc GetChangelogs(GetChangelogsRequest) returns (GetChangelogsResponse);
+
+  // FAQ(GET /api/faqs?lang=)
+  rpc GetFaqs(GetFaqsRequest) returns (GetFaqsResponse);
+
+  // リンク集(GET /api/links)
+  rpc GetLinks(GetLinksRequest) returns (GetLinksResponse);
+
+  // 強み(GET /api/strong-points?lang=)
+  rpc GetStrongPoints(GetStrongPointsRequest) returns (GetStrongPointsResponse);
+
+  // ポートフォリオ PDF 生成(GET /api/download-pdf)。
+  // レスポンスにバイナリ(bytes)を載せられるのが gRPC のわかりやすい利点の一つ。
+  rpc DownloadPortfolioPDF(DownloadPortfolioPDFRequest) returns (DownloadPortfolioPDFResponse);
+}
+
+// =============================================================================
+// message = 構造体(データの型)。REST の JSON オブジェクトに相当。
+// 各フィールドの末尾の数字 (= 1, = 2 ...) は「フィールド番号(タグ)」で、
+// バイナリ送受信時にフィールドを識別する ID。once 決めたら変更しないのがルール。
+// =============================================================================
+
+// ---- 共通・小さな部品 -------------------------------------------------------
+
+// SNS リンク
+message SocialLink {
+  string platform = 1;
+  string url = 2;
+  string icon = 3;
+}
+
+// ---- Health -----------------------------------------------------------------
+
+message HealthCheckRequest {}
+
+message HealthCheckResponse {
+  string status = 1;
+  string timestamp = 2;
+}
+
+// ---- Profile ----------------------------------------------------------------
+
+message Profile {
+  string name = 1;
+  string location = 2;
+  string avatar_url = 3;
+  repeated SocialLink social_links = 4; // repeated = 配列/スライス
+  string title = 5;
+  string summary = 6;
+  string bio = 7;
+}
+
+message GetProfileRequest {
+  string lang = 1; // "en" または "ja"(空なら ja 扱い)
+}
+
+message GetProfileResponse {
+  string message = 1; // REST の ApiResponse.message 相当
+  Profile data = 2;   // REST の ApiResponse.data 相当
+}
+
+// ---- Experience -------------------------------------------------------------
+
+message WorkExperience {
+  string company = 1;
+  string project_overview = 2;
+  string period = 3;
+  string team_size = 4;
+  string role = 5;
+  string man_month = 6;
+  repeated string description = 7;
+  repeated string archivement = 8;
+  repeated string technologies = 9;
+}
+
+message GetExperienceRequest {
+  string lang = 1;
+}
+
+message GetExperienceResponse {
+  string message = 1;
+  repeated WorkExperience data = 2;
+}
+
+// ---- Projects ---------------------------------------------------------------
+
+message Project {
+  string title = 1;
+  string description = 2;
+  string image = 3;
+  repeated string technologies = 4;
+  string github_url = 5;
+  string live_url = 6;
+}
+
+message GetProjectsRequest {
+  string lang = 1;
+}
+
+message GetProjectsResponse {
+  string message = 1;
+  repeated Project data = 2;
+}
+
+// ---- Skills -----------------------------------------------------------------
+
+message Skill {
+  string name = 1;
+  string category = 2;
+  string years = 3;
+  string proficiency = 4;
+  string picture = 5;
+  string picture_color = 6;
+}
+
+message GetSkillsRequest {}
+
+message GetSkillsResponse {
+  string message = 1;
+  repeated Skill data = 2;
+}
+
+message GetOtherSkillsRequest {}
+
+message GetOtherSkillsResponse {
+  string message = 1;
+  repeated Skill data = 2;
+}
+
+// ---- Education --------------------------------------------------------------
+
+message Education {
+  string start_year = 1;
+  string end_year = 2;
+  string school = 3;
+  string department = 4;
+  string description = 5;
+}
+
+message GetEducationRequest {
+  string lang = 1;
+}
+
+message GetEducationResponse {
+  string message = 1;
+  repeated Education data = 2;
+}
+
+// ---- Contact ----------------------------------------------------------------
+
+message SocialMedia {
+  string github = 1;
+}
+
+// 連絡可能時間帯・対応言語(model.ContactResponse に対応)
+message ResponseInfo {
+  string time_frame = 1;
+  repeated string languages = 2;
+}
+
+message Contact {
+  string email = 1;
+  string phone = 2;
+  string address = 3;
+  SocialMedia social_media = 4;
+  string preferred_method = 5;
+  repeated string available_for = 6;
+  ResponseInfo response = 7;
+}
+
+message GetContactRequest {}
+
+message GetContactResponse {
+  string message = 1;
+  Contact data = 2;
+}
+
+// ---- Certifications ---------------------------------------------------------
+
+message Certification {
+  int32 id = 1;
+  string name = 2;
+  string organization = 3;
+  string date = 4;
+  string verify_link = 5;
+}
+
+message GetCertificationsRequest {
+  string lang = 1;
+}
+
+message GetCertificationsResponse {
+  string message = 1;
+  repeated Certification data = 2;
+}
+
+// ---- Changelogs -------------------------------------------------------------
+
+message ChangelogChange {
+  string type = 1;
+  string description = 2;
+}
+
+message Changelog {
+  string version = 1;
+  string date = 2;
+  repeated ChangelogChange changes = 3;
+}
+
+message GetChangelogsRequest {
+  string lang = 1;
+}
+
+message GetChangelogsResponse {
+  string message = 1;
+  repeated Changelog data = 2;
+}
+
+// ---- FAQs -------------------------------------------------------------------
+
+message Faq {
+  string question = 1;
+  string answer = 2;
+  string size = 3;
+  string category = 4;
+}
+
+message GetFaqsRequest {
+  string lang = 1;
+}
+
+message GetFaqsResponse {
+  string message = 1;
+  repeated Faq data = 2;
+}
+
+// ---- Links ------------------------------------------------------------------
+
+message Links {
+  string creadly_link = 1;
+  string restaurant_around_station_link = 2;
+  string advanced_search_youtube_link = 3;
+}
+
+message GetLinksRequest {}
+
+message GetLinksResponse {
+  string message = 1;
+  Links data = 2;
+}
+
+// ---- Strong points ----------------------------------------------------------
+
+message StrongPoint {
+  string size = 1;
+  string question = 2;
+  string answer = 3;
+}
+
+message GetStrongPointsRequest {
+  string lang = 1;
+}
+
+message GetStrongPointsResponse {
+  string message = 1;
+  repeated StrongPoint data = 2;
+}
+
+// ---- PDF --------------------------------------------------------------------
+
+message DownloadPortfolioPDFRequest {
+  string lang = 1;   // "en" | "ja"
+  string format = 2; // standard | compact | executive | technical | academic | modern
+  bool include_projects = 3;
+  bool include_experience = 4;
+  bool include_certifications = 5;
+  bool include_education = 6;
+}
+
+message DownloadPortfolioPDFResponse {
+  bytes pdf = 1;         // PDF 本体(バイナリ)
+  string filename = 2;   // 推奨ファイル名
+  string content_type = 3; // "application/pdf"
+}
