@@ -32,14 +32,6 @@
     "pictureColor": "#6DB33F"
   },
   {
-    "name": "StackBlitz(React)",
-    "years": "self-study",
-    "category": "Others",
-    "proficiency": "self-study",
-    "picture": "/icons/StackBlitz.svg",
-    "pictureColor": "#1269D3"
-  },
-  {
     "name": "Visual Studio(C,C++,C#)",
     "years": "8 months",
     "category": "Others",
@@ -78,14 +70,6 @@
     "proficiency": "onBusiness",
     "picture": "/icons/Backlog.svg",
     "pictureColor": "#181717"
-  },
-  {
-    "name": "A5:SQL Mk-2",
-    "years": "1 year",
-    "category": "Others",
-    "proficiency": "onBusiness",
-    "picture": "/icons/A5SQLMk2.svg",
-    "pictureColor": "#336791"
   },
   {
     "name": "Bun",

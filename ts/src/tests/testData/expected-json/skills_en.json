@@ -112,14 +112,6 @@
     "pictureColor": "#764ABC"
   },
   {
-    "name": "Context API",
-    "years": "1 year",
-    "category": "State Management",
-    "proficiency": "onBusiness",
-    "picture": "/icons/Redux.svg",
-    "pictureColor": "#764ABC"
-  },
-  {
     "name": "Prisma",
     "years": "self-study",
     "category": "ORM",
@@ -272,30 +264,6 @@
     "pictureColor": "#000000"
   },
   {
-    "name": "codegen",
-    "years": "1 year",
-    "category": "Others",
-    "proficiency": "onBusiness",
-    "picture": "/icons/Codegen.svg",
-    "pictureColor": "#E10098"
-  },
-  {
-    "name": "babylon.js",
-    "years": "self-study",
-    "category": "Frontend",
-    "proficiency": "self-study",
-    "picture": "/icons/BabylonJS.svg",
-    "pictureColor": "#BB464B"
-  },
-  {
-    "name": "kaPlay",
-    "years": "self-study",
-    "category": "Frontend",
-    "proficiency": "self-study",
-    "picture": "/icons/KaPlay.svg",
-    "pictureColor": "#4CAF50"
-  },
-  {
     "name": "vectorDB(pgvector)",
     "years": "3 months",
     "category": "Database",
@@ -342,38 +310,6 @@
     "proficiency": "onBusiness",
     "picture": "/icons/Vite.svg",
     "pictureColor": "#646CFF"
-  },
-  {
-    "name": "Turborepo",
-    "years": "self-study",
-    "category": "Others",
-    "proficiency": "self-study",
-    "picture": "/icons/Turborepo.svg",
-    "pictureColor": "#EF4444"
-  },
-  {
-    "name": "lucide-react",
-    "years": "1 year",
-    "category": "Frontend",
-    "proficiency": "onBusiness",
-    "picture": "/icons/Lucide.svg",
-    "pictureColor": "#F56565"
-  },
-  {
-    "name": "next-intl",
-    "years": "6 months",
-    "category": "Frontend",
-    "proficiency": "onBusiness",
-    "picture": "/icons/NextIntl.svg",
-    "pictureColor": "#000000"
-  },
-  {
-    "name": "Playwright",
-    "years": "1 year",
-    "category": "Testing",
-    "proficiency": "onBusiness",
-    "picture": "/icons/Playwright.svg",
-    "pictureColor": "#2EAD33"
   },
   {
     "name": "Sentry",

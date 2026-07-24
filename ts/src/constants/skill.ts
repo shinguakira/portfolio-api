@@ -131,6 +131,7 @@ export const skills: SkillItem[] = [
     proficiency: onBusiness,
     picture: '/icons/Redux.svg',
     pictureColor: '#764ABC',
+    enabled: false, // hidden: built into React, weak as a standalone skill
   },
   {
     name: 'Prisma',
@@ -291,6 +292,7 @@ export const skills: SkillItem[] = [
     proficiency: onBusiness,
     picture: '/icons/Codegen.svg',
     pictureColor: '#E10098',
+    enabled: false, // hidden: niche helper tool
   },
   {
     name: 'babylon.js',
@@ -299,6 +301,7 @@ export const skills: SkillItem[] = [
     proficiency: selfStudy,
     picture: '/icons/BabylonJS.svg',
     pictureColor: '#BB464B',
+    enabled: false, // hidden: niche (3D engine), self-study
   },
   {
     name: 'kaPlay',
@@ -307,6 +310,7 @@ export const skills: SkillItem[] = [
     proficiency: selfStudy,
     picture: '/icons/KaPlay.svg',
     pictureColor: '#4CAF50',
+    enabled: false, // hidden: niche game lib, self-study
   },
   {
     name: 'vectorDB(pgvector)',
@@ -363,6 +367,7 @@ export const skills: SkillItem[] = [
     proficiency: selfStudy,
     picture: '/icons/Turborepo.svg',
     pictureColor: '#EF4444',
+    enabled: false, // hidden: niche monorepo tool, self-study
   },
   {
     name: 'lucide-react',
@@ -371,6 +376,7 @@ export const skills: SkillItem[] = [
     proficiency: onBusiness,
     picture: '/icons/Lucide.svg',
     pictureColor: '#F56565',
+    enabled: false, // hidden: icon set, not a core skill
   },
   {
     name: 'next-intl',
@@ -379,6 +385,7 @@ export const skills: SkillItem[] = [
     proficiency: onBusiness,
     picture: '/icons/NextIntl.svg',
     pictureColor: '#000000',
+    enabled: false, // hidden: niche i18n lib
   },
   {
     name: 'Playwright',
@@ -387,6 +394,7 @@ export const skills: SkillItem[] = [
     proficiency: onBusiness,
     picture: '/icons/Playwright.svg',
     pictureColor: '#2EAD33',
+    enabled: false, // hidden: merged into Playwright(TypeScript); still used as a project tag
   },
   {
     name: 'Sentry',
@@ -567,6 +575,7 @@ export const otherSkills: SkillItem[] = [
     proficiency: selfStudy,
     picture: '/icons/StackBlitz.svg',
     pictureColor: '#1269D3',
+    enabled: false, // hidden: online IDE, niche
   },
   {
     name: 'Visual Studio(C,C++,C#)',
@@ -615,6 +624,7 @@ export const otherSkills: SkillItem[] = [
     proficiency: onBusiness,
     picture: '/icons/A5SQLMk2.svg',
     pictureColor: '#336791',
+    enabled: false, // hidden: niche DB client
   },
   {
     name: 'Bun',
