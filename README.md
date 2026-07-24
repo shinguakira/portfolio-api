@@ -68,9 +68,15 @@ npm run build      # Compile TypeScript
 ```bash
 cd go
 go mod tidy
-go run .           # Start server on port 3005
+go run .           # Start REST (port 3005) + gRPC (port 50051) servers
 go test ./...      # Run tests
 ```
+
+The Go backend also exposes the same data over **gRPC** (default port `50051`,
+override with `GRPC_PORT`) alongside REST. Server reflection and the standard
+health service are enabled. See [go/docs/grpc-guide-ja.md](go/docs/grpc-guide-ja.md)
+for a beginner-friendly explanation (terminology, REST vs gRPC, how to regenerate
+code and test with `grpcurl`).
 
 ### Rust
 

@@ -1,0 +1,13 @@
+# コード生成の設定(v2)。`buf generate` で使われます。
+# ここで指定したプラグインが .proto を読み、Go コードを gen/ 以下に出力します。
+version: v2
+plugins:
+  # protoc-gen-go: message(構造体)と、そのシリアライズ処理を生成 → *.pb.go
+  - local: protoc-gen-go
+    out: gen
+    opt: paths=source_relative # proto のパス構成をそのまま出力先に反映
+
+  # protoc-gen-go-grpc: service のサーバ/クライアント用インタフェースを生成 → *_grpc.pb.go
+  - local: protoc-gen-go-grpc
+    out: gen
+    opt: paths=source_relative

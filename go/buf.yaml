@@ -1,0 +1,13 @@
+# buf のワークスペース設定(v2)。
+# `buf` は protoc の代わりになるツールで、protoc バイナリ無しで
+# lint / 破壊的変更チェック / コード生成ができます。
+version: v2
+modules:
+  # .proto を置くディレクトリ(モジュールのルート)
+  - path: proto
+lint:
+  use:
+    - STANDARD # 命名規則などの標準ルール一式
+breaking:
+  use:
+    - FILE # 後方互換を壊す変更(フィールド番号の付け替え等)を検出
