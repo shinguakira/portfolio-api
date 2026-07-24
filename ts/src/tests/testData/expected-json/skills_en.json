@@ -202,7 +202,7 @@
   {
     "name": "Vercel",
     "years": "1 year",
-    "category": "Database",
+    "category": "Cloud",
     "proficiency": "onBusiness",
     "picture": "/icons/Vercel.svg",
     "pictureColor": "#000000"
@@ -274,7 +274,7 @@
   {
     "name": "codegen",
     "years": "1 year",
-    "category": "Frontend",
+    "category": "Others",
     "proficiency": "onBusiness",
     "picture": "/icons/Codegen.svg",
     "pictureColor": "#E10098"
@@ -338,7 +338,7 @@
   {
     "name": "Vite",
     "years": "1 year",
-    "category": "Frontend",
+    "category": "Others",
     "proficiency": "onBusiness",
     "picture": "/icons/Vite.svg",
     "pictureColor": "#646CFF"
@@ -346,7 +346,7 @@
   {
     "name": "Turborepo",
     "years": "self-study",
-    "category": "Frontend",
+    "category": "Others",
     "proficiency": "self-study",
     "picture": "/icons/Turborepo.svg",
     "pictureColor": "#EF4444"
@@ -378,7 +378,7 @@
   {
     "name": "Sentry",
     "years": "6 months",
-    "category": "Testing",
+    "category": "Others",
     "proficiency": "onBusiness",
     "picture": "/icons/Sentry.svg",
     "pictureColor": "#362D59"
@@ -442,7 +442,7 @@
   {
     "name": "Ollama",
     "years": "self-study",
-    "category": "API",
+    "category": "AI",
     "proficiency": "self-study",
     "picture": "/icons/Ollama.svg",
     "pictureColor": "#000000"
@@ -450,7 +450,7 @@
   {
     "name": "RAG",
     "years": "3 months",
-    "category": "API",
+    "category": "AI",
     "proficiency": "onBusiness",
     "picture": "/icons/RAG.svg",
     "pictureColor": "#FF6B6B"
@@ -458,7 +458,7 @@
   {
     "name": "STT",
     "years": "3 months",
-    "category": "API",
+    "category": "AI",
     "proficiency": "onBusiness",
     "picture": "/icons/STT.svg",
     "pictureColor": "#4A90D9"
@@ -466,7 +466,7 @@
   {
     "name": "TTS",
     "years": "3 months",
-    "category": "API",
+    "category": "AI",
     "proficiency": "onBusiness",
     "picture": "/icons/TTS.svg",
     "pictureColor": "#4A90D9"
@@ -474,7 +474,7 @@
   {
     "name": "Whisper(local)",
     "years": "3 months",
-    "category": "API",
+    "category": "AI",
     "proficiency": "onBusiness",
     "picture": "/icons/Whisper.svg",
     "pictureColor": "#000000"
