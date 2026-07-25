@@ -9,7 +9,7 @@
       "Vercel"
     ],
     "title": "Planned Applications",
-    "description": "[Auto-fill Profile Data Across Recruitment Sites]\n[Image Recognition Application]\n[Visual Studio Project File Converter]\n[Matching Application]\n[Online Meeting Application]\n[Typing Game with 3D Harassment Bot]\n[Typing Game with Google Map Integration]\n[Typing Game with 2D Game Elements]\n",
+    "description": "[Auto-fill Profile Data Across Recruitment Sites]\n[Image Recognition Application]\n[Visual Studio Project File Converter]\n[Matching Application]\n[Typing Game with 3D Harassment Bot]\n[Typing Game with Google Map Integration]\n[Typing Game with 2D Game Elements]\n",
     "image": "/images/projects/onDeveloping.jpg",
     "githubUrl": "",
     "liveUrl": ""
@@ -90,23 +90,6 @@
     "image": "/images/projects/3dConnectFour.png",
     "githubUrl": "https://github.com/shinguakira/3d-connect-four",
     "liveUrl": "https://3d-connect-four-vfpy.vercel.app/"
-  },
-  {
-    "technologies": [
-      "React",
-      "TypeScript",
-      "Remix",
-      "Hono.js",
-      "DB(未定)",
-      "Tailwind CSS",
-      "lucide-react",
-      "kaPlay"
-    ],
-    "title": "2D Game",
-    "description": "A 2D game using the KaPlay library.\nCurrently implementing Game Boy-style graphics based on a story created by ChatGPT.\nBy deliberately using React and React-related libraries for game development,\nI'm learning about the characteristics and optimization of libraries that I might not notice in regular development.\n",
-    "image": "/images/projects/2d-rpg-react.png",
-    "githubUrl": "https://github.com/shinguakira/2d-rpg-react",
-    "liveUrl": ""
   },
   {
     "technologies": [
@@ -243,18 +226,6 @@
     "image": "/images/projects/3d-chatbot.png",
     "githubUrl": "https://github.com/shinguakira/3d-chatbot-power",
     "liveUrl": "https://3d-chatbot-power.vercel.app/"
-  },
-  {
-    "technologies": [
-      "React",
-      "Vite",
-      "TypeScript"
-    ],
-    "title": "ChatGPT Clone",
-    "description": "A ChatGPT clone using Vite, React for frontend and Express.js for backend",
-    "image": "/images/projects/chat-gpt-clone.png",
-    "githubUrl": "https://github.com/shinguakira/gpt-clone",
-    "liveUrl": ""
   },
   {
     "technologies": [

@@ -2,7 +2,6 @@ import {nextjsSkillSet, T3StackSkillSet, S} from './skill.js';
 import {links} from './links.js';
 
 const tmpPic = '/images/profile/developer-pic-1.png'; // ポートフォリオサイトの画像
-const chatGptColonePic = '/images/projects/chat-gpt-clone.png'; // ChatGPT クローンの画像
 const chatBot3dPic = '/images/projects/3d-chatbot.png'; // 3Dチャットボットの画像
 const onDevelopingPic = '/images/projects/onDeveloping.jpg'; // 開発中の画像
 const advancedSearchYoutubePic = '/images/projects/advanced-search-youtube.png'; // picture for advanced search youtube
@@ -10,7 +9,6 @@ const restaurantAroundStationPic =
   '/images/projects/restaurant-around-station.png'; // picture for restaurant around station
 const bankingAppPic = '/images/projects/banking-app.png'; // picture for banking app
 const typingGamePic = '/images/projects/typing-game.png'; // picture for typing game
-const TwodRpgPic = '/images/projects/2d-rpg-react.png'; // picture for 2d rpg
 const ragChatBotPic = '/images/projects/rag-chatbot.jpg'; // picture for rag chatbot
 const countryAppPic = '/images/projects/country-app.png'; // picture for country app
 const portfolioApiPic = '/images/projects/portfolio-api.png'; // picture for portfolio api
@@ -29,7 +27,6 @@ export const projects: MultilingualProject[] = [
 [画像認識を使用した何か]
 [Visual Studioのプロジェクトファイル変換アプリ]
 [何かのマッチングアプリ]
-[オンライン会議アプリ]
 [タイピング×パワハラ3Dボット]
 [タイピング×Google Map]
 [タイピング×2Dゲーム]
@@ -44,7 +41,6 @@ export const projects: MultilingualProject[] = [
 [Image Recognition Application]
 [Visual Studio Project File Converter]
 [Matching Application]
-[Online Meeting Application]
 [Typing Game with 3D Harassment Bot]
 [Typing Game with Google Map Integration]
 [Typing Game with 2D Game Elements]
@@ -195,40 +191,6 @@ The title screen changes randomly. The objects used can also be selected.
       image: connectFourPic,
       githubUrl: 'https://github.com/shinguakira/3d-connect-four',
       liveUrl: 'https://3d-connect-four-vfpy.vercel.app/',
-    },
-  },
-  {
-    technologies: [
-      S.react,
-      S.typescript,
-      S.remix,
-      S.honoJs,
-      'DB(未定)',
-      S.tailwind,
-      S.lucideReact,
-      S.kaPlay,
-    ],
-    ja: {
-      title: '2Dゲーム',
-      description: `KaPlayライブラリを使用した2Dゲーム
-ChatGPTが考えたストーリーを元にゲームボーイ風のグラフィックでの実装中。
-あえてゲーム開発で、ReactおよびReact関連のライブラリを使用することで、
-普段の開発では気づかない各ライブラリを使用時の特徴や、最適化について学習する。
-`,
-      image: TwodRpgPic,
-      githubUrl: 'https://github.com/shinguakira/2d-rpg-react',
-      liveUrl: '',
-    },
-    en: {
-      title: '2D Game',
-      description: `A 2D game using the KaPlay library.
-Currently implementing Game Boy-style graphics based on a story created by ChatGPT.
-By deliberately using React and React-related libraries for game development,
-I'm learning about the characteristics and optimization of libraries that I might not notice in regular development.
-`,
-      image: TwodRpgPic,
-      githubUrl: 'https://github.com/shinguakira/2d-rpg-react',
-      liveUrl: '',
     },
   },
   {
@@ -444,24 +406,6 @@ Changes from the original source:
       image: chatBot3dPic,
       githubUrl: 'https://github.com/shinguakira/3d-chatbot-power',
       liveUrl: 'https://3d-chatbot-power.vercel.app/',
-    },
-  },
-  {
-    technologies: [S.react, S.vite, S.typescript],
-    ja: {
-      title: 'ChatGPT クローン',
-      description: 'フロントVite,React,バックExpress.js使用のChatGPTクローン',
-      image: chatGptColonePic,
-      githubUrl: 'https://github.com/shinguakira/gpt-clone',
-      liveUrl: '',
-    },
-    en: {
-      title: 'ChatGPT Clone',
-      description:
-        'A ChatGPT clone using Vite, React for frontend and Express.js for backend',
-      image: chatGptColonePic,
-      githubUrl: 'https://github.com/shinguakira/gpt-clone',
-      liveUrl: '',
     },
   },
   {

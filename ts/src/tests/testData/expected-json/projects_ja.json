@@ -9,7 +9,7 @@
       "Vercel"
     ],
     "title": "開発予定を考えているアプリ",
-    "description": "[採用サイト間のプロフィール自動入力(データ連携)]\n[画像認識を使用した何か]\n[Visual Studioのプロジェクトファイル変換アプリ]\n[何かのマッチングアプリ]\n[オンライン会議アプリ]\n[タイピング×パワハラ3Dボット]\n[タイピング×Google Map]\n[タイピング×2Dゲーム]\n",
+    "description": "[採用サイト間のプロフィール自動入力(データ連携)]\n[画像認識を使用した何か]\n[Visual Studioのプロジェクトファイル変換アプリ]\n[何かのマッチングアプリ]\n[タイピング×パワハラ3Dボット]\n[タイピング×Google Map]\n[タイピング×2Dゲーム]\n",
     "image": "/images/projects/onDeveloping.jpg",
     "githubUrl": "",
     "liveUrl": ""
@@ -90,23 +90,6 @@
     "image": "/images/projects/3dConnectFour.png",
     "githubUrl": "https://github.com/shinguakira/3d-connect-four",
     "liveUrl": "https://3d-connect-four-vfpy.vercel.app/"
-  },
-  {
-    "technologies": [
-      "React",
-      "TypeScript",
-      "Remix",
-      "Hono.js",
-      "DB(未定)",
-      "Tailwind CSS",
-      "lucide-react",
-      "kaPlay"
-    ],
-    "title": "2Dゲーム",
-    "description": "KaPlayライブラリを使用した2Dゲーム\nChatGPTが考えたストーリーを元にゲームボーイ風のグラフィックでの実装中。\nあえてゲーム開発で、ReactおよびReact関連のライブラリを使用することで、\n普段の開発では気づかない各ライブラリを使用時の特徴や、最適化について学習する。\n",
-    "image": "/images/projects/2d-rpg-react.png",
-    "githubUrl": "https://github.com/shinguakira/2d-rpg-react",
-    "liveUrl": ""
   },
   {
     "technologies": [
@@ -243,18 +226,6 @@
     "image": "/images/projects/3d-chatbot.png",
     "githubUrl": "https://github.com/shinguakira/3d-chatbot-power",
     "liveUrl": "https://3d-chatbot-power.vercel.app/"
-  },
-  {
-    "technologies": [
-      "React",
-      "Vite",
-      "TypeScript"
-    ],
-    "title": "ChatGPT クローン",
-    "description": "フロントVite,React,バックExpress.js使用のChatGPTクローン",
-    "image": "/images/projects/chat-gpt-clone.png",
-    "githubUrl": "https://github.com/shinguakira/gpt-clone",
-    "liveUrl": ""
   },
   {
     "technologies": [
