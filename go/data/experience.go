@@ -5,7 +5,7 @@ import "github.com/shinguakira/portfolio-api-go/model"
 var WorkExperiencesJA = []model.WorkExperience{
 	{
 		Company:  "お客さま5",
-		Period:   "2025年10月 - 現在",
+		Period:   "2025年10月 - 2026年7月",
 		TeamSize: "4人",
 		ManMonth: "",
 		Technologies: []string{
@@ -69,7 +69,7 @@ var WorkExperiencesJA = []model.WorkExperience{
 	},
 	{
 		Company:  "お客さま5",
-		Period:   "2025年3月 - (現在)",
+		Period:   "2025年3月 - 2026年6月",
 		TeamSize: "10人",
 		ManMonth: "",
 		Technologies: []string{
@@ -319,7 +319,7 @@ var WorkExperiencesJA = []model.WorkExperience{
 var WorkExperiencesEN = []model.WorkExperience{
 	{
 		Company:  "Customer5",
-		Period:   "2025-10 - current",
+		Period:   "2025-10 - 2026-07",
 		TeamSize: "4",
 		ManMonth: "",
 		Technologies: []string{
@@ -383,7 +383,7 @@ var WorkExperiencesEN = []model.WorkExperience{
 	},
 	{
 		Company:  "Customer5",
-		Period:   "2025-03 - current",
+		Period:   "2025-03 - 2026-06",
 		TeamSize: "10",
 		ManMonth: "",
 		Technologies: []string{

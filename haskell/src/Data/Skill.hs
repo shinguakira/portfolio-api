@@ -80,7 +80,7 @@ skills =
   , SkillItem
       { skName         = "Hono.js"
       , skCategory     = "Backend"
-      , skYears        = "6 months"
+      , skYears        = "1 year"
       , skProficiency  = Just "onBusiness"
       , skPicture      = Just "/icons/Hono.js.svg"
       , skPictureColor = Just "#E36002"

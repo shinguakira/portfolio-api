@@ -9,7 +9,7 @@ workExperiencesJA =
   [ WorkExperience
       { weCompany = "お客さま5"
       , weProjectOverview = "人材系プラットフォーム開発"
-      , wePeriod = "2025年10月 - 現在"
+      , wePeriod = "2025年10月 - 2026年7月"
       , weTeamSize = "4人"
       , weRole = "フルスタック開発者"
       , weManMonth = ""
@@ -73,7 +73,7 @@ workExperiencesJA =
   , WorkExperience
       { weCompany = "お客さま5"
       , weProjectOverview = "コーチングマッチングサービスの開発"
-      , wePeriod = "2025年3月 - (現在)"
+      , wePeriod = "2025年3月 - 2026年6月"
       , weTeamSize = "10人"
       , weRole = "フロントエンド開発者"
       , weManMonth = ""
@@ -317,7 +317,7 @@ workExperiencesEN =
   [ WorkExperience
       { weCompany = "Customer5"
       , weProjectOverview = "HR Platform Development"
-      , wePeriod = "2025-10 - current"
+      , wePeriod = "2025-10 - 2026-07"
       , weTeamSize = "4"
       , weRole = "Full Stack Developer"
       , weManMonth = ""
@@ -381,7 +381,7 @@ workExperiencesEN =
   , WorkExperience
       { weCompany = "Customer5"
       , weProjectOverview = "Development of Coaching Matching Service"
-      , wePeriod = "2025-03 - current"
+      , wePeriod = "2025-03 - 2026-06"
       , weTeamSize = "10"
       , weRole = "Frontend Developer"
       , weManMonth = ""

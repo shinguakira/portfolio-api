@@ -12,7 +12,7 @@ var Skills = []model.SkillItem{
 	{Name: "Next.js", Years: "1 year", Category: "Frontend", Proficiency: "onBusiness", Picture: "/icons/Next.js.svg", PictureColor: "#000000"},
 	{Name: "Node.js", Years: "2 years", Category: "Backend", Proficiency: "onBusiness", Picture: "/icons/Node.js.svg", PictureColor: "#5FA04E"},
 	{Name: "Express.js", Years: "self-study", Category: "Backend", Proficiency: "self-study", Picture: "/icons/Express.js.svg", PictureColor: "#5FA04E"},
-	{Name: "Hono.js", Years: "6 months", Category: "Backend", Proficiency: "onBusiness", Picture: "/icons/Hono.js.svg", PictureColor: "#E36002"},
+	{Name: "Hono.js", Years: "1 year", Category: "Backend", Proficiency: "onBusiness", Picture: "/icons/Hono.js.svg", PictureColor: "#E36002"},
 	{Name: "Springboot(Java)", Years: "2 years", Category: "Backend", Proficiency: "onBusiness", Picture: "/icons/SpringBoot.svg", PictureColor: "#6DB33F"},
 	{Name: "GraphQL", Years: "2 years", Category: "API", Proficiency: "onBusiness", Picture: "/icons/GraphQL.svg", PictureColor: "#E10098"},
 	{Name: "REST", Years: "2 years", Category: "API", Proficiency: "onBusiness", Picture: "/icons/REST.svg", PictureColor: "#61DAFB"},

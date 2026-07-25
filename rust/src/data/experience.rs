@@ -5,7 +5,7 @@ lazy_static! {
     pub static ref WORK_EXPERIENCES_JA: Vec<WorkExperience> = vec![
         WorkExperience {
             company: "お客さま5".to_string(),
-            period: "2025年10月 - 現在".to_string(),
+            period: "2025年10月 - 2026年7月".to_string(),
             team_size: "4人".to_string(),
             man_month: "".to_string(),
             technologies: vec![
@@ -72,7 +72,7 @@ lazy_static! {
         },
         WorkExperience {
             company: "お客さま5".to_string(),
-            period: "2025年3月 - (現在)".to_string(),
+            period: "2025年3月 - 2026年6月".to_string(),
             team_size: "10人".to_string(),
             man_month: "".to_string(),
             technologies: vec![
@@ -315,7 +315,7 @@ lazy_static! {
     pub static ref WORK_EXPERIENCES_EN: Vec<WorkExperience> = vec![
         WorkExperience {
             company: "Customer5".to_string(),
-            period: "2025-10 - current".to_string(),
+            period: "2025-10 - 2026-07".to_string(),
             team_size: "4".to_string(),
             man_month: "".to_string(),
             technologies: vec![
@@ -382,7 +382,7 @@ lazy_static! {
         },
         WorkExperience {
             company: "Customer5".to_string(),
-            period: "2025-03 - (current)".to_string(),
+            period: "2025-03 - 2026-06".to_string(),
             team_size: "10".to_string(),
             man_month: "".to_string(),
             technologies: vec![
