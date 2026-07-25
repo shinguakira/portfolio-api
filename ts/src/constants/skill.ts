@@ -102,7 +102,7 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'Hono.js',
-    years: '6 months',
+    years: '1 year',
     category: 'Backend',
     proficiency: onBusiness,
     picture: '/icons/Hono.js.svg',
@@ -338,7 +338,7 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'Supabase',
-    years: selfStudy,
+    years: '1 year',
     category: 'Database',
     proficiency: selfStudy,
     picture: '/icons/Supabase.svg',
@@ -346,7 +346,7 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'Drizzle',
-    years: selfStudy,
+    years: '1 year',
     category: 'ORM',
     proficiency: selfStudy,
     picture: '/icons/Drizzle.svg',
@@ -386,7 +386,7 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'Turborepo',
-    years: selfStudy,
+    years: '1 year',
     category: 'Others',
     proficiency: selfStudy,
     picture: '/icons/Turborepo.svg',
@@ -469,7 +469,7 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'Cloudflare Workers',
-    years: selfStudy,
+    years: '1 year',
     category: 'Cloud',
     proficiency: selfStudy,
     picture: '/icons/CloudflareWorkers.svg',

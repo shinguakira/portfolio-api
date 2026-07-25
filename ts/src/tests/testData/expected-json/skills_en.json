@@ -89,7 +89,7 @@
   },
   {
     "name": "Hono.js",
-    "years": "6 months",
+    "years": "1 year",
     "category": "Backend",
     "proficiency": "onBusiness",
     "picture": "/icons/Hono.js.svg",
@@ -289,7 +289,7 @@
   },
   {
     "name": "Supabase",
-    "years": "self-study",
+    "years": "1 year",
     "category": "Database",
     "proficiency": "self-study",
     "picture": "/icons/Supabase.svg",
@@ -297,7 +297,7 @@
   },
   {
     "name": "Drizzle",
-    "years": "self-study",
+    "years": "1 year",
     "category": "ORM",
     "proficiency": "self-study",
     "picture": "/icons/Drizzle.svg",
@@ -393,7 +393,7 @@
   },
   {
     "name": "Cloudflare Workers",
-    "years": "self-study",
+    "years": "1 year",
     "category": "Cloud",
     "proficiency": "self-study",
     "picture": "/icons/CloudflareWorkers.svg",
