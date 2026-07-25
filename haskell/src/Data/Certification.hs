@@ -1,44 +1,42 @@
+{-# LANGUAGE OverloadedStrings #-}
+
 module Data.Certification where
 
-import Data.Text (Text)
 import Model.Certification (CertificationItem(..))
-
-creadlyLink :: Text
-creadlyLink = "https://www.credly.com/users/akira-shingu/badges"
 
 certificationsJA :: [CertificationItem]
 certificationsJA =
   [ CertificationItem
       { certId = 1
-      , certName = "\22522\26412\24773\22577\25216\34899\32773\35430\39443"
+      , certName = "基本情報技術者試験"
       , certOrganization = "IPA"
       , certDate = "2023-05"
       , certVerifyLink = "/images/certification/kihonInfoCert.pdf"
       }
   , CertificationItem
       { certId = 2
-      , certName = "\12489\12483\12488\12467\12512\12510\12473\12479\12540\12450\12489\12496\12531\12473 \12471\12531\12464\12523\12473\12479\12540"
+      , certName = "ドットコムマスターアドバンス シングルスター"
       , certOrganization = ".com"
       , certDate = "2023-5"
-      , certVerifyLink = "/images/certification/comMasterAdvenceOneCert.pdf"
+      , certVerifyLink = "/images/certification/comMasterAdvenceOneCert.pdhow f"
       }
   , CertificationItem
       { certId = 3
-      , certName = "\24773\22577\12475\12461\12517\12522\12486\12451\12510\12493\12472\12513\12531\12488"
+      , certName = "情報セキュリティマネジメント"
       , certOrganization = "IPA"
       , certDate = "2023-06"
       , certVerifyLink = "/images/certification/securityManagementCert.pdf"
       }
   , CertificationItem
       { certId = 4
-      , certName = "\12487\12451\12472\12479\12523\25216\34899\26908\23450 2\32026 \24773\22577"
+      , certName = "ディジタル技術検定 2級 情報"
       , certOrganization = ""
       , certDate = "2023-07"
       , certVerifyLink = "https://www.sgec.or.jp/kentei/de_kentei/"
       }
   , CertificationItem
       { certId = 5
-      , certName = "\32068\12415\36796\12415\12477\12501\12488\12454\12455\12450\25216\34899\32773\12463\12521\124732 \12464\12524\12540\12489B"
+      , certName = "組み込みソフトウェア技術者クラス2 グレードB"
       , certOrganization = ""
       , certDate = "2023-07"
       , certVerifyLink = "https://www.jasa.or.jp/etec/"
@@ -52,21 +50,21 @@ certificationsJA =
       }
   , CertificationItem
       { certId = 7
-      , certName = "Python3 \12456\12531\12472\12491\12450\35469\23450\22522\30990\35430\39443"
+      , certName = "Python3 エンジニア認定基礎試験"
       , certOrganization = "Python"
       , certDate = "2023-02"
       , certVerifyLink = "/images/certification/pythonBasicCert.pdf"
       }
   , CertificationItem
       { certId = 8
-      , certName = "Python3 \12456\12531\12472\12491\12450\35469\23450\12487\12540\12479\20998\26512\35430\39443"
+      , certName = "Python3 エンジニア認定データ分析試験"
       , certOrganization = "Python"
       , certDate = "2024-02"
       , certVerifyLink = "/images/certification/pythonDataBaseCert.pdf"
       }
   , CertificationItem
       { certId = 9
-      , certName = "Python3 \12456\12531\12472\12491\12450\35469\23450\23455\36341\35430\39443"
+      , certName = "Python3 エンジニア認定実践試験"
       , certOrganization = "Python"
       , certDate = "2024-02"
       , certVerifyLink = "/images/certification/pythonPracticalCert.pdf"
@@ -80,66 +78,66 @@ certificationsJA =
       }
   , CertificationItem
       { certId = 11
-      , certName = "HTML5\12503\12525\12501\12455\12483\12471\12519\12490\12523\35469\23450\35430\39443\12524\12505\125231"
+      , certName = "HTML5プロフェッショナル認定試験レベル1"
       , certOrganization = "LPI-Japan"
       , certDate = "2024-03"
       , certVerifyLink = "https://ma.educo-j.or.jp/h/EID900045390/qntzzbkx3h"
       }
   , CertificationItem
       { certId = 12
-      , certName = "AWS Certified Solutions Architect \8211 Associate"
+      , certName = "AWS Certified Solutions Architect – Associate"
       , certOrganization = "AWS"
       , certDate = "2024-03"
-      , certVerifyLink = creadlyLink
+      , certVerifyLink = "https://www.credly.com/users/akira-shingu/badges"
       }
   , CertificationItem
       { certId = 13
-      , certName = "HTML5\12503\12525\12501\12455\12483\12471\12519\12490\12523\35469\23450\35430\39443\12524\12505\125232"
+      , certName = "HTML5プロフェッショナル認定試験レベル2"
       , certOrganization = "LPI-Japan"
       , certDate = "2024-04"
       , certVerifyLink = "https://ma.educo-j.or.jp/h/EID900045390/qntzzbkx3h"
       }
   , CertificationItem
       { certId = 40
-      , certName = "AWS Certified SysOps Administrator \8211 Associate"
+      , certName = "AWS Certified SysOps Administrator – Associate"
       , certOrganization = "AWS"
       , certDate = "2024-04"
-      , certVerifyLink = creadlyLink
+      , certVerifyLink = "https://www.credly.com/users/akira-shingu/badges"
       }
   , CertificationItem
       { certId = 14
-      , certName = "AWS Certified Developer \8211 Associate"
+      , certName = "AWS Certified Developer – Associate"
       , certOrganization = "AWS"
       , certDate = "2024-05"
-      , certVerifyLink = creadlyLink
+      , certVerifyLink = "https://www.credly.com/users/akira-shingu/badges"
       }
   , CertificationItem
       { certId = 15
-      , certName = "AWS Certified DevOpes Engineer \8211 Professional"
+      , certName = "AWS Certified DevOpes Engineer – Professional"
       , certOrganization = "AWS"
       , certDate = "2024-05"
-      , certVerifyLink = creadlyLink
+      , certVerifyLink = "https://www.credly.com/users/akira-shingu/badges"
       }
   , CertificationItem
       { certId = 16
-      , certName = "AWS Certified Machine Learning \8211 Specialty"
+      , certName = "AWS Certified Machine Learning – Specialty"
       , certOrganization = "AWS"
       , certDate = "2024-06"
-      , certVerifyLink = creadlyLink
+      , certVerifyLink = "https://www.credly.com/users/akira-shingu/badges"
       }
   , CertificationItem
       { certId = 17
       , certName = "AWS Certified Data Enginner - Associate"
       , certOrganization = "AWS"
       , certDate = "2024-06"
-      , certVerifyLink = creadlyLink
+      , certVerifyLink = "https://www.credly.com/users/akira-shingu/badges"
       }
   , CertificationItem
       { certId = 18
-      , certName = "AWS Certified Solutions Architect \8211 Professional"
+      , certName = "AWS Certified Solutions Architect – Professional"
       , certOrganization = "AWS"
       , certDate = "2024-07"
-      , certVerifyLink = creadlyLink
+      , certVerifyLink = "https://www.credly.com/users/akira-shingu/badges"
       }
   , CertificationItem
       { certId = 19
@@ -157,10 +155,10 @@ certificationsJA =
       }
   , CertificationItem
       { certId = 21
-      , certName = "AWS Certified Advanced Networking \8211 Specialty"
+      , certName = "AWS Certified Advanced Networking – Specialty"
       , certOrganization = "AWS"
       , certDate = "2024-08"
-      , certVerifyLink = creadlyLink
+      , certVerifyLink = "https://www.credly.com/users/akira-shingu/badges"
       }
   , CertificationItem
       { certId = 22
@@ -174,7 +172,7 @@ certificationsJA =
       , certName = "Certified Junior Angular Developer"
       , certOrganization = "Certificates.dev Angular Traning"
       , certDate = "2024-09"
-      , certVerifyLink = "https://certificates.dev/c/9cea8a10-14d5-44e4-9343-70c02f44c9b7"
+      , certVerifyLink = "\thttps://certificates.dev/c/9cea8a10-14d5-44e4-9343-70c02f44c9b7"
       }
   , CertificationItem
       { certId = 24
@@ -195,14 +193,14 @@ certificationsJA =
       , certName = "AWS Certified AI Practitioner"
       , certOrganization = "AWS"
       , certDate = "2024-10"
-      , certVerifyLink = creadlyLink
+      , certVerifyLink = "https://www.credly.com/users/akira-shingu/badges"
       }
   , CertificationItem
       { certId = 27
       , certName = "AWS Certified Machine Learning - Associate"
       , certOrganization = "AWS"
       , certDate = "2024-11"
-      , certVerifyLink = creadlyLink
+      , certVerifyLink = "https://www.credly.com/users/akira-shingu/badges"
       }
   , CertificationItem
       { certId = 28
@@ -269,7 +267,7 @@ certificationsEN =
       , certName = "Dot Com Master Advance Single Star"
       , certOrganization = ".com"
       , certDate = "2023-5"
-      , certVerifyLink = "/images/certification/comMasterAdvenceOneCert.pdf"
+      , certVerifyLink = "/images/certification/comMasterAdvenceOneCert.pdhow f"
       }
   , CertificationItem
       { certId = 3
@@ -336,10 +334,10 @@ certificationsEN =
       }
   , CertificationItem
       { certId = 12
-      , certName = "AWS Certified Solutions Architect \8211 Associate"
+      , certName = "AWS Certified Solutions Architect – Associate"
       , certOrganization = "AWS"
       , certDate = "2024-03"
-      , certVerifyLink = creadlyLink
+      , certVerifyLink = "https://www.credly.com/users/akira-shingu/badges"
       }
   , CertificationItem
       { certId = 13
@@ -350,45 +348,45 @@ certificationsEN =
       }
   , CertificationItem
       { certId = 40
-      , certName = "AWS Certified SysOps Administrator \8211 Associate"
+      , certName = "AWS Certified SysOps Administrator – Associate"
       , certOrganization = "AWS"
       , certDate = "2024-04"
-      , certVerifyLink = creadlyLink
+      , certVerifyLink = "https://www.credly.com/users/akira-shingu/badges"
       }
   , CertificationItem
       { certId = 14
-      , certName = "AWS Certified Developer \8211 Associate"
+      , certName = "AWS Certified Developer – Associate"
       , certOrganization = "AWS"
       , certDate = "2024-05"
-      , certVerifyLink = creadlyLink
+      , certVerifyLink = "https://www.credly.com/users/akira-shingu/badges"
       }
   , CertificationItem
       { certId = 15
-      , certName = "AWS Certified DevOpes Engineer \8211 Professional"
+      , certName = "AWS Certified DevOpes Engineer – Professional"
       , certOrganization = "AWS"
       , certDate = "2024-05"
-      , certVerifyLink = creadlyLink
+      , certVerifyLink = "https://www.credly.com/users/akira-shingu/badges"
       }
   , CertificationItem
       { certId = 16
-      , certName = "AWS Certified Machine Learning \8211 Specialty"
+      , certName = "AWS Certified Machine Learning – Specialty"
       , certOrganization = "AWS"
       , certDate = "2024-06"
-      , certVerifyLink = creadlyLink
+      , certVerifyLink = "https://www.credly.com/users/akira-shingu/badges"
       }
   , CertificationItem
       { certId = 17
       , certName = "AWS Certified Data Enginner - Associate"
       , certOrganization = "AWS"
       , certDate = "2024-06"
-      , certVerifyLink = creadlyLink
+      , certVerifyLink = "https://www.credly.com/users/akira-shingu/badges"
       }
   , CertificationItem
       { certId = 18
-      , certName = "AWS Certified Solutions Architect \8211 Professional"
+      , certName = "AWS Certified Solutions Architect – Professional"
       , certOrganization = "AWS"
       , certDate = "2024-07"
-      , certVerifyLink = creadlyLink
+      , certVerifyLink = "https://www.credly.com/users/akira-shingu/badges"
       }
   , CertificationItem
       { certId = 19
@@ -406,10 +404,10 @@ certificationsEN =
       }
   , CertificationItem
       { certId = 21
-      , certName = "AWS Certified Advanced Networking \8211 Specialty"
+      , certName = "AWS Certified Advanced Networking – Specialty"
       , certOrganization = "AWS"
       , certDate = "2024-08"
-      , certVerifyLink = creadlyLink
+      , certVerifyLink = "https://www.credly.com/users/akira-shingu/badges"
       }
   , CertificationItem
       { certId = 22
@@ -423,7 +421,7 @@ certificationsEN =
       , certName = "Certified Junior Angular Developer"
       , certOrganization = "Certificates.dev Angular Traning"
       , certDate = "2024-09"
-      , certVerifyLink = "https://certificates.dev/c/9cea8a10-14d5-44e4-9343-70c02f44c9b7"
+      , certVerifyLink = "\thttps://certificates.dev/c/9cea8a10-14d5-44e4-9343-70c02f44c9b7"
       }
   , CertificationItem
       { certId = 24
@@ -444,14 +442,14 @@ certificationsEN =
       , certName = "AWS Certified AI Practitioner"
       , certOrganization = "AWS"
       , certDate = "2024-10"
-      , certVerifyLink = creadlyLink
+      , certVerifyLink = "https://www.credly.com/users/akira-shingu/badges"
       }
   , CertificationItem
       { certId = 27
       , certName = "AWS Certified Machine Learning - Associate"
       , certOrganization = "AWS"
       , certDate = "2024-11"
-      , certVerifyLink = creadlyLink
+      , certVerifyLink = "https://www.credly.com/users/akira-shingu/badges"
       }
   , CertificationItem
       { certId = 28

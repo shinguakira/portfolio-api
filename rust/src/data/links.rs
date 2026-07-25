@@ -1,5 +1,5 @@
-use lazy_static::lazy_static;
 use crate::model::links::Links;
+use lazy_static::lazy_static;
 
 lazy_static! {
     pub static ref LINKS_DATA: Links = Links {

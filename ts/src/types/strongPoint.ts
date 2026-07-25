@@ -1,4 +1,4 @@
-export type MultilingualStrongPointContent = {
+type MultilingualStrongPointContent = {
   question: string;
   answer: string;
 };

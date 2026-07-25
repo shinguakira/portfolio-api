@@ -40,6 +40,22 @@
     "pictureColor": "#3776AB"
   },
   {
+    "name": "Go",
+    "years": "self-study",
+    "category": "Language",
+    "proficiency": "self-study",
+    "picture": "/icons/Go.svg",
+    "pictureColor": "#00ADD8"
+  },
+  {
+    "name": "Rust",
+    "years": "self-study",
+    "category": "Language",
+    "proficiency": "self-study",
+    "picture": "/icons/Rust.svg",
+    "pictureColor": "#DEA584"
+  },
+  {
     "name": "React",
     "years": "2 years",
     "category": "Frontend",
@@ -73,7 +89,7 @@
   },
   {
     "name": "Hono.js",
-    "years": "6 months",
+    "years": "1 year",
     "category": "Backend",
     "proficiency": "onBusiness",
     "picture": "/icons/Hono.js.svg",
@@ -108,14 +124,6 @@
     "years": "self-study",
     "category": "State Management",
     "proficiency": "self-study",
-    "picture": "/icons/Redux.svg",
-    "pictureColor": "#764ABC"
-  },
-  {
-    "name": "Context API",
-    "years": "1 year",
-    "category": "State Management",
-    "proficiency": "onBusiness",
     "picture": "/icons/Redux.svg",
     "pictureColor": "#764ABC"
   },
@@ -202,7 +210,7 @@
   {
     "name": "Vercel",
     "years": "1 year",
-    "category": "Database",
+    "category": "Cloud",
     "proficiency": "onBusiness",
     "picture": "/icons/Vercel.svg",
     "pictureColor": "#000000"
@@ -272,30 +280,6 @@
     "pictureColor": "#000000"
   },
   {
-    "name": "codegen",
-    "years": "1 year",
-    "category": "Frontend",
-    "proficiency": "onBusiness",
-    "picture": "/icons/Codegen.svg",
-    "pictureColor": "#E10098"
-  },
-  {
-    "name": "babylon.js",
-    "years": "self-study",
-    "category": "Frontend",
-    "proficiency": "self-study",
-    "picture": "/icons/BabylonJS.svg",
-    "pictureColor": "#BB464B"
-  },
-  {
-    "name": "kaPlay",
-    "years": "self-study",
-    "category": "Frontend",
-    "proficiency": "self-study",
-    "picture": "/icons/KaPlay.svg",
-    "pictureColor": "#4CAF50"
-  },
-  {
     "name": "vectorDB(pgvector)",
     "years": "3 months",
     "category": "Database",
@@ -305,7 +289,7 @@
   },
   {
     "name": "Supabase",
-    "years": "self-study",
+    "years": "1 year",
     "category": "Database",
     "proficiency": "self-study",
     "picture": "/icons/Supabase.svg",
@@ -313,7 +297,7 @@
   },
   {
     "name": "Drizzle",
-    "years": "self-study",
+    "years": "1 year",
     "category": "ORM",
     "proficiency": "self-study",
     "picture": "/icons/Drizzle.svg",
@@ -336,49 +320,25 @@
     "pictureColor": "#47848F"
   },
   {
+    "name": "Tauri",
+    "years": "self-study",
+    "category": "Frontend",
+    "proficiency": "self-study",
+    "picture": "/icons/Tauri.svg",
+    "pictureColor": "#FFC131"
+  },
+  {
     "name": "Vite",
     "years": "1 year",
-    "category": "Frontend",
+    "category": "Others",
     "proficiency": "onBusiness",
     "picture": "/icons/Vite.svg",
     "pictureColor": "#646CFF"
   },
   {
-    "name": "Turborepo",
-    "years": "self-study",
-    "category": "Frontend",
-    "proficiency": "self-study",
-    "picture": "/icons/Turborepo.svg",
-    "pictureColor": "#EF4444"
-  },
-  {
-    "name": "lucide-react",
-    "years": "1 year",
-    "category": "Frontend",
-    "proficiency": "onBusiness",
-    "picture": "/icons/Lucide.svg",
-    "pictureColor": "#F56565"
-  },
-  {
-    "name": "next-intl",
-    "years": "6 months",
-    "category": "Frontend",
-    "proficiency": "onBusiness",
-    "picture": "/icons/NextIntl.svg",
-    "pictureColor": "#000000"
-  },
-  {
-    "name": "Playwright",
-    "years": "1 year",
-    "category": "Testing",
-    "proficiency": "onBusiness",
-    "picture": "/icons/Playwright.svg",
-    "pictureColor": "#2EAD33"
-  },
-  {
     "name": "Sentry",
     "years": "6 months",
-    "category": "Testing",
+    "category": "Others",
     "proficiency": "onBusiness",
     "picture": "/icons/Sentry.svg",
     "pictureColor": "#362D59"
@@ -433,7 +393,7 @@
   },
   {
     "name": "Cloudflare Workers",
-    "years": "self-study",
+    "years": "1 year",
     "category": "Cloud",
     "proficiency": "self-study",
     "picture": "/icons/CloudflareWorkers.svg",
@@ -442,7 +402,7 @@
   {
     "name": "Ollama",
     "years": "self-study",
-    "category": "API",
+    "category": "AI",
     "proficiency": "self-study",
     "picture": "/icons/Ollama.svg",
     "pictureColor": "#000000"
@@ -450,7 +410,7 @@
   {
     "name": "RAG",
     "years": "3 months",
-    "category": "API",
+    "category": "AI",
     "proficiency": "onBusiness",
     "picture": "/icons/RAG.svg",
     "pictureColor": "#FF6B6B"
@@ -458,7 +418,7 @@
   {
     "name": "STT",
     "years": "3 months",
-    "category": "API",
+    "category": "AI",
     "proficiency": "onBusiness",
     "picture": "/icons/STT.svg",
     "pictureColor": "#4A90D9"
@@ -466,7 +426,7 @@
   {
     "name": "TTS",
     "years": "3 months",
-    "category": "API",
+    "category": "AI",
     "proficiency": "onBusiness",
     "picture": "/icons/TTS.svg",
     "pictureColor": "#4A90D9"
@@ -474,7 +434,7 @@
   {
     "name": "Whisper(local)",
     "years": "3 months",
-    "category": "API",
+    "category": "AI",
     "proficiency": "onBusiness",
     "picture": "/icons/Whisper.svg",
     "pictureColor": "#000000"

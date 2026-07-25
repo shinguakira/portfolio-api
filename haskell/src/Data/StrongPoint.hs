@@ -1,9 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module Data.StrongPoint
-  ( strongPointsJA
-  , strongPointsEN
-  ) where
+module Data.StrongPoint where
 
 import Model.StrongPoint (StrongPoint(..))
 
@@ -126,7 +123,7 @@ strongPointsEN =
   , StrongPoint
       { spSize = "medium"
       , spQuestion = "Idea Realization and Problem-Solving"
-      , spAnswer = "I can translate ideas \x{2014} whether proposed by clients or myself \x{2014} into working implementations. Rather than simply fulfilling requests, I identify the underlying problem and what clients truly want to achieve, then propose suitable alternatives. I leverage mockups and other tools to refine idea details and drive realization."
+      , spAnswer = "I can translate ideas — whether proposed by clients or myself — into working implementations. Rather than simply fulfilling requests, I identify the underlying problem and what clients truly want to achieve, then propose suitable alternatives. I leverage mockups and other tools to refine idea details and drive realization."
       }
   , StrongPoint
       { spSize = "small"

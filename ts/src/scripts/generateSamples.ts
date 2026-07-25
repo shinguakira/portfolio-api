@@ -1,6 +1,5 @@
 import {writeFile, mkdir} from 'fs/promises';
 import {generatePortfolioPDF} from '../services/pdfService.js';
-import {generatePortfolioExcel} from '../services/excelService.js';
 
 const OUTPUT_DIR = 'E:/tmp';
 

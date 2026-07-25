@@ -1,7 +1,7 @@
 export const experience_ja = [
   {
     company: 'お客さま5',
-    period: '2025年10月 - 現在',
+    period: '2025年10月 - 2026年7月',
     teamSize: '4人',
     manMonth: '',
     technologies: [
@@ -100,7 +100,7 @@ export const experience_ja = [
   },
   {
     company: 'お客さま5',
-    period: '2025年3月 - (現在)',
+    period: '2025年3月 - 2026年6月',
     teamSize: '10人',
     manMonth: '',
     technologies: [
@@ -412,7 +412,7 @@ export const experience_ja = [
 export const experience_en = [
   {
     company: 'Customer5',
-    period: '2025-10 - current',
+    period: '2025-10 - 2026-07',
     teamSize: '4',
     manMonth: '',
     technologies: [
@@ -511,7 +511,7 @@ export const experience_en = [
   },
   {
     company: 'Customer5',
-    period: '2025-03 - (current)',
+    period: '2025-03 - 2026-06',
     teamSize: '10',
     manMonth: '',
     technologies: [

@@ -1,9 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module Data.Faq
-  ( faqsJA
-  , faqsEN
-  ) where
+module Data.Faq where
 
 import Model.Faq (Faq(..))
 
@@ -135,7 +132,7 @@ faqsEN =
       }
   , Faq
       { faqQuestion = "Why did you leave your first company?"
-      , faqAnswer = "I joined the company after being told I could do web development, but most of their projects were embedded systems. I wasn't offered web development projects and was forced to work at a company doing embedded systems. By chance, I was able to join a project using Java, but that was the only web project\x{2014}everything else was embedded systems."
+      , faqAnswer = "I joined the company after being told I could do web development, but most of their projects were embedded systems. I wasn't offered web development projects and was forced to work at a company doing embedded systems. By chance, I was able to join a project using Java, but that was the only web project—everything else was embedded systems."
       , faqSize = "large"
       , faqCategory = "Timeline"
       }

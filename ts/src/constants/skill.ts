@@ -1,6 +1,15 @@
 import {onBusiness, selfStudy} from './common.js';
 import type {SkillItem} from '../types/skillItem.js';
 
+// Return only the enabled skills, with the internal `enabled` flag stripped so
+// the response shape is identical to before (consumers never see the flag).
+// `enabled === false` excludes an entry; undefined/`true` keeps it — so with no
+// flags set, every skill is enabled.
+export const enabledSkills = (items: SkillItem[]): SkillItem[] =>
+  items
+    .filter((item) => item.enabled !== false)
+    .map(({enabled: _enabled, ...rest}) => rest);
+
 // main skills(Language,Libraries)
 export const skills: SkillItem[] = [
   {
@@ -44,6 +53,22 @@ export const skills: SkillItem[] = [
     pictureColor: '#3776AB',
   },
   {
+    name: 'Go',
+    years: selfStudy,
+    category: 'Language',
+    proficiency: selfStudy,
+    picture: '/icons/Go.svg',
+    pictureColor: '#00ADD8',
+  },
+  {
+    name: 'Rust',
+    years: selfStudy,
+    category: 'Language',
+    proficiency: selfStudy,
+    picture: '/icons/Rust.svg',
+    pictureColor: '#DEA584',
+  },
+  {
     name: 'React',
     years: '2 years',
     category: 'Frontend',
@@ -77,7 +102,7 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'Hono.js',
-    years: '6 months',
+    years: '1 year',
     category: 'Backend',
     proficiency: onBusiness,
     picture: '/icons/Hono.js.svg',
@@ -122,6 +147,7 @@ export const skills: SkillItem[] = [
     proficiency: onBusiness,
     picture: '/icons/Redux.svg',
     pictureColor: '#764ABC',
+    enabled: false, // hidden: built into React, weak as a standalone skill
   },
   {
     name: 'Prisma',
@@ -282,6 +308,7 @@ export const skills: SkillItem[] = [
     proficiency: onBusiness,
     picture: '/icons/Codegen.svg',
     pictureColor: '#E10098',
+    enabled: false, // hidden: niche helper tool
   },
   {
     name: 'babylon.js',
@@ -290,6 +317,7 @@ export const skills: SkillItem[] = [
     proficiency: selfStudy,
     picture: '/icons/BabylonJS.svg',
     pictureColor: '#BB464B',
+    enabled: false, // hidden: niche (3D engine), self-study
   },
   {
     name: 'kaPlay',
@@ -298,6 +326,7 @@ export const skills: SkillItem[] = [
     proficiency: selfStudy,
     picture: '/icons/KaPlay.svg',
     pictureColor: '#4CAF50',
+    enabled: false, // hidden: niche game lib, self-study
   },
   {
     name: 'vectorDB(pgvector)',
@@ -309,7 +338,7 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'Supabase',
-    years: selfStudy,
+    years: '1 year',
     category: 'Database',
     proficiency: selfStudy,
     picture: '/icons/Supabase.svg',
@@ -317,7 +346,7 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'Drizzle',
-    years: selfStudy,
+    years: '1 year',
     category: 'ORM',
     proficiency: selfStudy,
     picture: '/icons/Drizzle.svg',
@@ -340,6 +369,14 @@ export const skills: SkillItem[] = [
     pictureColor: '#47848F',
   },
   {
+    name: 'Tauri',
+    years: selfStudy,
+    category: 'Frontend',
+    proficiency: selfStudy,
+    picture: '/icons/Tauri.svg',
+    pictureColor: '#FFC131',
+  },
+  {
     name: 'Vite',
     years: '1 year',
     category: 'Others',
@@ -349,11 +386,12 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'Turborepo',
-    years: selfStudy,
+    years: '1 year',
     category: 'Others',
     proficiency: selfStudy,
     picture: '/icons/Turborepo.svg',
     pictureColor: '#EF4444',
+    enabled: false, // hidden: niche monorepo tool, self-study
   },
   {
     name: 'lucide-react',
@@ -362,6 +400,7 @@ export const skills: SkillItem[] = [
     proficiency: onBusiness,
     picture: '/icons/Lucide.svg',
     pictureColor: '#F56565',
+    enabled: false, // hidden: icon set, not a core skill
   },
   {
     name: 'next-intl',
@@ -370,14 +409,7 @@ export const skills: SkillItem[] = [
     proficiency: onBusiness,
     picture: '/icons/NextIntl.svg',
     pictureColor: '#000000',
-  },
-  {
-    name: 'Playwright',
-    years: '1 year',
-    category: 'Testing',
-    proficiency: onBusiness,
-    picture: '/icons/Playwright.svg',
-    pictureColor: '#2EAD33',
+    enabled: false, // hidden: niche i18n lib
   },
   {
     name: 'Sentry',
@@ -437,7 +469,7 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'Cloudflare Workers',
-    years: selfStudy,
+    years: '1 year',
     category: 'Cloud',
     proficiency: selfStudy,
     picture: '/icons/CloudflareWorkers.svg',
@@ -558,6 +590,7 @@ export const otherSkills: SkillItem[] = [
     proficiency: selfStudy,
     picture: '/icons/StackBlitz.svg',
     pictureColor: '#1269D3',
+    enabled: false, // hidden: online IDE, niche
   },
   {
     name: 'Visual Studio(C,C++,C#)',
@@ -606,6 +639,7 @@ export const otherSkills: SkillItem[] = [
     proficiency: onBusiness,
     picture: '/icons/A5SQLMk2.svg',
     pictureColor: '#336791',
+    enabled: false, // hidden: niche DB client
   },
   {
     name: 'Bun',
@@ -633,6 +667,8 @@ export const S = {
   java: n('Java'),
   cFamily: n('C,C++,C#'),
   python: n('Python'),
+  go: n('Go'),
+  rust: n('Rust'),
   react: n('React'),
   nextJs: n('Next.js'),
   nodeJs: n('Node.js'),
@@ -682,11 +718,11 @@ export const S = {
   drizzle: n('Drizzle'),
   remix: n('Remix'),
   electron: n('Electron'),
+  tauri: n('Tauri'),
   vite: n('Vite'),
   turborepo: n('Turborepo'),
   lucideReact: n('lucide-react'),
   nextIntl: n('next-intl'),
-  playwrightStandalone: n('Playwright'),
   sentry: n('Sentry'),
   awsLambda: n('AWS Lambda'),
   awsS3: n('AWS S3'),
@@ -714,38 +750,6 @@ export const nextjsSkillSet = [
   S.tailwind,
   S.shadcn,
   S.vercel,
-];
-
-export const receptionInnovationSkillSet = [
-  S.typescript,
-  S.react,
-  S.nodeJs,
-  S.mysql,
-  S.selenium,
-  'little state machine',
-  S.reactHookForm,
-  'axios',
-  'TypeORM',
-  'class-validator',
-  'Apollo Client Server(GraphQL)',
-  S.bootstrap5,
-  'Azure(App Service,Azure Functions)',
-  S.backlog,
-  S.swagger,
-  'アジャイル開発(スクラム)',
-];
-
-export const VOCSkillSet = [
-  S.typescript,
-  S.react,
-  S.java,
-  S.springboot,
-  S.mysql,
-  S.selenium,
-  'Mybatis(Java ORM)',
-  'axios',
-  S.backlog,
-  'アジャイル開発(スクラム)',
 ];
 
 export const T3StackSkillSet = [

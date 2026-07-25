@@ -82,7 +82,10 @@ function buildProfileSheet(wb: ExcelJS.Workbook, lang: 'en' | 'ja'): void {
     pattern: 'solid',
     fgColor: {argb: 'FFE3F2FD'},
   };
-  const labelFont: Partial<ExcelJS.Font> = {bold: true, color: {argb: 'FF0D47A1'}};
+  const labelFont: Partial<ExcelJS.Font> = {
+    bold: true,
+    color: {argb: 'FF0D47A1'},
+  };
 
   const addRow = (field: string, enVal: string, jaVal: string) => {
     const r = ws.addRow([field, enVal, jaVal]);
@@ -188,10 +191,7 @@ function buildSkillsSheet(wb: ExcelJS.Workbook): void {
   }
 }
 
-function buildExperienceSheet(
-  wb: ExcelJS.Workbook,
-  lang: 'en' | 'ja'
-): void {
+function buildExperienceSheet(wb: ExcelJS.Workbook, lang: 'en' | 'ja'): void {
   const ws = wb.addWorksheet('Experience', {
     properties: {tabColor: {argb: 'FF4CAF50'}},
     views: [{state: 'frozen', ySplit: 1}],
@@ -293,7 +293,7 @@ function buildProjectsSheet(wb: ExcelJS.Workbook, lang: 'en' | 'ja'): void {
   applyHeaderStyle(ws.getRow(1), 'FF4527A0');
 
   const localizedProjects = projects.map((p) => ({
-    ...( lang === 'en' ? p.en : p.ja),
+    ...(lang === 'en' ? p.en : p.ja),
     technologies: p.technologies,
   }));
 

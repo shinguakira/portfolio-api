@@ -2,7 +2,6 @@ import {nextjsSkillSet, T3StackSkillSet, S} from './skill.js';
 import {links} from './links.js';
 
 const tmpPic = '/images/profile/developer-pic-1.png'; // ポートフォリオサイトの画像
-const chatGptColonePic = '/images/projects/chat-gpt-clone.png'; // ChatGPT クローンの画像
 const chatBot3dPic = '/images/projects/3d-chatbot.png'; // 3Dチャットボットの画像
 const onDevelopingPic = '/images/projects/onDeveloping.jpg'; // 開発中の画像
 const advancedSearchYoutubePic = '/images/projects/advanced-search-youtube.png'; // picture for advanced search youtube
@@ -10,13 +9,21 @@ const restaurantAroundStationPic =
   '/images/projects/restaurant-around-station.png'; // picture for restaurant around station
 const bankingAppPic = '/images/projects/banking-app.png'; // picture for banking app
 const typingGamePic = '/images/projects/typing-game.png'; // picture for typing game
-const TwodRpgPic = '/images/projects/2d-rpg-react.png'; // picture for 2d rpg
 const ragChatBotPic = '/images/projects/rag-chatbot.jpg'; // picture for rag chatbot
 const countryAppPic = '/images/projects/country-app.png'; // picture for country app
 const portfolioApiPic = '/images/projects/portfolio-api.png'; // picture for portfolio api
 const vscodePortfolioPic = '/images/projects/vscode-portfolio.png'; // picture for vscode portfolio
 const connectFourPic = '/images/projects/3dConnectFour.png'; // picture for 3d connect four
 const brightyPic = '/images/projects/brighty.png'; // picture for brighty
+const designBookPic = '/images/projects/design-book.png';
+const officeFileAppPic = '/images/projects/office-file-app.png';
+const afkGamePic = '/images/projects/afk-game.png';
+const rnOthelloPic = '/images/projects/rn-othello.png';
+const pubmedSearchPic = '/images/projects/pubmed-search.png';
+const videoCallPic = '/images/projects/video-call.png';
+const zeroPocPic = '/images/projects/zero-poc.png';
+const itLearnMaterialPic = '/images/projects/it-learn-material.png';
+const keysoundPic = '/images/projects/keysound.png';
 
 import {MultilingualProject} from '../types/projectItem.js';
 
@@ -29,7 +36,6 @@ export const projects: MultilingualProject[] = [
 [画像認識を使用した何か]
 [Visual Studioのプロジェクトファイル変換アプリ]
 [何かのマッチングアプリ]
-[オンライン会議アプリ]
 [タイピング×パワハラ3Dボット]
 [タイピング×Google Map]
 [タイピング×2Dゲーム]
@@ -44,7 +50,6 @@ export const projects: MultilingualProject[] = [
 [Image Recognition Application]
 [Visual Studio Project File Converter]
 [Matching Application]
-[Online Meeting Application]
 [Typing Game with 3D Harassment Bot]
 [Typing Game with Google Map Integration]
 [Typing Game with 2D Game Elements]
@@ -82,7 +87,7 @@ Same as the one in the history, so omitted
       S.nextJs,
       S.tailwind,
       S.nextIntl,
-      S.playwrightStandalone,
+      S.playwright,
       S.lucideReact,
       S.vercel,
     ],
@@ -116,7 +121,7 @@ Features 3 visual themes, bilingual Japanese/English support, and 184 Playwright
       S.nextJs,
       S.tailwind,
       S.nextIntl,
-      S.playwrightStandalone,
+      S.playwright,
       S.lucideReact,
       S.vercel,
     ],
@@ -195,40 +200,6 @@ The title screen changes randomly. The objects used can also be selected.
       image: connectFourPic,
       githubUrl: 'https://github.com/shinguakira/3d-connect-four',
       liveUrl: 'https://3d-connect-four-vfpy.vercel.app/',
-    },
-  },
-  {
-    technologies: [
-      S.react,
-      S.typescript,
-      S.remix,
-      S.honoJs,
-      'DB(未定)',
-      S.tailwind,
-      S.lucideReact,
-      S.kaPlay,
-    ],
-    ja: {
-      title: '2Dゲーム',
-      description: `KaPlayライブラリを使用した2Dゲーム
-ChatGPTが考えたストーリーを元にゲームボーイ風のグラフィックでの実装中。
-あえてゲーム開発で、ReactおよびReact関連のライブラリを使用することで、
-普段の開発では気づかない各ライブラリを使用時の特徴や、最適化について学習する。
-`,
-      image: TwodRpgPic,
-      githubUrl: 'https://github.com/shinguakira/2d-rpg-react',
-      liveUrl: '',
-    },
-    en: {
-      title: '2D Game',
-      description: `A 2D game using the KaPlay library.
-Currently implementing Game Boy-style graphics based on a story created by ChatGPT.
-By deliberately using React and React-related libraries for game development,
-I'm learning about the characteristics and optimization of libraries that I might not notice in regular development.
-`,
-      image: TwodRpgPic,
-      githubUrl: 'https://github.com/shinguakira/2d-rpg-react',
-      liveUrl: '',
     },
   },
   {
@@ -447,24 +418,6 @@ Changes from the original source:
     },
   },
   {
-    technologies: [S.react, S.vite, S.typescript],
-    ja: {
-      title: 'ChatGPT クローン',
-      description: 'フロントVite,React,バックExpress.js使用のChatGPTクローン',
-      image: chatGptColonePic,
-      githubUrl: 'https://github.com/shinguakira/gpt-clone',
-      liveUrl: '',
-    },
-    en: {
-      title: 'ChatGPT Clone',
-      description:
-        'A ChatGPT clone using Vite, React for frontend and Express.js for backend',
-      image: chatGptColonePic,
-      githubUrl: 'https://github.com/shinguakira/gpt-clone',
-      liveUrl: '',
-    },
-  },
-  {
     technologies: [...nextjsSkillSet, S.lucideReact],
     ja: {
       title: 'ポートフォリオWebサイト',
@@ -480,6 +433,184 @@ Changes from the original source:
       image: `${tmpPic}?height=400&width=600`,
       githubUrl: '',
       liveUrl: '/',
+    },
+  },
+  {
+    technologies: [S.react, S.typescript, S.tailwind, S.vite, S.vercel],
+    ja: {
+      title: 'デザイン見本帳',
+      description: '実際に動くUIで見比べて選べる、個人用のデザイン見本帳。',
+      image: designBookPic,
+      githubUrl: 'https://github.com/shinguakira/design-book',
+      liveUrl: 'https://design-book-sepia.vercel.app',
+    },
+    en: {
+      title: 'Design Book',
+      description:
+        'A personal reference book of live, interactive UI you can compare at a glance.',
+      image: designBookPic,
+      githubUrl: 'https://github.com/shinguakira/design-book',
+      liveUrl: 'https://design-book-sepia.vercel.app',
+    },
+  },
+  {
+    technologies: [S.go, S.react, S.typescript, S.vite],
+    ja: {
+      title: 'Officeファイルプレビュー',
+      description: 'Word/PDF をブラウザ上でプレビューする PoC。',
+      image: officeFileAppPic,
+      githubUrl: 'https://github.com/shinguakira/office-file-app',
+      liveUrl: '',
+    },
+    en: {
+      title: 'Office File Preview',
+      description:
+        'A PoC for previewing Office files (Word/PDF) in the browser.',
+      image: officeFileAppPic,
+      githubUrl: 'https://github.com/shinguakira/office-file-app',
+      liveUrl: '',
+    },
+  },
+  {
+    technologies: [S.react, S.typescript, S.vite, S.expressJs, S.tauri],
+    ja: {
+      title: 'AFK Engineer（放置RPG）',
+      description: 'エンジニアモチーフのインクリメンタル（放置）RPG。',
+      image: afkGamePic,
+      githubUrl: 'https://github.com/shinguakira/afk-game',
+      liveUrl: '',
+    },
+    en: {
+      title: 'AFK Engineer',
+      description: 'An incremental (idle) RPG with a software-engineer theme.',
+      image: afkGamePic,
+      githubUrl: 'https://github.com/shinguakira/afk-game',
+      liveUrl: '',
+    },
+  },
+  {
+    technologies: ['React Native', 'Expo', S.typescript],
+    ja: {
+      title: 'オセロ（React Native）',
+      description: '通信対戦に対応したオセロ（リバーシ）。',
+      image: rnOthelloPic,
+      githubUrl: 'https://github.com/shinguakira/rn-othello',
+      liveUrl: '',
+    },
+    en: {
+      title: 'Othello (React Native)',
+      description: 'An Othello (Reversi) game with online multiplayer.',
+      image: rnOthelloPic,
+      githubUrl: 'https://github.com/shinguakira/rn-othello',
+      liveUrl: '',
+    },
+  },
+  {
+    technologies: [
+      S.react,
+      S.typescript,
+      S.vite,
+      S.tailwind,
+      S.rust,
+      S.docker,
+      'PubMed API',
+    ],
+    ja: {
+      title: 'The PubMed Gazette（PubMed検索）',
+      description:
+        '新聞風UIのPubMed論文検索リーダー。共有URL・ローカル保存・引用に対応。',
+      image: pubmedSearchPic,
+      githubUrl: 'https://github.com/shinguakira/pubmed-search',
+      liveUrl: '',
+    },
+    en: {
+      title: 'The PubMed Gazette',
+      description:
+        'A newspaper-styled PubMed search reader with shareable URLs, saves, and citations.',
+      image: pubmedSearchPic,
+      githubUrl: 'https://github.com/shinguakira/pubmed-search',
+      liveUrl: '',
+    },
+  },
+  {
+    technologies: [
+      S.nextJs,
+      S.react,
+      S.typescript,
+      'WebRTC',
+      'Socket.IO',
+      S.tailwind,
+      S.shadcn,
+    ],
+    ja: {
+      title: 'ビデオ通話（WebRTC PoC）',
+      description: 'ブラウザ間の P2P ビデオ通話 PoC。',
+      image: videoCallPic,
+      githubUrl: 'https://github.com/shinguakira/video-call',
+      liveUrl: '',
+    },
+    en: {
+      title: 'Video Call (WebRTC PoC)',
+      description: 'A browser-to-browser P2P video call PoC.',
+      image: videoCallPic,
+      githubUrl: 'https://github.com/shinguakira/video-call',
+      liveUrl: '',
+    },
+  },
+  {
+    technologies: ['Zero (zerolang.ai)', S.rest, S.vercel],
+    ja: {
+      title: 'ポートフォリオAPI（Zero言語版）',
+      description:
+        '既存のマルチバックエンドAPI（TS/Go/Rust/Haskell）を Zero言語(zerolang.ai) で実装した版。',
+      image: zeroPocPic,
+      githubUrl: 'https://github.com/shinguakira/zero-poc',
+      liveUrl: 'https://zero-poc.vercel.app',
+    },
+    en: {
+      title: 'Portfolio API (Zero lang)',
+      description:
+        'A Zero-language (zerolang.ai) reimplementation of the existing multi-backend portfolio API (TS/Go/Rust/Haskell).',
+      image: zeroPocPic,
+      githubUrl: 'https://github.com/shinguakira/zero-poc',
+      liveUrl: 'https://zero-poc.vercel.app',
+    },
+  },
+  {
+    technologies: ['JavaScript'],
+    ja: {
+      title: 'IT学習教材',
+      description: '多言語対応（英/日/比）のWeb開発 学習教材。',
+      image: itLearnMaterialPic,
+      githubUrl: 'https://github.com/shinguakira/it-learn-material',
+      liveUrl: '',
+    },
+    en: {
+      title: 'IT Learning Material',
+      description:
+        'A multilingual (EN/JA/PH) web-development learning resource.',
+      image: itLearnMaterialPic,
+      githubUrl: 'https://github.com/shinguakira/it-learn-material',
+      liveUrl: '',
+    },
+  },
+  {
+    technologies: [S.tauri, S.rust, 'SvelteKit', S.typescript, S.vite],
+    ja: {
+      title: 'KeySound（打鍵音アプリ）',
+      description:
+        'キー入力ごとに効果音を鳴らすデスクトップアプリ（非フォーカス時も動作）。',
+      image: keysoundPic,
+      githubUrl: 'https://github.com/shinguakira/keysound',
+      liveUrl: '',
+    },
+    en: {
+      title: 'KeySound',
+      description:
+        'A desktop app that plays a sound on every keypress, even when unfocused.',
+      image: keysoundPic,
+      githubUrl: 'https://github.com/shinguakira/keysound',
+      liveUrl: '',
     },
   },
 ];

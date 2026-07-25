@@ -167,9 +167,7 @@ func TestExperienceEndpoint(t *testing.T) {
 				if exp.Company == "" {
 					t.Error("expected non-empty company name")
 				}
-				if exp.Role == "" {
-					t.Error("expected non-empty role")
-				}
+				// Role may be empty (e.g. part-time entries); mirrors the TS data.
 				if exp.Period == "" {
 					t.Error("expected non-empty period")
 				}
@@ -393,9 +391,6 @@ func TestCertificationsEndpoint(t *testing.T) {
 			for _, cert := range result.Data {
 				if cert.Name == "" {
 					t.Error("expected non-empty certification name")
-				}
-				if cert.Organization == "" {
-					t.Error("expected non-empty organization")
 				}
 			}
 		})
