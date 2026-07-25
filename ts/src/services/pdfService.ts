@@ -1,4 +1,12 @@
-import {Document, Page, Text, View, StyleSheet, pdf, Link} from '@react-pdf/renderer';
+import {
+  Document,
+  Page,
+  Text,
+  View,
+  StyleSheet,
+  pdf,
+  Link,
+} from '@react-pdf/renderer';
 import * as React from 'react';
 import {
   profile,
@@ -47,12 +55,19 @@ const parseStartYM = (period: string): number => {
 };
 
 // Unique color palette per customer
-const getCompanyColor = (company: string): {bg: string; border: string; label: string} => {
-  if (/Customer\s*1|お客さま1/i.test(company)) return {bg: '#F1F8E9', border: '#558B2F', label: '#1B5E20'};
-  if (/Customer\s*2|お客さま2/i.test(company)) return {bg: '#EDE7F6', border: '#7B1FA2', label: '#4A148C'};
-  if (/Customer\s*3|お客さま3/i.test(company)) return {bg: '#FFF3E0', border: '#E65100', label: '#BF360C'};
-  if (/Customer\s*4|お客さま4/i.test(company)) return {bg: '#E3F2FD', border: '#1565C0', label: '#0D47A1'};
-  if (/Customer\s*5|お客さま5/i.test(company)) return {bg: '#E0F2F1', border: '#00695C', label: '#004D40'};
+const getCompanyColor = (
+  company: string
+): {bg: string; border: string; label: string} => {
+  if (/Customer\s*1|お客さま1/i.test(company))
+    return {bg: '#F1F8E9', border: '#558B2F', label: '#1B5E20'};
+  if (/Customer\s*2|お客さま2/i.test(company))
+    return {bg: '#EDE7F6', border: '#7B1FA2', label: '#4A148C'};
+  if (/Customer\s*3|お客さま3/i.test(company))
+    return {bg: '#FFF3E0', border: '#E65100', label: '#BF360C'};
+  if (/Customer\s*4|お客さま4/i.test(company))
+    return {bg: '#E3F2FD', border: '#1565C0', label: '#0D47A1'};
+  if (/Customer\s*5|お客さま5/i.test(company))
+    return {bg: '#E0F2F1', border: '#00695C', label: '#004D40'};
   return {bg: '#FAFAFA', border: '#757575', label: '#424242'};
 };
 
@@ -245,7 +260,6 @@ const createStandardPDF = ({
   // ── document ──────────────────────────────────────────────────────────────
   return React.createElement(Document, {}, [
     React.createElement(Page, {key: 'page', size: 'A4', style: styles.page}, [
-
       // ── Header ──────────────────────────────────────────────────────────
       React.createElement(View, {key: 'header', style: styles.header}, [
         React.createElement(Text, {style: styles.name}, profile.name),
@@ -253,21 +267,23 @@ const createStandardPDF = ({
         React.createElement(
           View,
           {style: {flexDirection: 'row', flexWrap: 'wrap', marginTop: 6}},
-          [
-            metaBadge(contact.address, 'address'),
-          ]
+          [metaBadge(contact.address, 'address')]
         ),
       ]),
 
       // ── Profile Summary ──────────────────────────────────────────────────
-      React.createElement(View, {key: 'profile-summary', style: styles.section}, [
-        sectionBar(lang === 'en' ? 'Profile Summary' : 'プロフィール概要'),
-        React.createElement(
-          Text,
-          {style: {fontSize: 10, color: '#333333', lineHeight: 1.6}},
-          profileData.summary
-        ),
-      ]),
+      React.createElement(
+        View,
+        {key: 'profile-summary', style: styles.section},
+        [
+          sectionBar(lang === 'en' ? 'Profile Summary' : 'プロフィール概要'),
+          React.createElement(
+            Text,
+            {style: {fontSize: 10, color: '#333333', lineHeight: 1.6}},
+            profileData.summary
+          ),
+        ]
+      ),
 
       // ── Technical Skills ─────────────────────────────────────────────────
       React.createElement(View, {key: 'skills', style: styles.section}, [
@@ -315,13 +331,48 @@ const createStandardPDF = ({
       (() => {
         const legend = React.createElement(
           View,
-          {key: 'legend', style: {flexDirection: 'row', flexWrap: 'wrap', marginBottom: 10}},
-          (['Customer1', 'Customer2', 'Customer3', 'Customer4', 'Customer5'] as const).map((name) => {
+          {
+            key: 'legend',
+            style: {flexDirection: 'row', flexWrap: 'wrap', marginBottom: 10},
+          },
+          (
+            [
+              'Customer1',
+              'Customer2',
+              'Customer3',
+              'Customer4',
+              'Customer5',
+            ] as const
+          ).map((name) => {
             const cc = getCompanyColor(name);
-            return React.createElement(View, {key: name, style: {flexDirection: 'row', alignItems: 'center', marginRight: 12, marginBottom: 3}}, [
-              React.createElement(View, {style: {width: 10, height: 10, backgroundColor: cc.border, borderRadius: 2, marginRight: 4}}),
-              React.createElement(Text, {style: {fontSize: 8, color: '#444444'}}, lang === 'en' ? name : name.replace('Customer', 'お客さま')),
-            ]);
+            return React.createElement(
+              View,
+              {
+                key: name,
+                style: {
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  marginRight: 12,
+                  marginBottom: 3,
+                },
+              },
+              [
+                React.createElement(View, {
+                  style: {
+                    width: 10,
+                    height: 10,
+                    backgroundColor: cc.border,
+                    borderRadius: 2,
+                    marginRight: 4,
+                  },
+                }),
+                React.createElement(
+                  Text,
+                  {style: {fontSize: 8, color: '#444444'}},
+                  lang === 'en' ? name : name.replace('Customer', 'お客さま')
+                ),
+              ]
+            );
           })
         );
 
@@ -330,12 +381,21 @@ const createStandardPDF = ({
         const safeCompanyName = (company: string): string => {
           // Replace known Japanese-only names
           if (/^ホテル$/.test(company)) return 'Hotel';
-          if (/^家庭教師/.test(company)) return 'Private Tutor';
+          if (company.startsWith('家庭教師')) return 'Private Tutor';
           // Strip Japanese parenthetical suffix e.g. "(アルバイト)" "(フリーランス)"
-          return company.replace(/[（(][^\)）]*[)）]/g, '').replace(/[\u3000-\u9fff\uff00-\uffef]/g, '').trim() || company;
+          return (
+            company
+              .replace(/[（(][^)）]*[)）]/g, '')
+              .replace(/[\u3000-\u9fff\uff00-\uffef]/g, '')
+              .trim() || company
+          );
         };
 
-        const expCard = (exp: WorkExperience, ci: number, _isParallel: boolean) => {
+        const expCard = (
+          exp: WorkExperience,
+          ci: number,
+          _isParallel: boolean
+        ) => {
           const cc = getCompanyColor(exp.company);
           const displayCompany = safeCompanyName(exp.company);
           return React.createElement(
@@ -357,51 +417,172 @@ const createStandardPDF = ({
               // Top row: company badge + period
               React.createElement(
                 View,
-                {style: {flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 4}},
+                {
+                  style: {
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    marginBottom: 4,
+                  },
+                },
                 [
                   React.createElement(
                     View,
-                    {style: {backgroundColor: cc.border, paddingTop: 2, paddingBottom: 2, paddingLeft: 5, paddingRight: 5, borderRadius: 2}},
-                    [React.createElement(Text, {style: {fontSize: 8, color: '#ffffff', fontWeight: 'bold'}}, displayCompany)]
+                    {
+                      style: {
+                        backgroundColor: cc.border,
+                        paddingTop: 2,
+                        paddingBottom: 2,
+                        paddingLeft: 5,
+                        paddingRight: 5,
+                        borderRadius: 2,
+                      },
+                    },
+                    [
+                      React.createElement(
+                        Text,
+                        {
+                          style: {
+                            fontSize: 8,
+                            color: '#ffffff',
+                            fontWeight: 'bold',
+                          },
+                        },
+                        displayCompany
+                      ),
+                    ]
                   ),
-                  React.createElement(Text, {style: {fontSize: 8, color: '#555555'}}, exp.period),
+                  React.createElement(
+                    Text,
+                    {style: {fontSize: 8, color: '#555555'}},
+                    exp.period
+                  ),
                 ]
               ),
               // Project title
               React.createElement(
                 Text,
-                {style: {fontSize: 11, fontWeight: 'bold', color: '#111111', marginBottom: 3}},
+                {
+                  style: {
+                    fontSize: 11,
+                    fontWeight: 'bold',
+                    color: '#111111',
+                    marginBottom: 3,
+                  },
+                },
                 exp.projectOverview
               ),
               // Role + meta
               React.createElement(
                 View,
-                {style: {flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', marginBottom: 4}},
+                {
+                  style: {
+                    flexDirection: 'row',
+                    flexWrap: 'wrap',
+                    alignItems: 'center',
+                    marginBottom: 4,
+                  },
+                },
                 [
-                  ...(exp.role ? [React.createElement(Text, {key: 'role', style: {fontSize: 8, color: '#777777', marginRight: 6}}, exp.role)] : []),
-                  ...(exp.teamSize ? [metaBadge(`Team: ${exp.teamSize}`, 'team')] : []),
+                  ...(exp.role
+                    ? [
+                        React.createElement(
+                          Text,
+                          {
+                            key: 'role',
+                            style: {
+                              fontSize: 8,
+                              color: '#777777',
+                              marginRight: 6,
+                            },
+                          },
+                          exp.role
+                        ),
+                      ]
+                    : []),
+                  ...(exp.teamSize
+                    ? [metaBadge(`Team: ${exp.teamSize}`, 'team')]
+                    : []),
                   ...(exp.manMonth ? [metaBadge(exp.manMonth, 'mm')] : []),
                 ]
               ),
               // Description
               ...exp.description.map((d: string, di: number) =>
-                React.createElement(View, {key: di, style: {flexDirection: 'row', marginBottom: 2}}, [
-                  React.createElement(Text, {style: {fontSize: 8, color: cc.border, width: 10}}, '\u2022'),
-                  React.createElement(Text, {style: {flex: 1, fontSize: 8, color: '#333333', lineHeight: 1.3}}, d),
-                ])
+                React.createElement(
+                  View,
+                  {key: di, style: {flexDirection: 'row', marginBottom: 2}},
+                  [
+                    React.createElement(
+                      Text,
+                      {style: {fontSize: 8, color: cc.border, width: 10}},
+                      '\u2022'
+                    ),
+                    React.createElement(
+                      Text,
+                      {
+                        style: {
+                          flex: 1,
+                          fontSize: 8,
+                          color: '#333333',
+                          lineHeight: 1.3,
+                        },
+                      },
+                      d
+                    ),
+                  ]
+                )
               ),
               // Achievements
               ...(exp.archivement.filter((a: string) => a.trim()).length > 0
                 ? [
-                    React.createElement(Text, {style: {fontSize: 8, fontWeight: 'bold', color: cc.label, marginTop: 3, marginBottom: 2}},
-                      lang === 'en' ? 'Achievements:' : '実績:'),
+                    React.createElement(
+                      Text,
+                      {
+                        style: {
+                          fontSize: 8,
+                          fontWeight: 'bold',
+                          color: cc.label,
+                          marginTop: 3,
+                          marginBottom: 2,
+                        },
+                      },
+                      lang === 'en' ? 'Achievements:' : '実績:'
+                    ),
                     ...exp.archivement
                       .filter((a: string) => a.trim())
                       .map((a: string, ai: number) =>
-                        React.createElement(View, {key: ai, style: {flexDirection: 'row', marginBottom: 2}}, [
-                          React.createElement(Text, {style: {fontSize: 8, color: cc.border, width: 10}}, '\u2713'),
-                          React.createElement(Text, {style: {flex: 1, fontSize: 8, color: '#333333', lineHeight: 1.3}}, a),
-                        ])
+                        React.createElement(
+                          View,
+                          {
+                            key: ai,
+                            style: {flexDirection: 'row', marginBottom: 2},
+                          },
+                          [
+                            React.createElement(
+                              Text,
+                              {
+                                style: {
+                                  fontSize: 8,
+                                  color: cc.border,
+                                  width: 10,
+                                },
+                              },
+                              '\u2713'
+                            ),
+                            React.createElement(
+                              Text,
+                              {
+                                style: {
+                                  flex: 1,
+                                  fontSize: 8,
+                                  color: '#333333',
+                                  lineHeight: 1.3,
+                                },
+                              },
+                              a
+                            ),
+                          ]
+                        )
                       ),
                   ]
                 : []),
@@ -410,8 +591,24 @@ const createStandardPDF = ({
                 ? [
                     React.createElement(
                       View,
-                      {style: {backgroundColor: '#F0F0F0', paddingTop: 3, paddingBottom: 3, paddingLeft: 5, paddingRight: 5, borderRadius: 2, marginTop: 4}},
-                      [React.createElement(Text, {style: {fontSize: 7, color: cc.label}}, `Tech: ${exp.technologies.join(' · ')}`)]
+                      {
+                        style: {
+                          backgroundColor: '#F0F0F0',
+                          paddingTop: 3,
+                          paddingBottom: 3,
+                          paddingLeft: 5,
+                          paddingRight: 5,
+                          borderRadius: 2,
+                          marginTop: 4,
+                        },
+                      },
+                      [
+                        React.createElement(
+                          Text,
+                          {style: {fontSize: 7, color: cc.label}},
+                          `Tech: ${exp.technologies.join(' · ')}`
+                        ),
+                      ]
                     ),
                   ]
                 : []),
@@ -431,11 +628,15 @@ const createStandardPDF = ({
         );
 
         // Force Work Experience to always start at top of a new page
-        return React.createElement(View, {key: 'experience', break: true, style: styles.section}, [
-          sectionBar(lang === 'en' ? 'Work Experience' : '職務経歴'),
-          legend,
-          ...groupViews,
-        ]);
+        return React.createElement(
+          View,
+          {key: 'experience', break: true, style: styles.section},
+          [
+            sectionBar(lang === 'en' ? 'Work Experience' : '職務経歴'),
+            legend,
+            ...groupViews,
+          ]
+        );
       })(),
 
       // ── Education ────────────────────────────────────────────────────────
@@ -463,11 +664,24 @@ const createStandardPDF = ({
             [
               React.createElement(
                 View,
-                {style: {flexDirection: 'row', justifyContent: 'space-between', marginBottom: 3}},
+                {
+                  style: {
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    marginBottom: 3,
+                  },
+                },
                 [
                   React.createElement(
                     Text,
-                    {style: {fontSize: 11, fontWeight: 'bold', color: '#1a3a1a', flex: 1}},
+                    {
+                      style: {
+                        fontSize: 11,
+                        fontWeight: 'bold',
+                        color: '#1a3a1a',
+                        flex: 1,
+                      },
+                    },
                     edu.school
                   ),
                   React.createElement(
@@ -518,7 +732,14 @@ const createStandardPDF = ({
               [
                 React.createElement(
                   Text,
-                  {style: {flex: 1, fontSize: 9, color: '#1a1a1a', fontWeight: 'bold'}},
+                  {
+                    style: {
+                      flex: 1,
+                      fontSize: 9,
+                      color: '#1a1a1a',
+                      fontWeight: 'bold',
+                    },
+                  },
                   cert.name
                 ),
                 React.createElement(
@@ -528,7 +749,15 @@ const createStandardPDF = ({
                 ),
                 React.createElement(
                   Text,
-                  {style: {fontSize: 9, color: '#888888', marginLeft: 8, width: 60, textAlign: 'right'}},
+                  {
+                    style: {
+                      fontSize: 9,
+                      color: '#888888',
+                      marginLeft: 8,
+                      width: 60,
+                      textAlign: 'right',
+                    },
+                  },
                   cert.date
                 ),
               ]
@@ -576,7 +805,14 @@ const createStandardPDF = ({
             [
               React.createElement(
                 Text,
-                {style: {fontSize: 10, fontWeight: 'bold', color: c.label, marginBottom: 3}},
+                {
+                  style: {
+                    fontSize: 10,
+                    fontWeight: 'bold',
+                    color: c.label,
+                    marginBottom: 3,
+                  },
+                },
                 point.question
               ),
               React.createElement(
@@ -616,7 +852,14 @@ const createStandardPDF = ({
             [
               React.createElement(
                 Text,
-                {style: {fontSize: 10, fontWeight: 'bold', color: '#3a006a', marginBottom: 3}},
+                {
+                  style: {
+                    fontSize: 10,
+                    fontWeight: 'bold',
+                    color: '#3a006a',
+                    marginBottom: 3,
+                  },
+                },
                 faq.question
               ),
               React.createElement(
@@ -655,12 +898,26 @@ const createStandardPDF = ({
             [
               React.createElement(
                 Text,
-                {style: {fontSize: 11, fontWeight: 'bold', color: '#1a0050', marginBottom: 4}},
+                {
+                  style: {
+                    fontSize: 11,
+                    fontWeight: 'bold',
+                    color: '#1a0050',
+                    marginBottom: 4,
+                  },
+                },
                 project.title
               ),
               React.createElement(
                 Text,
-                {style: {fontSize: 10, color: '#333333', lineHeight: 1.5, marginBottom: 5}},
+                {
+                  style: {
+                    fontSize: 10,
+                    color: '#333333',
+                    lineHeight: 1.5,
+                    marginBottom: 5,
+                  },
+                },
                 project.description
               ),
               React.createElement(
@@ -686,18 +943,34 @@ const createStandardPDF = ({
               ),
               ...(project.githubUrl
                 ? [
-                    React.createElement(Link, {
-                      src: project.githubUrl,
-                      style: {fontSize: 9, color: '#0044aa', textDecoration: 'underline'},
-                    }, `GitHub: ${project.githubUrl}`),
+                    React.createElement(
+                      Link,
+                      {
+                        src: project.githubUrl,
+                        style: {
+                          fontSize: 9,
+                          color: '#0044aa',
+                          textDecoration: 'underline',
+                        },
+                      },
+                      `GitHub: ${project.githubUrl}`
+                    ),
                   ]
                 : []),
               ...(project.liveUrl
                 ? [
-                    React.createElement(Link, {
-                      src: project.liveUrl,
-                      style: {fontSize: 9, color: '#0044aa', textDecoration: 'underline'},
-                    }, `Live: ${project.liveUrl}`),
+                    React.createElement(
+                      Link,
+                      {
+                        src: project.liveUrl,
+                        style: {
+                          fontSize: 9,
+                          color: '#0044aa',
+                          textDecoration: 'underline',
+                        },
+                      },
+                      `Live: ${project.liveUrl}`
+                    ),
                   ]
                 : []),
             ]
@@ -705,7 +978,6 @@ const createStandardPDF = ({
         ),
         true
       ),
-
     ]),
   ]);
 };
@@ -726,7 +998,8 @@ export const generatePortfolioPDF = async (
     technologies: project.technologies,
     ...(lang === 'en' ? project.en : project.ja),
   }));
-  const localizedExperience = lang === 'en' ? workExperiences_en : workExperiences_ja;
+  const localizedExperience =
+    lang === 'en' ? workExperiences_en : workExperiences_ja;
   const localizedEducation = educationHistory.map((item) => ({
     startYear: item.startYear,
     endYear: item.endYear,
