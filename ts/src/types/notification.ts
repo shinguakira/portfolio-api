@@ -1,4 +1,4 @@
-export type MultilingualNotificationContent = {
+type MultilingualNotificationContent = {
   title: string;
   content: string;
 };

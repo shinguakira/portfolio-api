@@ -725,38 +725,6 @@ export const nextjsSkillSet = [
   S.vercel,
 ];
 
-export const receptionInnovationSkillSet = [
-  S.typescript,
-  S.react,
-  S.nodeJs,
-  S.mysql,
-  S.selenium,
-  'little state machine',
-  S.reactHookForm,
-  'axios',
-  'TypeORM',
-  'class-validator',
-  'Apollo Client Server(GraphQL)',
-  S.bootstrap5,
-  'Azure(App Service,Azure Functions)',
-  S.backlog,
-  S.swagger,
-  'アジャイル開発(スクラム)',
-];
-
-export const VOCSkillSet = [
-  S.typescript,
-  S.react,
-  S.java,
-  S.springboot,
-  S.mysql,
-  S.selenium,
-  'Mybatis(Java ORM)',
-  'axios',
-  S.backlog,
-  'アジャイル開発(スクラム)',
-];
-
 export const T3StackSkillSet = [
   S.react,
   S.typescript,
