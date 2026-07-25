@@ -242,5 +242,126 @@
     "image": "/images/profile/developer-pic-1.png?height=400&width=600",
     "githubUrl": "",
     "liveUrl": "/"
+  },
+  {
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vite",
+      "Vercel"
+    ],
+    "title": "デザイン見本帳",
+    "description": "実際に動くUIで見比べて選べる、個人用のデザイン見本帳。",
+    "image": "/images/projects/design-book.png",
+    "githubUrl": "https://github.com/shinguakira/design-book",
+    "liveUrl": "https://design-book-sepia.vercel.app"
+  },
+  {
+    "technologies": [
+      "Go",
+      "React",
+      "TypeScript",
+      "Vite"
+    ],
+    "title": "Officeファイルプレビュー",
+    "description": "Word/PDF をブラウザ上でプレビューする PoC。",
+    "image": "/images/projects/office-file-app.png",
+    "githubUrl": "https://github.com/shinguakira/office-file-app",
+    "liveUrl": ""
+  },
+  {
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Express.js",
+      "Tauri"
+    ],
+    "title": "AFK Engineer（放置RPG）",
+    "description": "エンジニアモチーフのインクリメンタル（放置）RPG。",
+    "image": "/images/projects/afk-game.png",
+    "githubUrl": "https://github.com/shinguakira/afk-game",
+    "liveUrl": ""
+  },
+  {
+    "technologies": [
+      "React Native",
+      "Expo",
+      "TypeScript"
+    ],
+    "title": "オセロ（React Native）",
+    "description": "通信対戦に対応したオセロ（リバーシ）。",
+    "image": "/images/projects/rn-othello.png",
+    "githubUrl": "https://github.com/shinguakira/rn-othello",
+    "liveUrl": ""
+  },
+  {
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Rust",
+      "Docker",
+      "PubMed API"
+    ],
+    "title": "The PubMed Gazette（PubMed検索）",
+    "description": "新聞風UIのPubMed論文検索リーダー。共有URL・ローカル保存・引用に対応。",
+    "image": "/images/projects/pubmed-search.png",
+    "githubUrl": "https://github.com/shinguakira/pubmed-search",
+    "liveUrl": ""
+  },
+  {
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "WebRTC",
+      "Socket.IO",
+      "Tailwind CSS",
+      "shadcn"
+    ],
+    "title": "ビデオ通話（WebRTC PoC）",
+    "description": "ブラウザ間の P2P ビデオ通話 PoC。",
+    "image": "/images/projects/video-call.png",
+    "githubUrl": "https://github.com/shinguakira/video-call",
+    "liveUrl": ""
+  },
+  {
+    "technologies": [
+      "Zero (zerolang.ai)",
+      "REST",
+      "Vercel"
+    ],
+    "title": "ポートフォリオAPI（Zero言語版）",
+    "description": "既存のマルチバックエンドAPI（TS/Go/Rust/Haskell）を Zero言語(zerolang.ai) で実装した版。",
+    "image": "/images/projects/zero-poc.png",
+    "githubUrl": "https://github.com/shinguakira/zero-poc",
+    "liveUrl": "https://zero-poc.vercel.app"
+  },
+  {
+    "technologies": [
+      "JavaScript"
+    ],
+    "title": "IT学習教材",
+    "description": "多言語対応（英/日/比）のWeb開発 学習教材。",
+    "image": "/images/projects/it-learn-material.png",
+    "githubUrl": "https://github.com/shinguakira/it-learn-material",
+    "liveUrl": ""
+  },
+  {
+    "technologies": [
+      "Tauri",
+      "Rust",
+      "SvelteKit",
+      "TypeScript",
+      "Vite"
+    ],
+    "title": "KeySound（打鍵音アプリ）",
+    "description": "キー入力ごとに効果音を鳴らすデスクトップアプリ（非フォーカス時も動作）。",
+    "image": "/images/projects/keysound.png",
+    "githubUrl": "https://github.com/shinguakira/keysound",
+    "liveUrl": ""
   }
 ]

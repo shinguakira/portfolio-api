@@ -242,5 +242,126 @@
     "image": "/images/profile/developer-pic-1.png?height=400&width=600",
     "githubUrl": "",
     "liveUrl": "/"
+  },
+  {
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vite",
+      "Vercel"
+    ],
+    "title": "Design Book",
+    "description": "A personal reference book of live, interactive UI you can compare at a glance.",
+    "image": "/images/projects/design-book.png",
+    "githubUrl": "https://github.com/shinguakira/design-book",
+    "liveUrl": "https://design-book-sepia.vercel.app"
+  },
+  {
+    "technologies": [
+      "Go",
+      "React",
+      "TypeScript",
+      "Vite"
+    ],
+    "title": "Office File Preview",
+    "description": "A PoC for previewing Office files (Word/PDF) in the browser.",
+    "image": "/images/projects/office-file-app.png",
+    "githubUrl": "https://github.com/shinguakira/office-file-app",
+    "liveUrl": ""
+  },
+  {
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Express.js",
+      "Tauri"
+    ],
+    "title": "AFK Engineer",
+    "description": "An incremental (idle) RPG with a software-engineer theme.",
+    "image": "/images/projects/afk-game.png",
+    "githubUrl": "https://github.com/shinguakira/afk-game",
+    "liveUrl": ""
+  },
+  {
+    "technologies": [
+      "React Native",
+      "Expo",
+      "TypeScript"
+    ],
+    "title": "Othello (React Native)",
+    "description": "An Othello (Reversi) game with online multiplayer.",
+    "image": "/images/projects/rn-othello.png",
+    "githubUrl": "https://github.com/shinguakira/rn-othello",
+    "liveUrl": ""
+  },
+  {
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Rust",
+      "Docker",
+      "PubMed API"
+    ],
+    "title": "The PubMed Gazette",
+    "description": "A newspaper-styled PubMed search reader with shareable URLs, saves, and citations.",
+    "image": "/images/projects/pubmed-search.png",
+    "githubUrl": "https://github.com/shinguakira/pubmed-search",
+    "liveUrl": ""
+  },
+  {
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "WebRTC",
+      "Socket.IO",
+      "Tailwind CSS",
+      "shadcn"
+    ],
+    "title": "Video Call (WebRTC PoC)",
+    "description": "A browser-to-browser P2P video call PoC.",
+    "image": "/images/projects/video-call.png",
+    "githubUrl": "https://github.com/shinguakira/video-call",
+    "liveUrl": ""
+  },
+  {
+    "technologies": [
+      "Zero (zerolang.ai)",
+      "REST",
+      "Vercel"
+    ],
+    "title": "Portfolio API (Zero lang)",
+    "description": "A Zero-language (zerolang.ai) reimplementation of the existing multi-backend portfolio API (TS/Go/Rust/Haskell).",
+    "image": "/images/projects/zero-poc.png",
+    "githubUrl": "https://github.com/shinguakira/zero-poc",
+    "liveUrl": "https://zero-poc.vercel.app"
+  },
+  {
+    "technologies": [
+      "JavaScript"
+    ],
+    "title": "IT Learning Material",
+    "description": "A multilingual (EN/JA/PH) web-development learning resource.",
+    "image": "/images/projects/it-learn-material.png",
+    "githubUrl": "https://github.com/shinguakira/it-learn-material",
+    "liveUrl": ""
+  },
+  {
+    "technologies": [
+      "Tauri",
+      "Rust",
+      "SvelteKit",
+      "TypeScript",
+      "Vite"
+    ],
+    "title": "KeySound",
+    "description": "A desktop app that plays a sound on every keypress, even when unfocused.",
+    "image": "/images/projects/keysound.png",
+    "githubUrl": "https://github.com/shinguakira/keysound",
+    "liveUrl": ""
   }
 ]
