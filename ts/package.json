@@ -19,7 +19,8 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "format:check": "prettier --check \"src/**/*.ts\"",
     "fix": "npm run format && npm run lint:fix",
-    "generate:samples": "npx tsx src/scripts/generateSamples.ts"
+    "generate:samples": "npx tsx src/scripts/generateSamples.ts",
+    "gen:backends": "npx tsx src/scripts/generateBackends.ts"
   },
   "dependencies": {
     "@elysiajs/cors": "^1.2.0",
