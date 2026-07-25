@@ -126,14 +126,6 @@ skills =
       , skPictureColor = Just "#61DAFB"
       }
   , SkillItem
-      { skName = "Redux"
-      , skCategory = "State Management"
-      , skYears = "self-study"
-      , skProficiency = Just "self-study"
-      , skPicture = Just "/icons/Redux.svg"
-      , skPictureColor = Just "#764ABC"
-      }
-  , SkillItem
       { skName = "Prisma"
       , skCategory = "ORM"
       , skYears = "self-study"
@@ -278,14 +270,6 @@ skills =
       , skPictureColor = Just "#3E67B1"
       }
   , SkillItem
-      { skName = "NextAuth"
-      , skCategory = "Frontend"
-      , skYears = "1 year"
-      , skProficiency = Just "onBusiness"
-      , skPicture = Just "/icons/NextAuth.png"
-      , skPictureColor = Just "#000000"
-      }
-  , SkillItem
       { skName = "vectorDB(pgvector)"
       , skCategory = "Database"
       , skYears = "3 months"
@@ -308,14 +292,6 @@ skills =
       , skProficiency = Just "self-study"
       , skPicture = Just "/icons/Drizzle.svg"
       , skPictureColor = Just "#C5F74F"
-      }
-  , SkillItem
-      { skName = "Remix"
-      , skCategory = "Frontend"
-      , skYears = "self-study"
-      , skProficiency = Just "self-study"
-      , skPicture = Just "/icons/Remix.svg"
-      , skPictureColor = Just "#000000"
       }
   , SkillItem
       { skName = "Electron"

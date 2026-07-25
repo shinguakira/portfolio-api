@@ -139,6 +139,7 @@ export const skills: SkillItem[] = [
     proficiency: selfStudy,
     picture: '/icons/Redux.svg',
     pictureColor: '#764ABC',
+    enabled: false, // hidden: filtered from skills list
   },
   {
     name: 'Context API',
@@ -300,6 +301,7 @@ export const skills: SkillItem[] = [
     proficiency: onBusiness,
     picture: '/icons/NextAuth.png',
     pictureColor: '#000000',
+    enabled: false, // hidden: filtered from skills list
   },
   {
     name: 'codegen',
@@ -359,6 +361,7 @@ export const skills: SkillItem[] = [
     proficiency: selfStudy,
     picture: '/icons/Remix.svg',
     pictureColor: '#000000',
+    enabled: false, // hidden: filtered from skills list
   },
   {
     name: 'Electron',

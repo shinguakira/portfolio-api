@@ -124,14 +124,6 @@ lazy_static! {
             picture_color: Some("#61DAFB".to_string())
         },
         SkillItem {
-            name: "Redux".to_string(),
-            years: "self-study".to_string(),
-            category: "State Management".to_string(),
-            proficiency: Some("self-study".to_string()),
-            picture: Some("/icons/Redux.svg".to_string()),
-            picture_color: Some("#764ABC".to_string())
-        },
-        SkillItem {
             name: "Prisma".to_string(),
             years: "self-study".to_string(),
             category: "ORM".to_string(),
@@ -276,14 +268,6 @@ lazy_static! {
             picture_color: Some("#3E67B1".to_string())
         },
         SkillItem {
-            name: "NextAuth".to_string(),
-            years: "1 year".to_string(),
-            category: "Frontend".to_string(),
-            proficiency: Some("onBusiness".to_string()),
-            picture: Some("/icons/NextAuth.png".to_string()),
-            picture_color: Some("#000000".to_string())
-        },
-        SkillItem {
             name: "vectorDB(pgvector)".to_string(),
             years: "3 months".to_string(),
             category: "Database".to_string(),
@@ -306,14 +290,6 @@ lazy_static! {
             proficiency: Some("self-study".to_string()),
             picture: Some("/icons/Drizzle.svg".to_string()),
             picture_color: Some("#C5F74F".to_string())
-        },
-        SkillItem {
-            name: "Remix".to_string(),
-            years: "self-study".to_string(),
-            category: "Frontend".to_string(),
-            proficiency: Some("self-study".to_string()),
-            picture: Some("/icons/Remix.svg".to_string()),
-            picture_color: Some("#000000".to_string())
         },
         SkillItem {
             name: "Electron".to_string(),

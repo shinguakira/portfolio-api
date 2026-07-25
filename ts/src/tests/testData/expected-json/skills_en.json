@@ -120,14 +120,6 @@
     "pictureColor": "#61DAFB"
   },
   {
-    "name": "Redux",
-    "years": "self-study",
-    "category": "State Management",
-    "proficiency": "self-study",
-    "picture": "/icons/Redux.svg",
-    "pictureColor": "#764ABC"
-  },
-  {
     "name": "Prisma",
     "years": "self-study",
     "category": "ORM",
@@ -272,14 +264,6 @@
     "pictureColor": "#3E67B1"
   },
   {
-    "name": "NextAuth",
-    "years": "1 year",
-    "category": "Frontend",
-    "proficiency": "onBusiness",
-    "picture": "/icons/NextAuth.png",
-    "pictureColor": "#000000"
-  },
-  {
     "name": "vectorDB(pgvector)",
     "years": "3 months",
     "category": "Database",
@@ -302,14 +286,6 @@
     "proficiency": "self-study",
     "picture": "/icons/Drizzle.svg",
     "pictureColor": "#C5F74F"
-  },
-  {
-    "name": "Remix",
-    "years": "self-study",
-    "category": "Frontend",
-    "proficiency": "self-study",
-    "picture": "/icons/Remix.svg",
-    "pictureColor": "#000000"
   },
   {
     "name": "Electron",
