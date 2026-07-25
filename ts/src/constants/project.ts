@@ -29,6 +29,184 @@ import {MultilingualProject} from '../types/projectItem.js';
 
 export const projects: MultilingualProject[] = [
   {
+    technologies: [S.react, S.typescript, S.tailwind, S.vite, S.vercel],
+    ja: {
+      title: 'デザイン見本帳',
+      description: '実際に動くUIで見比べて選べる、個人用のデザイン見本帳。',
+      image: designBookPic,
+      githubUrl: 'https://github.com/shinguakira/design-book',
+      liveUrl: 'https://design-book-sepia.vercel.app',
+    },
+    en: {
+      title: 'Design Book',
+      description:
+        'A personal reference book of live, interactive UI you can compare at a glance.',
+      image: designBookPic,
+      githubUrl: 'https://github.com/shinguakira/design-book',
+      liveUrl: 'https://design-book-sepia.vercel.app',
+    },
+  },
+  {
+    technologies: [S.go, S.react, S.typescript, S.vite],
+    ja: {
+      title: 'Officeファイルプレビュー',
+      description: 'Word/PDF をブラウザ上でプレビューする PoC。',
+      image: officeFileAppPic,
+      githubUrl: 'https://github.com/shinguakira/office-file-app',
+      liveUrl: '',
+    },
+    en: {
+      title: 'Office File Preview',
+      description:
+        'A PoC for previewing Office files (Word/PDF) in the browser.',
+      image: officeFileAppPic,
+      githubUrl: 'https://github.com/shinguakira/office-file-app',
+      liveUrl: '',
+    },
+  },
+  {
+    technologies: [S.react, S.typescript, S.vite, S.expressJs, S.tauri],
+    ja: {
+      title: 'AFK Engineer（放置RPG）',
+      description: 'エンジニアモチーフのインクリメンタル（放置）RPG。',
+      image: afkGamePic,
+      githubUrl: 'https://github.com/shinguakira/afk-game',
+      liveUrl: '',
+    },
+    en: {
+      title: 'AFK Engineer',
+      description: 'An incremental (idle) RPG with a software-engineer theme.',
+      image: afkGamePic,
+      githubUrl: 'https://github.com/shinguakira/afk-game',
+      liveUrl: '',
+    },
+  },
+  {
+    technologies: ['React Native', 'Expo', S.typescript],
+    ja: {
+      title: 'オセロ（React Native）',
+      description: '通信対戦に対応したオセロ（リバーシ）。',
+      image: rnOthelloPic,
+      githubUrl: 'https://github.com/shinguakira/rn-othello',
+      liveUrl: '',
+    },
+    en: {
+      title: 'Othello (React Native)',
+      description: 'An Othello (Reversi) game with online multiplayer.',
+      image: rnOthelloPic,
+      githubUrl: 'https://github.com/shinguakira/rn-othello',
+      liveUrl: '',
+    },
+  },
+  {
+    technologies: [
+      S.react,
+      S.typescript,
+      S.vite,
+      S.tailwind,
+      S.rust,
+      S.docker,
+      'PubMed API',
+    ],
+    ja: {
+      title: 'The PubMed Gazette（PubMed検索）',
+      description:
+        '新聞風UIのPubMed論文検索リーダー。共有URL・ローカル保存・引用に対応。',
+      image: pubmedSearchPic,
+      githubUrl: 'https://github.com/shinguakira/pubmed-search',
+      liveUrl: '',
+    },
+    en: {
+      title: 'The PubMed Gazette',
+      description:
+        'A newspaper-styled PubMed search reader with shareable URLs, saves, and citations.',
+      image: pubmedSearchPic,
+      githubUrl: 'https://github.com/shinguakira/pubmed-search',
+      liveUrl: '',
+    },
+  },
+  {
+    technologies: [
+      S.nextJs,
+      S.react,
+      S.typescript,
+      'WebRTC',
+      'Socket.IO',
+      S.tailwind,
+      S.shadcn,
+    ],
+    ja: {
+      title: 'ビデオ通話（WebRTC PoC）',
+      description: 'ブラウザ間の P2P ビデオ通話 PoC。',
+      image: videoCallPic,
+      githubUrl: 'https://github.com/shinguakira/video-call',
+      liveUrl: '',
+    },
+    en: {
+      title: 'Video Call (WebRTC PoC)',
+      description: 'A browser-to-browser P2P video call PoC.',
+      image: videoCallPic,
+      githubUrl: 'https://github.com/shinguakira/video-call',
+      liveUrl: '',
+    },
+  },
+  {
+    technologies: ['Zero (zerolang.ai)', S.rest, S.vercel],
+    ja: {
+      title: 'ポートフォリオAPI（Zero言語版）',
+      description:
+        '既存のマルチバックエンドAPI（TS/Go/Rust/Haskell）を Zero言語(zerolang.ai) で実装した版。',
+      image: zeroPocPic,
+      githubUrl: 'https://github.com/shinguakira/zero-poc',
+      liveUrl: 'https://zero-poc.vercel.app',
+    },
+    en: {
+      title: 'Portfolio API (Zero lang)',
+      description:
+        'A Zero-language (zerolang.ai) reimplementation of the existing multi-backend portfolio API (TS/Go/Rust/Haskell).',
+      image: zeroPocPic,
+      githubUrl: 'https://github.com/shinguakira/zero-poc',
+      liveUrl: 'https://zero-poc.vercel.app',
+    },
+  },
+  {
+    technologies: ['JavaScript'],
+    ja: {
+      title: 'IT学習教材',
+      description: '多言語対応（英/日/比）のWeb開発 学習教材。',
+      image: itLearnMaterialPic,
+      githubUrl: 'https://github.com/shinguakira/it-learn-material',
+      liveUrl: '',
+    },
+    en: {
+      title: 'IT Learning Material',
+      description:
+        'A multilingual (EN/JA/PH) web-development learning resource.',
+      image: itLearnMaterialPic,
+      githubUrl: 'https://github.com/shinguakira/it-learn-material',
+      liveUrl: '',
+    },
+  },
+  {
+    technologies: [S.tauri, S.rust, 'SvelteKit', S.typescript, S.vite],
+    ja: {
+      title: 'KeySound（打鍵音アプリ）',
+      description:
+        'キー入力ごとに効果音を鳴らすデスクトップアプリ（非フォーカス時も動作）。',
+      image: keysoundPic,
+      githubUrl: 'https://github.com/shinguakira/keysound',
+      liveUrl: '',
+    },
+    en: {
+      title: 'KeySound',
+      description:
+        'A desktop app that plays a sound on every keypress, even when unfocused.',
+      image: keysoundPic,
+      githubUrl: 'https://github.com/shinguakira/keysound',
+      liveUrl: '',
+    },
+  },
+  {
     technologies: nextjsSkillSet,
     ja: {
       title: '開発予定を考えているアプリ',
@@ -433,184 +611,6 @@ Changes from the original source:
       image: `${tmpPic}?height=400&width=600`,
       githubUrl: '',
       liveUrl: '/',
-    },
-  },
-  {
-    technologies: [S.react, S.typescript, S.tailwind, S.vite, S.vercel],
-    ja: {
-      title: 'デザイン見本帳',
-      description: '実際に動くUIで見比べて選べる、個人用のデザイン見本帳。',
-      image: designBookPic,
-      githubUrl: 'https://github.com/shinguakira/design-book',
-      liveUrl: 'https://design-book-sepia.vercel.app',
-    },
-    en: {
-      title: 'Design Book',
-      description:
-        'A personal reference book of live, interactive UI you can compare at a glance.',
-      image: designBookPic,
-      githubUrl: 'https://github.com/shinguakira/design-book',
-      liveUrl: 'https://design-book-sepia.vercel.app',
-    },
-  },
-  {
-    technologies: [S.go, S.react, S.typescript, S.vite],
-    ja: {
-      title: 'Officeファイルプレビュー',
-      description: 'Word/PDF をブラウザ上でプレビューする PoC。',
-      image: officeFileAppPic,
-      githubUrl: 'https://github.com/shinguakira/office-file-app',
-      liveUrl: '',
-    },
-    en: {
-      title: 'Office File Preview',
-      description:
-        'A PoC for previewing Office files (Word/PDF) in the browser.',
-      image: officeFileAppPic,
-      githubUrl: 'https://github.com/shinguakira/office-file-app',
-      liveUrl: '',
-    },
-  },
-  {
-    technologies: [S.react, S.typescript, S.vite, S.expressJs, S.tauri],
-    ja: {
-      title: 'AFK Engineer（放置RPG）',
-      description: 'エンジニアモチーフのインクリメンタル（放置）RPG。',
-      image: afkGamePic,
-      githubUrl: 'https://github.com/shinguakira/afk-game',
-      liveUrl: '',
-    },
-    en: {
-      title: 'AFK Engineer',
-      description: 'An incremental (idle) RPG with a software-engineer theme.',
-      image: afkGamePic,
-      githubUrl: 'https://github.com/shinguakira/afk-game',
-      liveUrl: '',
-    },
-  },
-  {
-    technologies: ['React Native', 'Expo', S.typescript],
-    ja: {
-      title: 'オセロ（React Native）',
-      description: '通信対戦に対応したオセロ（リバーシ）。',
-      image: rnOthelloPic,
-      githubUrl: 'https://github.com/shinguakira/rn-othello',
-      liveUrl: '',
-    },
-    en: {
-      title: 'Othello (React Native)',
-      description: 'An Othello (Reversi) game with online multiplayer.',
-      image: rnOthelloPic,
-      githubUrl: 'https://github.com/shinguakira/rn-othello',
-      liveUrl: '',
-    },
-  },
-  {
-    technologies: [
-      S.react,
-      S.typescript,
-      S.vite,
-      S.tailwind,
-      S.rust,
-      S.docker,
-      'PubMed API',
-    ],
-    ja: {
-      title: 'The PubMed Gazette（PubMed検索）',
-      description:
-        '新聞風UIのPubMed論文検索リーダー。共有URL・ローカル保存・引用に対応。',
-      image: pubmedSearchPic,
-      githubUrl: 'https://github.com/shinguakira/pubmed-search',
-      liveUrl: '',
-    },
-    en: {
-      title: 'The PubMed Gazette',
-      description:
-        'A newspaper-styled PubMed search reader with shareable URLs, saves, and citations.',
-      image: pubmedSearchPic,
-      githubUrl: 'https://github.com/shinguakira/pubmed-search',
-      liveUrl: '',
-    },
-  },
-  {
-    technologies: [
-      S.nextJs,
-      S.react,
-      S.typescript,
-      'WebRTC',
-      'Socket.IO',
-      S.tailwind,
-      S.shadcn,
-    ],
-    ja: {
-      title: 'ビデオ通話（WebRTC PoC）',
-      description: 'ブラウザ間の P2P ビデオ通話 PoC。',
-      image: videoCallPic,
-      githubUrl: 'https://github.com/shinguakira/video-call',
-      liveUrl: '',
-    },
-    en: {
-      title: 'Video Call (WebRTC PoC)',
-      description: 'A browser-to-browser P2P video call PoC.',
-      image: videoCallPic,
-      githubUrl: 'https://github.com/shinguakira/video-call',
-      liveUrl: '',
-    },
-  },
-  {
-    technologies: ['Zero (zerolang.ai)', S.rest, S.vercel],
-    ja: {
-      title: 'ポートフォリオAPI（Zero言語版）',
-      description:
-        '既存のマルチバックエンドAPI（TS/Go/Rust/Haskell）を Zero言語(zerolang.ai) で実装した版。',
-      image: zeroPocPic,
-      githubUrl: 'https://github.com/shinguakira/zero-poc',
-      liveUrl: 'https://zero-poc.vercel.app',
-    },
-    en: {
-      title: 'Portfolio API (Zero lang)',
-      description:
-        'A Zero-language (zerolang.ai) reimplementation of the existing multi-backend portfolio API (TS/Go/Rust/Haskell).',
-      image: zeroPocPic,
-      githubUrl: 'https://github.com/shinguakira/zero-poc',
-      liveUrl: 'https://zero-poc.vercel.app',
-    },
-  },
-  {
-    technologies: ['JavaScript'],
-    ja: {
-      title: 'IT学習教材',
-      description: '多言語対応（英/日/比）のWeb開発 学習教材。',
-      image: itLearnMaterialPic,
-      githubUrl: 'https://github.com/shinguakira/it-learn-material',
-      liveUrl: '',
-    },
-    en: {
-      title: 'IT Learning Material',
-      description:
-        'A multilingual (EN/JA/PH) web-development learning resource.',
-      image: itLearnMaterialPic,
-      githubUrl: 'https://github.com/shinguakira/it-learn-material',
-      liveUrl: '',
-    },
-  },
-  {
-    technologies: [S.tauri, S.rust, 'SvelteKit', S.typescript, S.vite],
-    ja: {
-      title: 'KeySound（打鍵音アプリ）',
-      description:
-        'キー入力ごとに効果音を鳴らすデスクトップアプリ（非フォーカス時も動作）。',
-      image: keysoundPic,
-      githubUrl: 'https://github.com/shinguakira/keysound',
-      liveUrl: '',
-    },
-    en: {
-      title: 'KeySound',
-      description:
-        'A desktop app that plays a sound on every keypress, even when unfocused.',
-      image: keysoundPic,
-      githubUrl: 'https://github.com/shinguakira/keysound',
-      liveUrl: '',
     },
   },
 ];
