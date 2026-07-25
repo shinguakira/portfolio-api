@@ -1,5 +1,5 @@
-use lazy_static::lazy_static;
 use crate::model::profile::{ProfileResponse, SocialLink};
+use lazy_static::lazy_static;
 
 lazy_static! {
     pub static ref PROFILE_JA: ProfileResponse = ProfileResponse {
@@ -13,7 +13,6 @@ lazy_static! {
         summary: "React/TypeScript/Next.jsを中心としたWeb開発に従事するフルスタックエンジニア。".to_string(),
         bio: "Turning Vision Into Reality With Code And Design.".to_string(),
     };
-
     pub static ref PROFILE_EN: ProfileResponse = ProfileResponse {
         name: "Web Dev".to_string(),
         location: "Tokyo, Japan".to_string(),
