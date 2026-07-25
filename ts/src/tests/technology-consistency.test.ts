@@ -27,12 +27,9 @@ const excludedTechs = new Set([
   'tRPC',
   'DB(未定)',
   'Prisma(or Drizzle)',
-  // Category 2b: newly added GitHub projects (languages/tools not tracked as skills)
-  'Go',
-  'Rust',
+  // Category 2b: newly added GitHub projects (tools not tracked as skills)
   'React Native',
   'Expo',
-  'Tauri',
   'SvelteKit',
   'WebRTC',
   'Socket.IO',

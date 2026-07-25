@@ -40,6 +40,22 @@
     "pictureColor": "#3776AB"
   },
   {
+    "name": "Go",
+    "years": "self-study",
+    "category": "Language",
+    "proficiency": "self-study",
+    "picture": "/icons/Go.svg",
+    "pictureColor": "#00ADD8"
+  },
+  {
+    "name": "Rust",
+    "years": "self-study",
+    "category": "Language",
+    "proficiency": "self-study",
+    "picture": "/icons/Rust.svg",
+    "pictureColor": "#DEA584"
+  },
+  {
     "name": "React",
     "years": "2 years",
     "category": "Frontend",
@@ -302,6 +318,14 @@
     "proficiency": "self-study",
     "picture": "/icons/Electron.svg",
     "pictureColor": "#47848F"
+  },
+  {
+    "name": "Tauri",
+    "years": "self-study",
+    "category": "Frontend",
+    "proficiency": "self-study",
+    "picture": "/icons/Tauri.svg",
+    "pictureColor": "#FFC131"
   },
   {
     "name": "Vite",

@@ -454,7 +454,7 @@ Changes from the original source:
     },
   },
   {
-    technologies: ['Go', S.react, S.typescript, S.vite],
+    technologies: [S.go, S.react, S.typescript, S.vite],
     ja: {
       title: 'Officeファイルプレビュー',
       description: 'Word/PDF をブラウザ上でプレビューする PoC。',
@@ -472,7 +472,7 @@ Changes from the original source:
     },
   },
   {
-    technologies: [S.react, S.typescript, S.vite, S.expressJs, 'Tauri'],
+    technologies: [S.react, S.typescript, S.vite, S.expressJs, S.tauri],
     ja: {
       title: 'AFK Engineer（放置RPG）',
       description: 'エンジニアモチーフのインクリメンタル（放置）RPG。',
@@ -511,7 +511,7 @@ Changes from the original source:
       S.typescript,
       S.vite,
       S.tailwind,
-      'Rust',
+      S.rust,
       S.docker,
       'PubMed API',
     ],
@@ -595,7 +595,7 @@ Changes from the original source:
     },
   },
   {
-    technologies: ['Tauri', 'Rust', 'SvelteKit', S.typescript, S.vite],
+    technologies: [S.tauri, S.rust, 'SvelteKit', S.typescript, S.vite],
     ja: {
       title: 'KeySound（打鍵音アプリ）',
       description:
