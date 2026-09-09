@@ -131,7 +131,7 @@ function buildSkillsSheet(wb: ExcelJS.Workbook): void {
 
   applyHeaderStyle(ws.getRow(1), 'FF1B5E20');
 
-  const allSkills = [...skills, ...otherSkills];
+  const allSkills = [...skills(), ...otherSkills()];
   let i = 1;
   for (const skill of allSkills) {
     const row = ws.addRow({

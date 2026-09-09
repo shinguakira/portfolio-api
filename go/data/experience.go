@@ -33,8 +33,8 @@ var WorkExperiencesJA = []model.WorkExperience{
 		Role:            "フルスタック開発者",
 		ManMonth:        "",
 		Description:     []string{"社内ツール開発"},
-		Archivement:     []string{"subversionからgitへの移行", "CI/CDパイプラインの構築", "開発環境の改善", "kiroなどを使ったAIエージェントを使ったAI駆動開発の導入と整備", "仕様駆動開発の導入"},
-		Technologies:    []string{"TypeScript", "React", "Vite", "Java", "Springboot(Java)", "Python", "FastAPI", "Azure", "Azure Web Apps", "Azure DevOps", "Azure Pipelines", "Azure Repos", "Whisper(local)", "Ollama", "TTS", "STT", "RAG", "vectorDB(pgvector)"},
+		Archivement:     []string{"subversionからgitへの移行", "CI/CDパイプラインの構築", "開発環境の改善", "kiroなどを使ったAIエージェントを使ったAI駆動開発の導入と整備", "仕様駆動開発の導入", "マイクロサービス化", "JavaからGoへの移行"},
+		Technologies:    []string{"TypeScript", "React", "Vite", "Java", "Springboot(Java)", "Go", "Microservices", "Azure", "Azure Web Apps", "Azure DevOps", "Azure Pipelines", "Azure Repos", "Whisper(local)", "Ollama", "TTS", "STT", "RAG", "vectorDB(pgvector)"},
 	},
 	{
 		Company:         "お客さま5",
@@ -223,8 +223,8 @@ var WorkExperiencesEN = []model.WorkExperience{
 		Role:            "Full Stack Developer",
 		ManMonth:        "",
 		Description:     []string{"Internal tools development"},
-		Archivement:     []string{"Migration from Subversion to Git", "CI/CD pipeline construction", "Development environment improvement", "Introduction and setup of AI-driven development using AI agents such as Kiro", "Introduction of specification-driven development"},
-		Technologies:    []string{"TypeScript", "React", "Vite", "Java", "Springboot(Java)", "Python", "FastAPI", "Azure", "Azure Web Apps", "Azure DevOps", "Azure Pipelines", "Azure Repos", "Whisper(local)", "Ollama", "TTS", "STT", "RAG", "vectorDB(pgvector)"},
+		Archivement:     []string{"Migration from Subversion to Git", "CI/CD pipeline construction", "Development environment improvement", "Introduction and setup of AI-driven development using AI agents such as Kiro", "Introduction of specification-driven development", "Migration to a microservices architecture", "Migration from Java to Go"},
+		Technologies:    []string{"TypeScript", "React", "Vite", "Java", "Springboot(Java)", "Go", "Microservices", "Azure", "Azure Web Apps", "Azure DevOps", "Azure Pipelines", "Azure Repos", "Whisper(local)", "Ollama", "TTS", "STT", "RAG", "vectorDB(pgvector)"},
 	},
 	{
 		Company:         "Customer5",

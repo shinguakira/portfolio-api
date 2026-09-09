@@ -36,8 +36,8 @@ workExperiencesJA =
       , weRole = "フルスタック開発者"
       , weManMonth = ""
       , weDescription = ["社内ツール開発"]
-      , weArchivement = ["subversionからgitへの移行", "CI/CDパイプラインの構築", "開発環境の改善", "kiroなどを使ったAIエージェントを使ったAI駆動開発の導入と整備", "仕様駆動開発の導入"]
-      , weTechnologies = ["TypeScript", "React", "Vite", "Java", "Springboot(Java)", "Python", "FastAPI", "Azure", "Azure Web Apps", "Azure DevOps", "Azure Pipelines", "Azure Repos", "Whisper(local)", "Ollama", "TTS", "STT", "RAG", "vectorDB(pgvector)"]
+      , weArchivement = ["subversionからgitへの移行", "CI/CDパイプラインの構築", "開発環境の改善", "kiroなどを使ったAIエージェントを使ったAI駆動開発の導入と整備", "仕様駆動開発の導入", "マイクロサービス化", "JavaからGoへの移行"]
+      , weTechnologies = ["TypeScript", "React", "Vite", "Java", "Springboot(Java)", "Go", "Microservices", "Azure", "Azure Web Apps", "Azure DevOps", "Azure Pipelines", "Azure Repos", "Whisper(local)", "Ollama", "TTS", "STT", "RAG", "vectorDB(pgvector)"]
       }
   , WorkExperience
       { weCompany = "お客さま5"
@@ -227,8 +227,8 @@ workExperiencesEN =
       , weRole = "Full Stack Developer"
       , weManMonth = ""
       , weDescription = ["Internal tools development"]
-      , weArchivement = ["Migration from Subversion to Git", "CI/CD pipeline construction", "Development environment improvement", "Introduction and setup of AI-driven development using AI agents such as Kiro", "Introduction of specification-driven development"]
-      , weTechnologies = ["TypeScript", "React", "Vite", "Java", "Springboot(Java)", "Python", "FastAPI", "Azure", "Azure Web Apps", "Azure DevOps", "Azure Pipelines", "Azure Repos", "Whisper(local)", "Ollama", "TTS", "STT", "RAG", "vectorDB(pgvector)"]
+      , weArchivement = ["Migration from Subversion to Git", "CI/CD pipeline construction", "Development environment improvement", "Introduction and setup of AI-driven development using AI agents such as Kiro", "Introduction of specification-driven development", "Migration to a microservices architecture", "Migration from Java to Go"]
+      , weTechnologies = ["TypeScript", "React", "Vite", "Java", "Springboot(Java)", "Go", "Microservices", "Azure", "Azure Web Apps", "Azure DevOps", "Azure Pipelines", "Azure Repos", "Whisper(local)", "Ollama", "TTS", "STT", "RAG", "vectorDB(pgvector)"]
       }
   , WorkExperience
       { weCompany = "Customer5"

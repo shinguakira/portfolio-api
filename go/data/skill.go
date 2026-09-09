@@ -2,13 +2,13 @@ package data
 
 import "github.com/shinguakira/portfolio-api-go/model"
 
-var Skills = []model.SkillItem{
+var skillDefs = []model.SkillItem{
 	{Name: "TypeScript", Years: "1 year 6 months", Category: "Language", Proficiency: "onBusiness", Picture: "/icons/TypeScript.svg", PictureColor: "#3178C6"},
 	{Name: "JavaScript(include TypeScript)", Years: "2 years", Category: "Language", Proficiency: "onBusiness", Picture: "/icons/JavaScript.svg", PictureColor: "#F7DF1E"},
 	{Name: "Java", Years: "2 years", Category: "Language", Proficiency: "onBusiness", Picture: "/icons/Java.svg", PictureColor: "#61DAFB"},
 	{Name: "C,C++,C#", Years: "6 months", Category: "Language", Proficiency: "onBusiness", Picture: "/icons/C-Cpp-CSharp.svg", PictureColor: "#00599C"},
 	{Name: "Python", Years: "2 years", Category: "Language", Proficiency: "onBusiness", Picture: "/icons/Python.svg", PictureColor: "#3776AB"},
-	{Name: "Go", Years: "self-study", Category: "Language", Proficiency: "self-study", Picture: "/icons/Go.svg", PictureColor: "#00ADD8"},
+	{Name: "Go", Years: "@since:2026-08", Category: "Language", Proficiency: "onBusiness", Picture: "/icons/Go.svg", PictureColor: "#00ADD8"},
 	{Name: "Rust", Years: "self-study", Category: "Language", Proficiency: "self-study", Picture: "/icons/Rust.svg", PictureColor: "#DEA584"},
 	{Name: "React", Years: "2 years", Category: "Frontend", Proficiency: "onBusiness", Picture: "/icons/React.svg", PictureColor: "#61DAFB"},
 	{Name: "Next.js", Years: "1 year", Category: "Frontend", Proficiency: "onBusiness", Picture: "/icons/Next.js.svg", PictureColor: "#000000"},
@@ -16,6 +16,7 @@ var Skills = []model.SkillItem{
 	{Name: "Express.js", Years: "self-study", Category: "Backend", Proficiency: "self-study", Picture: "/icons/Express.js.svg", PictureColor: "#5FA04E"},
 	{Name: "Hono.js", Years: "1 year", Category: "Backend", Proficiency: "onBusiness", Picture: "/icons/Hono.js.svg", PictureColor: "#E36002"},
 	{Name: "Springboot(Java)", Years: "2 years", Category: "Backend", Proficiency: "onBusiness", Picture: "/icons/SpringBoot.svg", PictureColor: "#6DB33F"},
+	{Name: "Microservices", Years: "@since:2026-08", Category: "Backend", Proficiency: "onBusiness", Picture: "/icons/Microservices.svg", PictureColor: "#5C7CFA"},
 	{Name: "GraphQL", Years: "2 years", Category: "API", Proficiency: "onBusiness", Picture: "/icons/GraphQL.svg", PictureColor: "#E10098"},
 	{Name: "REST", Years: "2 years", Category: "API", Proficiency: "onBusiness", Picture: "/icons/REST.svg", PictureColor: "#61DAFB"},
 	{Name: "Prisma", Years: "self-study", Category: "ORM", Proficiency: "self-study", Picture: "/icons/Prisma.svg", PictureColor: "#2D3748"},
@@ -61,7 +62,7 @@ var Skills = []model.SkillItem{
 	{Name: "FHIR", Years: "6 months", Category: "Others", Proficiency: "onBusiness", Picture: "/icons/FHIR.svg", PictureColor: "#E44D26"},
 }
 
-var OtherSkills = []model.SkillItem{
+var otherSkillDefs = []model.SkillItem{
 	{Name: "VS Code(Typescript)", Years: "2 year", Category: "Others", Proficiency: "onBusiness", Picture: "/icons/VSCode.svg", PictureColor: "#007ACC"},
 	{Name: "IntelliJ IDEA(Typescript)", Years: "1 year", Category: "Others", Proficiency: "onBusiness", Picture: "/icons/IntelliJIDEA.svg", PictureColor: "#000000"},
 	{Name: "Eclipse(Java,Javascript)", Years: "1 year", Category: "Others", Proficiency: "onBusiness", Picture: "/icons/Eclipse.svg", PictureColor: "#0089D6"},

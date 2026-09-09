@@ -3,8 +3,8 @@ module Data.Skill where
 import Data.Text (Text)
 import Model.Skill (SkillItem(..))
 
-skills :: [SkillItem]
-skills =
+skillDefs :: [SkillItem]
+skillDefs =
   [ SkillItem
       { skName = "TypeScript"
       , skCategory = "Language"
@@ -48,8 +48,8 @@ skills =
   , SkillItem
       { skName = "Go"
       , skCategory = "Language"
-      , skYears = "self-study"
-      , skProficiency = Just "self-study"
+      , skYears = "@since:2026-08"
+      , skProficiency = Just "onBusiness"
       , skPicture = Just "/icons/Go.svg"
       , skPictureColor = Just "#00ADD8"
       }
@@ -108,6 +108,14 @@ skills =
       , skProficiency = Just "onBusiness"
       , skPicture = Just "/icons/SpringBoot.svg"
       , skPictureColor = Just "#6DB33F"
+      }
+  , SkillItem
+      { skName = "Microservices"
+      , skCategory = "Backend"
+      , skYears = "@since:2026-08"
+      , skProficiency = Just "onBusiness"
+      , skPicture = Just "/icons/Microservices.svg"
+      , skPictureColor = Just "#5C7CFA"
       }
   , SkillItem
       { skName = "GraphQL"
@@ -455,8 +463,8 @@ skills =
       }
   ]
 
-otherSkills :: [SkillItem]
-otherSkills =
+otherSkillDefs :: [SkillItem]
+otherSkillDefs =
   [ SkillItem
       { skName = "VS Code(Typescript)"
       , skCategory = "Others"

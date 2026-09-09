@@ -79,7 +79,7 @@ fn get_strong_points(lang: &str) -> Vec<StrongPoint> {
 }
 
 fn get_skills() -> Vec<SkillItem> {
-    data::skill::SKILLS.clone()
+    data::duration::skills()
 }
 
 fn localized_text<'a>(lang: &str, en: &'a str, ja: &'a str) -> &'a str {

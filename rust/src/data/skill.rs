@@ -2,7 +2,7 @@ use crate::model::skill::SkillItem;
 use lazy_static::lazy_static;
 
 lazy_static! {
-    pub static ref SKILLS: Vec<SkillItem> = vec![
+    pub static ref SKILL_DEFS: Vec<SkillItem> = vec![
         SkillItem {
             name: "TypeScript".to_string(),
             years: "1 year 6 months".to_string(),
@@ -45,9 +45,9 @@ lazy_static! {
         },
         SkillItem {
             name: "Go".to_string(),
-            years: "self-study".to_string(),
+            years: "@since:2026-08".to_string(),
             category: "Language".to_string(),
-            proficiency: Some("self-study".to_string()),
+            proficiency: Some("onBusiness".to_string()),
             picture: Some("/icons/Go.svg".to_string()),
             picture_color: Some("#00ADD8".to_string())
         },
@@ -106,6 +106,14 @@ lazy_static! {
             proficiency: Some("onBusiness".to_string()),
             picture: Some("/icons/SpringBoot.svg".to_string()),
             picture_color: Some("#6DB33F".to_string())
+        },
+        SkillItem {
+            name: "Microservices".to_string(),
+            years: "@since:2026-08".to_string(),
+            category: "Backend".to_string(),
+            proficiency: Some("onBusiness".to_string()),
+            picture: Some("/icons/Microservices.svg".to_string()),
+            picture_color: Some("#5C7CFA".to_string())
         },
         SkillItem {
             name: "GraphQL".to_string(),
@@ -452,7 +460,7 @@ lazy_static! {
             picture_color: Some("#E44D26".to_string())
         },
     ];
-    pub static ref OTHER_SKILLS: Vec<SkillItem> = vec![
+    pub static ref OTHER_SKILL_DEFS: Vec<SkillItem> = vec![
         SkillItem {
             name: "VS Code(Typescript)".to_string(),
             years: "2 year".to_string(),

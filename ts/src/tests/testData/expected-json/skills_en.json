@@ -41,9 +41,9 @@
   },
   {
     "name": "Go",
-    "years": "self-study",
+    "years": "@since:2026-08",
     "category": "Language",
-    "proficiency": "self-study",
+    "proficiency": "onBusiness",
     "picture": "/icons/Go.svg",
     "pictureColor": "#00ADD8"
   },
@@ -102,6 +102,14 @@
     "proficiency": "onBusiness",
     "picture": "/icons/SpringBoot.svg",
     "pictureColor": "#6DB33F"
+  },
+  {
+    "name": "Microservices",
+    "years": "@since:2026-08",
+    "category": "Backend",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Microservices.svg",
+    "pictureColor": "#5C7CFA"
   },
   {
     "name": "GraphQL",

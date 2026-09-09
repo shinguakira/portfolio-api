@@ -7,8 +7,8 @@ import {
 } from '../constants/workExperience.js';
 
 const allSkillNames = [
-  ...skills.map((s) => s.name),
-  ...otherSkills.map((s) => s.name),
+  ...skills().map((s) => s.name),
+  ...otherSkills().map((s) => s.name),
 ];
 
 // Techs used in projects/experiences that are intentionally not tracked in skills/otherSkills

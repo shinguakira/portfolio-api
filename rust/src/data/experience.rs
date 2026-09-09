@@ -33,8 +33,8 @@ lazy_static! {
             role: "フルスタック開発者".to_string(),
             man_month: "".to_string(),
             description: vec!["社内ツール開発".to_string()],
-            archivement: vec!["subversionからgitへの移行".to_string(), "CI/CDパイプラインの構築".to_string(), "開発環境の改善".to_string(), "kiroなどを使ったAIエージェントを使ったAI駆動開発の導入と整備".to_string(), "仕様駆動開発の導入".to_string()],
-            technologies: vec!["TypeScript".to_string(), "React".to_string(), "Vite".to_string(), "Java".to_string(), "Springboot(Java)".to_string(), "Python".to_string(), "FastAPI".to_string(), "Azure".to_string(), "Azure Web Apps".to_string(), "Azure DevOps".to_string(), "Azure Pipelines".to_string(), "Azure Repos".to_string(), "Whisper(local)".to_string(), "Ollama".to_string(), "TTS".to_string(), "STT".to_string(), "RAG".to_string(), "vectorDB(pgvector)".to_string()],
+            archivement: vec!["subversionからgitへの移行".to_string(), "CI/CDパイプラインの構築".to_string(), "開発環境の改善".to_string(), "kiroなどを使ったAIエージェントを使ったAI駆動開発の導入と整備".to_string(), "仕様駆動開発の導入".to_string(), "マイクロサービス化".to_string(), "JavaからGoへの移行".to_string()],
+            technologies: vec!["TypeScript".to_string(), "React".to_string(), "Vite".to_string(), "Java".to_string(), "Springboot(Java)".to_string(), "Go".to_string(), "Microservices".to_string(), "Azure".to_string(), "Azure Web Apps".to_string(), "Azure DevOps".to_string(), "Azure Pipelines".to_string(), "Azure Repos".to_string(), "Whisper(local)".to_string(), "Ollama".to_string(), "TTS".to_string(), "STT".to_string(), "RAG".to_string(), "vectorDB(pgvector)".to_string()],
         },
         WorkExperience {
             company: "お客さま5".to_string(),
@@ -222,8 +222,8 @@ lazy_static! {
             role: "Full Stack Developer".to_string(),
             man_month: "".to_string(),
             description: vec!["Internal tools development".to_string()],
-            archivement: vec!["Migration from Subversion to Git".to_string(), "CI/CD pipeline construction".to_string(), "Development environment improvement".to_string(), "Introduction and setup of AI-driven development using AI agents such as Kiro".to_string(), "Introduction of specification-driven development".to_string()],
-            technologies: vec!["TypeScript".to_string(), "React".to_string(), "Vite".to_string(), "Java".to_string(), "Springboot(Java)".to_string(), "Python".to_string(), "FastAPI".to_string(), "Azure".to_string(), "Azure Web Apps".to_string(), "Azure DevOps".to_string(), "Azure Pipelines".to_string(), "Azure Repos".to_string(), "Whisper(local)".to_string(), "Ollama".to_string(), "TTS".to_string(), "STT".to_string(), "RAG".to_string(), "vectorDB(pgvector)".to_string()],
+            archivement: vec!["Migration from Subversion to Git".to_string(), "CI/CD pipeline construction".to_string(), "Development environment improvement".to_string(), "Introduction and setup of AI-driven development using AI agents such as Kiro".to_string(), "Introduction of specification-driven development".to_string(), "Migration to a microservices architecture".to_string(), "Migration from Java to Go".to_string()],
+            technologies: vec!["TypeScript".to_string(), "React".to_string(), "Vite".to_string(), "Java".to_string(), "Springboot(Java)".to_string(), "Go".to_string(), "Microservices".to_string(), "Azure".to_string(), "Azure Web Apps".to_string(), "Azure DevOps".to_string(), "Azure Pipelines".to_string(), "Azure Repos".to_string(), "Whisper(local)".to_string(), "Ollama".to_string(), "TTS".to_string(), "STT".to_string(), "RAG".to_string(), "vectorDB(pgvector)".to_string()],
         },
         WorkExperience {
             company: "Customer5".to_string(),

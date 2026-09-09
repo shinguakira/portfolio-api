@@ -1,6 +1,7 @@
 pub mod certification;
 pub mod changelog;
 pub mod contact;
+pub mod duration;
 pub mod education;
 pub mod experience;
 pub mod faq;

@@ -157,7 +157,7 @@ func createStandardPDF(opts PDFOptions) ([]byte, error) {
 
 	// Skills
 	addSectionTitle(pdf, localizedText(opts.Lang, "Technical Skills", "技術スキル"))
-	for _, skill := range data.Skills {
+	for _, skill := range data.Skills() {
 		pdf.SetFont("Helvetica", "", 10)
 		pdf.SetTextColor(51, 51, 51)
 		pdf.CellFormat(0, 5, skill.Name+" ("+skill.Years+")", "", 1, "", false, 0, "")
@@ -417,7 +417,7 @@ func createExecutivePDF(opts PDFOptions) ([]byte, error) {
 
 	// Core Technologies
 	addSectionTitle(pdf, localizedText(opts.Lang, "Core Technologies", "コア技術"))
-	for _, skill := range data.Skills {
+	for _, skill := range data.Skills() {
 		pdf.SetFont("Helvetica", "", 11)
 		pdf.SetTextColor(51, 51, 51)
 		pdf.CellFormat(0, 5, skill.Category+": "+skill.Name, "", 1, "", false, 0, "")
@@ -449,7 +449,7 @@ func createTechnicalPDF(opts PDFOptions) ([]byte, error) {
 	// Technical Skills
 	addSectionTitle(pdf, localizedText(opts.Lang, "Technical Expertise", "技術的専門知識"))
 	currentCategory := ""
-	for _, skill := range data.Skills {
+	for _, skill := range data.Skills() {
 		if skill.Category != currentCategory {
 			currentCategory = skill.Category
 			pdf.SetFont("Helvetica", "B", 12)
@@ -552,7 +552,7 @@ func createAcademicPDF(opts PDFOptions) ([]byte, error) {
 
 	// Skills
 	addSectionTitle(pdf, localizedText(opts.Lang, "Technical Skills", "技術スキル"))
-	for _, skill := range data.Skills {
+	for _, skill := range data.Skills() {
 		pdf.SetFont("Helvetica", "", 11)
 		pdf.SetTextColor(51, 51, 51)
 		pdf.CellFormat(0, 5, skill.Category+": "+skill.Name, "", 1, "", false, 0, "")
@@ -639,7 +639,7 @@ func createModernPDF(opts PDFOptions) ([]byte, error) {
 	pdf.CellFormat(0, 7, localizedText(opts.Lang, "Technical Expertise", "技術的専門知識"), "", 1, "", false, 0, "")
 	pdf.Ln(2)
 	currentCategory := ""
-	for _, skill := range data.Skills {
+	for _, skill := range data.Skills() {
 		if skill.Category != currentCategory {
 			currentCategory = skill.Category
 			pdf.SetFont("Helvetica", "B", 11)

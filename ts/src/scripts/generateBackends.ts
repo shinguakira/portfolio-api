@@ -9,8 +9,7 @@
  */
 import {writeFileSync} from 'fs';
 import {
-  skills,
-  otherSkills,
+  skillDefsForCodegen,
   enabledSkills,
   projects,
   profile,
@@ -31,8 +30,11 @@ const q = (s: string): string => JSON.stringify(s);
 const num = (n: number): string => String(n);
 
 // ─── localized views mirroring the controllers ───────────────────────────────
-const mainSkills = enabledSkills(skills);
-const other = enabledSkills(otherSkills);
+// Skill `years` may be an `@since:YYYY-MM` marker rather than a fixed string.
+// It is emitted verbatim and each backend's hand-written duration helper
+// resolves it per request, so no clone ever freezes a computed duration.
+const mainSkills = enabledSkills(skillDefsForCodegen.skills);
+const other = enabledSkills(skillDefsForCodegen.otherSkills);
 const projJa = projects.map((p) => ({technologies: p.technologies, ...p.ja}));
 const projEn = projects.map((p) => ({technologies: p.technologies, ...p.en}));
 const profJa = {
@@ -150,7 +152,7 @@ type Any = any;
     `var ${name} = []model.${typ}{\n${items.join('\n')}\n}\n`;
   writeFileSync(
     '../go/data/skill.go',
-    hdr + list('Skills', 'SkillItem', mainSkills.map(sk)) + '\n' + list('OtherSkills', 'SkillItem', other.map(sk))
+    hdr + list('skillDefs', 'SkillItem', mainSkills.map(sk)) + '\n' + list('otherSkillDefs', 'SkillItem', other.map(sk))
   );
   writeFileSync(
     '../go/data/project.go',
@@ -292,7 +294,7 @@ type Any = any;
     `use lazy_static::lazy_static;\n${imports}\n\nlazy_static! {\n${body}}\n`;
   writeFileSync(
     '../rust/src/data/skill.rs',
-    file('use crate::model::skill::SkillItem;', ls('SKILLS', 'SkillItem', mainSkills.map(sk)) + ls('OTHER_SKILLS', 'SkillItem', other.map(sk)))
+    file('use crate::model::skill::SkillItem;', ls('SKILL_DEFS', 'SkillItem', mainSkills.map(sk)) + ls('OTHER_SKILL_DEFS', 'SkillItem', other.map(sk)))
   );
   writeFileSync(
     '../rust/src/data/project.rs',
@@ -460,9 +462,9 @@ type Any = any;
   writeFileSync(
     '../haskell/src/Data/Skill.hs',
     `module Data.Skill where\n\nimport Data.Text (Text)\nimport Model.Skill (SkillItem(..))\n\n` +
-      decl('skills', 'SkillItem', mainSkills.map(sk)) +
+      decl('skillDefs', 'SkillItem', mainSkills.map(sk)) +
       '\n' +
-      decl('otherSkills', 'SkillItem', other.map(sk))
+      decl('otherSkillDefs', 'SkillItem', other.map(sk))
   );
   writeFileSync(
     '../haskell/src/Data/Project.hs',
