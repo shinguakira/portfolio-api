@@ -6,6 +6,9 @@ pub struct WorkExperience {
     pub company: String,
     pub project_overview: String,
     pub period: String,
+    pub start_date: String,
+    #[serde(skip_serializing_if = "String::is_empty")]
+    pub end_date: String,
     #[serde(skip_serializing_if = "String::is_empty")]
     pub team_size: String,
     pub role: String,

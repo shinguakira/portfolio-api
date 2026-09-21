@@ -51,7 +51,15 @@ export type ProfileResponse = {
 export type WorkExperience = {
   company: string;
   projectOverview: string;
+  /** Localized display string, e.g. `2025年10月 - 現在` / `2025-10 - current`. */
   period: string;
+  /**
+   * Machine-readable start of the period: `YYYY-MM`, or `YYYY` when only the
+   * year is known. Sort and lay out on this, never by parsing `period`.
+   */
+  startDate: string;
+  /** Machine-readable end, same shape as `startDate`. Absent while ongoing. */
+  endDate?: string;
   teamSize?: string;
   role: string;
   manMonth: string;
