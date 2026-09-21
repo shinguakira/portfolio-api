@@ -2,6 +2,8 @@ export const experience_ja = [
   {
     company: 'お客さま5',
     period: '2025年10月 - 2026年7月',
+    startDate: '2025-10',
+    endDate: '2026-07',
     teamSize: '4人',
     manMonth: '',
     technologies: [
@@ -27,6 +29,7 @@ export const experience_ja = [
   {
     company: 'お客さま4',
     period: '2025年10月 - 現在',
+    startDate: '2025-10',
     teamSize: '4人',
     manMonth: '',
     technologies: [
@@ -65,6 +68,7 @@ export const experience_ja = [
   {
     company: 'お客さま4',
     period: '2025年10月 - 現在',
+    startDate: '2025-10',
     teamSize: '4人',
     manMonth: '',
     technologies: [
@@ -73,8 +77,8 @@ export const experience_ja = [
       'Vite',
       'Java',
       'Springboot(Java)',
-      'Python',
-      'FastAPI',
+      'Go',
+      'Microservices',
       'Azure',
       'Azure Web Apps',
       'Azure DevOps',
@@ -96,11 +100,15 @@ export const experience_ja = [
       '開発環境の改善',
       'kiroなどを使ったAIエージェントを使ったAI駆動開発の導入と整備',
       '仕様駆動開発の導入',
+      'マイクロサービス化',
+      'JavaからGoへの移行',
     ],
   },
   {
     company: 'お客さま5',
     period: '2025年3月 - 2026年6月',
+    startDate: '2025-03',
+    endDate: '2026-06',
     teamSize: '10人',
     manMonth: '',
     technologies: [
@@ -146,6 +154,8 @@ export const experience_ja = [
   {
     company: 'お客さま4',
     period: '2025年7月 - 2025年9月',
+    startDate: '2025-07',
+    endDate: '2025-09',
     teamSize: '2人',
     manMonth: '3人月',
     technologies: [
@@ -170,6 +180,8 @@ export const experience_ja = [
   {
     company: 'お客さま3',
     period: '2025年3月 - 2025年6月',
+    startDate: '2025-03',
+    endDate: '2025-06',
     teamSize: '10人',
     manMonth: '',
     technologies: [
@@ -200,6 +212,8 @@ export const experience_ja = [
   {
     company: 'お客さま3',
     period: '2025年5月 - 2025年6月',
+    startDate: '2025-05',
+    endDate: '2025-06',
     teamSize: '10人',
     manMonth: '',
     technologies: ['Angular', 'TypeScript', 'PostgreSQL', 'マイナンバー'],
@@ -213,6 +227,8 @@ export const experience_ja = [
   {
     company: 'お客さま2',
     period: '2024年10月 - 2025年2月',
+    startDate: '2024-10',
+    endDate: '2025-02',
     teamSize: '3人',
     manMonth: '3,4人月',
     technologies: ['TypeScript', 'Azure', 'AzureFunctions'],
@@ -230,6 +246,8 @@ export const experience_ja = [
   {
     company: 'お客さま2',
     period: '2024年10月 - 2024年11月(20日)',
+    startDate: '2024-10',
+    endDate: '2024-11',
     teamSize: '3人',
     manMonth: '3,4人月',
     technologies: [
@@ -252,6 +270,8 @@ export const experience_ja = [
   {
     company: 'お客さま2',
     period: '2024年5月 - 2025年2月',
+    startDate: '2024-05',
+    endDate: '2025-02',
     teamSize: '7-8',
     manMonth: '15+人月',
     technologies: [
@@ -279,6 +299,8 @@ export const experience_ja = [
   {
     company: 'お客さま2',
     period: '2024年1月 - 2024年4月(4か月)',
+    startDate: '2024-01',
+    endDate: '2024-04',
     teamSize: '3-4',
     manMonth: '15人月',
     technologies: [
@@ -304,6 +326,8 @@ export const experience_ja = [
   {
     company: 'お客さま1',
     period: '2023年6月 - 2023年12月(6か月)',
+    startDate: '2023-06',
+    endDate: '2023-12',
     teamSize: '4-10',
     manMonth: '不明(2021年頃スタート)',
     technologies: [
@@ -332,6 +356,8 @@ export const experience_ja = [
   {
     company: 'お客さま1',
     period: '2023年4月 - 2023年6月(2ヶ月)',
+    startDate: '2023-04',
+    endDate: '2023-06',
     teamSize: '1',
     manMonth: '9人月',
     technologies: [
@@ -354,6 +380,8 @@ export const experience_ja = [
   {
     company: 'ホテル',
     period: '2022年1月 - 2023年3月',
+    startDate: '2022-01',
+    endDate: '2023-03',
     teamSize: '',
     manMonth: '',
     technologies: [],
@@ -369,6 +397,8 @@ export const experience_ja = [
   {
     company: 'iMobilePhoneX(アルバイト)',
     period: '2019年 - 2020年',
+    startDate: '2019',
+    endDate: '2020',
     teamSize: '',
     manMonth: '',
     technologies: [],
@@ -385,6 +415,8 @@ export const experience_ja = [
   {
     company: 'Freelancer.com(フリーランス)',
     period: '2019年 - 2020年',
+    startDate: '2019',
+    endDate: '2020',
     teamSize: '',
     manMonth: '',
     technologies: [],
@@ -396,6 +428,8 @@ export const experience_ja = [
   {
     company: '家庭教師(アルバイト)',
     period: '2019年 - 2021年',
+    startDate: '2019',
+    endDate: '2021',
     teamSize: '',
     manMonth: '',
     technologies: [],
@@ -413,6 +447,8 @@ export const experience_en = [
   {
     company: 'Customer5',
     period: '2025-10 - 2026-07',
+    startDate: '2025-10',
+    endDate: '2026-07',
     teamSize: '4',
     manMonth: '',
     technologies: [
@@ -438,6 +474,7 @@ export const experience_en = [
   {
     company: 'Customer4',
     period: '2025-10 - current',
+    startDate: '2025-10',
     teamSize: '4',
     manMonth: '',
     technologies: [
@@ -476,6 +513,7 @@ export const experience_en = [
   {
     company: 'Customer4',
     period: '2025-10 - current',
+    startDate: '2025-10',
     teamSize: '4',
     manMonth: '',
     technologies: [
@@ -484,8 +522,8 @@ export const experience_en = [
       'Vite',
       'Java',
       'Springboot(Java)',
-      'Python',
-      'FastAPI',
+      'Go',
+      'Microservices',
       'Azure',
       'Azure Web Apps',
       'Azure DevOps',
@@ -507,11 +545,15 @@ export const experience_en = [
       'Development environment improvement',
       'Introduction and setup of AI-driven development using AI agents such as Kiro',
       'Introduction of specification-driven development',
+      'Migration to a microservices architecture',
+      'Migration from Java to Go',
     ],
   },
   {
     company: 'Customer5',
     period: '2025-03 - 2026-06',
+    startDate: '2025-03',
+    endDate: '2026-06',
     teamSize: '10',
     manMonth: '',
     technologies: [
@@ -557,6 +599,8 @@ export const experience_en = [
   {
     company: 'Customer4',
     period: '2025-07 - 2025-09',
+    startDate: '2025-07',
+    endDate: '2025-09',
     teamSize: '2',
     manMonth: '3 person-month',
     technologies: [
@@ -581,6 +625,8 @@ export const experience_en = [
   {
     company: 'Customer3',
     period: '2025-03 - 2025-06',
+    startDate: '2025-03',
+    endDate: '2025-06',
     teamSize: '10',
     manMonth: '',
     technologies: [
@@ -611,6 +657,8 @@ export const experience_en = [
   {
     company: 'Customer3',
     period: '2025-05 - 2025-06',
+    startDate: '2025-05',
+    endDate: '2025-06',
     teamSize: '10',
     manMonth: '',
     technologies: ['Angular', 'TypeScript', 'PostgreSQL', 'マイナンバー'],
@@ -635,6 +683,8 @@ export const experience_en = [
     ],
     manMonth: '3,4 person-month',
     period: '2024-10 - 2025-02',
+    startDate: '2024-10',
+    endDate: '2025-02',
     projectOverview: 'Customer Information Search and API Modification',
     role: 'Full Stack Developer (Specification, Development, Testing)',
     teamSize: '3',
@@ -650,6 +700,8 @@ export const experience_en = [
     ],
     manMonth: '3,4 person-month',
     period: '2024-10 - 2024-11(20 days)',
+    startDate: '2024-10',
+    endDate: '2024-11',
     projectOverview: 'Voice of Customer System Additional Modifications',
     role: 'Full Stack Developer (Specification, Development, Testing)',
     teamSize: '3',
@@ -676,6 +728,8 @@ export const experience_en = [
     ],
     manMonth: '15+ person-month',
     period: '2024-05 - 2025-02',
+    startDate: '2024-05',
+    endDate: '2025-02',
     projectOverview: 'Reception Innovation Project',
     role: 'Full Stack Developer (Specification, Development, Testing)',
     teamSize: '7-8',
@@ -703,6 +757,8 @@ export const experience_en = [
     ],
     manMonth: '15 person-month',
     period: '2024-01 - 2024-04(4 months)',
+    startDate: '2024-01',
+    endDate: '2024-04',
     projectOverview: 'Voice of Customer System Renovation and Replacement',
     role: 'Full Stack Developer (Specification, Development, Testing)',
     teamSize: '3-4',
@@ -731,6 +787,8 @@ export const experience_en = [
     ],
     manMonth: 'Unknown(2021 started)',
     period: '2023-06 - 2023-12(6 months)',
+    startDate: '2023-06',
+    endDate: '2023-12',
     projectOverview:
       'Airport Power Monitoring and Control System (MISE) Modification',
     role: 'Full Stack Developer (Specification, Development, Testing, Test Environment Setup)',
@@ -756,6 +814,8 @@ export const experience_en = [
     ],
     manMonth: '9 person-month',
     period: '2023-04 - 2023-06(2 months)',
+    startDate: '2023-04',
+    endDate: '2023-06',
     projectOverview: 'PLC Communication TCP/IP Program',
     role: 'Full Stack Developer (Specification, Development, Testing)',
     teamSize: '1',
@@ -779,6 +839,8 @@ export const experience_en = [
     ],
     manMonth: '',
     period: '2022-01 - 2023-03',
+    startDate: '2022-01',
+    endDate: '2023-03',
     projectOverview: 'Hotel Front Desk (Part-time)',
     role: '',
     teamSize: '',
@@ -795,6 +857,8 @@ export const experience_en = [
     ],
     manMonth: '',
     period: '2019 - 2020',
+    startDate: '2019',
+    endDate: '2020',
     projectOverview: 'English-Japanese Translation (Part-time)',
     role: '',
     teamSize: '',
@@ -809,6 +873,8 @@ export const experience_en = [
     ],
     manMonth: '',
     period: '2019 - 2020',
+    startDate: '2019',
+    endDate: '2020',
     projectOverview: 'Freelance Translator',
     role: '',
     teamSize: '',
@@ -825,6 +891,8 @@ export const experience_en = [
     ],
     manMonth: '',
     period: '2019 - 2021',
+    startDate: '2019',
+    endDate: '2021',
     projectOverview: 'Math and English Tutor (Part-time)',
     role: '',
     teamSize: '',

@@ -3,8 +3,8 @@ module Data.Skill where
 import Data.Text (Text)
 import Model.Skill (SkillItem(..))
 
-skills :: [SkillItem]
-skills =
+skillDefs :: [SkillItem]
+skillDefs =
   [ SkillItem
       { skName = "TypeScript"
       , skCategory = "Language"
@@ -48,8 +48,8 @@ skills =
   , SkillItem
       { skName = "Go"
       , skCategory = "Language"
-      , skYears = "self-study"
-      , skProficiency = Just "self-study"
+      , skYears = "@since:2026-08"
+      , skProficiency = Just "onBusiness"
       , skPicture = Just "/icons/Go.svg"
       , skPictureColor = Just "#00ADD8"
       }
@@ -110,6 +110,14 @@ skills =
       , skPictureColor = Just "#6DB33F"
       }
   , SkillItem
+      { skName = "Microservices"
+      , skCategory = "Backend"
+      , skYears = "@since:2026-08"
+      , skProficiency = Just "onBusiness"
+      , skPicture = Just "/icons/Microservices.svg"
+      , skPictureColor = Just "#5C7CFA"
+      }
+  , SkillItem
       { skName = "GraphQL"
       , skCategory = "API"
       , skYears = "2 years"
@@ -124,14 +132,6 @@ skills =
       , skProficiency = Just "onBusiness"
       , skPicture = Just "/icons/REST.svg"
       , skPictureColor = Just "#61DAFB"
-      }
-  , SkillItem
-      { skName = "Redux"
-      , skCategory = "State Management"
-      , skYears = "self-study"
-      , skProficiency = Just "self-study"
-      , skPicture = Just "/icons/Redux.svg"
-      , skPictureColor = Just "#764ABC"
       }
   , SkillItem
       { skName = "Prisma"
@@ -278,14 +278,6 @@ skills =
       , skPictureColor = Just "#3E67B1"
       }
   , SkillItem
-      { skName = "NextAuth"
-      , skCategory = "Frontend"
-      , skYears = "1 year"
-      , skProficiency = Just "onBusiness"
-      , skPicture = Just "/icons/NextAuth.png"
-      , skPictureColor = Just "#000000"
-      }
-  , SkillItem
       { skName = "vectorDB(pgvector)"
       , skCategory = "Database"
       , skYears = "3 months"
@@ -308,14 +300,6 @@ skills =
       , skProficiency = Just "self-study"
       , skPicture = Just "/icons/Drizzle.svg"
       , skPictureColor = Just "#C5F74F"
-      }
-  , SkillItem
-      { skName = "Remix"
-      , skCategory = "Frontend"
-      , skYears = "self-study"
-      , skProficiency = Just "self-study"
-      , skPicture = Just "/icons/Remix.svg"
-      , skPictureColor = Just "#000000"
       }
   , SkillItem
       { skName = "Electron"
@@ -479,8 +463,8 @@ skills =
       }
   ]
 
-otherSkills :: [SkillItem]
-otherSkills =
+otherSkillDefs :: [SkillItem]
+otherSkillDefs =
   [ SkillItem
       { skName = "VS Code(Typescript)"
       , skCategory = "Others"

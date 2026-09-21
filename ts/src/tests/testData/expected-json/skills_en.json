@@ -41,9 +41,9 @@
   },
   {
     "name": "Go",
-    "years": "self-study",
+    "years": "@since:2026-08",
     "category": "Language",
-    "proficiency": "self-study",
+    "proficiency": "onBusiness",
     "picture": "/icons/Go.svg",
     "pictureColor": "#00ADD8"
   },
@@ -104,6 +104,14 @@
     "pictureColor": "#6DB33F"
   },
   {
+    "name": "Microservices",
+    "years": "@since:2026-08",
+    "category": "Backend",
+    "proficiency": "onBusiness",
+    "picture": "/icons/Microservices.svg",
+    "pictureColor": "#5C7CFA"
+  },
+  {
     "name": "GraphQL",
     "years": "2 years",
     "category": "API",
@@ -118,14 +126,6 @@
     "proficiency": "onBusiness",
     "picture": "/icons/REST.svg",
     "pictureColor": "#61DAFB"
-  },
-  {
-    "name": "Redux",
-    "years": "self-study",
-    "category": "State Management",
-    "proficiency": "self-study",
-    "picture": "/icons/Redux.svg",
-    "pictureColor": "#764ABC"
   },
   {
     "name": "Prisma",
@@ -272,14 +272,6 @@
     "pictureColor": "#3E67B1"
   },
   {
-    "name": "NextAuth",
-    "years": "1 year",
-    "category": "Frontend",
-    "proficiency": "onBusiness",
-    "picture": "/icons/NextAuth.png",
-    "pictureColor": "#000000"
-  },
-  {
     "name": "vectorDB(pgvector)",
     "years": "3 months",
     "category": "Database",
@@ -302,14 +294,6 @@
     "proficiency": "self-study",
     "picture": "/icons/Drizzle.svg",
     "pictureColor": "#C5F74F"
-  },
-  {
-    "name": "Remix",
-    "years": "self-study",
-    "category": "Frontend",
-    "proficiency": "self-study",
-    "picture": "/icons/Remix.svg",
-    "pictureColor": "#000000"
   },
   {
     "name": "Electron",

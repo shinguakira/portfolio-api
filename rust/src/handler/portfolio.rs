@@ -108,14 +108,14 @@ pub async fn get_projects(query: web::Query<LangQuery>) -> HttpResponse {
 pub async fn get_skills() -> HttpResponse {
     HttpResponse::Ok().json(ApiResponse {
         message: "Skills data fetched successfully".to_string(),
-        data: data::skill::SKILLS.clone(),
+        data: data::duration::skills(),
     })
 }
 
 pub async fn get_other_skills() -> HttpResponse {
     HttpResponse::Ok().json(ApiResponse {
         message: "Other skills data fetched successfully".to_string(),
-        data: data::skill::OTHER_SKILLS.clone(),
+        data: data::duration::other_skills(),
     })
 }
 

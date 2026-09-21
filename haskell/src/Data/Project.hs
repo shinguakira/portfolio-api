@@ -7,6 +7,78 @@ import Model.Project (Project(..))
 projectsJA :: [Project]
 projectsJA =
   [ Project
+      { projTitle = "デザイン見本帳"
+      , projDescription = "実際に動くUIで見比べて選べる、個人用のデザイン見本帳。"
+      , projImage = "/images/projects/design-book.png"
+      , projTechnologies = ["React", "TypeScript", "Tailwind CSS", "Vite", "Vercel"]
+      , projGithubUrl = "https://github.com/shinguakira/design-book"
+      , projLiveUrl = "https://design-book-sepia.vercel.app"
+      }
+  , Project
+      { projTitle = "Officeファイルプレビュー"
+      , projDescription = "Word/PDF をブラウザ上でプレビューする PoC。"
+      , projImage = "/images/projects/office-file-app.png"
+      , projTechnologies = ["Go", "React", "TypeScript", "Vite"]
+      , projGithubUrl = "https://github.com/shinguakira/office-file-app"
+      , projLiveUrl = ""
+      }
+  , Project
+      { projTitle = "AFK Engineer（放置RPG）"
+      , projDescription = "エンジニアモチーフのインクリメンタル（放置）RPG。"
+      , projImage = "/images/projects/afk-game.png"
+      , projTechnologies = ["React", "TypeScript", "Vite", "Express.js", "Tauri"]
+      , projGithubUrl = "https://github.com/shinguakira/afk-game"
+      , projLiveUrl = ""
+      }
+  , Project
+      { projTitle = "オセロ（React Native）"
+      , projDescription = "通信対戦に対応したオセロ（リバーシ）。"
+      , projImage = "/images/projects/rn-othello.png"
+      , projTechnologies = ["React Native", "Expo", "TypeScript"]
+      , projGithubUrl = "https://github.com/shinguakira/rn-othello"
+      , projLiveUrl = ""
+      }
+  , Project
+      { projTitle = "The PubMed Gazette（PubMed検索）"
+      , projDescription = "新聞風UIのPubMed論文検索リーダー。共有URL・ローカル保存・引用に対応。"
+      , projImage = "/images/projects/pubmed-search.png"
+      , projTechnologies = ["React", "TypeScript", "Vite", "Tailwind CSS", "Rust", "Docker", "PubMed API"]
+      , projGithubUrl = "https://github.com/shinguakira/pubmed-search"
+      , projLiveUrl = ""
+      }
+  , Project
+      { projTitle = "ビデオ通話（WebRTC PoC）"
+      , projDescription = "ブラウザ間の P2P ビデオ通話 PoC。"
+      , projImage = "/images/projects/video-call.png"
+      , projTechnologies = ["Next.js", "React", "TypeScript", "WebRTC", "Socket.IO", "Tailwind CSS", "shadcn"]
+      , projGithubUrl = "https://github.com/shinguakira/video-call"
+      , projLiveUrl = ""
+      }
+  , Project
+      { projTitle = "ポートフォリオAPI（Zero言語版）"
+      , projDescription = "既存のマルチバックエンドAPI（TS/Go/Rust/Haskell）を Zero言語(zerolang.ai) で実装した版。"
+      , projImage = "/images/projects/zero-poc.png"
+      , projTechnologies = ["Zero (zerolang.ai)", "REST", "Vercel"]
+      , projGithubUrl = "https://github.com/shinguakira/zero-poc"
+      , projLiveUrl = "https://zero-poc.vercel.app"
+      }
+  , Project
+      { projTitle = "IT学習教材"
+      , projDescription = "多言語対応（英/日/比）のWeb開発 学習教材。"
+      , projImage = "/images/projects/it-learn-material.png"
+      , projTechnologies = ["JavaScript"]
+      , projGithubUrl = "https://github.com/shinguakira/it-learn-material"
+      , projLiveUrl = ""
+      }
+  , Project
+      { projTitle = "KeySound（打鍵音アプリ）"
+      , projDescription = "キー入力ごとに効果音を鳴らすデスクトップアプリ（非フォーカス時も動作）。"
+      , projImage = "/images/projects/keysound.png"
+      , projTechnologies = ["Tauri", "Rust", "SvelteKit", "TypeScript", "Vite"]
+      , projGithubUrl = "https://github.com/shinguakira/keysound"
+      , projLiveUrl = ""
+      }
+  , Project
       { projTitle = "開発予定を考えているアプリ"
       , projDescription = "[採用サイト間のプロフィール自動入力(データ連携)]\n[画像認識を使用した何か]\n[Visual Studioのプロジェクトファイル変換アプリ]\n[何かのマッチングアプリ]\n[タイピング×パワハラ3Dボット]\n[タイピング×Google Map]\n[タイピング×2Dゲーム]\n"
       , projImage = "/images/projects/onDeveloping.jpg"
@@ -126,83 +198,83 @@ projectsJA =
       , projGithubUrl = ""
       , projLiveUrl = "/"
       }
-  , Project
-      { projTitle = "デザイン見本帳"
-      , projDescription = "実際に動くUIで見比べて選べる、個人用のデザイン見本帳。"
+  ]
+
+projectsEN :: [Project]
+projectsEN =
+  [ Project
+      { projTitle = "Design Book"
+      , projDescription = "A personal reference book of live, interactive UI you can compare at a glance."
       , projImage = "/images/projects/design-book.png"
       , projTechnologies = ["React", "TypeScript", "Tailwind CSS", "Vite", "Vercel"]
       , projGithubUrl = "https://github.com/shinguakira/design-book"
       , projLiveUrl = "https://design-book-sepia.vercel.app"
       }
   , Project
-      { projTitle = "Officeファイルプレビュー"
-      , projDescription = "Word/PDF をブラウザ上でプレビューする PoC。"
+      { projTitle = "Office File Preview"
+      , projDescription = "A PoC for previewing Office files (Word/PDF) in the browser."
       , projImage = "/images/projects/office-file-app.png"
       , projTechnologies = ["Go", "React", "TypeScript", "Vite"]
       , projGithubUrl = "https://github.com/shinguakira/office-file-app"
       , projLiveUrl = ""
       }
   , Project
-      { projTitle = "AFK Engineer（放置RPG）"
-      , projDescription = "エンジニアモチーフのインクリメンタル（放置）RPG。"
+      { projTitle = "AFK Engineer"
+      , projDescription = "An incremental (idle) RPG with a software-engineer theme."
       , projImage = "/images/projects/afk-game.png"
       , projTechnologies = ["React", "TypeScript", "Vite", "Express.js", "Tauri"]
       , projGithubUrl = "https://github.com/shinguakira/afk-game"
       , projLiveUrl = ""
       }
   , Project
-      { projTitle = "オセロ（React Native）"
-      , projDescription = "通信対戦に対応したオセロ（リバーシ）。"
+      { projTitle = "Othello (React Native)"
+      , projDescription = "An Othello (Reversi) game with online multiplayer."
       , projImage = "/images/projects/rn-othello.png"
       , projTechnologies = ["React Native", "Expo", "TypeScript"]
       , projGithubUrl = "https://github.com/shinguakira/rn-othello"
       , projLiveUrl = ""
       }
   , Project
-      { projTitle = "The PubMed Gazette（PubMed検索）"
-      , projDescription = "新聞風UIのPubMed論文検索リーダー。共有URL・ローカル保存・引用に対応。"
+      { projTitle = "The PubMed Gazette"
+      , projDescription = "A newspaper-styled PubMed search reader with shareable URLs, saves, and citations."
       , projImage = "/images/projects/pubmed-search.png"
       , projTechnologies = ["React", "TypeScript", "Vite", "Tailwind CSS", "Rust", "Docker", "PubMed API"]
       , projGithubUrl = "https://github.com/shinguakira/pubmed-search"
       , projLiveUrl = ""
       }
   , Project
-      { projTitle = "ビデオ通話（WebRTC PoC）"
-      , projDescription = "ブラウザ間の P2P ビデオ通話 PoC。"
+      { projTitle = "Video Call (WebRTC PoC)"
+      , projDescription = "A browser-to-browser P2P video call PoC."
       , projImage = "/images/projects/video-call.png"
       , projTechnologies = ["Next.js", "React", "TypeScript", "WebRTC", "Socket.IO", "Tailwind CSS", "shadcn"]
       , projGithubUrl = "https://github.com/shinguakira/video-call"
       , projLiveUrl = ""
       }
   , Project
-      { projTitle = "ポートフォリオAPI（Zero言語版）"
-      , projDescription = "既存のマルチバックエンドAPI（TS/Go/Rust/Haskell）を Zero言語(zerolang.ai) で実装した版。"
+      { projTitle = "Portfolio API (Zero lang)"
+      , projDescription = "A Zero-language (zerolang.ai) reimplementation of the existing multi-backend portfolio API (TS/Go/Rust/Haskell)."
       , projImage = "/images/projects/zero-poc.png"
       , projTechnologies = ["Zero (zerolang.ai)", "REST", "Vercel"]
       , projGithubUrl = "https://github.com/shinguakira/zero-poc"
       , projLiveUrl = "https://zero-poc.vercel.app"
       }
   , Project
-      { projTitle = "IT学習教材"
-      , projDescription = "多言語対応（英/日/比）のWeb開発 学習教材。"
+      { projTitle = "IT Learning Material"
+      , projDescription = "A multilingual (EN/JA/PH) web-development learning resource."
       , projImage = "/images/projects/it-learn-material.png"
       , projTechnologies = ["JavaScript"]
       , projGithubUrl = "https://github.com/shinguakira/it-learn-material"
       , projLiveUrl = ""
       }
   , Project
-      { projTitle = "KeySound（打鍵音アプリ）"
-      , projDescription = "キー入力ごとに効果音を鳴らすデスクトップアプリ（非フォーカス時も動作）。"
+      { projTitle = "KeySound"
+      , projDescription = "A desktop app that plays a sound on every keypress, even when unfocused."
       , projImage = "/images/projects/keysound.png"
       , projTechnologies = ["Tauri", "Rust", "SvelteKit", "TypeScript", "Vite"]
       , projGithubUrl = "https://github.com/shinguakira/keysound"
       , projLiveUrl = ""
       }
-  ]
-
-projectsEN :: [Project]
-projectsEN =
-  [ Project
+  , Project
       { projTitle = "Planned Applications"
       , projDescription = "[Auto-fill Profile Data Across Recruitment Sites]\n[Image Recognition Application]\n[Visual Studio Project File Converter]\n[Matching Application]\n[Typing Game with 3D Harassment Bot]\n[Typing Game with Google Map Integration]\n[Typing Game with 2D Game Elements]\n"
       , projImage = "/images/projects/onDeveloping.jpg"
@@ -321,77 +393,5 @@ projectsEN =
       , projTechnologies = ["React", "TypeScript", "Next.js", "Tailwind CSS", "shadcn", "Vercel", "lucide-react"]
       , projGithubUrl = ""
       , projLiveUrl = "/"
-      }
-  , Project
-      { projTitle = "Design Book"
-      , projDescription = "A personal reference book of live, interactive UI you can compare at a glance."
-      , projImage = "/images/projects/design-book.png"
-      , projTechnologies = ["React", "TypeScript", "Tailwind CSS", "Vite", "Vercel"]
-      , projGithubUrl = "https://github.com/shinguakira/design-book"
-      , projLiveUrl = "https://design-book-sepia.vercel.app"
-      }
-  , Project
-      { projTitle = "Office File Preview"
-      , projDescription = "A PoC for previewing Office files (Word/PDF) in the browser."
-      , projImage = "/images/projects/office-file-app.png"
-      , projTechnologies = ["Go", "React", "TypeScript", "Vite"]
-      , projGithubUrl = "https://github.com/shinguakira/office-file-app"
-      , projLiveUrl = ""
-      }
-  , Project
-      { projTitle = "AFK Engineer"
-      , projDescription = "An incremental (idle) RPG with a software-engineer theme."
-      , projImage = "/images/projects/afk-game.png"
-      , projTechnologies = ["React", "TypeScript", "Vite", "Express.js", "Tauri"]
-      , projGithubUrl = "https://github.com/shinguakira/afk-game"
-      , projLiveUrl = ""
-      }
-  , Project
-      { projTitle = "Othello (React Native)"
-      , projDescription = "An Othello (Reversi) game with online multiplayer."
-      , projImage = "/images/projects/rn-othello.png"
-      , projTechnologies = ["React Native", "Expo", "TypeScript"]
-      , projGithubUrl = "https://github.com/shinguakira/rn-othello"
-      , projLiveUrl = ""
-      }
-  , Project
-      { projTitle = "The PubMed Gazette"
-      , projDescription = "A newspaper-styled PubMed search reader with shareable URLs, saves, and citations."
-      , projImage = "/images/projects/pubmed-search.png"
-      , projTechnologies = ["React", "TypeScript", "Vite", "Tailwind CSS", "Rust", "Docker", "PubMed API"]
-      , projGithubUrl = "https://github.com/shinguakira/pubmed-search"
-      , projLiveUrl = ""
-      }
-  , Project
-      { projTitle = "Video Call (WebRTC PoC)"
-      , projDescription = "A browser-to-browser P2P video call PoC."
-      , projImage = "/images/projects/video-call.png"
-      , projTechnologies = ["Next.js", "React", "TypeScript", "WebRTC", "Socket.IO", "Tailwind CSS", "shadcn"]
-      , projGithubUrl = "https://github.com/shinguakira/video-call"
-      , projLiveUrl = ""
-      }
-  , Project
-      { projTitle = "Portfolio API (Zero lang)"
-      , projDescription = "A Zero-language (zerolang.ai) reimplementation of the existing multi-backend portfolio API (TS/Go/Rust/Haskell)."
-      , projImage = "/images/projects/zero-poc.png"
-      , projTechnologies = ["Zero (zerolang.ai)", "REST", "Vercel"]
-      , projGithubUrl = "https://github.com/shinguakira/zero-poc"
-      , projLiveUrl = "https://zero-poc.vercel.app"
-      }
-  , Project
-      { projTitle = "IT Learning Material"
-      , projDescription = "A multilingual (EN/JA/PH) web-development learning resource."
-      , projImage = "/images/projects/it-learn-material.png"
-      , projTechnologies = ["JavaScript"]
-      , projGithubUrl = "https://github.com/shinguakira/it-learn-material"
-      , projLiveUrl = ""
-      }
-  , Project
-      { projTitle = "KeySound"
-      , projDescription = "A desktop app that plays a sound on every keypress, even when unfocused."
-      , projImage = "/images/projects/keysound.png"
-      , projTechnologies = ["Tauri", "Rust", "SvelteKit", "TypeScript", "Vite"]
-      , projGithubUrl = "https://github.com/shinguakira/keysound"
-      , projLiveUrl = ""
       }
   ]

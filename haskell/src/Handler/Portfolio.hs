@@ -16,6 +16,7 @@ import qualified Data.Profile as Profile
 import qualified Data.Experience as Experience
 import qualified Data.Project as Project
 import qualified Data.Skill as Skill
+import qualified Data.Duration as Duration
 import qualified Data.Education as Education
 import qualified Data.Contact as Contact
 import qualified Data.Certification as Certification
@@ -98,11 +99,13 @@ getProjects = do
 
 getSkills :: ActionM ()
 getSkills = do
-  json $ ApiResponse "Skills data fetched successfully" Skill.skills
+  skillData <- liftIO (Duration.resolveDurations Skill.skillDefs)
+  json $ ApiResponse "Skills data fetched successfully" skillData
 
 getOtherSkills :: ActionM ()
 getOtherSkills = do
-  json $ ApiResponse "Other skills data fetched successfully" Skill.otherSkills
+  skillData <- liftIO (Duration.resolveDurations Skill.otherSkillDefs)
+  json $ ApiResponse "Other skills data fetched successfully" skillData
 
 getEducation :: ActionM ()
 getEducation = do

@@ -184,7 +184,7 @@ const createStandardPDF = ({
   localizedCertifications,
   localizedStrongPoints,
 }: StandardPDFOptions) => {
-  const skillsByCategory = groupSkillsByCategory(skills);
+  const skillsByCategory = groupSkillsByCategory(skills());
 
   // Group experiences by same start year-month → newest first
   const expGroups: WorkExperience[][] = (() => {

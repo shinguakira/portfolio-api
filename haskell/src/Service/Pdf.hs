@@ -20,6 +20,7 @@ import qualified Data.Profile as ProfileData
 import qualified Data.Experience as ExperienceData
 import qualified Data.Project as ProjectData
 import qualified Data.Skill as SkillData
+import qualified Data.Duration as Duration
 import qualified Data.Education as EducationData
 import qualified Data.Certification as CertificationData
 import qualified Data.Contact as ContactData
@@ -64,8 +65,10 @@ getCertifications lang = if lang == "en" then CertificationData.certificationsEN
 getStrongPoints :: Text -> [StrongPoint]
 getStrongPoints lang = if lang == "en" then StrongPointData.strongPointsEN else StrongPointData.strongPointsJA
 
+-- The PDF builders are pure with no IO to read the clock from, so durations
+-- here are resolved once per process. See Data.Duration for the caveat.
 getSkills :: [SkillItem]
-getSkills = SkillData.skills
+getSkills = Duration.resolveDurationsAtStartup SkillData.skillDefs
 
 getContactData :: Contact
 getContactData = ContactData.contactData

@@ -86,7 +86,7 @@ func GetProjects(w http.ResponseWriter, r *http.Request) {
 func GetSkills(w http.ResponseWriter, r *http.Request) {
 	respondJSON(w, http.StatusOK, model.ApiResponse[[]model.SkillItem]{
 		Message: "Skills data fetched successfully",
-		Data:    data.Skills,
+		Data:    data.Skills(),
 	})
 }
 
@@ -94,7 +94,7 @@ func GetSkills(w http.ResponseWriter, r *http.Request) {
 func GetOtherSkills(w http.ResponseWriter, r *http.Request) {
 	respondJSON(w, http.StatusOK, model.ApiResponse[[]model.SkillItem]{
 		Message: "Other skills data fetched successfully",
-		Data:    data.OtherSkills,
+		Data:    data.OtherSkills(),
 	})
 }
 

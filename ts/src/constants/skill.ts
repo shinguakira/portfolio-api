@@ -1,4 +1,4 @@
-import {onBusiness, selfStudy} from './common.js';
+import {onBusiness, selfStudy, resolveDuration, since} from './common.js';
 import type {SkillItem} from '../types/skillItem.js';
 
 // Return only the enabled skills, with the internal `enabled` flag stripped so
@@ -10,8 +10,13 @@ export const enabledSkills = (items: SkillItem[]): SkillItem[] =>
     .filter((item) => item.enabled !== false)
     .map(({enabled: _enabled, ...rest}) => rest);
 
+// Raw skill definitions. `years` may hold an `@since:YYYY-MM` marker instead of
+// a fixed string; `skills()`/`otherSkills()` below render those against the
+// current date, and the backend generator reads these defs so the marker reaches
+// the Go/Rust/Haskell clones intact.
+
 // main skills(Language,Libraries)
-export const skills: SkillItem[] = [
+const skillDefs: SkillItem[] = [
   {
     name: 'TypeScript',
     years: '1 year 6 months',
@@ -54,9 +59,9 @@ export const skills: SkillItem[] = [
   },
   {
     name: 'Go',
-    years: selfStudy,
+    years: since(2026, 8),
     category: 'Language',
-    proficiency: selfStudy,
+    proficiency: onBusiness,
     picture: '/icons/Go.svg',
     pictureColor: '#00ADD8',
   },
@@ -117,6 +122,14 @@ export const skills: SkillItem[] = [
     pictureColor: '#6DB33F',
   },
   {
+    name: 'Microservices',
+    years: since(2026, 8),
+    category: 'Backend',
+    proficiency: onBusiness,
+    picture: '/icons/Microservices.svg',
+    pictureColor: '#5C7CFA',
+  },
+  {
     name: 'GraphQL',
     years: '2 years',
     category: 'API',
@@ -139,6 +152,7 @@ export const skills: SkillItem[] = [
     proficiency: selfStudy,
     picture: '/icons/Redux.svg',
     pictureColor: '#764ABC',
+    enabled: false, // hidden: filtered from skills list
   },
   {
     name: 'Context API',
@@ -300,6 +314,7 @@ export const skills: SkillItem[] = [
     proficiency: onBusiness,
     picture: '/icons/NextAuth.png',
     pictureColor: '#000000',
+    enabled: false, // hidden: filtered from skills list
   },
   {
     name: 'codegen',
@@ -359,6 +374,7 @@ export const skills: SkillItem[] = [
     proficiency: selfStudy,
     picture: '/icons/Remix.svg',
     pictureColor: '#000000',
+    enabled: false, // hidden: filtered from skills list
   },
   {
     name: 'Electron',
@@ -550,7 +566,7 @@ export const skills: SkillItem[] = [
 ];
 
 // otherSkills(IDE,Editor,Project Management Tool.etc)
-export const otherSkills: SkillItem[] = [
+const otherSkillDefs: SkillItem[] = [
   {
     name: 'VS Code(Typescript)',
     years: '2 year',
@@ -651,9 +667,28 @@ export const otherSkills: SkillItem[] = [
   },
 ];
 
+const renderDurations = (items: SkillItem[]): SkillItem[] =>
+  items.map((item) => ({...item, years: resolveDuration(item.years)}));
+
+// Deliberately functions, not module-scope arrays: an `@since:` duration has to
+// be derived per request. A warm Vercel/Lambda instance — or a long-running
+// clone backend — outlives a month boundary, so a snapshot taken at module load
+// would keep serving last month's duration until the instance happened to
+// recycle.
+export const skills = (): SkillItem[] => renderDurations(skillDefs);
+export const otherSkills = (): SkillItem[] => renderDurations(otherSkillDefs);
+
+// Backend-generator entry point: the definitions with their `@since:` markers
+// still intact, so the emitted Go/Rust/Haskell data carries the marker and each
+// clone resolves it per request, rather than a value frozen at generation time.
+export const skillDefsForCodegen = {
+  skills: skillDefs,
+  otherSkills: otherSkillDefs,
+};
+
 // runtime-validated skill name accessor
 // S.typescript => 'TypeScript', S.nextJs => 'Next.js', etc.
-const allSkills = [...skills, ...otherSkills];
+const allSkills = [...skillDefs, ...otherSkillDefs];
 const n = <T extends (typeof allSkills)[number]['name']>(name: T): T => {
   if (!allSkills.some((skill) => skill.name === name)) {
     throw new Error(`Skill not found: ${name}`);
@@ -675,6 +710,7 @@ export const S = {
   expressJs: n('Express.js'),
   honoJs: n('Hono.js'),
   springboot: n('Springboot(Java)'),
+  microservices: n('Microservices'),
   graphql: n('GraphQL'),
   rest: n('REST'),
   redux: n('Redux'),

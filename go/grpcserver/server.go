@@ -248,14 +248,14 @@ func (s *Server) GetProjects(_ context.Context, req *pb.GetProjectsRequest) (*pb
 func (s *Server) GetSkills(_ context.Context, _ *pb.GetSkillsRequest) (*pb.GetSkillsResponse, error) {
 	return &pb.GetSkillsResponse{
 		Message: "Skills data fetched successfully",
-		Data:    toPBSkills(data.Skills),
+		Data:    toPBSkills(data.Skills()),
 	}, nil
 }
 
 func (s *Server) GetOtherSkills(_ context.Context, _ *pb.GetOtherSkillsRequest) (*pb.GetOtherSkillsResponse, error) {
 	return &pb.GetOtherSkillsResponse{
 		Message: "Other skills data fetched successfully",
-		Data:    toPBSkills(data.OtherSkills),
+		Data:    toPBSkills(data.OtherSkills()),
 	}, nil
 }
 

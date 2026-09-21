@@ -9,8 +9,7 @@
  */
 import {writeFileSync} from 'fs';
 import {
-  skills,
-  otherSkills,
+  skillDefsForCodegen,
   enabledSkills,
   projects,
   profile,
@@ -31,8 +30,11 @@ const q = (s: string): string => JSON.stringify(s);
 const num = (n: number): string => String(n);
 
 // ─── localized views mirroring the controllers ───────────────────────────────
-const mainSkills = enabledSkills(skills);
-const other = enabledSkills(otherSkills);
+// Skill `years` may be an `@since:YYYY-MM` marker rather than a fixed string.
+// It is emitted verbatim and each backend's hand-written duration helper
+// resolves it per request, so no clone ever freezes a computed duration.
+const mainSkills = enabledSkills(skillDefsForCodegen.skills);
+const other = enabledSkills(skillDefsForCodegen.otherSkills);
 const projJa = projects.map((p) => ({technologies: p.technologies, ...p.ja}));
 const projEn = projects.map((p) => ({technologies: p.technologies, ...p.en}));
 const profJa = {
@@ -115,7 +117,8 @@ type Any = any;
     `\t\tGithubURL: ${q(p.githubUrl)},\n\t\tLiveURL: ${q(p.liveUrl)},\n\t},`;
   const ex = (e: Any): string =>
     `\t{\n\t\tCompany: ${q(e.company)},\n\t\tProjectOverview: ${q(e.projectOverview)},\n` +
-    `\t\tPeriod: ${q(e.period)},\n\t\tTeamSize: ${q(e.teamSize)},\n\t\tRole: ${q(e.role)},\n` +
+    `\t\tPeriod: ${q(e.period)},\n\t\tStartDate: ${q(e.startDate)},\n` +
+    `\t\tEndDate: ${q(e.endDate ?? '')},\n\t\tTeamSize: ${q(e.teamSize)},\n\t\tRole: ${q(e.role)},\n` +
     `\t\tManMonth: ${q(e.manMonth)},\n\t\tDescription: ${arr(e.description)},\n` +
     `\t\tArchivement: ${arr(e.archivement)},\n\t\tTechnologies: ${arr(e.technologies)},\n\t},`;
   const ed = (e: Any): string =>
@@ -150,7 +153,7 @@ type Any = any;
     `var ${name} = []model.${typ}{\n${items.join('\n')}\n}\n`;
   writeFileSync(
     '../go/data/skill.go',
-    hdr + list('Skills', 'SkillItem', mainSkills.map(sk)) + '\n' + list('OtherSkills', 'SkillItem', other.map(sk))
+    hdr + list('skillDefs', 'SkillItem', mainSkills.map(sk)) + '\n' + list('otherSkillDefs', 'SkillItem', other.map(sk))
   );
   writeFileSync(
     '../go/data/project.go',
@@ -233,7 +236,9 @@ type Any = any;
   const ex = (e: Any): string =>
     `        WorkExperience {\n            company: ${s(e.company)},\n            project_overview: ${s(
       e.projectOverview
-    )},\n            period: ${s(e.period)},\n            team_size: ${s(
+    )},\n            period: ${s(e.period)},\n            start_date: ${s(
+      e.startDate
+    )},\n            end_date: ${s(e.endDate ?? '')},\n            team_size: ${s(
       e.teamSize
     )},\n            role: ${s(e.role)},\n            man_month: ${s(
       e.manMonth
@@ -292,7 +297,7 @@ type Any = any;
     `use lazy_static::lazy_static;\n${imports}\n\nlazy_static! {\n${body}}\n`;
   writeFileSync(
     '../rust/src/data/skill.rs',
-    file('use crate::model::skill::SkillItem;', ls('SKILLS', 'SkillItem', mainSkills.map(sk)) + ls('OTHER_SKILLS', 'SkillItem', other.map(sk)))
+    file('use crate::model::skill::SkillItem;', ls('SKILL_DEFS', 'SkillItem', mainSkills.map(sk)) + ls('OTHER_SKILL_DEFS', 'SkillItem', other.map(sk)))
   );
   writeFileSync(
     '../rust/src/data/project.rs',
@@ -398,6 +403,8 @@ type Any = any;
       ['weCompany', q(e.company)],
       ['weProjectOverview', q(e.projectOverview)],
       ['wePeriod', q(e.period)],
+      ['weStartDate', q(e.startDate)],
+      ['weEndDate', q(e.endDate ?? '')],
       ['weTeamSize', q(e.teamSize)],
       ['weRole', q(e.role)],
       ['weManMonth', q(e.manMonth)],
@@ -460,9 +467,9 @@ type Any = any;
   writeFileSync(
     '../haskell/src/Data/Skill.hs',
     `module Data.Skill where\n\nimport Data.Text (Text)\nimport Model.Skill (SkillItem(..))\n\n` +
-      decl('skills', 'SkillItem', mainSkills.map(sk)) +
+      decl('skillDefs', 'SkillItem', mainSkills.map(sk)) +
       '\n' +
-      decl('otherSkills', 'SkillItem', other.map(sk))
+      decl('otherSkillDefs', 'SkillItem', other.map(sk))
   );
   writeFileSync(
     '../haskell/src/Data/Project.hs',

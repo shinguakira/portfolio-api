@@ -2,7 +2,7 @@ use crate::model::skill::SkillItem;
 use lazy_static::lazy_static;
 
 lazy_static! {
-    pub static ref SKILLS: Vec<SkillItem> = vec![
+    pub static ref SKILL_DEFS: Vec<SkillItem> = vec![
         SkillItem {
             name: "TypeScript".to_string(),
             years: "1 year 6 months".to_string(),
@@ -45,9 +45,9 @@ lazy_static! {
         },
         SkillItem {
             name: "Go".to_string(),
-            years: "self-study".to_string(),
+            years: "@since:2026-08".to_string(),
             category: "Language".to_string(),
-            proficiency: Some("self-study".to_string()),
+            proficiency: Some("onBusiness".to_string()),
             picture: Some("/icons/Go.svg".to_string()),
             picture_color: Some("#00ADD8".to_string())
         },
@@ -108,6 +108,14 @@ lazy_static! {
             picture_color: Some("#6DB33F".to_string())
         },
         SkillItem {
+            name: "Microservices".to_string(),
+            years: "@since:2026-08".to_string(),
+            category: "Backend".to_string(),
+            proficiency: Some("onBusiness".to_string()),
+            picture: Some("/icons/Microservices.svg".to_string()),
+            picture_color: Some("#5C7CFA".to_string())
+        },
+        SkillItem {
             name: "GraphQL".to_string(),
             years: "2 years".to_string(),
             category: "API".to_string(),
@@ -122,14 +130,6 @@ lazy_static! {
             proficiency: Some("onBusiness".to_string()),
             picture: Some("/icons/REST.svg".to_string()),
             picture_color: Some("#61DAFB".to_string())
-        },
-        SkillItem {
-            name: "Redux".to_string(),
-            years: "self-study".to_string(),
-            category: "State Management".to_string(),
-            proficiency: Some("self-study".to_string()),
-            picture: Some("/icons/Redux.svg".to_string()),
-            picture_color: Some("#764ABC".to_string())
         },
         SkillItem {
             name: "Prisma".to_string(),
@@ -276,14 +276,6 @@ lazy_static! {
             picture_color: Some("#3E67B1".to_string())
         },
         SkillItem {
-            name: "NextAuth".to_string(),
-            years: "1 year".to_string(),
-            category: "Frontend".to_string(),
-            proficiency: Some("onBusiness".to_string()),
-            picture: Some("/icons/NextAuth.png".to_string()),
-            picture_color: Some("#000000".to_string())
-        },
-        SkillItem {
             name: "vectorDB(pgvector)".to_string(),
             years: "3 months".to_string(),
             category: "Database".to_string(),
@@ -306,14 +298,6 @@ lazy_static! {
             proficiency: Some("self-study".to_string()),
             picture: Some("/icons/Drizzle.svg".to_string()),
             picture_color: Some("#C5F74F".to_string())
-        },
-        SkillItem {
-            name: "Remix".to_string(),
-            years: "self-study".to_string(),
-            category: "Frontend".to_string(),
-            proficiency: Some("self-study".to_string()),
-            picture: Some("/icons/Remix.svg".to_string()),
-            picture_color: Some("#000000".to_string())
         },
         SkillItem {
             name: "Electron".to_string(),
@@ -476,7 +460,7 @@ lazy_static! {
             picture_color: Some("#E44D26".to_string())
         },
     ];
-    pub static ref OTHER_SKILLS: Vec<SkillItem> = vec![
+    pub static ref OTHER_SKILL_DEFS: Vec<SkillItem> = vec![
         SkillItem {
             name: "VS Code(Typescript)".to_string(),
             years: "2 year".to_string(),
