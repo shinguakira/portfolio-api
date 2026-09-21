@@ -74,22 +74,26 @@ All data endpoints are mounted under `/api`:
 
 ## Deployment
 
-### AWS Lambda (Serverless Framework)
+See `DEPLOYMENT.md` for the full endpoint list and how to verify a deployment.
+
+### Vercel (live)
+
+- **Base URL**: `https://portfolio-api-ten-delta.vercel.app`
+- This is the deployment the portfolio front-ends call.
+
+```bash
+vercel --prod
+```
+
+### AWS Lambda (Serverless Framework) — currently down
 
 - **Base URL**: `https://s55mfd704a.execute-api.us-east-1.amazonaws.com/dev`
+- Every path returns 502; redeploy before relying on this URL.
 - The `/dev` stage prefix is required in all URLs
 
 ```bash
 npm run build
 serverless deploy
-```
-
-### Vercel
-
-- **Base URL**: `https://portfolio-mifikniwe-akirashingus-projects.vercel.app`
-
-```bash
-vercel --prod
 ```
 
 ## Cross-Platform Compatibility Notes

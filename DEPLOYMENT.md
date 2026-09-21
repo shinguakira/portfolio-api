@@ -4,80 +4,87 @@ This document contains information about the deployed endpoints and how to verif
 
 ## Deployed Endpoints
 
-### AWS Lambda (Serverless Framework)
+### Vercel (live)
+
+- **Base URL**: https://portfolio-api-ten-delta.vercel.app
+- This is the deployment the portfolio front-ends call. `my-vscode-portfolio`
+  falls back to this URL in `lib/api/client.ts` when
+  `NEXT_PUBLIC_PORTFOLIO_API_URL` is unset.
+
+#### Available Endpoints
+
+All verified to return 200 on the live deployment.
+
+| Endpoint | Description |
+|---|---|
+| `/` | Root documentation listing the endpoints |
+| `/health` | Health check |
+| `/api/profile` | Profile information |
+| `/api/skills` | Main skills |
+| `/api/other-skills` | Other skills (IDEs, tools) |
+| `/api/projects` | Projects |
+| `/api/experience` | Work experience |
+| `/api/education` | Education history |
+| `/api/certifications` | Certifications |
+| `/api/faqs` | FAQs |
+| `/api/links` | Important links |
+| `/api/strong-points` | Strong points |
+| `/api/changelogs` | Changelog history |
+| `/api/notifications` | Notifications |
+| `/api/articles` | Articles |
+| `/api/contact` | Contact information |
+| `/api/download-pdf` | Portfolio as PDF (`application/pdf`) |
+| `/api/download-excel` | Portfolio as XLSX |
+
+Localized endpoints take `?lang=ja` (default) or `?lang=en`.
+
+`/api/download-pdf` also takes a `format` of `standard`, `compact`, `executive`,
+`technical`, `academic` or `modern`, plus the section toggles `projects`,
+`experience`, `certifications` and `education` (`true` / `false`).
+
+### AWS Lambda (Serverless Framework) — currently down
+
 - **Base URL**: https://s55mfd704a.execute-api.us-east-1.amazonaws.com/dev
-- **Important Note**: The `/dev` stage name is required for all AWS API Gateway endpoints
-
-#### Available Endpoints
-- Root Documentation: `https://s55mfd704a.execute-api.us-east-1.amazonaws.com/dev`
-- Health Check: `https://s55mfd704a.execute-api.us-east-1.amazonaws.com/dev/health`
-- API Base: `https://s55mfd704a.execute-api.us-east-1.amazonaws.com/dev/api`
-- Profile Data: `https://s55mfd704a.execute-api.us-east-1.amazonaws.com/dev/api/profile`
-- Skills: `https://s55mfd704a.execute-api.us-east-1.amazonaws.com/dev/api/skills`
-- Projects: `https://s55mfd704a.execute-api.us-east-1.amazonaws.com/dev/api/projects`
-- Experience: `https://s55mfd704a.execute-api.us-east-1.amazonaws.com/dev/api/experience`
-- Education: `https://s55mfd704a.execute-api.us-east-1.amazonaws.com/dev/api/education`
-- Certifications: `https://s55mfd704a.execute-api.us-east-1.amazonaws.com/dev/api/certifications`
-- FAQs: `https://s55mfd704a.execute-api.us-east-1.amazonaws.com/dev/api/faqs`
-- Links: `https://s55mfd704a.execute-api.us-east-1.amazonaws.com/dev/api/links`
-- Strong Points: `https://s55mfd704a.execute-api.us-east-1.amazonaws.com/dev/api/strong-points`
-- Changelogs: `https://s55mfd704a.execute-api.us-east-1.amazonaws.com/dev/api/changelogs`
-
-### Vercel
-- **Base URL**: https://portfolio-mifikniwe-akirashingus-projects.vercel.app
-
-#### Available Endpoints
-- Root Documentation: `https://portfolio-mifikniwe-akirashingus-projects.vercel.app`
-- Health Check: `https://portfolio-mifikniwe-akirashingus-projects.vercel.app/health`
-- API Base: `https://portfolio-mifikniwe-akirashingus-projects.vercel.app/api`
-- Profile Data: `https://portfolio-mifikniwe-akirashingus-projects.vercel.app/api/profile`
-- Skills: `https://portfolio-mifikniwe-akirashingus-projects.vercel.app/api/skills`
-- Projects: `https://portfolio-mifikniwe-akirashingus-projects.vercel.app/api/projects`
-- Experience: `https://portfolio-mifikniwe-akirashingus-projects.vercel.app/api/experience`
-- Education: `https://portfolio-mifikniwe-akirashingus-projects.vercel.app/api/education`
-- Certifications: `https://portfolio-mifikniwe-akirashingus-projects.vercel.app/api/certifications`
-- FAQs: `https://portfolio-mifikniwe-akirashingus-projects.vercel.app/api/faqs`
-- Links: `https://portfolio-mifikniwe-akirashingus-projects.vercel.app/api/links`
-- Strong Points: `https://portfolio-mifikniwe-akirashingus-projects.vercel.app/api/strong-points`
-- Changelogs: `https://portfolio-mifikniwe-akirashingus-projects.vercel.app/api/changelogs`
+- **Status**: every path returns 502. The API Gateway stage still resolves, but
+  the function behind it does not. Redeploy before quoting this URL anywhere.
+- **Note**: the `/dev` stage name is part of the path for all AWS API Gateway
+  endpoints.
 
 ## Verifying Deployments
 
 ### Testing Endpoints
-You can verify that your endpoints are working correctly using:
 
-1. **Browser**: Visit the URLs directly in your browser (for GET requests)
-2. **cURL**: 
+1. **Browser**: open the URLs directly (GET requests only)
+2. **cURL**:
    ```bash
-   curl https://s55mfd704a.execute-api.us-east-1.amazonaws.com/dev/health
-   curl https://portfolio-mifikniwe-akirashingus-projects.vercel.app/health
+   curl https://portfolio-api-ten-delta.vercel.app/health
    ```
-3. **Postman/Insomnia**: Import the URLs and test all endpoints
+3. **Postman/Insomnia**: import the URLs and test all endpoints
 
 ### Expected Response
-A successful health check should return:
+
+A successful health check returns:
+
 ```json
 {
   "status": "OK",
-  "timestamp": "2025-07-13T01:33:10.000Z"
+  "timestamp": "2026-09-21T23:48:52.559Z"
 }
 ```
 
-The root endpoint should return documentation about all available endpoints.
+The root endpoint returns documentation about all available endpoints.
 
 ## Deployment Commands
 
-### AWS Lambda (Serverless Framework)
-```bash
-# Build the application
-npm run build
+### Vercel
 
-# Deploy to AWS
-serverless deploy
+```bash
+vercel --prod
 ```
 
-### Vercel
+### AWS Lambda (Serverless Framework)
+
 ```bash
-# Build and deploy to Vercel
-vercel --prod
+npm run build
+serverless deploy
 ```
